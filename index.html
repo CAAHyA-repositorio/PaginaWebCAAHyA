@@ -1,0 +1,354 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CAAHYA — Consejo Académico de Humanidades y Artes</title>
+    <meta name="description" content="Sitio institucional del Consejo Académico de Humanidades y Artes (CAAHYA). Información, documentos y noticias oficiales.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body class="no-scroll">
+    <!-- Overlay de transición entre páginas -->
+    <div id="pageTransition" class="page-transition active" aria-hidden="false">
+      <img src="assets/img/LogoAzulOscuro_Completo.png" alt="CAAHYA">
+    </div>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-ca sticky-top" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#" aria-label="Página de inicio CAAHYA">
+          <img src="assets/img/LogoAzulOscuro.png" alt="CAAHYA" onerror="this.style.display='none'">
+          <span class="brand-text">CAAHyA</span>
+        </a>
+
+        <!-- Redes a la izquierda del botón (solo móvil) -->
+        <div class="d-flex d-lg-none align-items-center ms-auto gap-2">
+          <div class="social d-flex align-items-center" aria-label="Redes sociales">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Mostrar menú">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="directorio.html">Directorio</a></li>
+          </ul>
+
+          <form id="navbarSearchForm" class="d-flex navbar-search" role="search" aria-label="Buscar en el sitio" action="search.html" method="get">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="q">
+            <button class="btn btn-secondary-ca" type="submit"><i class="bi bi-search"></i></button>
+          </form>
+
+          <!-- Redes a la derecha (escritorio) -->
+          <div class="social d-none d-lg-flex align-items-center ms-3" aria-label="Redes sociales">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero py-5">
+      <div class="container py-4">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <h1 class="display-5 mb-3">Consejo Académico de Humanidades y Artes</h1>
+            <p class="lead mb-2">Instancia colegiada para la coordinación académica y el fortalecimiento institucional.</p>
+            <p class="text-on-dark opacity-75 mb-4">Promueve la mejora continua, el diálogo interdisciplinario y la proyección en áreas de humanidades y artes.</p>
+            <div class="d-flex gap-3">
+              <a href="#consejo" class="btn btn-accent btn-lg">Conoce más</a>
+              <a href="#documentos" class="btn btn-outline-light btn-lg">Ver documentos</a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="hero-photo">
+              <div class="ratio ratio-16x9">
+                <img src="assets/img/LogoAzulOscuro_Completo.png" alt="Instalaciones de la institución" class="w-100 h-100 object-fit-cover" onerror="this.style.display='none'">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main id="contenido">
+
+      <!-- Documentos -->
+      <section id="documentos" class="py-5">
+        <div class="container">
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <h2 class="mb-0" style="color:#262261;">Documentos</h2>
+            <a href="#" class="btn btn-secondary-ca">Ver todo</a>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <a class="link-doc p-3 border rounded-min shadow-sm h-100" href="#">
+                <i class="bi bi-journal-text text-secondary-ca fs-3"></i>
+                <div>
+                  <div class="fw-bold">Actas del Consejo</div>
+                  <small class="text-muted">Versiones oficiales en PDF</small>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <a class="link-doc p-3 border rounded-min shadow-sm h-100" href="#">
+                <i class="bi bi-shield-check text-secondary-ca fs-3"></i>
+                <div>
+                  <div class="fw-bold">Reglamento</div>
+                  <small class="text-muted">Normativa vigente</small>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <a class="link-doc p-3 border rounded-min shadow-sm h-100" href="#">
+                <i class="bi bi-clipboard-data text-secondary-ca fs-3"></i>
+                <div>
+                  <div class="fw-bold">Lineamientos</div>
+                  <small class="text-muted">Criterios y políticas</small>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <a class="link-doc p-3 border rounded-min shadow-sm h-100" href="https://www.caahya.unam.mx/?page_id=7908">
+                <i class="bi bi-calendar2-week text-secondary-ca fs-3"></i>
+                <div>
+                  <div class="fw-bold">Calendario</div>
+                  <small class="text-muted">Sesiones y eventos</small>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre el Consejo -->
+      <section id="consejo" class="py-5 bg-white">
+        <div class="container">
+          <div class="row g-4 align-items-stretch">
+            <div class="col-lg-7">
+              <h2 class="mb-3" style="color:#262261;">Sobre el Consejo</h2>
+              <p>El Consejo Académico de Humanidades y Artes (CAAHYA) es un órgano colegiado orientado al fortalecimiento de los procesos académicos, la articulación entre programas y la promoción de la excelencia en las áreas de humanidades y artes.</p>
+              <p>Sus funciones incluyen la generación de lineamientos, la revisión de planes y proyectos, y el acompañamiento de iniciativas institucionales con pertinencia social y cultural.</p>
+            </div>
+            <div class="col-lg-5">
+              <div class="p-4 shadow-soft rounded-min border border-2 border-secondary-ca h-100">
+                <h3 class="h5 text-secondary-ca mb-3">Misión y visión</h3>
+                <p class="mb-2"><strong>Misión:</strong> Promover la calidad académica, la integridad y el diálogo interdisciplinario.</p>
+                <p class="mb-0"><strong>Visión:</strong> Ser referente institucional en la toma de decisiones académicas y culturales.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Entidades: 4 cajas horizontales con fondo propio -->
+      <section id="entidades" class="py-5">
+        <div class="container">
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <h2 class="mb-0" style="color:#262261;">Entidades</h2>
+          </div>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+              <a href="#" class="entity-card entity-facultades d-block rounded-min text-decoration-none p-4 h-100 shadow-soft" data-bs-toggle="modal" data-bs-target="#modalFacultades">
+                <div class="icon-badge"><i class="bi bi-mortarboard-fill"></i></div>
+                <h3 class="h5 mt-3 mb-2">Facultades</h3>
+                <p class="mb-0">Programas y escuelas de nivel superior.</p>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#" class="entity-card entity-escuelas d-block rounded-min text-decoration-none p-4 h-100 shadow-soft" data-bs-toggle="modal" data-bs-target="#modalEscuelas">
+                <div class="icon-badge"><i class="bi bi-journal-bookmark-fill"></i></div>
+                <h3 class="h5 mt-3 mb-2">Escuelas</h3>
+                <p class="mb-0">Formación especializada y profesionalizante.</p>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#" class="entity-card entity-institutos d-block rounded-min text-decoration-none p-4 h-100 shadow-soft" data-bs-toggle="modal" data-bs-target="#modalInstitutos">
+                <div class="icon-badge"><i class="bi bi-bank"></i></div>
+                <h3 class="h5 mt-3 mb-2">Institutos</h3>
+                <p class="mb-0">Investigación y producción de conocimiento.</p>
+              </a>
+            </div>
+            <div class="col">
+              <a href="#" class="entity-card entity-centros d-block rounded-min text-decoration-none p-4 h-100 shadow-soft" data-bs-toggle="modal" data-bs-target="#modalCentros">
+                <div class="icon-badge"><i class="bi bi-collection-fill"></i></div>
+                <h3 class="h5 mt-3 mb-2">Centros</h3>
+                <p class="mb-0">Vinculación y desarrollo académico-cultural.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Side Navigation (derecha, fondo invisible) -->
+    <nav id="sideNav" class="side-nav d-none d-md-block" aria-label="Navegación de secciones">
+      <ul class="nav flex-column align-items-start gap-2 m-0">
+        <li class="nav-item"><a class="nav-link" href="#inicio"><span class="dot" aria-hidden="true"></span><span class="label">Inicio</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#documentos"><span class="dot" aria-hidden="true"></span><span class="label">Documentos</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#consejo"><span class="dot" aria-hidden="true"></span><span class="label">Consejo</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#entidades"><span class="dot" aria-hidden="true"></span><span class="label">Entidades</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto"><span class="dot" aria-hidden="true"></span><span class="label">Contacto y Ubicacion</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- Modales de entidades -->
+    <div class="modal fade modal-entity" id="modalFacultades" tabindex="-1" aria-labelledby="modalFacultadesLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title d-flex align-items-center gap-2" id="modalFacultadesLabel"><i class="bi bi-mortarboard-fill"></i> Facultades</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body pt-0">
+            <div class="list-group list-group-flush">
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Facultad de Arquitectura <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Facultad de Artes y Diseño <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Facultad de Filosofía y Letras <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Facultad de Música <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Facultad de Estudios Superiores Acatlán <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Facultad de Estudios Superiores Aragón <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Facultad de Estudios Superiores, Cuautitlán <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade modal-entity" id="modalEscuelas" tabindex="-1" aria-labelledby="modalEscuelasLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title d-flex align-items-center gap-2" id="modalEscuelasLabel"><i class="bi bi-journal-bookmark-fill"></i> Escuelas</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body pt-0">
+            <div class="list-group list-group-flush">
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Escuela Nacional de Estudios Superiores, Unidad León <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Escuela Nacional de Estudios Superiores, Unidad Morelia <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Escuela Nacional de Estudios Superiores, Unidad Mérida <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Escuela Nacional de Lenguas, Lingüística y Traducción <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Escuela Nacional de Artes Cinematográficas <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Escuela Nacional de Estudios Superiores, Unidad Oaxaca <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Escuela Nacional de Ciencias Forenses <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Escuela Nacional de Estudios Superiores Juriquilla <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade modal-entity" id="modalInstitutos" tabindex="-1" aria-labelledby="modalInstitutosLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title d-flex align-items-center gap-2" id="modalInstitutosLabel"><i class="bi bi-bank"></i> Institutos</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body pt-0">
+            <div class="list-group list-group-flush">
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Instituto de Investigaciones Bibliográficas <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Instituto de Investigaciones Bibliotecológicas y de la Información <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Instituto de Investigaciones Estéticas <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Instituto de Investigaciones Filológicas <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Instituto de Investigaciones Filosóficas <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Instituto de Investigaciones Históricas <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Instituto de Investigaciones sobre la Universidad y la Educación <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade modal-entity" id="modalCentros" tabindex="-1" aria-labelledby="modalCentrosLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title d-flex align-items-center gap-2" id="modalCentrosLabel"><i class="bi bi-collection-fill"></i> Centros</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body pt-0">
+            <div class="list-group list-group-flush">
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Centro de Investigaciones sobre América Latina y el Caribe <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Centro de Investigaciones y Estudios de Género <i class="bi bi-arrow-up-right"></i></a>
+              <a class="list-group-item list-group-item-action" href="#" target="_blank" rel="noopener">Centro Peninsular en Humanidades y Ciencias Sociales <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videos (YouTube) -->
+    <section id="videos" class="py-5 bg-white">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h2 class="mb-0" style="color:#262261;">Podcasts</h2>
+          <a class="btn btn-secondary-ca" href="https://www.youtube.com/@CAAHYA_UNAM" target="_blank" rel="noopener">Ver canal</a>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 ">
+            <div class="ratio ratio-16x9 rounded-min shadow-soft">
+              <iframe src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UU0_KLa9zF_KkLnA7BvMEZ2g&index=1" title="YouTube - Último video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="origin-when-cross-origin"></iframe>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 ">
+            <div class="ratio ratio-16x9 rounded-min shadow-soft">
+              <iframe src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UU0_KLa9zF_KkLnA7BvMEZ2g&index=2" title="YouTube - Segundo más reciente" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="origin-when-cross-origin"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="pt-5 pb-4">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <img src="assets/img/logo-caahya-white.png" alt="CAAHYA" style="height:36px" onerror="this.style.display='none'">
+              <strong>CAAHYA</strong>
+            </div>
+            <p class="mb-2">Consejo Académico de Humanidades y Artes</p>
+            <small class="opacity-75">&copy; <span data-year></span> &bull; Todos los derechos reservados.</small>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <h5 class="mb-3">Enlaces</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1"><a class="footer-link" href="#documentos">Documentos</a></li>
+              <li class="mb-1"><a class="footer-link" href="#entidades">Entidades</a></li>
+              <li class="mb-1"><a class="footer-link" href="#consejo">Consejo</a></li>
+              <li class="mb-1"><a class="footer-link" href="#">Transparencia</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <h5 class="mb-3">Contacto</h5>
+            <p class="mb-2"><i class="bi bi-envelope text-secondary-ca"></i> humanidadesyartes@unam.mx</p>
+            <p class="mb-3"><i class="bi bi-geo-alt text-secondary-ca"></i> Universidad Nacional Autónoma de México, C.U., Coyoacán, 04510 Ciudad de México, CDMX, México</p>
+            <div class="ratio ratio-16x9 rounded-min shadow-soft mb-3">
+              <iframe src="https://www.google.com/maps?q=Direcci%C3%B3n.%20Edificio%20de%20los%20Consejos%20Acad%C3%A9micos%20Circuito%20Exterior%20S%2FN%20Ciudad%20Universitaria%20C.P.%2004510&output=embed" title="Mapa: Dirección. Edificio de los Consejos Académicos Circuito Exterior S/N Ciudad Universitaria C.P. 04510" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="social" aria-label="Redes sociales"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+
+

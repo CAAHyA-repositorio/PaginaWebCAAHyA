@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "generated": "2025-10-20T19:38:16.770Z",
+  "pages": [
+    {
+      "url": "directorio.html",
+      "title": "Directorio · CAAHYA",
+      "sections": [
+        {
+          "id": "equipo",
+          "title": "Directorio del CAAHYA",
+          "content": "Integrantes y equipo de trabajo"
+        },
+        {
+          "id": "miembros",
+          "title": "Integrantes",
+          "content": "Breve presentación de la integrante. Enfoque, área o función dentro del consejo."
+        }
+      ]
+    },
+    {
+      "url": "dist/index.html",
+      "title": "CAAHYA — Consejo Académico de Humanidades y Artes",
+      "sections": [
+        {
+          "id": "inicio",
+          "title": "Consejo Académico de Humanidades y Artes",
+          "content": "Instancia colegiada para la coordinación académica y el fortalecimiento institucional."
+        },
+        {
+          "id": "documentos",
+          "title": "Documentos",
+          "content": "Documentos Ver todo Actas del Consejo Versiones oficiales en PDF Reglamento Normativa vigente Lineamientos Criterios y políticas Calendario Sesiones y eventos"
+        },
+        {
+          "id": "consejo",
+          "title": "Sobre el Consejo",
+          "content": "El Consejo Académico de Humanidades y Artes (CAAHYA) es un órgano colegiado orientado al fortalecimiento de los procesos académicos, la articulación entre programas y la promoción de la excelencia en las áreas de humanidades y artes."
+        },
+        {
+          "id": "entidades",
+          "title": "Entidades",
+          "content": "Programas y escuelas de nivel superior."
+        },
+        {
+          "id": "videos",
+          "title": "Podcasts",
+          "content": "Podcasts Ver canal"
+        }
+      ]
+    },
+    {
+      "url": "index.html",
+      "title": "CAAHYA — Consejo Académico de Humanidades y Artes",
+      "sections": [
+        {
+          "id": "inicio",
+          "title": "Consejo Académico de Humanidades y Artes",
+          "content": "Instancia colegiada para la coordinación académica y el fortalecimiento institucional."
+        },
+        {
+          "id": "documentos",
+          "title": "Documentos",
+          "content": "Documentos Ver todo Actas del Consejo Versiones oficiales en PDF Reglamento Normativa vigente Lineamientos Criterios y políticas Calendario Sesiones y eventos"
+        },
+        {
+          "id": "consejo",
+          "title": "Sobre el Consejo",
+          "content": "El Consejo Académico de Humanidades y Artes (CAAHYA) es un órgano colegiado orientado al fortalecimiento de los procesos académicos, la articulación entre programas y la promoción de la excelencia en las áreas de humanidades y artes."
+        },
+        {
+          "id": "entidades",
+          "title": "Entidades",
+          "content": "Programas y escuelas de nivel superior."
+        },
+        {
+          "id": "videos",
+          "title": "Podcasts",
+          "content": "Podcasts Ver canal"
+        }
+      ]
+    }
+  ]
+}

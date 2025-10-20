@@ -1,0 +1,12 @@
+# Ignorar dependencias y artefactos de build
+node_modules/
+dist/
+
+# SO / IDE
+.DS_Store
+Thumbs.db
+*.log
+
+# Entornos
+.env
+.env.*

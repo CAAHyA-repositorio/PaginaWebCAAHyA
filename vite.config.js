@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+﻿import { defineConfig } from 'vite'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [
     viteStaticCopy({
       targets: [
-        { src: 'assets/search-*.json', dest: 'assets' }
+        { src: 'assets/search-*.json', dest: 'assets' },
+        { src: 'assets/vendor/**', dest: 'assets/vendor' }
       ]
     })
   ],

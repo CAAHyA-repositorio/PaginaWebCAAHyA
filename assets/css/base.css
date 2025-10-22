@@ -1,0 +1,62 @@
+/* CAAHYA — Estilos base */
+:root{
+  --primary:#262261; /* Azul principal */
+  --secondary:#ee8219; /* Naranja */
+  --accent:#ffca00; /* Amarillo */
+  --text-on-dark:#ffffff;
+  --text-muted:#e6e6e6;
+}
+
+html,body{height:100%;}
+html{ scroll-behavior:smooth; }
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Alternativa a Brisbane */
+  color:#222;
+  background:#f7f8fb;
+}
+img,svg,video{max-width:100%;height:auto;}
+/* util */
+.object-fit-cover{ object-fit: cover; }
+
+/* Tipografía: usar pesos similares a Brisbane */
+h1,h2,h3,h4,h5,h6,.display-1,.display-2,.display-3{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700; /* Bold */
+  letter-spacing: .2px;
+}
+/* Escala fluida para títulos clave */
+.hero h1{ font-size: clamp(1.75rem, 2vw + 1.25rem, 2.75rem); }
+h2{ font-size: clamp(1.25rem, 1vw + 1rem, 1.75rem); }
+h3{ font-size: clamp(1.05rem, .7vw + .9rem, 1.25rem); }
+
+/* Colores utilitarios coherentes con Bootstrap */
+.bg-primary-ca{background:var(--primary)!important;}
+.bg-primary-ca-soft{background:linear-gradient(180deg, #2f2a83 0%, #262261 60%);} 
+.bg-primary-ca-verysoft{background:linear-gradient(180deg, #2f2a83 0%, #262261 40%);} 
+.text-on-dark{color:var(--text-on-dark)!important;}
+.text-secondary-ca{color:var(--secondary)!important;}
+.text-accent{color:var(--accent)!important;}
+.border-secondary-ca{border-color:var(--secondary)!important;}
+
+.btn-accent{
+  --bs-btn-color:#1f1b4a;
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-hover-bg: #f0b800;
+  --bs-btn-hover-border-color: #f0b800;
+  --bs-btn-active-bg:#e6b000;
+  --bs-btn-active-border-color:#e6b000;
+  font-weight:700;
+}
+
+.btn-secondary-ca{
+  --bs-btn-color:#fff;
+  --bs-btn-bg: var(--secondary);
+  --bs-btn-border-color: var(--secondary);
+  --bs-btn-hover-bg: #d57215;
+  --bs-btn-hover-border-color: #d57215;
+  --bs-btn-active-bg:#c66914;
+  --bs-btn-active-border-color:#c66914;
+  font-weight:600;
+}
+

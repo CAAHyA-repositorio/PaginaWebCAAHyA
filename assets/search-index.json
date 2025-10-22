@@ -1,9 +1,25 @@
 {
   "version": 1,
-  "generated": "2025-10-20T19:38:16.770Z",
+  "generated": "2025-10-20T20:47:40.427Z",
   "pages": [
     {
       "url": "directorio.html",
+      "title": "Directorio · CAAHYA",
+      "sections": [
+        {
+          "id": "equipo",
+          "title": "Directorio del CAAHYA",
+          "content": "Integrantes y equipo de trabajo"
+        },
+        {
+          "id": "miembros",
+          "title": "Integrantes",
+          "content": "Breve presentación de la integrante. Enfoque, área o función dentro del consejo."
+        }
+      ]
+    },
+    {
+      "url": "dist/directorio.html",
       "title": "Directorio · CAAHYA",
       "sections": [
         {
@@ -48,6 +64,11 @@
           "content": "Podcasts Ver canal"
         }
       ]
+    },
+    {
+      "url": "dist/search.html",
+      "title": "Buscar · CAAHYA",
+      "sections": []
     },
     {
       "url": "index.html",

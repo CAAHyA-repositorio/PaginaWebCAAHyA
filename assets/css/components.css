@@ -1,0 +1,292 @@
+/* Sin degradado sobre la foto */
+
+/* Directorio */
+.team-hero{ background:#0f0f20; color:#fff; }
+.team-hero .team-hero-media{ position:relative; }
+.team-hero-overlay{ position:absolute; inset:0; background: linear-gradient(180deg, rgba(38,34,97,.35), rgba(0,0,0,.45)); }
+.team-hero-caption{ position:absolute; left:0; right:0; bottom:1.25rem; color:#fff; }
+.card-profile{ border: 1px solid rgba(0,0,0,.06); }
+.avatar{ width:96px; height:96px; background: linear-gradient(135deg, rgba(238,130,25,.25), rgba(38,34,97,.25)); display:flex; align-items:center; justify-content:center; color:#fff; }
+.avatar-xxl{ width:112px; height:112px; }
+.avatar.placeholder{ background: linear-gradient(135deg, rgba(238,130,25,.3), rgba(38,34,97,.35)); }
+.avatar-xxl{ max-width: 24vw; max-height:24vw; }
+
+/* Bloques y tarjetas */
+.shadow-soft{ box-shadow: 0 12px 28px rgba(38,34,97,.18); }
+.rounded-min{ border-radius: .5rem; }
+
+/* Enlaces destacados */
+.link-doc{
+  display:flex; align-items:center; gap:.5rem; text-decoration:none;
+  color:#1f1b4a;
+}
+.link-doc:hover{ color: #000; }
+
+/* Footer */
+footer{
+  background: #1f1b4a;
+  color: var(--text-on-dark);
+}
+.footer-link{ color:#d7d7ff; text-decoration:none; }
+.footer-link:hover{ color:#fff; text-decoration:underline; }
+.social a{ color: var(--secondary); font-size:1.25rem; margin-right:.75rem; }
+.social a:hover{ color: #d57215; }
+/* Redes en navbar y footer en blanco */
+.navbar-ca .social a{ color:#ffffff; }
+.navbar-ca .social a:hover{ color:#ffca00; }
+footer .social a{ color:#ffffff; }
+footer .social a:hover{ color:#d7d7ff; }
+@media (min-width: 1200px){
+  .navbar-search .form-control{ width:260px; }
+}
+
+/* Listas sobre fondo azul institucional */
+.list-entities li{
+  padding:.4rem 0;
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+.list-entities li:last-child{ border-bottom:0; }
+
+/* Ítems con iconos en Entidades */
+.entity-item{ display:flex; align-items:center; gap:.65rem; }
+.icon-bullet{
+  width:2rem; height:2rem; flex:0 0 2rem; border-radius:50%;
+  display:inline-flex; align-items:center; justify-content:center;
+  background: rgba(238,130,25,.18); /* Naranja suave */
+  color: var(--accent); /* Amarillo para el ícono */
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
+}
+.entity-item .label{ color: var(--text-on-dark); }
+.list-entities li:hover .label{ color:#fff; }
+.list-entities li:hover .icon-bullet{ transform: translateY(-1px); }
+
+/* Figura/imagen de entidad (placeholder y caption) */
+.entity-figure-placeholder{
+  width:100%; height:100%;
+  background: radial-gradient(600px 280px at 90% -10%, rgba(255,202,0,.28), transparent 55%),
+              linear-gradient(135deg, rgba(238,130,25,.25), rgba(38,34,97,.4));
+  border-bottom: 1px solid rgba(255,255,255,.18);
+}
+.entity-figure-caption{
+  background: rgba(0,0,0,.25);
+  color: var(--text-on-dark);
+  font-size:.95rem;
+}
+
+/* Tarjetas de Entidades (4 cajas) */
+.entity-card{
+  position: relative;
+  color: #fff;
+  border: 1px solid rgba(0,0,0,.05);
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.entity-card:hover{ transform: translateY(-3px); }
+.entity-card .icon-badge{
+  width: 2.5rem; height: 2.5rem; border-radius: 50%;
+  display: inline-flex; align-items:center; justify-content:center;
+  background: rgba(255,255,255,.18);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.25);
+}
+.entity-card h3, .entity-card p{ color:#fff; }
+
+/* Fondos propios para cada tarjeta */
+.entity-facultades{
+  background:
+    radial-gradient(600px 300px at 100% -20%, rgba(255,202,0,.30), transparent 55%),
+    radial-gradient(700px 320px at -10% 110%, rgba(238,130,25,.22), transparent 60%),
+    linear-gradient(160deg, #2f2a83 0%, #262261 70%);
+}
+.entity-escuelas{
+  background:
+    radial-gradient(500px 260px at 0% -10%, rgba(238,130,25,.24), transparent 55%),
+    radial-gradient(500px 260px at 110% 110%, rgba(255,202,0,.26), transparent 55%),
+    linear-gradient(160deg, #2a276f 0%, #262261 70%);
+}
+.entity-institutos{
+  background:
+    radial-gradient(520px 280px at 90% 0%, rgba(255,202,0,.22), transparent 50%),
+    linear-gradient(140deg, #1f1b4a 0%, #262261 70%);
+}
+.entity-centros{
+  background:
+    radial-gradient(520px 280px at -10% 100%, rgba(238,130,25,.22), transparent 55%),
+    linear-gradient(140deg, #24205c 0%, #262261 70%);
+}
+
+/* Modal entidades (estilo y animación de expansión) */
+.modal-entity .modal-content{
+  background:
+    radial-gradient(700px 320px at 100% -20%, rgba(0, 17, 255, 0.185), transparent 55%),
+    linear-gradient(160deg, #2f2a83 0%, #262261 70%);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.12); border-radius:.9rem;
+  box-shadow: 0 24px 60px rgba(0,0,0,.35);
+  position: relative; overflow: hidden;
+}
+/*Cuando esta expandido*/
+.modal-entity .modal-content:before{
+  content:""; position:absolute; inset:0; padding:1px; border-radius:inherit;
+  background: linear-gradient(135deg, rgba(255, 204, 0, 0.116), rgba(86, 89, 238, 0.548), rgba(38,34,97,.6));
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  pointer-events:none;
+}
+.modal-entity .modal-title{ color:#fff; }
+.modal-entity .modal-title .bi{
+  width:2rem; height:2rem; border-radius:50%; display:inline-flex; align-items:center; justify-content:center;
+  background: rgba(255,255,255,.15); box-shadow: inset 0 0 0 1px rgba(255,255,255,.25);
+}
+.modal-entity .list-group-item{
+  background: transparent; color: #fff; border-color: rgba(255,255,255,.15);
+  display:flex; align-items:center; justify-content:space-between; gap:.75rem;
+}
+.modal-entity .list-group-item:hover{ background: rgba(0,0,0,.18); }
+.modal-entity .list-group-item .bi{ opacity:.9; transition: transform .18s ease, opacity .18s ease; }
+.modal-entity .list-group-item:hover .bi{ transform: translateX(2px) translateY(-1px); opacity:1; }
+.modal-entity .btn-close{ filter: invert(1) grayscale(100%); opacity:.85; }
+.modal-entity .btn-close:hover{ opacity:1; }
+.modal-entity .modal-header{ padding-bottom: .25rem; }
+
+/* Animación spin 180° + scale-in */
+.modal-entity .modal-dialog{ transform: none; opacity: 1; }
+
+/* Backdrop con tinte institucional */
+.modal-backdrop.show{
+  background:
+    radial-gradient(60vw 60vh at 50% 10%, rgba(255,202,0,.10), transparent 50%),
+    rgba(0,0,0,.5);
+  opacity: 1;
+}
+
+/* Respeto a reduced-motion */
+@media (prefers-reduced-motion: reduce){
+  .modal-entity.modal.fade .modal-dialog{
+    transform: scale(.98);
+    transition: transform .25s ease, opacity .25s ease;
+  }
+  .modal-entity.modal.show .modal-dialog{ transform: scale(1); }
+}
+
+/* Flip card (para Facultades) */
+.flip-card{ perspective: 100px; }
+.flip-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+.flip-card.flipped .flip-inner{ transform: rotateY(180deg); }
+.flip-face{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip-back{
+  position: absolute;
+  inset: 0;
+  transform: rotateY(90deg);
+  overflow: hidden;
+}
+.flip-front .icon-badge{ transition: transform .7s ease; }
+.flip-front:hover .icon-badge{ transform: translateY(-2px); }
+
+/* Contenido del reverso */
+.entity-back{
+  display:flex; flex-direction:column; gap:.5rem;
+}
+.entity-list a{
+  display:flex; align-items:center; gap:.5rem;
+  color:#fff; text-decoration:none;
+  padding:.4rem .5rem; border-radius:.35rem;
+  background: rgba(0,0,0,.12);
+}
+.entity-list a:hover{ background: rgba(0,0,0,.2); }
+.entity-list .bi{ opacity:.9; }
+.entity-back .back-action{
+  color:#ffca00; text-decoration:none; font-weight:600;
+}
+.entity-back .back-action:hover{ text-decoration:underline; }
+
+/* Búsqueda compacta en navbar */
+.navbar-search .form-control{ border-radius: 2rem; padding-left: .85rem; padding-right:.85rem; }
+.navbar-search .btn{ border-radius: 2rem; }
+
+/* (Eliminado) Animación de subrayado por opción en navbar */
+
+/* Modal reglamento */
+.modal-reglamento .modal-dialog{
+  transform: translateY(20px);
+  opacity:0;
+  transition: transform .35s ease, opacity .35s ease;
+}
+.modal-reglamento.show .modal-dialog,
+.modal-reglamento.fade.show .modal-dialog{
+  transform: translateY(0);
+  opacity:1;
+}
+.modal-reglamento .modal-content{
+  background: linear-gradient(145deg, rgba(38,34,97,.20) 0%, rgba(255,255,255,1) 70%);
+  border: 1px solid rgba(38,34,97,.18);
+  border-radius: 1rem;
+  box-shadow: 0 24px 60px rgba(12,11,28,.25);
+  overflow: hidden;
+}
+.modal-reglamento .modal-header{ background: rgba(255,255,255,.85); }
+.modal-reglamento .modal-title{ font-weight:700; color:#262261; }
+.modal-reglamento .modal-header .bi{ color: var(--secondary); }
+.modal-reglamento .modal-body{
+  background:#ffffff;
+  border-radius: .75rem;
+}
+.reglamento-downloads{ position: relative; z-index:1; }
+.reglamento-card{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  padding:1rem 1.1rem;
+  border-radius:.85rem;
+  border:1px solid rgba(38,34,97,.12);
+  background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(245,246,252,.9) 100%);
+  text-decoration:none;
+  color:#1f1b4a;
+  box-shadow: 0 14px 24px rgba(38,34,97,.08);
+  position:relative;
+  overflow:hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.reglamento-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 30px rgba(38,34,97,.16);
+}
+.reglamento-card > *{ position:relative; z-index:1; }
+.reglamento-icon{
+  width:3rem; height:3rem;
+  border-radius:.85rem;
+  background: rgba(38,34,97,.1);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color: var(--secondary);
+  font-size:1.35rem;
+}
+.reglamento-arrow{
+  margin-left:auto;
+  color: var(--secondary);
+  font-size:1.4rem;
+  transition: transform .2s ease;
+}
+.reglamento-card:hover .reglamento-arrow{ transform: translateX(4px); }
+.modal-reglamento .modal-footer{
+  background: rgba(255,255,255,.85);
+  border-top:1px solid rgba(38,34,97,.1);
+}
+.reglamento-trigger{
+  position:relative;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.reglamento-trigger:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(38,34,97,.12);
+}

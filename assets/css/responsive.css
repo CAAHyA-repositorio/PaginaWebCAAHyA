@@ -1,0 +1,15 @@
+/* Ajustes responsivos */
+@media (max-width: 767.98px){
+  .hero h1{ font-size: 1.9rem; }
+  .entity-card{ padding: 1.25rem !important; }
+  .team-hero .team-hero-caption{ padding-left: 1rem; padding-right: 1rem; }
+}
+
+@media (max-width: 575.98px){
+  .navbar-brand img{ height:32px; }
+  .navbar-brand .brand-text{ font-size:1.05rem; }
+  .hero h1{ font-size: 1.7rem; }
+  /* Ajustar relación del hero de directorio para pantallas pequeñas */
+  .team-hero .ratio{ --bs-aspect-ratio: 56.25%; }
+}
+

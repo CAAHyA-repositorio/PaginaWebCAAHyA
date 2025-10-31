@@ -92,40 +92,79 @@
           </div>
         </div>
 
-       
-
-        <!-- Entidades dentro del hero para aprovechar el fondo -->
-        <div id="entidades" class="hero-entities mt-4 mt-lg-5">
-          <div class="d-flex align-items-center justify-content-between mb-3 mb-lg-4">
-            <h2 class="mb-0 text-on-dark">Entidades</h2>
+        <div class="hero-comunicados mt-5" aria-labelledby="comunicadosHeading">
+          <div class="hero-comunicados-header d-flex align-items-center justify-content-between gap-3">
+            <h2 id="comunicadosHeading" class="mb-0 text-on-dark">Comunicados</h2>
+            <div class="hero-comunicados-dots" role="group" aria-label="Seleccionar comunicado">
+              <button type="button" class="comunicado-dot active" aria-label="Mostrar comunicado 1" data-index="0" aria-pressed="true"></button>
+              <button type="button" class="comunicado-dot" aria-label="Mostrar comunicado 2" data-index="1" aria-pressed="false"></button>
+              <button type="button" class="comunicado-dot" aria-label="Mostrar comunicado 3" data-index="2" aria-pressed="false"></button>
+            </div>
           </div>
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-            <div class="col">
+          <div class="hero-comunicados-carousel" role="region" aria-live="polite">
+            <div class="comunicado-slide active">
+              <a href="https://www.unam.mx/" class="comunicado-card d-block text-decoration-none" target="_blank" rel="noopener noreferrer">
+                <span class="comunicado-meta">Publicado el 05 de junio de 2024</span>
+                <h3 class="h5 mb-2">UNAM presenta agenda cultural de verano</h3>
+                <p class="mb-3">Consulta las actividades destacadas de la temporada cultural universitaria.</p>
+                <span class="comunicado-link">Ir al comunicado <i class="bi bi-arrow-up-right"></i></span>
+              </a>
+            </div>
+            <div class="comunicado-slide">
+              <a href="https://www.gaceta.unam.mx/" class="comunicado-card d-block text-decoration-none" target="_blank" rel="noopener noreferrer">
+                <span class="comunicado-meta">Publicado el 28 de mayo de 2024</span>
+                <h3 class="h5 mb-2">Convocatoria nacional para proyectos de humanidades</h3>
+                <p class="mb-3">Explora las bases para participar con investigaciones interdisciplinarias.</p>
+                <span class="comunicado-link">Ir al comunicado <i class="bi bi-arrow-up-right"></i></span>
+              </a>
+            </div>
+            <div class="comunicado-slide">
+              <a href="https://cultura.unam.mx/" class="comunicado-card d-block text-decoration-none" target="_blank" rel="noopener noreferrer">
+                <span class="comunicado-meta">Publicado el 16 de mayo de 2024</span>
+                <h3 class="h5 mb-2">Cultura UNAM anuncia residencias artisticas</h3>
+                <p class="mb-3">Revisa las residencias y talleres que se ofreceran durante el semestre.</p>
+                <span class="comunicado-link">Ir al comunicado <i class="bi bi-arrow-up-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="entidades" class="entities-marquee-section py-5">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+          <h2 class="mb-0" style="color:#262261;">Entidades</h2>
+          <p class="mb-0 text-muted small">Da clic para conocer mas sobre cada entidad participante.</p>
+        </div>
+        <div class="entities-marquee" role="region" aria-label="Entidades del Consejo">
+          <div class="entities-track" data-enhanced="false">
+            <div class="entity-slide">
               <a href="#" class="entity-card entity-facultades d-block rounded-min text-decoration-none p-4 h-100 shadow-soft" data-bs-toggle="modal" data-bs-target="#modalFacultades">
                 <div class="icon-badge"><i class="bi bi-mortarboard-fill"></i></div>
                 <h3 class="h5 mt-3 mb-2">Facultades</h3>
                 <p class="mb-0">Programas y escuelas de nivel superior.</p>
               </a>
             </div>
-            <div class="col">
+            <div class="entity-slide">
               <a href="#" class="entity-card entity-escuelas d-block rounded-min text-decoration-none p-4 h-100 shadow-soft" data-bs-toggle="modal" data-bs-target="#modalEscuelas">
                 <div class="icon-badge"><i class="bi bi-journal-bookmark-fill"></i></div>
                 <h3 class="h5 mt-3 mb-2">Escuelas</h3>
-                <p class="mb-0">Formación especializada y profesionalizante.</p>
+                <p class="mb-0">Formacion especializada y profesionalizante.</p>
               </a>
             </div>
-            <div class="col">
+            <div class="entity-slide">
               <a href="#" class="entity-card entity-institutos d-block rounded-min text-decoration-none p-4 h-100 shadow-soft" data-bs-toggle="modal" data-bs-target="#modalInstitutos">
                 <div class="icon-badge"><i class="bi bi-bank"></i></div>
                 <h3 class="h5 mt-3 mb-2">Institutos</h3>
-                <p class="mb-0">Investigación y producción de conocimiento.</p>
+                <p class="mb-0">Investigacion y produccion de conocimiento.</p>
               </a>
             </div>
-            <div class="col">
+            <div class="entity-slide">
               <a href="#" class="entity-card entity-centros d-block rounded-min text-decoration-none p-4 h-100 shadow-soft" data-bs-toggle="modal" data-bs-target="#modalCentros">
                 <div class="icon-badge"><i class="bi bi-collection-fill"></i></div>
                 <h3 class="h5 mt-3 mb-2">Centros</h3>
-                <p class="mb-0">Vinculación y desarrollo académico-cultural.</p>
+                <p class="mb-0">Vinculacion y desarrollo academico-cultural.</p>
               </a>
             </div>
           </div>
@@ -144,9 +183,6 @@
           </div>
           <div class="documents-area" data-expanded="false">
             <div class="documents-carousel" role="region" aria-label="Documentos del consejo">
-              <button type="button" class="documents-nav documents-nav-prev" aria-label="Ver documentos anteriores" disabled>
-                <i class="bi bi-chevron-left"></i>
-              </button>
               <div class="documents-track" role="list" tabindex="0">
                 <div class="document-card" role="listitem">
                   <a class="link-doc p-3 border rounded-min shadow-sm h-100 pleno-trigger" href="#" data-bs-toggle="modal" data-bs-target="#modalPleno">
@@ -230,9 +266,6 @@
                   </a>
                 </div>
               </div>
-              <button type="button" class="documents-nav documents-nav-next" aria-label="Ver documentos siguientes">
-                <i class="bi bi-chevron-right"></i>
-              </button>
             </div>
           </div>
         </div>
@@ -1000,6 +1033,92 @@
     <script src="assets/js/main.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
+        const comunicadoSlides = Array.from(document.querySelectorAll('.hero-comunicados .comunicado-slide'));
+        const comunicadoDots = Array.from(document.querySelectorAll('.hero-comunicados .comunicado-dot'));
+        const comunicadoCarousel = document.querySelector('.hero-comunicados-carousel');
+
+        if (comunicadoSlides.length > 1) {
+          let activeIndex = comunicadoSlides.findIndex((slide) => slide.classList.contains('active'));
+          if (activeIndex < 0) activeIndex = 0;
+          let autoTimer;
+
+          const syncDots = () => {
+            comunicadoDots.forEach((dot, index) => {
+              const isActive = index === activeIndex;
+              dot.classList.toggle('active', isActive);
+              dot.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            });
+          };
+
+          const setActiveSlide = (nextIndex) => {
+            if (nextIndex === activeIndex) return;
+            comunicadoSlides[activeIndex].classList.remove('active');
+            activeIndex = nextIndex;
+            comunicadoSlides[activeIndex].classList.add('active');
+            syncDots();
+          };
+
+          const goTo = (index) => {
+            const nextIndex = (index + comunicadoSlides.length) % comunicadoSlides.length;
+            setActiveSlide(nextIndex);
+          };
+
+          const nextSlide = () => goTo(activeIndex + 1);
+
+          const startAuto = () => {
+            clearInterval(autoTimer);
+            autoTimer = window.setInterval(nextSlide, 3000);
+          };
+
+          const pauseAuto = () => {
+            clearInterval(autoTimer);
+          };
+
+          comunicadoDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+              goTo(index);
+              startAuto();
+            });
+            dot.addEventListener('keydown', (event) => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                goTo(index);
+                startAuto();
+              }
+            });
+          });
+
+          if (comunicadoCarousel) {
+            ['mouseenter', 'focusin'].forEach((type) => {
+              comunicadoCarousel.addEventListener(type, pauseAuto);
+            });
+            ['mouseleave', 'focusout'].forEach((type) => {
+              comunicadoCarousel.addEventListener(type, startAuto);
+            });
+          }
+
+          syncDots();
+          startAuto();
+        }
+
+        const entitiesTrack = document.querySelector('.entities-track');
+        if (entitiesTrack && entitiesTrack.children.length > 0 && entitiesTrack.dataset.enhanced !== 'true') {
+          const slides = Array.from(entitiesTrack.children);
+          slides.forEach((slide) => {
+            const clone = slide.cloneNode(true);
+            clone.setAttribute('data-duplicate', 'true');
+            entitiesTrack.appendChild(clone);
+          });
+          entitiesTrack.dataset.enhanced = 'true';
+
+          const marqueeWrapper = entitiesTrack.parentElement;
+          if (marqueeWrapper) {
+            const distance = entitiesTrack.scrollWidth / 2;
+            const seconds = Math.max(18, distance / 100);
+            entitiesTrack.style.setProperty('--entities-marquee-duration', `${seconds}s`);
+          }
+        }
+
         const docsConfig = {
           reglamentos: [
             {

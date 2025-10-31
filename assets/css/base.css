@@ -60,3 +60,6 @@ h3{ font-size: clamp(1.05rem, .7vw + .9rem, 1.25rem); }
   font-weight:600;
 }
 
+/* util de color de fondo secundario */
+.bg-secondary-ca{ background: var(--secondary) !important; }
+

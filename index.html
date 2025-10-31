@@ -158,6 +158,15 @@
                   </a>
                 </div>
                 <div class="document-card" role="listitem">
+                  <a class="link-doc p-3 border rounded-min shadow-sm h-100" href="#modalDirectorio" data-bs-toggle="modal" data-bs-target="#modalDirectorio" role="button">
+                    <i class="bi bi-people text-secondary-ca fs-3"></i>
+                    <div>
+                      <div class="fw-bold">Directorio</div>
+                      <small class="text-muted">Integrantes y contactos actualizados</small>
+                    </div>
+                  </a>
+                </div>
+                <div class="document-card" role="listitem">
                   <a class="link-doc p-3 border rounded-min shadow-sm h-100" href="#modalActas" data-bs-toggle="modal" data-bs-target="#modalActas" role="button">
                     <i class="bi bi-journal-text text-secondary-ca fs-3"></i>
                     <div>
@@ -283,7 +292,7 @@
           <div class="modal-footer border-0 justify-content-between">
             <div class="d-flex align-items-center gap-2 text-muted">
               <i class="bi bi-info-circle"></i>
-              <small>Los documentos se actualizan trimestralmente.</small>
+              <small>Los documentos se encuentran actualizados.</small>
             </div>
             <button type="button" class="btn btn-secondary-ca" data-bs-dismiss="modal">Cerrar</button>
           </div>
@@ -306,18 +315,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
           </div>
           <div class="modal-body">
-            <div class="row g-3 reglamento-downloads">
-              <div class="col-12 col-md-6">
-                <a class="reglamento-card" href="directorio.html">
-                  <div class="reglamento-icon"><i class="bi bi-people-fill"></i></div>
-                  <div>
-                    <h6 class="mb-1">Directorio del Consejo</h6>
-                    <small>Consulta la integraci&oacute;n y datos de contacto actualizados.</small>
-                  </div>
-                  <span class="reglamento-arrow"><i class="bi bi-arrow-up-right-circle-fill"></i></span>
-                </a>
-              </div>
-            </div>
+            <div class="row g-3 reglamento-downloads" data-docs="actas"></div>
           </div>
           <div class="modal-footer border-0 justify-content-between">
             <div class="d-flex align-items-center gap-2 text-muted">
@@ -325,6 +323,32 @@
               <small>Los recursos de esta secci&oacute;n se actualizan peri&oacute;dicamente.</small>
             </div>
             <button type="button" class="btn btn-secondary-ca" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Directorio -->
+    <div class="modal fade modal-directorio" id="modalDirectorio" tabindex="-1" aria-labelledby="modalDirectorioLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <div>
+              <h5 class="modal-title mb-1 d-flex align-items-center gap-2" id="modalDirectorioLabel">
+                <i class="bi bi-people"></i>
+                Directorio del Consejo
+              </h5>
+              <p class="mb-0 text-muted">Consulta la integraci&oacute;n completa y los datos de contacto oficiales.</p>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <div class="ratio ratio-4x3 border rounded-min shadow-soft overflow-hidden">
+              <iframe src="directorio.html" title="Directorio del Consejo Acad&eacute;mico" class="w-100 h-100" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <div class="modal-footer border-0 justify-content-end">
+            <a class="btn btn-outline-secondary" href="directorio.html" target="_blank" rel="noopener">Abrir en nueva pesta&ntilde;a</a>
           </div>
         </div>
       </div>
@@ -370,7 +394,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Profesor: Dr. José Gerardo Guízar Bermúdez</li>
                         <li>Profesora: Arq. Elodia Gómez Maqueo Rojas</li>
@@ -387,7 +411,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Profesor: Lic. Manuel Gerardo Alonso Ulloa</li>
                         <li>Profesora suplente: Lic. María del Carmen Mendoza Chávez</li>
@@ -404,7 +428,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Profesora: Mtra. Julia Edith Constantino Reyes</li>
                         <li>Alumno: José Luis Segura Morales</li>
@@ -420,7 +444,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Profesor: Mtro. Ignacio Daniel Mariscal Martínez</li>
                         <li>Profesora suplente: Mtra. Viktoria Horti Pasztor</li>
@@ -437,7 +461,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Profesor: Dr. David Fragoso Franco</li>
                         <li>Profesor suplente: Dr. José Luis Caballero Facio</li>
@@ -454,7 +478,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Profesor: Dr. Carlos Chávez Aguilera</li>
                         <li>Profesora suplente: Dra. Mónica Morales Barrera</li>
@@ -471,7 +495,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Profesora: Mtra. Huberta Márquez Villeda</li>
                         <li>Profesor suplente: Mtro. Sergio Omar Terán Ramírez</li>
@@ -493,7 +517,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Profesor: Mtro. Leonardo Arturo Rivas Rivas</li>
                         <li>Profesora Suplente: Dra. Arlene Iskra García Vázquez</li>
@@ -510,7 +534,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Profesor: Dr. Francisco Fricke Martin</li>
                         <li>Profesora Suplente: Mtra. Daniela Huda Tarhuni Navarro</li>
@@ -525,7 +549,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Profesora: Mtra. Berenice Araceli Granados Vázquez</li>
                         <li>Profesora Suplente: Dra. Cecilia López Ridaura</li>
@@ -542,7 +566,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Profesora: Mtra. Aurora Lourdes Ojeda Coronado</li>
                         <li>Profesor Suplente: Mtro. Jorge Arturo García González</li>
@@ -559,7 +583,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Profesora: Dra. Eréndira Dolores Camarena Ortiz</li>
                         <li>Profesor Suplente: Dr. José Martín Gasca García</li>
@@ -576,7 +600,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                       </ul>
                     </div>
@@ -594,7 +618,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Investigadora: Dra. Ramona Isabel Pérez Bertruy</li>
                         <li>Investigadora suplente: Dra. Irma Lombardo García</li>
@@ -609,7 +633,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Investigador: Dr. Ariel Alejandro Rodríguez García</li>
                         <li>Investigadora suplente: Dra. Adriana Suárez Sánchez</li>
@@ -624,7 +648,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Investigador: Dr. Jaime Genaro Cuadriello Aguilar</li>
                         <li>Investigadora suplente: Dra. Verónica Hernández Díaz</li>
@@ -639,7 +663,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Investigadora: Dr. José Rafael Mondragón Velázquez</li>
                       </ul>
@@ -653,7 +677,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Investigador: Dra. María Teresa Rodríguez González</li>
                         <li>Investigador suplente: Dr. Juan Espíndola Mata</li>
@@ -668,7 +692,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Investigador: Dra. María Dolores Lorenzo Río</li>
                         <li>Investigadora suplente: Dra. Estela Roselló Soberón</li>
@@ -683,7 +707,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Investigador: Dr. Jesús García Reyes</li>
                         <li>Investigador: Dra. Leticia Pogliaghi</li>
@@ -698,7 +722,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Investigador: Dr. Jesús García Reyes</li>
                         <li>Investigador: Dra. Leticia Pogliaghi</li>
@@ -718,7 +742,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Investigadora: Dra. Gaja Joanna Makaran Kubis</li>
                         <li>Investigador suplente: Dr. Fernando Neira Orjuela</li>
@@ -733,7 +757,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Investigadora: Dra. Lucía Ciccia</li>
                       </ul>
@@ -747,7 +771,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Investigadora: Dra. Sandra Lucía Sánchez Ramírez</li>
                         <li>Investigadora: Dr. Jorge Arturo Taracena Arriola</li>
@@ -766,7 +790,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Profesora: Dra. María Teresa Ruiz García</li>
                         <li>Profesor: Lic. Enrique Escalante Campos</li>
@@ -785,7 +809,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Alumna: Lic. Mariana Becerril Trejo</li>
                         <li>Alumno suplente: Lic. Daniel González Escobar</li>
@@ -806,7 +830,7 @@
                       </div>
                       <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
                     </button>
-                    <div class="pleno-card-body" hidden>
+                    <div class="pleno-card-body">
                       <ul class="pleno-entity-members">
                         <li>Técnica Académica:Mtra. Eva Leticia Ortiz Ávalo</li>
                         <li>Técnica Académica Suplente: Mtra. María Antonieta Rodríguez Rivera</li>
@@ -974,8 +998,132 @@
     <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/animejs/anime.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const docsConfig = {
+          reglamentos: [
+            {
+              title: 'ESTATUTO GENERAL DE LA UNAM',
+              description: 'CONSULTAR',
+              href: 'https://www.abogadogeneral.unam.mx/sites/default/files/archivos/LegUniv/3-EstatutoGeneral_rem38_021220.pdf',
+              icon: 'bi bi-file-earmark-text-fill',
+              arrowIcon: 'bi bi-arrow-down-circle-fill',
+              targetBlank: true
+            },
+            {
+              title: 'REGLAMENTO INTERNO DE LOS CONSEJOS ACADÉMICOS DE ÁREA',
+              description: 'CONSULTAR',
+              href: 'https://www.abogadogeneral.unam.mx/sites/default/files/archivos/LegUniv/ReglamentoInternoConsejosAcademicosArea_090424.pdf',
+              icon: 'bi bi-file-earmark-text-fill',
+              arrowIcon: 'bi bi-arrow-down-circle-fill',
+              targetBlank: true
+            },
+            {
+              title: 'REGLAMENTO GENERAL PARA LA PRESENTACIÓN Y APROBACIÓN DE PLANES Y PROGRAMAS DE ESTUDIO',
+              description: 'CONSULTAR',
+              href: 'https://www.caahya.unam.mx/wp-content/uploads/2023/09/RGPAPPE.pdf',
+              icon: 'bi bi-file-earmark-text-fill',
+              arrowIcon: 'bi bi-arrow-down-circle-fill',
+              targetBlank: true
+            },
+            {
+              title: 'REQUISITOS GENERALES PARA FUNGIR COMO MIEMBRO DE LAS COMISIONES DICTAMINADORAS DEL ÁREA DE LAS HUMANIDADES Y DE LAS ARTES',
+              description: 'CONSULTAR',
+              href: 'https://www.caahya.unam.mx/wp-content/uploads/2025/05/Requisitos-generales.pdf',
+              icon: 'bi bi-file-earmark-text-fill',
+              arrowIcon: 'bi bi-arrow-down-circle-fill',
+              targetBlank: true
+            },
+            {
+              title: 'REGLAMENTO PARA LA ELECCIÓN DE CONSEJEROS ACADÉMICOS DE ÁREA Y DEL BACHILLERATO REPRESENTANTES DE PROFESORES, INVESTIGADORES, TÉCNICOS ACADÉMICOS Y ALUMNOS',
+              description: 'CONSULTAR',
+              href: 'https://www.abogadogeneral.unam.mx/sites/default/files/archivos/LegUniv/18-ReglamentoEleccionConsejerosAcademicosBachilleratoRepresentantesProfesoresInvestigadoresTecnicosAcademicosAlumnos_rem38_021220.pdf',
+              icon: 'bi bi-file-earmark-text-fill',
+              arrowIcon: 'bi bi-arrow-down-circle-fill',
+              targetBlank: true
+            },
+            {
+              title: 'NORMAS DE APLICACIÓN Y PROCEDIMIENTO DE LOS REGLAMENTOS PARA LA ELECCIÓN DE CONSEJEROS UNIVERSITARIOS Y TÉCNICOS, Y PARA LA ELECCIÓN DE CONSEJEROS ACADÉMICOS DE ÁREA Y DEL BACHILLERATO, REPRESENTANTES DE PROFESORES, INVESTIGADORES Y ALUMNOS',
+              description: 'CONSULTAR',
+              href: 'https://www.abogadogeneral.unam.mx/sites/default/files/archivos/LegUniv/6-NormasAplicacionProcedimientoReglamentosEleccionConsejerosUniversitariosTecnicosEleccionConsejerosAcademicosBachilleratoRepresentantesProfesoresInvestigadoresAlumnos_rem38_021220.pdf',
+              icon: 'bi bi-file-earmark-text-fill',
+              arrowIcon: 'bi bi-arrow-down-circle-fill',
+              targetBlank: true
+            },
+            {
+              title: 'LINEAMIENTOS Y CRITERIOS GENERALES DE EVALUACIÓN DEL PEDPACMET',
+              description: 'CONSULTAR',
+              href: 'https://www.caahya.unam.mx/wp-content/uploads/2025/04/LINEAMIENTOS-Y-CRITERIOS-GENERALES-CAAHyA-PEDPACMET.pdf',
+              icon: 'bi bi-file-earmark-text-fill',
+              arrowIcon: 'bi bi-arrow-down-circle-fill',
+              targetBlank: true
+            }
+          ],
+          actas: [
+            {
+              title: 'Directorio del Consejo',
+              description: 'Consulta la integración y datos de contacto actualizados.',
+              href: 'directorio.html',
+              icon: 'bi bi-people-fill',
+              arrowIcon: 'bi bi-arrow-up-right-circle-fill'
+            }
+          ]
+        };
+
+        const createDocCard = (item) => {
+          const col = document.createElement('div');
+          col.className = 'col-12 col-md-6';
+
+          const link = document.createElement('a');
+          link.className = 'reglamento-card';
+          link.href = item.href;
+          if (item.targetBlank) {
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+          }
+
+          const iconWrap = document.createElement('div');
+          iconWrap.className = 'reglamento-icon';
+          iconWrap.innerHTML = `<i class="${item.icon}"></i>`;
+
+          const textWrap = document.createElement('div');
+
+          const titleEl = document.createElement('h6');
+          titleEl.className = 'mb-1';
+          titleEl.textContent = item.title;
+
+          const descEl = document.createElement('small');
+          descEl.textContent = item.description;
+
+          textWrap.appendChild(titleEl);
+          textWrap.appendChild(descEl);
+
+          const arrowWrap = document.createElement('span');
+          arrowWrap.className = 'reglamento-arrow';
+          arrowWrap.innerHTML = `<i class="${item.arrowIcon}"></i>`;
+
+          link.appendChild(iconWrap);
+          link.appendChild(textWrap);
+          link.appendChild(arrowWrap);
+
+          col.appendChild(link);
+          return col;
+        };
+
+        document.querySelectorAll('[data-docs]').forEach((container) => {
+          const key = container.getAttribute('data-docs');
+          const entries = docsConfig[key];
+          if (!entries) return;
+
+          const fragment = document.createDocumentFragment();
+          entries.forEach((item) => fragment.appendChild(createDocCard(item)));
+          container.appendChild(fragment);
+        });
+      });
+    </script>
   </body>
 </html>
+
 
 
 

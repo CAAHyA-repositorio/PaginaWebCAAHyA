@@ -143,31 +143,96 @@ document.addEventListener('DOMContentLoaded', function(){
   const cards = document.querySelectorAll('[data-pleno-card]');
   if(!cards.length) return;
 
-  let autoId = 0;
-  cards.forEach((card)=>{
+  const resizeHandlers = [];
+
+  cards.forEach((card, index)=>{
     const header = card.querySelector('.pleno-card-header');
     const body = card.querySelector('.pleno-card-body');
     if(!header || !body) return;
 
+    header.type = 'button';
+    header.classList.add('pleno-card-front');
+    body.classList.add('pleno-card-back');
+    body.hidden = false;
+    body.setAttribute('aria-hidden', 'true');
+    body.setAttribute('tabindex', '0');
+
     if(!body.id){
-      autoId += 1;
-      body.id = `pleno-card-panel-${autoId}`;
+      body.id = `pleno-card-panel-${index + 1}`;
     }
     header.setAttribute('aria-controls', body.id);
+
+    let flip = card.querySelector('.pleno-card-flip');
+    if(!flip){
+      flip = document.createElement('div');
+      flip.className = 'pleno-card-flip';
+      card.prepend(flip);
+    }
+    if(!flip.contains(header)){
+      flip.append(header);
+    }
+    if(!flip.contains(body)){
+      flip.append(body);
+    }
+
+    if(!body.querySelector('.pleno-card-back-title')){
+      const title = document.createElement('h6');
+      title.className = 'pleno-card-back-title';
+      title.textContent = 'Profesores y alumnos';
+      body.prepend(title);
+    }
+
+    const updateHeight = ()=>{
+      const frontHeight = header.offsetHeight;
+      const backHeight = body.scrollHeight;
+      flip.style.minHeight = `${Math.max(frontHeight, backHeight)}px`;
+    };
 
     const setOpen = (open)=>{
       card.dataset.open = open ? 'true' : 'false';
       header.setAttribute('aria-expanded', open ? 'true' : 'false');
-      body.hidden = !open;
       card.classList.toggle('is-open', open);
+      body.setAttribute('aria-hidden', open ? 'false' : 'true');
+
+      if(!open){
+        body.blur();
+      }
+      updateHeight();
     };
 
     setOpen(false);
+    updateHeight();
+
+    const onResize = ()=> updateHeight();
+    window.addEventListener('resize', onResize);
+    resizeHandlers.push(onResize);
 
     header.addEventListener('click', ()=>{
       const isOpen = card.dataset.open === 'true';
-      setOpen(!isOpen);
+      const nextState = !isOpen;
+      setOpen(nextState);
+      if(nextState){
+        body.focus({ preventScroll: true });
+      }else{
+        header.focus({ preventScroll: true });
+      }
     });
+
+    body.addEventListener('click', ()=>{
+      setOpen(false);
+      header.focus({ preventScroll: true });
+    });
+
+    body.addEventListener('keydown', (event)=>{
+      if(event.key === 'Escape'){
+        setOpen(false);
+        header.focus({ preventScroll: true });
+      }
+    });
+  });
+
+  window.addEventListener('beforeunload', ()=>{
+    resizeHandlers.forEach((handler)=> window.removeEventListener('resize', handler));
   });
 });
   // ===== Modales: animaciones con Anime.js =====

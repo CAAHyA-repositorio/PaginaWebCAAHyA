@@ -15,11 +15,13 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
   </head>
   <body>
+    <!--Overlay-->
     <div id="pageTransition" class="page-transition active" aria-hidden="false">
       <img src="assets/img/LogoAzulOscuro_Completo.png" alt="CAAHYA">
     </div>
     <a class="skip-link" href="#contenidoPrincipal">Saltar al contenido</a>
 
+    <!-- Barra de navegacion-->
     <nav class="navbar navbar-expand-lg navbar-ca sticky-top" aria-label="Navegación principal">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Inicio CAAHYA">
@@ -42,7 +44,7 @@
             <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="index.html#documentos">Documentos</a></li>
             <li class="nav-item"><a class="nav-link" href="directorio.html">Directorio</a></li>
-            <li class="nav-item"><a class="nav-link" href="procesoConsejo.html">Proceso del Consejo.</a></li>
+            <li class="nav-item"><a class="nav-link" href="procesoConsejo.html">Proceso del Consejo</a></li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="comisiones.html">Comisiones</a></li>
           </ul>
           <form id="navbarSearchForm" class="d-flex navbar-search" role="search" aria-label="Buscar en el sitio" action="search.html" method="get">
@@ -95,7 +97,7 @@
           </div>
           <div class="row g-4" id="permanentesAccordion">
             <div class="col-12 col-md-6 col-xl-3">
-              <a class="commission-card" data-bs-toggle="modal" data-bs-target="#modalComisionPermanente" role="button">
+              <a class="commission-card" href="#modalComisionPermanente" data-bs-toggle="modal" data-bs-target="#modalComisionPermanente" role="button">
                 <div class="commission-card-media">
                   <img src="assets/img/procesos/proceso-comisiones-dictaminadoras.svg" alt="Comisi&oacute;n Permanente de Personal Acad&eacute;mico">
                 </div>
@@ -107,7 +109,7 @@
               </a>
             </div>
             <div class="col-12 col-md-6 col-xl-3">
-              <a class="commission-card" data-bs-toggle="modal" data-bs-target="#modalComisionEvaluadora" role="button">
+              <a class="commission-card" href="#modalComisionEvaluadora" data-bs-toggle="modal" data-bs-target="#modalComisionEvaluadora" role="button">
                 <div class="commission-card-media">
                   <img src="assets/img/procesos/proceso-comisiones-evaluadoras-pride.svg" alt="Comisi&oacute;n Evaluadora del PRIDE">
                 </div>
@@ -119,7 +121,7 @@
               </a>
             </div>
             <div class="col-12 col-md-6 col-xl-3">
-              <a class="commission-card" data-bs-toggle="modal" data-bs-target="#modalComisionDictaminadora" role="button">
+              <a class="commission-card" href="#modalComisionDictaminadora" data-bs-toggle="modal" data-bs-target="#modalComisionDictaminadora" role="button">
                 <div class="commission-card-media">
                   <img src="assets/img/procesos/proceso-comision-pride.svg" alt="Comisi&oacute;n Dictaminadora Integral">
                 </div>
@@ -131,7 +133,7 @@
               </a>
             </div>
             <div class="col-12 col-md-6 col-xl-3">
-              <a class="commission-card" data-bs-toggle="modal" data-bs-target="#modalComisionSeguimiento" role="button">
+              <a class="commission-card" href="#modalComisionSeguimiento" data-bs-toggle="modal" data-bs-target="#modalComisionSeguimiento" role="button">
                 <div class="commission-card-media">
                   <img src="assets/img/procesos/proceso-eximir-grado-pride.svg" alt="Comisi&oacute;n de Seguimiento Curricular">
                 </div>
@@ -145,6 +147,10 @@
           </div>
         </div>
       </section>
+
+
+
+      
       <!-- Comisiones Especiales -->
       <section id="especiales" class="commission-section py-5 section-formal-light">
         <div class="container">
@@ -154,98 +160,614 @@
               <p class="mb-0 text-muted">Grupos temporales que atienden proyectos estrat&eacute;gicos o necesidades espec&iacute;ficas con alcance definido.</p>
             </div>
           </div>
-          <div class="row g-4" id="especialesAccordion">
-            <div class="col-12 col-md-6 col-xl-3">
-              <button type="button" class="commission-card commission-card-toggle" data-bs-toggle="collapse" data-bs-target="#commissionEspecial1" aria-expanded="false" aria-controls="commissionEspecial1">
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="#modalComisionLenguas" data-bs-toggle="modal" data-bs-target="#modalComisionLenguas" role="button">
                 <div class="commission-card-media">
                   <img src="assets/img/procesos/proceso-comision-lenguas.svg" alt="Comisi&oacute;n Especial de Lenguas">
                 </div>
                 <div class="commission-card-body">
                   <h3 class="commission-card-title">Comisi&oacute;n Especial de Lenguas</h3>
                   <p class="commission-card-text">Dise&ntilde;a estrategias para fortalecer la ense&ntilde;anza y certificaci&oacute;n de lenguas.</p>
-                  <span class="commission-card-action">Ver documentos <i class="bi bi-plus-lg ms-1"></i></span>
+                  <span class="commission-card-action">Ver detalles <i class="bi bi-arrow-up-right ms-1"></i></span>
                 </div>
-              </button>
-              <div class="collapse commission-card-panel" id="commissionEspecial1" data-bs-parent="#especialesAccordion">
-                <div class="commission-card-panel-inner">
-                  <div class="commission-detail-group">
-                    <h6>Documentos</h6>
-                    <ul class="commission-doc-list">
-                      <li><a href="https://www.caahya.unam.mx/wp-content/uploads/2023/03/Flujos-de-la-CPPA-1.pdf" target="_blank" rel="noopener">Flujo CPPA &mdash; Comisi&oacute;n especial de lenguas</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
-            <div class="col-12 col-md-6 col-xl-3">
-              <button type="button" class="commission-card commission-card-toggle" data-bs-toggle="collapse" data-bs-target="#commissionEspecial2" aria-expanded="false" aria-controls="commissionEspecial2">
-                <div class="commission-card-media">
-                  <img src="assets/img/procesos/proceso-comision-revisora-pride.svg" alt="Comisi&oacute;n Revisora PRIDE">
-                </div>
-                <div class="commission-card-body">
-                  <h3 class="commission-card-title">Comisi&oacute;n Revisora PRIDE</h3>
-                  <p class="commission-card-text">Analiza casos extraordinarios y solicitudes de reconsideraci&oacute;n dentro del programa PRIDE.</p>
-                  <span class="commission-card-action">Ver documentos <i class="bi bi-plus-lg ms-1"></i></span>
-                </div>
-              </button>
-              <div class="collapse commission-card-panel" id="commissionEspecial2" data-bs-parent="#especialesAccordion">
-                <div class="commission-card-panel-inner">
-                  <div class="commission-detail-group">
-                    <h6>Documentos</h6>
-                    <ul class="commission-doc-list">
-                      <li><a href="https://www.caahya.unam.mx/wp-content/uploads/2023/03/Flujos-de-la-CPPA-3.pdf" target="_blank" rel="noopener">Flujo CPPA &mdash; Comisi&oacute;n revisora del PRIDE</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl-3">
-              <button type="button" class="commission-card commission-card-toggle" data-bs-toggle="collapse" data-bs-target="#commissionEspecial3" aria-expanded="false" aria-controls="commissionEspecial3">
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="#modalComisionInnovacion" data-bs-toggle="modal" data-bs-target="#modalComisionInnovacion" role="button">
                 <div class="commission-card-media">
                   <img src="assets/img/procesos/proceso-comisiones-dictaminadoras.svg" alt="Comisi&oacute;n de Innovaci&oacute;n Pedag&oacute;gica">
                 </div>
                 <div class="commission-card-body">
                   <h3 class="commission-card-title">Comisi&oacute;n de Innovaci&oacute;n Pedag&oacute;gica</h3>
                   <p class="commission-card-text">Promueve buenas pr&aacute;cticas de docencia h&iacute;brida y recursos educativos abiertos.</p>
-                  <span class="commission-card-action">Ver documentos <i class="bi bi-plus-lg ms-1"></i></span>
+                  <span class="commission-card-action">Ver detalles <i class="bi bi-arrow-up-right ms-1"></i></span>
                 </div>
-              </button>
-              <div class="collapse commission-card-panel" id="commissionEspecial3" data-bs-parent="#especialesAccordion">
-                <div class="commission-card-panel-inner">
-                  <div class="commission-detail-group">
-                    <h6>Documentos</h6>
-                    <ul class="commission-doc-list">
-                      <li><a href="https://www.caahya.unam.mx/wp-content/uploads/2023/11/Proceso-Planes-y-Programas-de-Estudio-3.pdf" target="_blank" rel="noopener">Proceso &mdash; Innovaci&oacute;n de planes y programas</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
-            <div class="col-12 col-md-6 col-xl-3">
-              <button type="button" class="commission-card commission-card-toggle" data-bs-toggle="collapse" data-bs-target="#commissionEspecial4" aria-expanded="false" aria-controls="commissionEspecial4">
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="#modalComisionPosgrados" data-bs-toggle="modal" data-bs-target="#modalComisionPosgrados" role="button">
                 <div class="commission-card-media">
                   <img src="assets/img/procesos/proceso-comision-pride.svg" alt="Comisi&oacute;n de Enlace con Posgrados">
                 </div>
                 <div class="commission-card-body">
                   <h3 class="commission-card-title">Comisi&oacute;n de Enlace con Posgrados</h3>
                   <p class="commission-card-text">Coordina la colaboraci&oacute;n entre programas de posgrado y el Consejo Acad&eacute;mico.</p>
-                  <span class="commission-card-action">Ver documentos <i class="bi bi-plus-lg ms-1"></i></span>
+                  <span class="commission-card-action">Ver detalles <i class="bi bi-arrow-up-right ms-1"></i></span>
                 </div>
-              </button>
-              <div class="collapse commission-card-panel" id="commissionEspecial4" data-bs-parent="#especialesAccordion">
-                <div class="commission-card-panel-inner">
-                  <div class="commission-detail-group">
-                    <h6>Documentos</h6>
-                    <ul class="commission-doc-list">
-                      <li><a href="https://www.caahya.unam.mx/wp-content/uploads/2023/11/Proceso-Planes-y-Programas-de-Estudio-5.pdf" target="_blank" rel="noopener">Proceso &mdash; Enlace con posgrados</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
       </section>
+    </div>
+    <!-- Modal Comision Especial de Lenguas -->
+    <div class="modal fade modal-commission" id="modalComisionLenguas" tabindex="-1" aria-labelledby="modalComisionLenguasLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <div>
+              <h5 class="modal-title d-flex align-items-center gap-2 mb-1" id="modalComisionLenguasLabel">
+                <i class="bi bi-translate"></i>
+                Comisi&oacute;n Especial de Lenguas
+              </h5>
+              <p class="mb-0 text-muted">Plantilla para documentar la composici&oacute;n, ejes y materiales de la Comisi&oacute;n Especial de Lenguas.</p>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <div class="commission-modal-body">
+              <section class="commission-modal-section">
+                <h6 class="commission-modal-section-title">INTEGRANTES</h6>
+                <div class="commission-accordion" id="accordionComisionLenguas">
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#clCoordinacion" aria-expanded="false" aria-controls="clCoordinacion">
+                      <span>COORDINACI&Oacute;N GENERAL</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="clCoordinacion" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionLenguas">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Registra a la persona que preside la comisi&oacute;n.</li>
+                        <li>Pendiente de actualizar &mdash; Incluye enlaces acad&eacute;micos o administrativos responsables.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#clAcademicos" aria-expanded="false" aria-controls="clAcademicos">
+                      <span>ESPECIALISTAS EN LENGUAS</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="clAcademicos" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionLenguas">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Lista docentes titulares con idioma, adscripci&oacute;n y rol.</li>
+                        <li>Pendiente de actualizar &mdash; Anota suplencias o asesor&iacute;as externas.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#clEstudiantes" aria-expanded="false" aria-controls="clEstudiantes">
+                      <span>REPRESENTACI&Oacute;N ESTUDIANTIL</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="clEstudiantes" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionLenguas">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Agrega estudiantes propietarios con programa de procedencia.</li>
+                        <li>Pendiente de actualizar &mdash; Agrega suplencias y vigencia.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="commission-modal-section">
+                <h6 class="commission-modal-section-title">DOCUMENTOS</h6>
+                <div class="row g-3 commission-doc-grid">
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-text"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Lineamientos de idiomas</h6>
+                        <small>Reemplaza con manuales o criterios vigentes</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-spreadsheet"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Registro de certificaciones</h6>
+                        <small>Actualiza con hojas de control o tableros</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Programas y convocatorias</h6>
+                        <small>Sustituye con convocatorias o calendarios oficiales</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-person"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Contacto y soporte</h6>
+                        <small>Agrega datos de contacto o enlaces de apoyo</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="modal-footer border-0 justify-content-between">
+            <div class="d-flex align-items-center gap-2 text-muted">
+              <i class="bi bi-info-circle"></i>
+              <small>Actualiza con la informaci&oacute;n validada antes de publicar.</small>
+            </div>
+            <button type="button" class="btn btn-secondary-ca" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Comision de Innovacion Pedagogica -->
+    <div class="modal fade modal-commission" id="modalComisionInnovacion" tabindex="-1" aria-labelledby="modalComisionInnovacionLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <div>
+              <h5 class="modal-title d-flex align-items-center gap-2 mb-1" id="modalComisionInnovacionLabel">
+                <i class="bi bi-lightbulb"></i>
+                Comisi&oacute;n de Innovaci&oacute;n Pedag&oacute;gica
+              </h5>
+              <p class="mb-0 text-muted">Personaliza este modal con la informaci&oacute;n de proyectos, integrantes y productos de la comisi&oacute;n.</p>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <div class="commission-modal-body">
+              <section class="commission-modal-section">
+                <h6 class="commission-modal-section-title">INTEGRANTES</h6>
+                <div class="commission-accordion" id="accordionComisionInnovacion">
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#ciCoordinacion" aria-expanded="false" aria-controls="ciCoordinacion">
+                      <span>COORDINACI&Oacute;N DEL PROYECTO</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="ciCoordinacion" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionInnovacion">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Registra a la presidencia o enlace institucional.</li>
+                        <li>Pendiente de actualizar &mdash; Incluye responsables de cada eje de innovaci&oacute;n.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#ciAcademicos" aria-expanded="false" aria-controls="ciAcademicos">
+                      <span>DOCENTES Y DISE&Ntilde;ADORES</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="ciAcademicos" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionInnovacion">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Lista titulares con su entidad y rol dentro del equipo.</li>
+                        <li>Pendiente de actualizar &mdash; Agrega suplencias o colaboradores especialistas.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#ciSoporte" aria-expanded="false" aria-controls="ciSoporte">
+                      <span>APOYO T&Eacute;CNICO</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="ciSoporte" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionInnovacion">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Registra especialistas en tecnolog&iacute;as educativas.</li>
+                        <li>Pendiente de actualizar &mdash; Incluye enlaces de soporte audiovisual o de plataformas.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="commission-modal-section">
+                <h6 class="commission-modal-section-title">DOCUMENTOS</h6>
+                <div class="row g-3 commission-doc-grid">
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-slides"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Presentaciones de proyectos</h6>
+                        <small>Reemplaza con diapositivas o videos demostrativos</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Protocolos y gu&iacute;as</h6>
+                        <small>Actualiza con manuales o lineamientos aprobados</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-bar-graph"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Indicadores de seguimiento</h6>
+                        <small>Integra reportes de evaluaci&oacute;n o tableros estad&iacute;sticos</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-zip"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Repositorio de recursos</h6>
+                        <small>Incluye carpetas comprimidas o bancos de materiales</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="modal-footer border-0 justify-content-between">
+            <div class="d-flex align-items-center gap-2 text-muted">
+              <i class="bi bi-info-circle"></i>
+              <small>Completa la informaci&oacute;n antes de divulgarla al p&uacute;blico.</small>
+            </div>
+            <button type="button" class="btn btn-secondary-ca" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Comision de Enlace con Posgrados -->
+    <div class="modal fade modal-commission" id="modalComisionPosgrados" tabindex="-1" aria-labelledby="modalComisionPosgradosLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <div>
+              <h5 class="modal-title d-flex align-items-center gap-2 mb-1" id="modalComisionPosgradosLabel">
+                <i class="bi bi-diagram-3"></i>
+                Comisi&oacute;n de Enlace con Posgrados
+              </h5>
+              <p class="mb-0 text-muted">Usa esta plantilla para sistematizar coordinaciones, proyectos y recursos del enlace con posgrados.</p>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <div class="commission-modal-body">
+              <section class="commission-modal-section">
+                <h6 class="commission-modal-section-title">INTEGRANTES</h6>
+                <div class="commission-accordion" id="accordionComisionPosgrados">
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#cpDirectivosPosgrados" aria-expanded="false" aria-controls="cpDirectivosPosgrados">
+                      <span>VINCULACI&Oacute;N ACAD&Eacute;MICA</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="cpDirectivosPosgrados" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionPosgrados">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Anota la presidencia y secretar&iacute;a de la comisi&oacute;n.</li>
+                        <li>Pendiente de actualizar &mdash; Agrega enlaces institucionales de posgrado.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#cpCoordinaciones" aria-expanded="false" aria-controls="cpCoordinaciones">
+                      <span>COORDINACIONES DE POSGRADO</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="cpCoordinaciones" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionPosgrados">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Lista representantes de programas con adscripci&oacute;n y rol.</li>
+                        <li>Pendiente de actualizar &mdash; Incluye suplencias o enlaces operativos.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#cpEstudiantesPosgrados" aria-expanded="false" aria-controls="cpEstudiantesPosgrados">
+                      <span>REPRESENTACI&Oacute;N ESTUDIANTIL</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="cpEstudiantesPosgrados" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionPosgrados">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Registra estudiantes de posgrado propietarios y suplentes.</li>
+                        <li>Pendiente de actualizar &mdash; Anota contacto y periodo de participaci&oacute;n.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="commission-modal-section">
+                <h6 class="commission-modal-section-title">DOCUMENTOS</h6>
+                <div class="row g-3 commission-doc-grid">
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-richtext"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Convenios y acuerdos</h6>
+                        <small>Incluye minutas o convenios aprobados</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-spreadsheet"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Calendario de actividades</h6>
+                        <small>Reemplaza con cronogramas o matrices de planeaci&oacute;n</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-bar-graph"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Reportes y evaluaciones</h6>
+                        <small>Agrega informes de resultados o indicadores</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-person"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Contacto y asesor&iacute;a</h6>
+                        <small>Incluye enlaces a coordinaciones o responsables</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="modal-footer border-0 justify-content-between">
+            <div class="d-flex align-items-center gap-2 text-muted">
+              <i class="bi bi-info-circle"></i>
+              <small>Verifica la informaci&oacute;n con las coordinaciones involucradas antes de publicar.</small>
+            </div>
+            <button type="button" class="btn btn-secondary-ca" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Comision Permanente de Personal Academico -->
+    <div class="modal fade modal-commission" id="modalComisionPermanente" tabindex="-1" aria-labelledby="modalComisionPermanenteLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <div>
+              <h5 class="modal-title d-flex align-items-center gap-2 mb-1" id="modalComisionPermanenteLabel">
+                <i class="bi bi-mortarboard"></i>
+                Comisi&oacute;n Permanente de Personal Acad&eacute;mico
+              </h5>
+              <p class="mb-0 text-muted">Utiliza este modal como plantilla para capturar la integraci&oacute;n y acuerdos de la comisi&oacute;n permanente.</p>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <div class="commission-modal-body">
+              <section class="commission-modal-section">
+                <h6 class="commission-modal-section-title">INTEGRANTES</h6>
+                <div class="commission-accordion" id="accordionComisionPermanente">
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#cpDirectivos" aria-expanded="false" aria-controls="cpDirectivos">
+                      <span>DIRECTIVAS Y DIRECTIVOS</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="cpDirectivos" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionPermanente">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Sustituye con la Presidencia de la comisi&oacute;n.</li>
+                        <li>Pendiente de actualizar &mdash; Incluye la Secretar&iacute;a T&eacute;cnica o enlace administrativo.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#cpAcademicos" aria-expanded="false" aria-controls="cpAcademicos">
+                      <span>PERSONAL ACAD&Eacute;MICO</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="cpAcademicos" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionPermanente">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Registra integrantes titulares con adscripci&oacute;n y rol.</li>
+                        <li>Pendiente de actualizar &mdash; Registra integrantes suplentes y vigencia.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#cpEstudiantes" aria-expanded="false" aria-controls="cpEstudiantes">
+                      <span>REPRESENTACI&Oacute;N ESTUDIANTIL</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="cpEstudiantes" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionPermanente">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Agrega representantes propietarios y suplentes.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="commission-modal-section">
+                <h6 class="commission-modal-section-title">DOCUMENTOS</h6>
+                <div class="row g-3 commission-doc-grid">
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-word"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Formato de dictamen</h6>
+                        <small>Reemplaza con el archivo editable correspondiente</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-text"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Lineamientos vigentes</h6>
+                        <small>Se&ntilde;ala el marco normativo actualizado</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-spreadsheet"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Registro de acuerdos</h6>
+                        <small>Actualiza con hojas de c&aacute;lculo o minutas</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-person"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Contacto y orientaciones</h6>
+                        <small>Incluye correos o gu&iacute;as de apoyo para integrantes</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="modal-footer border-0 justify-content-between">
+            <div class="d-flex align-items-center gap-2 text-muted">
+              <i class="bi bi-info-circle"></i>
+              <small>Completa los apartados con los datos oficiales antes de publicar la informaci&oacute;n.</small>
+            </div>
+            <button type="button" class="btn btn-secondary-ca" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Comision Evaluadora del PRIDE -->
+    <div class="modal fade modal-commission" id="modalComisionEvaluadora" tabindex="-1" aria-labelledby="modalComisionEvaluadoraLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <div>
+              <h5 class="modal-title d-flex align-items-center gap-2 mb-1" id="modalComisionEvaluadoraLabel">
+                <i class="bi bi-award"></i>
+                Comisi&oacute;n Evaluadora del PRIDE
+              </h5>
+              <p class="mb-0 text-muted">Plantilla para describir la integraci&oacute;n y los recursos de la Comisi&oacute;n Evaluadora del PRIDE.</p>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <div class="commission-modal-body">
+              <section class="commission-modal-section">
+                <h6 class="commission-modal-section-title">INTEGRANTES</h6>
+                <div class="commission-accordion" id="accordionComisionEvaluadora">
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#ceDirectivos" aria-expanded="false" aria-controls="ceDirectivos">
+                      <span>REPRESENTACI&Oacute;N DIRECTIVA</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="ceDirectivos" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionEvaluadora">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Registra la Presidencia de la comisi&oacute;n evaluadora.</li>
+                        <li>Pendiente de actualizar &mdash; Incluye las secretar&iacute;as o enlaces institucionales.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#ceAcademicos" aria-expanded="false" aria-controls="ceAcademicos">
+                      <span>PERSONAL ACAD&Eacute;MICO</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="ceAcademicos" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionEvaluadora">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Sustituye con los nombres titulares y su entidad acad&eacute;mica.</li>
+                        <li>Pendiente de actualizar &mdash; Sustituye con las suplencias asignadas.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="commission-toggle-card">
+                    <button class="commission-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#ceEstudiantes" aria-expanded="false" aria-controls="ceEstudiantes">
+                      <span>REPRESENTACI&Oacute;N ESTUDIANTIL</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div id="ceEstudiantes" class="collapse commission-toggle-panel" data-bs-parent="#accordionComisionEvaluadora">
+                      <ul class="commission-modal-list">
+                        <li>Pendiente de actualizar &mdash; Agrega representantes y periodo de participaci&oacute;n.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="commission-modal-section">
+                <h6 class="commission-modal-section-title">DOCUMENTOS</h6>
+                <div class="row g-3 commission-doc-grid">
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-word"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Formato de postulaci&oacute;n</h6>
+                        <small>Reemplaza con el archivo editable vigente</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-pdf"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Criterios PRIDE</h6>
+                        <small>Actualizar con PDF oficial emitido por la DGP</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-bar-graph"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Indicadores y reportes</h6>
+                        <small>Incluye estad&iacute;sticas o seguimientos de resultados</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <a class="commission-doc-card" href="javascript:void(0)" role="button" aria-disabled="true" data-placeholder="true">
+                      <div class="commission-doc-icon"><i class="bi bi-file-earmark-person"></i></div>
+                      <div class="commission-doc-info">
+                        <h6>Contacto y orientaciones</h6>
+                        <small>Agrega instructivos o datos de asesor&iacute;a</small>
+                      </div>
+                      <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="modal-footer border-0 justify-content-between">
+            <div class="d-flex align-items-center gap-2 text-muted">
+              <i class="bi bi-info-circle"></i>
+              <small>Actualiza estos elementos con los materiales definitivos antes de difundirlos.</small>
+            </div>
+            <button type="button" class="btn btn-secondary-ca" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Modal Documentos Evaluadora PRIDE -->
     <div class="modal fade modal-commission" id="modalComisionEvaluadoraDocs" tabindex="-1" aria-labelledby="modalComisionEvaluadoraDocsLabel" aria-hidden="true">
@@ -338,6 +860,8 @@
     <!-- Modal Comisi&oacute;n Dictaminadora Integral -->
     <div class="modal fade modal-commission" id="modalComisionDictaminadora" tabindex="-1" aria-labelledby="modalComisionDictaminadoraLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-xl">
+        <!-- Conteniido del modal-->
+        
         <div class="modal-content">
           <div class="modal-header border-0">
             <div>
@@ -349,6 +873,7 @@
             </div>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
           </div>
+
           <div class="modal-body">
             <div class="commission-modal-body">
               <section class="commission-modal-section">
@@ -462,6 +987,7 @@
               </section>
             </div>
           </div>
+
           <div class="modal-footer border-0 justify-content-between">
             <div class="d-flex align-items-center gap-2 text-muted">
               <i class="bi bi-info-circle"></i>
@@ -785,8 +1311,6 @@
         </div>
       </div>
     </div>
-
-    
 
     <footer class="py-5 text-on-dark">
       <div class="container">

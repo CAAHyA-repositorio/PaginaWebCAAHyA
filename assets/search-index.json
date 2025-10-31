@@ -46,7 +46,7 @@
         {
           "id": "documentos",
           "title": "Documentos",
-          "content": "Documentos Ver todo Actas del Consejo Versiones oficiales en PDF Reglamento Normativa vigente Lineamientos Criterios y políticas Calendario Sesiones y eventos"
+          "content": "Documentos Ver todo Actas del Consejo Versiones oficiales en PDF Reglamentos Normativa vigente Lineamientos Criterios y políticas Calendario Sesiones y eventos"
         },
         {
           "id": "consejo",
@@ -82,7 +82,7 @@
         {
           "id": "documentos",
           "title": "Documentos",
-          "content": "Documentos Ver todo Actas del Consejo Versiones oficiales en PDF Reglamento Normativa vigente Lineamientos Criterios y políticas Calendario Sesiones y eventos"
+          "content": "Documentos Ver todo Actas del Consejo Versiones oficiales en PDF Reglamentos Normativa vigente Lineamientos Criterios y políticas Calendario Sesiones y eventos"
         },
         {
           "id": "consejo",
@@ -98,6 +98,48 @@
           "id": "videos",
           "title": "Podcasts",
           "content": "Podcasts Ver canal"
+        }
+      ]
+    },
+    {
+      "url": "procesoConsejo.html",
+      "title": "Proceso del Consejo — CAAHYA",
+      "sections": [
+        {
+          "id": "hero",
+          "title": "Proceso del Consejo",
+          "content": "Diagramas y procedimientos oficiales del Consejo Académico de Humanidades y Artes."
+        },
+        {
+          "id": "cppa",
+          "title": "Comisión Permanente de Personal Académico",
+          "content": "Flujos de trabajo y responsabilidades de las comisiones especiales, dictaminadoras y evaluadoras del PRIDE."
+        },
+        {
+          "id": "planes-programas",
+          "title": "Planes y Programas de Estudio",
+          "content": "Creación, modificación, implantación, evaluación y titulación de planes y programas académicos."
+        }
+      ]
+    },
+    {
+      "url": "dist/procesoConsejo.html",
+      "title": "Proceso del Consejo — CAAHYA",
+      "sections": [
+        {
+          "id": "hero",
+          "title": "Proceso del Consejo",
+          "content": "Diagramas y procedimientos oficiales del Consejo Académico de Humanidades y Artes."
+        },
+        {
+          "id": "cppa",
+          "title": "Comisión Permanente de Personal Académico",
+          "content": "Flujos de trabajo y responsabilidades de las comisiones especiales, dictaminadoras y evaluadoras del PRIDE."
+        },
+        {
+          "id": "planes-programas",
+          "title": "Planes y Programas de Estudio",
+          "content": "Creación, modificación, implantación, evaluación y titulación de planes y programas académicos."
         }
       ]
     }

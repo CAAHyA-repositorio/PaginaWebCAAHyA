@@ -1155,31 +1155,7 @@ footer .social a:hover{ color:#d7d7ff; }
 
 /* (Eliminado) Animación de subrayado por opción en navbar */
 
-/* Modal reglamento */
-.modal-reglamento .modal-dialog{
-  transform: translateY(20px);
-  opacity:0;
-  transition: transform .35s ease, opacity .35s ease;
-}
-.modal-reglamento.show .modal-dialog,
-.modal-reglamento.fade.show .modal-dialog{
-  transform: translateY(0);
-  opacity:1;
-}
-.modal-reglamento .modal-content{
-  background: linear-gradient(145deg, rgba(38,34,97,.20) 0%, rgba(255,255,255,1) 70%);
-  border: 1px solid rgba(38,34,97,.18);
-  border-radius: 1rem;
-  box-shadow: 0 24px 60px rgba(12,11,28,.25);
-  overflow: hidden;
-}
-.modal-reglamento .modal-header{ background: rgba(255,255,255,.85); }
-.modal-reglamento .modal-title{ font-weight:700; color:#262261; }
-.modal-reglamento .modal-header .bi{ color: var(--secondary); }
-.modal-reglamento .modal-body{
-  background:#ffffff;
-  border-radius: .75rem;
-}
+/* Reglamentos */
 .reglamento-downloads{ position: relative; z-index:1; }
 .reglamento-card{
   display:flex;
@@ -1218,15 +1194,35 @@ footer .social a:hover{ color:#d7d7ff; }
   transition: transform .2s ease;
 }
 .reglamento-card:hover .reglamento-arrow{ transform: translateX(4px); }
+.modal-reglamento .modal-dialog{
+  transform:translateY(20px);
+  opacity:0;
+  transition:transform .35s ease, opacity .35s ease;
+}
+.modal-reglamento.show .modal-dialog,
+.modal-reglamento.fade.show .modal-dialog{
+  transform:translateY(0);
+  opacity:1;
+}
+.modal-reglamento .modal-content{
+  background:linear-gradient(145deg, rgba(38,34,97,.18) 0%, rgba(255,255,255,1) 70%);
+  border:1px solid rgba(38,34,97,.18);
+  border-radius:1rem;
+  box-shadow:0 24px 60px rgba(12,11,28,.25);
+  overflow:hidden;
+}
+.modal-reglamento .modal-header{ background: rgba(255,255,255,.88); }
+.modal-reglamento .modal-body{ background:#ffffff; }
+.modal-reglamento .modal-title{ font-weight:700; color:#262261; }
+.modal-reglamento .modal-header .bi{ color:var(--secondary); }
 .modal-reglamento .modal-footer{
-  background: rgba(255,255,255,.85);
+  background: rgba(255,255,255,.88);
   border-top:1px solid rgba(38,34,97,.1);
 }
 .reglamento-trigger{
-  position:relative;
-  transition: transform .2s ease, box-shadow .2s ease;
+  transition:transform .2s ease, box-shadow .2s ease;
 }
 .reglamento-trigger:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(38,34,97,.12);
+  transform:translateY(-2px);
+  box-shadow:0 12px 24px rgba(38,34,97,.12);
 }

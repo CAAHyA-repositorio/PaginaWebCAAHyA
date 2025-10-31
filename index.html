@@ -41,11 +41,8 @@
 
         <div class="collapse navbar-collapse" id="navMain">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#documentos">Documentos</a></li>
-            <li class="nav-item"><a class="nav-link" href="directorio.html">Directorio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="procesoConsejo.html">Proceso del Consejo</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="comisiones.html">Comisiones</a></li>
           </ul>
           <form id="navbarSearchForm" class="d-flex navbar-search" role="search" aria-label="Buscar en el sitio" action="search.html" method="get">
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="q">
@@ -59,6 +56,36 @@
         </div>
       </div>
     </nav>
+
+    <!-- Modal Reglamento -->
+    <div class="modal fade modal-reglamento" id="modalReglamento" tabindex="-1" aria-labelledby="modalReglamentoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <div>
+              <h5 class="modal-title mb-1 d-flex align-items-center gap-2" id="modalReglamentoLabel">
+                <i class="bi bi-shield-check"></i>
+                Reglamentos Vigentes
+              </h5>
+              <p class="mb-0 text-muted">Selecciona el documento que deseas consultar.</p>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+          <div class="ratio ratio-4x3 border rounded-min shadow-soft overflow-hidden">
+            <iframe src="modals/modalReglamentos.html" title="Reglamentos vigentes" class="w-100 h-100 border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          </div>
+          <div class="modal-footer border-0 justify-content-between">
+            <div class="d-flex align-items-center gap-2 text-muted">
+              <i class="bi bi-info-circle"></i>
+              <small>Los documentos se encuentran actualizados.</small>
+            </div>
+            <button type="button" class="btn btn-secondary-ca" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Hero -->
     <section id="inicio" class="hero py-5">
@@ -203,10 +230,10 @@
                   </a>
                 </div>
                 <div class="document-card" role="listitem">
-                  <a class="link-doc p-3 border rounded-min shadow-sm h-100 reglamento-trigger" href="#" data-bs-toggle="modal" data-bs-target="#modalReglamento">
+                  <a class="link-doc p-3 border rounded-min shadow-sm h-100 reglamento-trigger" href="#" role="button" data-bs-toggle="modal" data-bs-target="#modalReglamento">
                     <i class="bi bi-shield-check text-secondary-ca fs-3"></i>
                     <div>
-                      <div class="fw-bold">Reglamento</div>
+                      <div class="fw-bold">Reglamentos</div>
                       <small class="text-muted">Normativa vigente</small>
                     </div>
                   </a>
@@ -296,34 +323,6 @@
       </ul>
     </nav>
 
-    <!-- Modal Reglamento -->
-    <div class="modal fade modal-reglamento" id="modalReglamento" tabindex="-1" aria-labelledby="modalReglamentoLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header border-0">
-            <div>
-              <h5 class="modal-title mb-1 d-flex align-items-center gap-2" id="modalReglamentoLabel">
-                <i class="bi bi-shield-check"></i>
-                Reglamentos Vigentes
-              </h5>
-              <p class="mb-0 text-muted">Selecciona el documento que deseas consultar.</p>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body">
-            <div class="row g-3 reglamento-downloads" data-docs="reglamentos"></div>
-          </div>
-          <div class="modal-footer border-0 justify-content-between">
-            <div class="d-flex align-items-center gap-2 text-muted">
-              <i class="bi bi-info-circle"></i>
-              <small>Los documentos se encuentran actualizados.</small>
-            </div>
-            <button type="button" class="btn btn-secondary-ca" data-bs-dismiss="modal">Cerrar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Modal Actas del Consejo -->
     <div class="modal fade modal-actas" id="modalActas" tabindex="-1" aria-labelledby="modalActasLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -368,11 +367,11 @@
           </div>
           <div class="modal-body">
             <div class="ratio ratio-4x3 border rounded-min shadow-soft overflow-hidden">
-              <iframe src="directorio.html" title="Directorio del Consejo Acad&eacute;mico" class="w-100 h-100" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="modals/modalDirectorio.html" title="Directorio del Consejo Acad&eacute;mico" class="w-100 h-100" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
           <div class="modal-footer border-0 justify-content-end">
-            <a class="btn btn-outline-secondary" href="directorio.html" target="_blank" rel="noopener">Abrir en nueva pesta&ntilde;a</a>
+            <a class="btn btn-outline-secondary" href="modals/modalDirectorio.html" target="_blank" rel="noopener">Abrir en nueva pesta&ntilde;a</a>
           </div>
         </div>
       </div>
@@ -392,487 +391,15 @@
             </div>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
           </div>
-          <div class="modal-body">
-            <div class="pleno-content">
-              <section class="pleno-section">
-                <h6 class="pleno-section-title">Integración del Pleno</h6>
-                <ul class="pleno-summary-list">
-                  <li>El Coordinador: Dr. Gerardo García Luna Martínez.</li>
-                  <li>Los directores de las 24 entidades académicas del área.</li>
-                  <li>Un consejero representante del personal académico titular y uno suplente por cada entidad académica.</li>
-                  <li>Un consejero representante titular y uno suplente de los alumnos del área de cada escuela y facultad.</li>
-                  <li>Dos consejeros representantes, con sus respectivos suplentes, de los técnicos académicos del área.</li>
-                  <li>Dos consejeros representantes, con sus respectivos suplentes, de los alumnos de los posgrados del área.</li>
-                  <li>Dos profesores representantes del Consejo Académico del Bachillerato y designados por éste.</li>
-                  <li>Todos los consejeros suplentes participan con voz y voto en las comisiones, y con voz pero sin voto (en presencia del titular) en el Pleno del Consejo.</li>
-                </ul>
-              </section>
-              <section class="pleno-section">
-                <h6 class="pleno-section-title">Facultades</h6>
-                <div class="pleno-entity-grid">
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">FACULTAD DE ARQUITECTURA</h6>
-                        <p class="pleno-entity-lead">Directora: Dra. Mónica Cejudo Collera</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Profesor: Dr. José Gerardo Guízar Bermúdez</li>
-                        <li>Profesora: Arq. Elodia Gómez Maqueo Rojas</li>
-                        <li>Alumno: Joel Iván Estévez Moreno</li>
-                        <li>Alumna suplente: Rebeca Paola Cardoso Rodríguez</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">FACULTAD DE ARTES Y DISEÑO</h6>
-                        <p class="pleno-entity-lead">Director: Dr. Mauricio de Jesús Juárez Servín</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Profesor: Lic. Manuel Gerardo Alonso Ulloa</li>
-                        <li>Profesora suplente: Lic. María del Carmen Mendoza Chávez</li>
-                        <li>Alumna: Ximena Alejandra Meléndez Rebollo</li>
-                        <li>Alumna suplente: Jazmín Alejandra Sánchez García</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">FACULTAD DE FILOSOFÍA Y LETRAS</h6>
-                        <p class="pleno-entity-lead">Directora: Dra. Mary Frances Rodríguez Van Gort</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Profesora: Mtra. Julia Edith Constantino Reyes</li>
-                        <li>Alumno: José Luis Segura Morales</li>
-                        <li>Alumna suplente: Elsa María Dueñas Tapia</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">FACULTAD DE MÚSICA</h6>
-                        <p class="pleno-entity-lead">Directora: Mtra. María Teresa Navarro Agraz</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Profesor: Mtro. Ignacio Daniel Mariscal Martínez</li>
-                        <li>Profesora suplente: Mtra. Viktoria Horti Pasztor</li>
-                        <li>Alumno: Jorge Manuel Neri Torres</li>
-                        <li>Alumna suplente: Yelena Castillo Guerrero</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">FACULTAD DE ESTUDIOS SUPERIORES – ACATLÁN</h6>
-                        <p class="pleno-entity-lead">Directora: Mtra. Nora del Consuelo Goris Mayans</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Profesor: Dr. David Fragoso Franco</li>
-                        <li>Profesor suplente: Dr. José Luis Caballero Facio</li>
-                        <li>Alumno: Erin Fernanda Páez Vázquez</li>
-                        <li>Alumna suplente: Karla Camila Mendoza Cuéllar</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">FACULTAD DE ESTUDIOS SUPERIORES – ARAGÓN</h6>
-                        <p class="pleno-entity-lead">Directora: Mtra. Araceli Romo Cabrera</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Profesor: Dr. Carlos Chávez Aguilera</li>
-                        <li>Profesora suplente: Dra. Mónica Morales Barrera</li>
-                        <li>Alumna: Rut Rodríguez Pérez</li>
-                        <li>Alumno suplente: Diego Sánchez Rojas Sollano</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">FACULTAD DE ESTUDIOS SUPERIORES - CUAUTITLÁN</h6>
-                        <p class="pleno-entity-lead">Director: Dr. David Quintanar Guerrero</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Profesora: Mtra. Huberta Márquez Villeda</li>
-                        <li>Profesor suplente: Mtro. Sergio Omar Terán Ramírez</li>
-                        <li>Alumn(a)(o):</li>
-                        <li>Alumn(a)(o) suplente:</li>
-                      </ul>
-                    </div>
-                  </article>
-                </div>
-              </section>
-              <section class="pleno-section">
-                <h6 class="pleno-section-title">Escuelas y ENES</h6>
-                <div class="pleno-entity-grid">
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">ESCUELA NACIONAL DE ESTUDIOS SUPERIORES, UNIDAD LEÓN</h6>
-                        <p class="pleno-entity-lead">Director: Mtro. Salvador Andrade Ortiz</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Profesor: Mtro. Leonardo Arturo Rivas Rivas</li>
-                        <li>Profesora Suplente: Dra. Arlene Iskra García Vázquez</li>
-                        <li>Alumna: Diana Montserrat Lugo Pérez</li>
-                        <li>Alumna suplente: Renata López Banda</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">ESCUELA NACIONAL DE ESTUDIOS SUPERIORES, UNIDAD MÉRIDA</h6>
-                        <p class="pleno-entity-lead">Director: Dr. Francisco Xavier Chiappa Carrara</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Profesor: Dr. Francisco Fricke Martin</li>
-                        <li>Profesora Suplente: Mtra. Daniela Huda Tarhuni Navarro</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">ESCUELA NACIONAL DE ESTUDIOS SUPERIORES, UNIDAD MORELIA</h6>
-                        <p class="pleno-entity-lead">Directora: Dra. Yunuen Tapia Torres</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Profesora: Mtra. Berenice Araceli Granados Vázquez</li>
-                        <li>Profesora Suplente: Dra. Cecilia López Ridaura</li>
-                        <li>Alumna: Alexia Harley Ortiz Herrera</li>
-                        <li>Alumna suplente: Natalia Ciriaco Ramírez</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">ESCUELA NACIONAL DE ARTES CINEMATOGRÁFICAS</h6>
-                        <p class="pleno-entity-lead">Directora: Lic. María de los Ángeles Guadalupe Castro Gurría</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Profesora: Mtra. Aurora Lourdes Ojeda Coronado</li>
-                        <li>Profesor Suplente: Mtro. Jorge Arturo García González</li>
-                        <li>Alumna: Kenia Nirvana Mendieta Alfonso</li>
-                        <li>Alumna suplente: Ana Victoria Méndez Peña</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">ESCUELA NACIONAL DE LENGUAS, LINGÜÍSTICA Y TRADUCCIÓN</h6>
-                        <p class="pleno-entity-lead">Director: Dr. Arturo Mendoza Ramos</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Profesora: Dra. Eréndira Dolores Camarena Ortiz</li>
-                        <li>Profesor Suplente: Dr. José Martín Gasca García</li>
-                        <li>Alumna: Natalia Alonso Madrigal</li>
-                        <li>Alumna suplente: Tábatha Berlanga Sandoval</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">Escuela Nacional de Ciencias Forenses</h6>
-                        <p class="pleno-entity-lead">Directora: Dra. Zoraida García Castillo</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                      </ul>
-                    </div>
-                  </article>
-                </div>
-              </section>
-              <section class="pleno-section">
-                <h6 class="pleno-section-title">Institutos</h6>
-                <div class="pleno-entity-grid">
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">INSTITUTO DE INVESTIGACIONES BIBLIOGRÁFICAS</h6>
-                        <p class="pleno-entity-lead">Directora: Dra. María Andrea Giovine Yánez</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Investigadora: Dra. Ramona Isabel Pérez Bertruy</li>
-                        <li>Investigadora suplente: Dra. Irma Lombardo García</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">INSTITUTO DE INVESTIGACIONES BIBLIOTECOLÓGICAS Y DE LA INFORMACIÓN</h6>
-                        <p class="pleno-entity-lead">Directora: Dra. Perla Olivia Rodríguez Reséndiz</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Investigador: Dr. Ariel Alejandro Rodríguez García</li>
-                        <li>Investigadora suplente: Dra. Adriana Suárez Sánchez</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">INSTITUTO DE INVESTIGACIONES ESTÉTICAS</h6>
-                        <p class="pleno-entity-lead">Directora: Dra. Angélica Velázquez Guadarrama</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Investigador: Dr. Jaime Genaro Cuadriello Aguilar</li>
-                        <li>Investigadora suplente: Dra. Verónica Hernández Díaz</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">INSTITUTO DE INVESTIGACIONES FILOLÓGICAS</h6>
-                        <p class="pleno-entity-lead">Directora: Dra. Lilián Álvarez Arellano</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Investigadora: Dr. José Rafael Mondragón Velázquez</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">INSTITUTO DE INVESTIGACIONES FILOSÓFICAS</h6>
-                        <p class="pleno-entity-lead">Director: Dr. Luis Estrada González</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Investigador: Dra. María Teresa Rodríguez González</li>
-                        <li>Investigador suplente: Dr. Juan Espíndola Mata</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">INSTITUTO DE INVESTIGACIONES HISTÓRICAS</h6>
-                        <p class="pleno-entity-lead">Directora: Dra. Elisa Speckman Guerra</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Investigador: Dra. María Dolores Lorenzo Río</li>
-                        <li>Investigadora suplente: Dra. Estela Roselló Soberón</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">INSTITUTO DE INVESTIGACIONES SOBRE LA UNIVERSIDAD Y LA EDUCACIÓN</h6>
-                        <p class="pleno-entity-lead">Directora: Dra. Gabriela de la Cruz Flores</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Investigador: Dr. Jesús García Reyes</li>
-                        <li>Investigador: Dra. Leticia Pogliaghi</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">INSTITUTO DE INVESTIGACIONES SOBRE LA UNIVERSIDAD Y LA EDUCACIÓN</h6>
-                        <p class="pleno-entity-lead">Directora: Dra. Gabriela de la Cruz Flores</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Investigador: Dr. Jesús García Reyes</li>
-                        <li>Investigador: Dra. Leticia Pogliaghi</li>
-                      </ul>
-                    </div>
-                  </article>
-                </div>
-              </section>
-              <section class="pleno-section">
-                <h6 class="pleno-section-title">Centros</h6>
-                <div class="pleno-entity-grid">
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">CENTRO DE INVESTIGACIONES SOBRE AMÉRICA LATINA Y EL CARIBE</h6>
-                        <p class="pleno-entity-lead">Director: Dr. Jesús Gerardo Torres Salcido</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Investigadora: Dra. Gaja Joanna Makaran Kubis</li>
-                        <li>Investigador suplente: Dr. Fernando Neira Orjuela</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">CENTRO DE INVESTIGACIONES Y ESTUDIOS DE GÉNERO</h6>
-                        <p class="pleno-entity-lead">Directora: Dra. Amneris Chaparro Martínez</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Investigadora: Dra. Lucía Ciccia</li>
-                      </ul>
-                    </div>
-                  </article>
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">CENTRO PENÍNSULAR EN HUMANIDADES Y CIENCIAS SOCIALES</h6>
-                        <p class="pleno-entity-lead">Directora: Dra. María Carolina Depetris</p>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Investigadora: Dra. Sandra Lucía Sánchez Ramírez</li>
-                        <li>Investigadora: Dr. Jorge Arturo Taracena Arriola</li>
-                      </ul>
-                    </div>
-                  </article>
-                </div>
-              </section>
-              <section class="pleno-section">
-                <h6 class="pleno-section-title">Consejo Académico del Bachillerato</h6>
-                <div class="pleno-entity-grid">
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">CONSEJO ACADÉMICO DEL BACHILLERATO</h6>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Profesora: Dra. María Teresa Ruiz García</li>
-                        <li>Profesor: Lic. Enrique Escalante Campos</li>
-                      </ul>
-                    </div>
-                  </article>
-                </div>
-              </section>
-              <section class="pleno-section">
-                <h6 class="pleno-section-title">Posgrado</h6>
-                <div class="pleno-entity-grid">
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">POSGRADO</h6>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Alumna: Lic. Mariana Becerril Trejo</li>
-                        <li>Alumno suplente: Lic. Daniel González Escobar</li>
-                        <li>Alumno: Mtra. Ana Paulina Matamoros Vences</li>
-                        <li>Alumna suplente: Lic. Raúl Sergio Cuéllar Sánchez</li>
-                      </ul>
-                    </div>
-                  </article>
-                </div>
-              </section>
-              <section class="pleno-section">
-                <h6 class="pleno-section-title">Técnicos Académicos</h6>
-                <div class="pleno-entity-grid">
-                                    <article class="pleno-entity" data-pleno-card>
-                    <button type="button" class="pleno-card-header" aria-expanded="false">
-                      <div class="pleno-card-header-text">
-                        <h6 class="pleno-entity-title">TÉCNICOS ACADÉMICOS</h6>
-                      </div>
-                      <i class="bi bi-chevron-down pleno-card-icon" aria-hidden="true"></i>
-                    </button>
-                    <div class="pleno-card-body">
-                      <ul class="pleno-entity-members">
-                        <li>Técnica Académica:Mtra. Eva Leticia Ortiz Ávalo</li>
-                        <li>Técnica Académica Suplente: Mtra. María Antonieta Rodríguez Rivera</li>
-                        <li>Técnica Académica: Mtra. Oralia García Cárdenas</li>
-                        <li>Técnica Académica Suplente: Lic. Martha Caritina Díaz Alaniz</li>
-                      </ul>
-                    </div>
-                  </article>
-                </div>
-              </section>
+                    <div class="modal-body">
+            <div class="ratio ratio-4x3 border rounded-min shadow-soft overflow-hidden">
+              <iframe src="modals/modalPleno.html" title="Documento del Pleno" class="w-100 h-100" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
-          <div class="modal-footer border-0 justify-content-between">
-            <div class="d-flex align-items-center gap-2 text-muted">
-              <i class="bi bi-info-circle"></i>
-              <small>Información proporcionada por la Secretaría Técnica del Pleno.</small>
-            </div>
-            <button type="button" class="btn btn-secondary-ca" data-bs-dismiss="modal">Cerrar</button>
+          <div class="modal-footer border-0 justify-content-end">
+            <a class="btn btn-outline-secondary" href="modals/modalPleno.html" target="_blank" rel="noopener">Abrir en nueva pesta&ntilde;a</a>
+          </div>
+
           </div>
         </div>
       </div>
@@ -1022,217 +549,12 @@
     <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/animejs/anime.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const comunicadoSlides = Array.from(document.querySelectorAll('.hero-comunicados .comunicado-slide'));
-        const comunicadoDots = Array.from(document.querySelectorAll('.hero-comunicados .comunicado-dot'));
-        const comunicadoCarousel = document.querySelector('.hero-comunicados-carousel');
-
-        if (comunicadoSlides.length > 1) {
-          let activeIndex = comunicadoSlides.findIndex((slide) => slide.classList.contains('active'));
-          if (activeIndex < 0) activeIndex = 0;
-          let autoTimer;
-
-          const syncDots = () => {
-            comunicadoDots.forEach((dot, index) => {
-              const isActive = index === activeIndex;
-              dot.classList.toggle('active', isActive);
-              dot.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-            });
-          };
-
-          const setActiveSlide = (nextIndex) => {
-            if (nextIndex === activeIndex) return;
-            comunicadoSlides[activeIndex].classList.remove('active');
-            activeIndex = nextIndex;
-            comunicadoSlides[activeIndex].classList.add('active');
-            syncDots();
-          };
-
-          const goTo = (index) => {
-            const nextIndex = (index + comunicadoSlides.length) % comunicadoSlides.length;
-            setActiveSlide(nextIndex);
-          };
-
-          const nextSlide = () => goTo(activeIndex + 1);
-
-          const startAuto = () => {
-            clearInterval(autoTimer);
-            autoTimer = window.setInterval(nextSlide, 3000);
-          };
-
-          const pauseAuto = () => {
-            clearInterval(autoTimer);
-          };
-
-          comunicadoDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-              goTo(index);
-              startAuto();
-            });
-            dot.addEventListener('keydown', (event) => {
-              if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                goTo(index);
-                startAuto();
-              }
-            });
-          });
-
-          if (comunicadoCarousel) {
-            ['mouseenter', 'focusin'].forEach((type) => {
-              comunicadoCarousel.addEventListener(type, pauseAuto);
-            });
-            ['mouseleave', 'focusout'].forEach((type) => {
-              comunicadoCarousel.addEventListener(type, startAuto);
-            });
-          }
-
-          syncDots();
-          startAuto();
-        }
-
-        const entitiesTrack = document.querySelector('.entities-track');
-        if (entitiesTrack && entitiesTrack.children.length > 0 && entitiesTrack.dataset.enhanced !== 'true') {
-          const slides = Array.from(entitiesTrack.children);
-          slides.forEach((slide) => {
-            const clone = slide.cloneNode(true);
-            clone.setAttribute('data-duplicate', 'true');
-            entitiesTrack.appendChild(clone);
-          });
-          entitiesTrack.dataset.enhanced = 'true';
-
-          const marqueeWrapper = entitiesTrack.parentElement;
-          if (marqueeWrapper) {
-            const distance = entitiesTrack.scrollWidth / 2;
-            const seconds = Math.max(18, distance / 100);
-            entitiesTrack.style.setProperty('--entities-marquee-duration', `${seconds}s`);
-          }
-        }
-
-        const docsConfig = {
-          reglamentos: [
-            {
-              title: 'ESTATUTO GENERAL DE LA UNAM',
-              description: 'CONSULTAR',
-              href: 'https://www.abogadogeneral.unam.mx/sites/default/files/archivos/LegUniv/3-EstatutoGeneral_rem38_021220.pdf',
-              icon: 'bi bi-file-earmark-text-fill',
-              arrowIcon: 'bi bi-arrow-down-circle-fill',
-              targetBlank: true
-            },
-            {
-              title: 'REGLAMENTO INTERNO DE LOS CONSEJOS ACADÉMICOS DE ÁREA',
-              description: 'CONSULTAR',
-              href: 'https://www.abogadogeneral.unam.mx/sites/default/files/archivos/LegUniv/ReglamentoInternoConsejosAcademicosArea_090424.pdf',
-              icon: 'bi bi-file-earmark-text-fill',
-              arrowIcon: 'bi bi-arrow-down-circle-fill',
-              targetBlank: true
-            },
-            {
-              title: 'REGLAMENTO GENERAL PARA LA PRESENTACIÓN Y APROBACIÓN DE PLANES Y PROGRAMAS DE ESTUDIO',
-              description: 'CONSULTAR',
-              href: 'https://www.caahya.unam.mx/wp-content/uploads/2023/09/RGPAPPE.pdf',
-              icon: 'bi bi-file-earmark-text-fill',
-              arrowIcon: 'bi bi-arrow-down-circle-fill',
-              targetBlank: true
-            },
-            {
-              title: 'REQUISITOS GENERALES PARA FUNGIR COMO MIEMBRO DE LAS COMISIONES DICTAMINADORAS DEL ÁREA DE LAS HUMANIDADES Y DE LAS ARTES',
-              description: 'CONSULTAR',
-              href: 'https://www.caahya.unam.mx/wp-content/uploads/2025/05/Requisitos-generales.pdf',
-              icon: 'bi bi-file-earmark-text-fill',
-              arrowIcon: 'bi bi-arrow-down-circle-fill',
-              targetBlank: true
-            },
-            {
-              title: 'REGLAMENTO PARA LA ELECCIÓN DE CONSEJEROS ACADÉMICOS DE ÁREA Y DEL BACHILLERATO REPRESENTANTES DE PROFESORES, INVESTIGADORES, TÉCNICOS ACADÉMICOS Y ALUMNOS',
-              description: 'CONSULTAR',
-              href: 'https://www.abogadogeneral.unam.mx/sites/default/files/archivos/LegUniv/18-ReglamentoEleccionConsejerosAcademicosBachilleratoRepresentantesProfesoresInvestigadoresTecnicosAcademicosAlumnos_rem38_021220.pdf',
-              icon: 'bi bi-file-earmark-text-fill',
-              arrowIcon: 'bi bi-arrow-down-circle-fill',
-              targetBlank: true
-            },
-            {
-              title: 'NORMAS DE APLICACIÓN Y PROCEDIMIENTO DE LOS REGLAMENTOS PARA LA ELECCIÓN DE CONSEJEROS UNIVERSITARIOS Y TÉCNICOS, Y PARA LA ELECCIÓN DE CONSEJEROS ACADÉMICOS DE ÁREA Y DEL BACHILLERATO, REPRESENTANTES DE PROFESORES, INVESTIGADORES Y ALUMNOS',
-              description: 'CONSULTAR',
-              href: 'https://www.abogadogeneral.unam.mx/sites/default/files/archivos/LegUniv/6-NormasAplicacionProcedimientoReglamentosEleccionConsejerosUniversitariosTecnicosEleccionConsejerosAcademicosBachilleratoRepresentantesProfesoresInvestigadoresAlumnos_rem38_021220.pdf',
-              icon: 'bi bi-file-earmark-text-fill',
-              arrowIcon: 'bi bi-arrow-down-circle-fill',
-              targetBlank: true
-            },
-            {
-              title: 'LINEAMIENTOS Y CRITERIOS GENERALES DE EVALUACIÓN DEL PEDPACMET',
-              description: 'CONSULTAR',
-              href: 'https://www.caahya.unam.mx/wp-content/uploads/2025/04/LINEAMIENTOS-Y-CRITERIOS-GENERALES-CAAHyA-PEDPACMET.pdf',
-              icon: 'bi bi-file-earmark-text-fill',
-              arrowIcon: 'bi bi-arrow-down-circle-fill',
-              targetBlank: true
-            }
-          ],
-          actas: [
-            {
-              title: 'Directorio del Consejo',
-              description: 'Consulta la integración y datos de contacto actualizados.',
-              href: 'directorio.html',
-              icon: 'bi bi-people-fill',
-              arrowIcon: 'bi bi-arrow-up-right-circle-fill'
-            }
-          ]
-        };
-
-        const createDocCard = (item) => {
-          const col = document.createElement('div');
-          col.className = 'col-12 col-md-6';
-
-          const link = document.createElement('a');
-          link.className = 'reglamento-card';
-          link.href = item.href;
-          if (item.targetBlank) {
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-          }
-
-          const iconWrap = document.createElement('div');
-          iconWrap.className = 'reglamento-icon';
-          iconWrap.innerHTML = `<i class="${item.icon}"></i>`;
-
-          const textWrap = document.createElement('div');
-
-          const titleEl = document.createElement('h6');
-          titleEl.className = 'mb-1';
-          titleEl.textContent = item.title;
-
-          const descEl = document.createElement('small');
-          descEl.textContent = item.description;
-
-          textWrap.appendChild(titleEl);
-          textWrap.appendChild(descEl);
-
-          const arrowWrap = document.createElement('span');
-          arrowWrap.className = 'reglamento-arrow';
-          arrowWrap.innerHTML = `<i class="${item.arrowIcon}"></i>`;
-
-          link.appendChild(iconWrap);
-          link.appendChild(textWrap);
-          link.appendChild(arrowWrap);
-
-          col.appendChild(link);
-          return col;
-        };
-
-        document.querySelectorAll('[data-docs]').forEach((container) => {
-          const key = container.getAttribute('data-docs');
-          const entries = docsConfig[key];
-          if (!entries) return;
-
-          const fragment = document.createDocumentFragment();
-          entries.forEach((item) => fragment.appendChild(createDocCard(item)));
-          container.appendChild(fragment);
-        });
-      });
-    </script>
+    <script src="assets/js/index-page.js"></script>
   </body>
 </html>
+
+
+
 
 
 

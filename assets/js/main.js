@@ -49,6 +49,208 @@ window.addEventListener('load', function(){ const pageTransition = document.getE
     });
   }
 
+document.addEventListener('DOMContentLoaded', function(){
+  const docsSection = document.getElementById('documentos');
+  if(!docsSection) return;
+
+  const area = docsSection.querySelector('.documents-area');
+  const track = area ? area.querySelector('.documents-track') : null;
+  const toggleBtn = docsSection.querySelector('.docs-toggle');
+
+  if(!area || !track || !toggleBtn) return;
+
+  const navButtons = docsSection.querySelectorAll('.documents-nav');
+  navButtons.forEach((btn)=> btn && btn.remove());
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(prefersReducedMotion.matches){
+    toggleBtn.disabled = true;
+    toggleBtn.setAttribute('aria-disabled', 'true');
+  }
+
+  const removeDuplicates = ()=>{
+    track.querySelectorAll('[data-doc-duplicate="true"]').forEach((node)=> node.remove());
+  };
+
+  const setCloneAccessibility = (root)=>{
+    root.setAttribute('aria-hidden', 'true');
+    root.querySelectorAll('a, button').forEach((el)=>{
+      el.setAttribute('tabindex', '-1');
+      el.setAttribute('aria-hidden', 'true');
+    });
+  };
+
+  const recalcDuration = ()=>{
+    if(!area.classList.contains('documents-marquee-active')) return;
+    window.requestAnimationFrame(()=>{
+      const distance = track.scrollWidth / 2;
+      if(distance <= 0) return;
+      const seconds = Math.max(18, distance / 110);
+      track.style.setProperty('--documents-marquee-duration', `${seconds}s`);
+    });
+  };
+
+  const activateMarquee = ()=>{
+    if(prefersReducedMotion.matches) return;
+    removeDuplicates();
+    const originals = Array.from(track.children).filter((node)=> !node.hasAttribute('data-doc-duplicate'));
+    if(!originals.length) return;
+    originals.forEach((node)=>{
+      const clone = node.cloneNode(true);
+      clone.setAttribute('data-doc-duplicate', 'true');
+      setCloneAccessibility(clone);
+      track.appendChild(clone);
+    });
+    area.classList.add('documents-marquee-active');
+    area.classList.remove('documents-marquee-paused');
+    recalcDuration();
+  };
+
+  const deactivateMarquee = ()=>{
+    area.classList.remove('documents-marquee-active', 'documents-marquee-paused');
+    removeDuplicates();
+    track.style.removeProperty('--documents-marquee-duration');
+  };
+
+  const pauseMarquee = ()=>{
+    if(!area.classList.contains('documents-marquee-active')) return;
+    area.classList.add('documents-marquee-paused');
+  };
+
+  const resumeMarquee = ()=>{
+    area.classList.remove('documents-marquee-paused');
+  };
+
+  track.addEventListener('mouseenter', pauseMarquee);
+  track.addEventListener('mouseleave', resumeMarquee);
+  track.addEventListener('focusin', pauseMarquee);
+  track.addEventListener('focusout', (event)=>{
+    if(track.contains(event.relatedTarget)) return;
+    resumeMarquee();
+  });
+
+  const setExpanded = (expanded)=>{
+    if(!expanded && prefersReducedMotion.matches){
+      expanded = true;
+    }
+    area.classList.toggle('documents-expanded', expanded);
+    area.dataset.expanded = expanded ? 'true' : 'false';
+    toggleBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    toggleBtn.textContent = expanded ? 'Ver menos' : 'Ver todo';
+    if(expanded){
+      deactivateMarquee();
+    } else {
+      activateMarquee();
+    }
+  };
+
+  if(!prefersReducedMotion.matches){
+    toggleBtn.addEventListener('click', ()=>{
+      const expanded = area.classList.contains('documents-expanded');
+      setExpanded(!expanded);
+    });
+  }
+
+  window.addEventListener('resize', recalcDuration);
+
+  setExpanded(prefersReducedMotion.matches);
+});
+document.addEventListener('DOMContentLoaded', function(){
+  const cards = document.querySelectorAll('[data-pleno-card]');
+  if(!cards.length) return;
+
+  const resizeHandlers = [];
+
+  cards.forEach((card, index)=>{
+    const header = card.querySelector('.pleno-card-header');
+    const body = card.querySelector('.pleno-card-body');
+    if(!header || !body) return;
+
+    header.type = 'button';
+    header.classList.add('pleno-card-front');
+    body.classList.add('pleno-card-back');
+    body.hidden = false;
+    body.setAttribute('aria-hidden', 'true');
+    body.setAttribute('tabindex', '0');
+
+    if(!body.id){
+      body.id = `pleno-card-panel-${index + 1}`;
+    }
+    header.setAttribute('aria-controls', body.id);
+
+    let flip = card.querySelector('.pleno-card-flip');
+    if(!flip){
+      flip = document.createElement('div');
+      flip.className = 'pleno-card-flip';
+      card.prepend(flip);
+    }
+    if(!flip.contains(header)){
+      flip.append(header);
+    }
+    if(!flip.contains(body)){
+      flip.append(body);
+    }
+
+    if(!body.querySelector('.pleno-card-back-title')){
+      const title = document.createElement('h6');
+      title.className = 'pleno-card-back-title';
+      title.textContent = 'Profesores y alumnos';
+      body.prepend(title);
+    }
+
+    const updateHeight = ()=>{
+      const frontHeight = header.offsetHeight;
+      const backHeight = body.scrollHeight;
+      flip.style.minHeight = `${Math.max(frontHeight, backHeight)}px`;
+    };
+
+    const setOpen = (open)=>{
+      card.dataset.open = open ? 'true' : 'false';
+      header.setAttribute('aria-expanded', open ? 'true' : 'false');
+      card.classList.toggle('is-open', open);
+      body.setAttribute('aria-hidden', open ? 'false' : 'true');
+
+      if(!open){
+        body.blur();
+      }
+      updateHeight();
+    };
+
+    setOpen(false);
+    updateHeight();
+
+    const onResize = ()=> updateHeight();
+    window.addEventListener('resize', onResize);
+    resizeHandlers.push(onResize);
+
+    header.addEventListener('click', ()=>{
+      const isOpen = card.dataset.open === 'true';
+      const nextState = !isOpen;
+      setOpen(nextState);
+      if(nextState){
+        body.focus({ preventScroll: true });
+      }else{
+        header.focus({ preventScroll: true });
+      }
+    });
+
+    body.addEventListener('click', ()=>{
+      setOpen(false);
+      header.focus({ preventScroll: true });
+    });
+
+    body.addEventListener('keydown', (event)=>{
+      if(event.key === 'Escape'){
+        setOpen(false);
+        header.focus({ preventScroll: true });
+      }
+    });
+  });
+
+  window.addEventListener('beforeunload', ()=>{
+    resizeHandlers.forEach((handler)=> window.removeEventListener('resize', handler));
+  });
+});
   // ===== Modales: animaciones con Anime.js =====
   document.querySelectorAll('.modal-entity').forEach(function(modal){
     modal.addEventListener('shown.bs.modal', function(){
@@ -135,4 +337,3 @@ window.addEventListener('load', function(){ const pageTransition = document.getE
       a.addEventListener('click', ()=>{ links.forEach(l=>l.classList.remove('active')); a.classList.add('active'); const dot = a.querySelector('.dot'); if(dot){ dot.classList.remove('pulse'); void dot.offsetWidth; dot.classList.add('pulse'); } });
     });
   }
-

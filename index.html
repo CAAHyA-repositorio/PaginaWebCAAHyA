@@ -21,9 +21,9 @@
     </div>
     <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
-    <!-- Header / Navbar -->
- <!-- Barra de navegacion-->
-    <nav class="navbar navbar-expand-lg navbar-ca sticky-top" aria-label="Navegaci�n principal">
+
+    <!-- Barra de navegacion-->
+    <nav class="navbar navbar-expand-lg navbar-ca sticky-top" aria-label="Navegacion principal">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Inicio CAAHYA">
           <img src="assets/img/LogoCA.png" alt="CAAHYA" onerror="this.style.display='none'">
@@ -35,7 +35,7 @@
             <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
             <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
           </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Mostrar men�">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Mostrar menu">
             <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
           </button>
         </div>
@@ -43,10 +43,9 @@
         <div class="collapse navbar-collapse" id="navMain">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#documentos">Documentos</a></li>
-            <li class="nav-item"><a class="nav-link" href="directorio.html">Directorio</a></li>
-            <li class="nav-item"><a class="nav-link" href="procesoConsejo.html">Proceso del Consejo</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="comisiones.html">Comisiones</a></li>
+            <li class="nav-item"><a class="nav-link" href="procesoConsejo.html">Proceso del consejo</a></li>
+            <li class="nav-item"><a class="nav-link" href="comisiones.html">Comisiones</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="comitesAcademicos.html">Comites academicos</a></li>
           </ul>
           <form id="navbarSearchForm" class="d-flex navbar-search" role="search" aria-label="Buscar en el sitio" action="search.html" method="get">
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="q">
@@ -91,6 +90,74 @@
       </div>
     </div>
 
+    <!-- Comunicados destacados -->
+    <section id="comunicados" class="comunicados-section py-5">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-xl-9 col-lg-10">
+            <div class="hero-comunicados hero-comunicados-xl" aria-labelledby="comunicadosHeading">
+              <div class="hero-comunicados-header d-flex align-items-center justify-content-between gap-3">
+                <h2 id="comunicadosHeading" class="mb-0 text-on-dark">Comunicados</h2>
+                <div class="hero-comunicados-dots" role="group" aria-label="Seleccionar comunicado">
+                  <button type="button" class="comunicado-dot active" aria-label="Mostrar comunicado 1" data-index="0" aria-pressed="true"></button>
+                  <button type="button" class="comunicado-dot" aria-label="Mostrar comunicado 2" data-index="1" aria-pressed="false"></button>
+                  <button type="button" class="comunicado-dot" aria-label="Mostrar comunicado 3" data-index="2" aria-pressed="false"></button>
+                  <button type="button" class="comunicado-dot" aria-label="Mostrar comunicado 4" data-index="3" aria-pressed="false"></button>
+                </div>
+              </div>
+              <div class="hero-comunicados-carousel" role="region" aria-live="polite">
+                <div class="comunicado-slide active">
+                  <a href="https://www.unam.mx/" class="comunicado-card d-block text-decoration-none" target="_blank" rel="noopener noreferrer">
+                    <div class="comunicado-media">
+                      <img src="/wp-content/uploads/2025/11/IMAGEN_CARRUSEL.png" alt="Imagen relacionada al comunicado" loading="lazy">
+                    </div>
+                    <span class="comunicado-meta">Publicado el 05 de junio de 2024</span>
+                    <h3 class="h5 mb-2">UNAM presenta agenda cultural de verano</h3>
+                    <p class="mb-3">Consulta las actividades destacadas de la temporada cultural universitaria.</p>
+                    <span class="comunicado-link">Ir al comunicado <i class="bi bi-arrow-up-right"></i></span>
+                  </a>
+                </div>
+                <div class="comunicado-slide">
+                  <a href="https://www.gaceta.unam.mx/" class="comunicado-card d-block text-decoration-none" target="_blank" rel="noopener noreferrer">
+                    <div class="comunicado-media">
+                      <img src="/assets/img/CAConFondo.png" alt="Imagen relacionada al comunicado" loading="lazy">
+                    </div>
+                    <span class="comunicado-meta">Publicado el 28 de mayo de 2024</span>
+                    <h3 class="h5 mb-2">Convocatoria nacional para proyectos de humanidades</h3>
+                    <p class="mb-3">Explora las bases para participar con investigaciones interdisciplinarias.</p>
+                    <span class="comunicado-link">Ir al comunicado <i class="bi bi-arrow-up-right"></i></span>
+                  </a>
+                </div>
+                <div class="comunicado-slide">
+                  <a href="https://cultura.unam.mx/" class="comunicado-card d-block text-decoration-none" target="_blank" rel="noopener noreferrer">
+                    <div class="comunicado-media">
+                      <img src="/wp-content/uploads/2025/11/IMAGEN_CARRUSEL-1-scaled.webp" alt="Imagen relacionada al comunicado" loading="lazy">
+                    </div>
+                    <span class="comunicado-meta">Publicado el 16 de mayo de 2024</span>
+                    <h3 class="h5 mb-2">Cultura UNAM anuncia residencias artisticas</h3>
+                    <p class="mb-3">Revisa las residencias y talleres que se ofreceran durante el semestre.</p>
+                    <span class="comunicado-link">Ir al comunicado <i class="bi bi-arrow-up-right"></i></span>
+                  </a>
+                </div>
+                <div class="comunicado-slide">
+                  <div class="comunicado-card h-100 d-flex flex-column">
+                    <a href="https://www.caahya.unam.mx" class="comunicado-media comunicado-media-link d-block" target="_blank" rel="noopener noreferrer">
+                      <img src="https://www.caahya.unam.mx/wp-content/uploads/2025/11/IMAGEN_CARRUSEL-1-scaled.webp" alt="Registro al encuentro anual" loading="lazy">
+                    </a>
+                    <span class="comunicado-meta">Publicado el 10 de junio de 2024</span>
+                    <h3 class="h5 mb-2">Registro al encuentro anual de consejos academicos</h3>
+                    <p class="mb-3 flex-grow-1">Aparta tu lugar en el encuentro 2024 y comparte propuestas con otras entidades academicas.</p>
+                    <div class="d-flex flex-wrap gap-3 align-items-center">
+                      <a href="https://www.caahya.unam.mx" class="comunicado-link text-decoration-none" target="_blank" rel="noopener noreferrer">Ir al comunicado <i class="bi bi-arrow-up-right"></i></a>
+                      <a href="#contacto" class="btn btn-accent btn-sm ms-auto">Registrarse</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
     <!-- Hero -->
     <section id="inicio" class="hero py-5">
       <!-- Contacto arriba a la derecha -->
@@ -104,49 +171,28 @@
               <a href="#consejo" class="btn btn-accent btn-lg">Conoce más</a>
               <a href="#documentos" class="btn btn-outline-light btn-lg">Ver documentos</a>
             </div>
+            <!-- Sobre el Consejo -->
+
+                <div class="row g-4 align-items-stretch">
+                  <div class="col-lg-7">
+                    <h2 class="mb-3" style="color:#eeeef7;">Sobre el Consejo</h2>
+                    <p class="text-on-dark opacity-75 mb-4">El Consejo Académico de Humanidades y Artes (CAAHYA) es un órgano colegiado orientado al fortalecimiento de los procesos académicos, la articulación entre programas y la promoción de la excelencia en las áreas de humanidades y artes.</p>
+                    <p class="text-on-dark opacity-75 mb-4">Sus funciones incluyen la generación de lineamientos, la revisión de planes y proyectos, y el acompañamiento de iniciativas institucionales con pertinencia social y cultural.</p>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="p-4 shadow-soft rounded-min border border-2 border-secondary-ca h-100">
+                      <h3 class="h5 text-secondary-ca mb-3">Misión y visión</h3>
+                      <p class="mb-2"><strong>Misión:</strong> Promover la calidad académica, la integridad y el diálogo interdisciplinario.</p>
+                      <p class="mb-0"><strong>Visión:</strong> Ser referente institucional en la toma de decisiones académicas y culturales.</p>
+                    </div>
+                  </div>
+                </div>
           </div>
           <div class="col-lg-5">
             <div class="hero-photo">
               <div class="ratio ratio-16x9">
                 <img src="assets/img/LogoAzulOscuro_Completo.png" alt="Instalaciones de la institución" class="w-100 h-100 object-fit-cover" onerror="this.style.display='none'">
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-comunicados mt-5" aria-labelledby="comunicadosHeading">
-          <div class="hero-comunicados-header d-flex align-items-center justify-content-between gap-3">
-            <h2 id="comunicadosHeading" class="mb-0 text-on-dark">Comunicados</h2>
-            <div class="hero-comunicados-dots" role="group" aria-label="Seleccionar comunicado">
-              <button type="button" class="comunicado-dot active" aria-label="Mostrar comunicado 1" data-index="0" aria-pressed="true"></button>
-              <button type="button" class="comunicado-dot" aria-label="Mostrar comunicado 2" data-index="1" aria-pressed="false"></button>
-              <button type="button" class="comunicado-dot" aria-label="Mostrar comunicado 3" data-index="2" aria-pressed="false"></button>
-            </div>
-          </div>
-          <div class="hero-comunicados-carousel" role="region" aria-live="polite">
-            <div class="comunicado-slide active">
-              <a href="https://www.unam.mx/" class="comunicado-card d-block text-decoration-none" target="_blank" rel="noopener noreferrer">
-                <span class="comunicado-meta">Publicado el 05 de junio de 2024</span>
-                <h3 class="h5 mb-2">UNAM presenta agenda cultural de verano</h3>
-                <p class="mb-3">Consulta las actividades destacadas de la temporada cultural universitaria.</p>
-                <span class="comunicado-link">Ir al comunicado <i class="bi bi-arrow-up-right"></i></span>
-              </a>
-            </div>
-            <div class="comunicado-slide">
-              <a href="https://www.gaceta.unam.mx/" class="comunicado-card d-block text-decoration-none" target="_blank" rel="noopener noreferrer">
-                <span class="comunicado-meta">Publicado el 28 de mayo de 2024</span>
-                <h3 class="h5 mb-2">Convocatoria nacional para proyectos de humanidades</h3>
-                <p class="mb-3">Explora las bases para participar con investigaciones interdisciplinarias.</p>
-                <span class="comunicado-link">Ir al comunicado <i class="bi bi-arrow-up-right"></i></span>
-              </a>
-            </div>
-            <div class="comunicado-slide">
-              <a href="https://cultura.unam.mx/" class="comunicado-card d-block text-decoration-none" target="_blank" rel="noopener noreferrer">
-                <span class="comunicado-meta">Publicado el 16 de mayo de 2024</span>
-                <h3 class="h5 mb-2">Cultura UNAM anuncia residencias artisticas</h3>
-                <p class="mb-3">Revisa las residencias y talleres que se ofreceran durante el semestre.</p>
-                <span class="comunicado-link">Ir al comunicado <i class="bi bi-arrow-up-right"></i></span>
-              </a>
             </div>
           </div>
         </div>
@@ -498,7 +544,7 @@
     <section id="videos" class="py-5 section-formal">
       <div class="container">
         <div class="d-flex align-items-center justify-content-between mb-3">
-          <h2 class="mb-0" style="color:#262261;">Podcasts</h2>
+          <h2 class="mb-0" style="color:#262261;">YouTube</h2>
           <a class="btn btn-secondary-ca" href="https://www.youtube.com/@CAAHYA_UNAM" target="_blank" rel="noopener">Ver canal</a>
         </div>
         <div class="row g-4">
@@ -509,7 +555,7 @@
           </div>
           <div class="col-12 col-md-6 ">
             <div class="ratio ratio-16x9 rounded-min shadow-soft">
-              <iframe src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UU0_KLa9zF_KkLnA7BvMEZ2g&index=2" title="YouTube - Segundo más reciente" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="origin-when-cross-origin"></iframe>
+              <iframe src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UU0_KLa9zF_KkLnA7BvMEZ2g&index=2" title="YouTube - Primer episodio de Podcast" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="origin-when-cross-origin"></iframe>
             </div>
           </div>
         </div>
@@ -554,6 +600,7 @@
     <script src="assets/vendor/animejs/anime.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/index-page.js"></script>
+    <script src="assets/js/marquee-fallback.js"></script>
   </body>
 </html>
 

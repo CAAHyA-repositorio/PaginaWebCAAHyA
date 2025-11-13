@@ -68,21 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const entitiesTrack = document.querySelector('.entities-track');
-  if (entitiesTrack && entitiesTrack.children.length > 0 && entitiesTrack.dataset.enhanced !== 'true') {
-    const slides = Array.from(entitiesTrack.children);
-    slides.forEach((slide) => {
-      const clone = slide.cloneNode(true);
-      clone.setAttribute('data-duplicate', 'true');
-      entitiesTrack.appendChild(clone);
-    });
-    entitiesTrack.dataset.enhanced = 'true';
+  if (entitiesTrack && window.MarqueeLooper) {
+    const loop = window.MarqueeLooper.mount(entitiesTrack, { speed: 32 });
+    const pauseLoop = () => loop && loop.stop();
+    const resumeLoop = () => loop && loop.start();
 
-    const marqueeWrapper = entitiesTrack.parentElement;
-    if (marqueeWrapper) {
-      const distance = entitiesTrack.scrollWidth / 2;
-      const seconds = Math.max(18, distance / 100);
-      entitiesTrack.style.setProperty('--entities-marquee-duration', `${seconds}s`);
-    }
+    entitiesTrack.addEventListener('mouseenter', pauseLoop);
+    entitiesTrack.addEventListener('mouseleave', resumeLoop);
+    entitiesTrack.addEventListener('focusin', pauseLoop);
+    entitiesTrack.addEventListener('focusout', (event) => {
+      if (entitiesTrack.contains(event.relatedTarget)) return;
+      resumeLoop();
+    });
   }
 
   const docsConfig = {

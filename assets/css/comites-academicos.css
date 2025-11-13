@@ -1,0 +1,69 @@
+.career-hero {
+  background: radial-gradient(circle at 10% 20%, rgba(87, 134, 255, 0.15), transparent 50%),
+    radial-gradient(circle at 80% 0%, rgba(255, 186, 120, 0.25), transparent 60%),
+    linear-gradient(135deg, #f5f7ff 0%, #ffffff 55%);
+}
+
+.career-hero .hero-badge {
+  letter-spacing: 0.08em;
+  background: rgba(16, 57, 150, 0.08);
+  color: #103996;
+}
+
+.committee-card {
+  border: 1px solid rgba(16, 16, 16, 0.08);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  background: #ffffff;
+  box-shadow: 0 15px 35px rgba(17, 24, 39, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.committee-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 45px rgba(17, 24, 39, 0.12);
+}
+
+.committee-card small {
+  font-size: 0.85rem;
+  color: #5b6474;
+}
+
+.modal-committee .modal-content {
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.25);
+}
+
+.modal-hero {
+  background: linear-gradient(120deg, rgba(16, 57, 150, 0.08), rgba(105, 65, 198, 0.05));
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+}
+
+.modal-hero-photo img {
+  border: 6px solid #ffffff;
+}
+
+.entity-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #f6f7fb;
+  border: 1px solid transparent;
+  text-align: center;
+  text-decoration: none;
+  color: #17223b;
+  font-weight: 600;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.entity-card:focus,
+.entity-card:hover {
+  background: #ffffff;
+  border-color: rgba(16, 57, 150, 0.4);
+  color: #103996;
+}

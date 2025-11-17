@@ -4,6 +4,9 @@
   transition: background .3s ease, box-shadow .3s ease, padding .2s ease;
   background: var(--primary);
 }
+.navbar-ca .container{
+  position:relative;
+}
 .navbar-brand img{
   height:44px; width:44px;
   object-fit: contain;
@@ -50,6 +53,19 @@
 @media (max-width: 991.98px){
   .navbar-nav.nav-pills-ca{ flex-direction: column; }
   .navbar-nav.nav-pills-ca .nav-link{ width:100%; text-align:center; }
+}
+@media (min-width: 992px){
+  .navbar-ca #navMain{
+    flex-grow:1;
+    justify-content:flex-end;
+  }
+  .navbar-ca .navbar-nav.nav-pills-ca{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    margin:0;
+  }
 }
 
 /* Contacto en navbar (derecha) */
@@ -288,7 +304,12 @@
 .navbar-search{ width:100%; }
 @media (min-width: 992px){
   .navbar-search{ width:auto; }
-  .navbar-search .form-control{ width:220px; }
+  .navbar-search .form-control{
+    width:160px;
+    border-radius:999px;
+    padding-inline:.85rem;
+    font-size:.9rem;
+  }
 }
 .email-popover{
   background:#1a1740;

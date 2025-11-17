@@ -12,6 +12,72 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 });
 
+document.addEventListener('DOMContentLoaded', function(){
+  const emailButtons = document.querySelectorAll('[data-email-popover]');
+  if(!emailButtons.length) return;
+
+  const buildContent = (email, copied)=>{
+    const msg = copied ? 'Correo copiado al portapapeles' : 'Correo de contacto';
+    return msg + '<br><a href=\"mailto:' + email + '\">' + email + '</a>';
+  };
+
+  emailButtons.forEach((btn)=>{
+    const email = btn.getAttribute('data-email') || 'humanidadesyartes@unam.mx';
+    let popover = null;
+
+    if(window.bootstrap && window.bootstrap.Popover){
+      popover = window.bootstrap.Popover.getOrCreateInstance(btn, {
+        container: 'body',
+        trigger: 'focus',
+        html: true,
+        content: buildContent(email, false),
+        customClass: btn.getAttribute('data-bs-custom-class') || ''
+      });
+    }
+
+    const copyToClipboard = async ()=>{
+      try{
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          await navigator.clipboard.writeText(email);
+        }else{
+          const tmp = document.createElement('input');
+          tmp.value = email;
+          document.body.appendChild(tmp);
+          tmp.select();
+          document.execCommand('copy');
+          document.body.removeChild(tmp);
+        }
+      }catch(e){
+        // sin manejo extra, el usuario aun ve el correo
+      }
+    };
+
+    btn.addEventListener('click', async (event)=>{
+      event.preventDefault();
+      await copyToClipboard();
+
+      if(popover){
+        if(typeof popover.setContent === 'function'){
+          popover.setContent({ '.popover-body': buildContent(email, true) });
+        }else{
+          btn.setAttribute('data-bs-content', buildContent(email, true));
+          popover.dispose();
+          popover = window.bootstrap.Popover.getOrCreateInstance(btn, {
+            container: 'body',
+            trigger: 'focus',
+            html: true,
+            customClass: btn.getAttribute('data-bs-custom-class') || ''
+          });
+        }
+        popover.show();
+        btn.focus();
+      }else{
+        alert('Correo copiado: ' + email);
+      }
+    });
+  });
+});
+
 // Overlay de transición: animación de entrada y al cambiar de página
 window.addEventListener('load', function(){ const pageTransition = document.getElementById('pageTransition');
   if(!pageTransition) return;

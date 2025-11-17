@@ -1,15 +1,83 @@
 /* Ajustes responsivos */
-@media (max-width: 767.98px){
+@media (max-width: 1199.98px){
   .hero h1{ font-size: 1.9rem; }
   .entity-card{ padding: 1.25rem !important; }
   .team-hero .team-hero-caption{ padding-left: 1rem; padding-right: 1rem; }
 }
 
-@media (max-width: 575.98px){
-  .navbar-brand img{ height:32px; }
-  .navbar-brand .brand-text{ font-size:1.05rem; }
+@media (max-width: 1199.98px){
+  /* Navbar: branding compacto para que quepa junto al menu */
+  .navbar-brand{
+    padding:1px 8px;
+  }
+  .navbar-brand img{
+    height:28px;
+    width:28px;
+  }
+  .navbar-brand .brand-text{
+    font-size:.7rem;
+    letter-spacing:.8px;
+  }
+  .navbar .d-flex.d-lg-none{
+    gap:.15rem;
+  }
+  .navbar .social .social-email,
+  .navbar .social .social-pill{
+    width:30px;
+    height:30px;
+    margin-left:.15rem;
+  }
+  .navbar-toggler{
+    padding:.15rem .4rem;
+    border-width:1px;
+  }
+  /* old: .navbar-brand img{ height:32px; } */
   .hero h1{ font-size: 1.7rem; }
   /* Ajustar relación del hero de directorio para pantallas pequeñas */
   .team-hero .ratio{ --bs-aspect-ratio: 56.25%; }
 }
 
+/* Ajustes responsivos extra sacados de layout.css */
+@media (max-width: 1199.98px){
+  .navbar-nav.nav-pills-ca{
+    flex-direction: column;
+  }
+  .navbar-nav.nav-pills-ca .nav-link{
+    width:100%;
+    text-align:center;
+    margin-top:.35rem;
+  }
+}
+
+@media (min-width: 992px){
+  .navbar-ca .container{
+    padding-left:0;
+    padding-right:0;
+  }
+  .navbar-ca #navMain{
+    flex-grow:1;
+    justify-content:flex-end;
+  }
+  .navbar-ca .navbar-nav.nav-pills-ca{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    margin:0;
+  }
+  .navbar-search{
+    width:auto;
+  }
+  .navbar-search .form-control{
+    width:160px;
+    border-radius:999px;
+    padding-inline:.85rem;
+    font-size:.9rem;
+  }
+}
+
+@media (max-width: 575.98px){
+  .hero-card{
+    padding:1.5rem;
+  }
+}

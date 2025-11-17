@@ -12,6 +12,21 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 });
 
+document.addEventListener('DOMContentLoaded', function(){
+  const emailButtons = document.querySelectorAll('[data-email-popover]');
+  if(!emailButtons.length || !window.bootstrap) return;
+
+  emailButtons.forEach((btn)=>{
+    window.bootstrap.Popover.getOrCreateInstance(btn, {
+      container: 'body',
+      trigger: 'focus',
+      customClass: btn.getAttribute('data-bs-custom-class') || ''
+    });
+
+    btn.addEventListener('click', ()=> btn.focus());
+  });
+});
+
 // Overlay de transición: animación de entrada y al cambiar de página
 window.addEventListener('load', function(){ const pageTransition = document.getElementById('pageTransition');
   if(!pageTransition) return;

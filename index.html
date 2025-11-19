@@ -34,9 +34,9 @@
       </a>
       <div class="d-flex d-xl-none align-items-center ms-auto gap-2">
         <div class="social d-flex align-items-center" aria-label="Redes sociales">
-          <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-          <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/p/Consejo-Acad%C3%A9mico-del-%C3%81rea-de-las-Humanidades-y-las-Artes-Caahya-61573733710648/" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.youtube.com/@CAAHYA_UNAM" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.instagram.com/caahya_unam/" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
           <button type="button" class="social-email" data-email-popover="true" data-email="humanidadesyartes@unam.mx"
             data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
             data-bs-custom-class="email-popover" data-bs-html="true" aria-label="Correo electronico">
@@ -52,8 +52,25 @@
       <div class="collapse navbar-collapse" id="navMain">
         <!-- MENÚ CENTRAL -->
         <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="procesoConsejo.html">Proceso del consejo</a></li>
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="index.html" id="inicioMenu">
+              CAAHyA
+            </a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Inicio CAAHyA</p>
+                <a href="#modalDirectorio" class="mega-menu__item" data-bs-toggle="modal" data-bs-target="#modalDirectorio">
+                  <span class="mega-menu__item-title">Directorio del Consejo</span>
+                  <span class="mega-menu__item-desc">Consulta la integración y los datos de contacto oficiales.</span>
+                </a>
+                <a href="#modalSobreConsejo" class="mega-menu__item" data-bs-toggle="modal" data-bs-target="#modalSobreConsejo">
+                  <span class="mega-menu__item-title">Acerca del Consejo</span>
+                  <span class="mega-menu__item-desc">Conoce el origen, funciones e integración del CAAHyA.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="procesoConsejo.html">Procesos</a></li>
 
           <!-- MEGA MENÚ -->
           <li class="nav-item dropdown-mega">
@@ -91,7 +108,7 @@
           </li>
           <!-- FIN MEGA MENÚ -->
 
-          <li class="nav-item"><a class="nav-link" href="comitesAcademicos.html">Comites academicos</a></li>
+          <li class="nav-item"><a class="nav-link" href="comitesAcademicos.html">Comites</a></li>
         </ul>
 
 
@@ -404,7 +421,7 @@
                   <i class="bi bi-journal-richtext text-secondary-ca fs-3"></i>
                   <div>
                     <div class="fw-bold">Documento del Pleno</div>
-                    <small class="text-muted">Resumen y acuerdos de la sesi&oacute;n reciente</small>
+                    <small class="text-muted">Resumen y acuerdos de la sesión reciente</small>
                   </div>
                 </a>
               </div>
@@ -537,9 +554,9 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
         <div class="modal-body">
-          <div class="ratio ratio-4x3 border rounded-min shadow-soft overflow-hidden">
+          <div class="modal-iframe-wrapper border rounded-min shadow-soft overflow-hidden">
             <iframe src="modals/modalDirectorio.html" title="Directorio del Consejo Acad&eacute;mico"
-              class="w-100 h-100" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              class="w-100 h-100 border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
         <div class="modal-footer border-0 justify-content-end">
@@ -576,6 +593,35 @@
             nueva pesta&ntilde;a</a>
         </div>
 
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Sobre el Consejo -->
+  <div class="modal fade modal-pleno" id="modalSobreConsejo" tabindex="-1" aria-labelledby="modalSobreConsejoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <div>
+            <h5 class="modal-title d-flex align-items-center gap-2" id="modalSobreConsejoLabel">
+              <i class="bi bi-info-circle text-secondary-ca"></i>
+              Acerca del Consejo
+            </h5>
+            <p class="mb-0 text-muted">Conoce el origen, funciones e integración del Consejo Académico de Humanidades y Artes.</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 border rounded-min shadow-soft overflow-hidden">
+            <iframe src="modals/modalSobreElConsejo.html" title="Acerca del Consejo" class="w-100 h-100" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="modal-footer border-0 justify-content-end">
+          <a class="btn btn-outline-secondary" href="modals/modalSobreElConsejo.html" target="_blank" rel="noopener">Abrir en
+            nueva pestaña</a>
+        </div>
       </div>
     </div>
   </div>

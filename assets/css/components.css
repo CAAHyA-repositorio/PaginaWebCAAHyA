@@ -286,17 +286,10 @@
 }
 [data-pleno-card]{
   position:relative;
-  perspective:1100px;
 }
 .pleno-card-flip{
   position:relative;
   width:100%;
-  min-height:260px;
-  transform-style:preserve-3d;
-  transition:transform .6s cubic-bezier(.4,.2,.2,1);
-}
-[data-pleno-card].is-open .pleno-card-flip{
-  transform:rotateY(180deg);
 }
 .pleno-card-header{
   position:relative;
@@ -314,8 +307,6 @@
   color:inherit;
   cursor:pointer;
   box-shadow:0 10px 24px rgba(31,27,74,.08);
-  backface-visibility:hidden;
-  transform-style:preserve-3d;
 }
 .pleno-card-header:focus-visible{
   outline:2px solid rgba(38,34,97,.35);
@@ -338,21 +329,30 @@
 [data-pleno-card].is-open .pleno-card-icon{
   transform:rotate(180deg);
 }
+/*contenido del backgroudn de las listas y nombres*/
 .pleno-card-body,
 .pleno-card-back{
-  position:absolute;
-  inset:0;
+  position:relative;
   display:flex;
   flex-direction:column;
   gap:.9rem;
   padding:1.25rem 1.5rem;
   margin:0;
   border-radius:.9rem;
-  background:#262261;
+  background:#9892ed;
   color:#fff;
-  backface-visibility:hidden;
-  transform:rotateY(180deg);
   box-shadow:0 16px 30px rgba(31,27,74,.18);
+  max-height:0;
+  opacity:0;
+  overflow:hidden;
+  transition:max-height .35s cubic-bezier(.4,0,.2,1), opacity .25s ease;
+}
+.pleno-card-body{
+  margin-top:.75rem;
+}
+[data-pleno-card].is-open .pleno-card-body,
+[data-pleno-card].is-open .pleno-card-back{
+  opacity:1;
 }
 .pleno-card-back-title{
   font-size:1rem;
@@ -381,6 +381,49 @@
 .pleno-trigger:hover{
   transform:translateY(-2px);
   box-shadow:0 12px 24px rgba(38,34,97,.12);
+}
+
+/* Modal Directorio (envoltura en index) */
+.modal-directorio .modal-dialog{
+  max-width:1100px;
+  margin:0 auto;      /* Aumenta este valor para más espacio top/bottom */
+  min-height:calc(100vh - 4rem); /* opcional, para que siga centrado */
+  display:flex;
+  align-items:center;
+}
+@media (max-width: 991.98px){
+  .modal-directorio .modal-dialog{
+    margin:.75rem;
+  }
+}
+.modal-directorio .modal-content{
+  border-radius:1.1rem;
+  border:1px solid rgba(38,34,97,.18);
+  box-shadow:0 26px 60px rgba(12,11,28,.32);
+  background:radial-gradient(900px 420px at 100% 0, rgba(255,202,0,.10), transparent 55%),
+             linear-gradient(145deg, #ffffff 0%, #f5f6fc 85%);
+}
+.modal-directorio .modal-header{
+  background:linear-gradient(135deg, rgba(199, 199, 251, 0.98), rgba(189, 184, 250, 0.98));
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.modal-directorio .modal-title{
+  color:#ffffff;
+  font-weight:700;
+}
+.modal-directorio .modal-header p{
+  color:rgba(255,255,255,.8);
+}
+.modal-directorio .modal-header .bi{
+  color:var(--accent);
+}
+.modal-directorio .modal-body{
+  background:transparent;
+  padding:1.5rem;
+}
+.modal-directorio .modal-footer{
+  background:rgba(255,255,255,.9);
+  border-top:1px solid rgba(38,34,97,.08);
 }
 
 /* Página de comisiones */
@@ -1229,6 +1272,26 @@ footer .social a:hover{ color:#d7d7ff; }
   background: rgba(255,255,255,.88);
   border-top:1px solid rgba(38,34,97,.1);
 }
+
+/* Tamaño unificado para modales principales
+   (igual que los comités académicos) */
+.modal-pleno .modal-dialog,
+.modal-commission .modal-dialog,
+.modal-entity .modal-dialog,
+.modal-reglamento .modal-dialog{
+  max-width:1140px;
+  margin:1.5rem auto;
+  margin-bottom:3rem;
+}
+@media (max-width: 991.98px){
+  .modal-pleno .modal-dialog,
+  .modal-commission .modal-dialog,
+  .modal-entity .modal-dialog,
+  .modal-reglamento .modal-dialog{
+    margin:0.5rem;
+  }
+}
+
 .reglamento-trigger{
   transition:transform .2s ease, box-shadow .2s ease;
 }

@@ -47,9 +47,16 @@
     text-align:center;
     margin-top:.35rem;
   }
+  .navbar-ca .navbar-collapse{
+    padding:.6rem 1rem 1rem;
+    border-radius:0 0 .85rem .85rem;
+  }
+  .navbar-ca .navbar-nav.nav-pills-ca{
+    align-items:stretch;
+  }
 }
 
-@media (min-width: 992px){
+@media (min-width: 1200px){
   .navbar-ca .container{
     padding-left:0;
     padding-right:0;

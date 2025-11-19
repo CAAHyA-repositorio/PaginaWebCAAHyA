@@ -808,9 +808,6 @@ footer{
 .navbar-ca .social a:hover{ color:#ffca00; }
 footer .social a{ color:#ffffff; }
 footer .social a:hover{ color:#d7d7ff; }
-@media (min-width: 1200px){
-  .navbar-search .form-control{ width:260px; }
-}
 
 /* Listas sobre fondo azul institucional */
 .list-entities li{

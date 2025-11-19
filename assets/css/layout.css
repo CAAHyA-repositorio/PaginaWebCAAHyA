@@ -39,12 +39,12 @@
 }
 .nav-link{ color: var(--text-on-dark)!important; opacity:.95; }
 .nav-link:hover,.nav-link:focus{ opacity:1; }
-.navbar-nav.nav-pills-ca{ gap:.45rem; }
+.navbar-nav.nav-pills-ca{ gap:.30rem; }
 /* Estilo de los botones de la navbar (pills) */
 .nav-pills-ca .nav-link{
   background: rgba(11, 1, 79, 0.823); 
   border-radius: 50px;
-  padding: 0.45rem 1.2rem;
+  padding: 0.35rem 1.2rem;
   color: #fff;
   font-weight: 500;
   border:1px solid rgba(0, 225, 255, 0.318);

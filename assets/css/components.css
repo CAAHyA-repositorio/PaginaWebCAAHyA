@@ -203,7 +203,7 @@
   border-radius:1rem;
   border:1px solid rgba(38,34,97,.12);
   box-shadow:0 24px 55px rgba(0,0,0,.28);
-  background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(245,246,252,1) 85%);
+  background: linear-gradient(135deg, rgb(247, 244, 244) 0%, rgba(243, 244, 246, 0.774) 85%);
 }
 .modal-pleno .modal-header{
   background:rgba(255,255,255,.92);
@@ -404,11 +404,11 @@
              linear-gradient(145deg, #ffffff 0%, #f5f6fc 85%);
 }
 .modal-directorio .modal-header{
-  background:linear-gradient(135deg, rgba(199, 199, 251, 0.98), rgba(189, 184, 250, 0.98));
+  background:linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(245,247,255,1) 70%);
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 .modal-directorio .modal-title{
-  color:#ffffff;
+  color:#210575;
   font-weight:700;
 }
 .modal-directorio .modal-header p{
@@ -424,6 +424,68 @@
 .modal-directorio .modal-footer{
   background:rgba(255,255,255,.9);
   border-top:1px solid rgba(38,34,97,.08);
+}
+
+/* Ajuste de altura para que el directorio ocupe mejor la pantalla */
+.modal-directorio .modal-dialog{
+  min-height:100vh;
+  display:flex;
+  align-items:stretch;
+}
+@media (max-width: 991.98px){
+  .modal-directorio .modal-dialog{
+    min-height:100vh;
+    align-items:stretch;
+  }
+}
+.modal-directorio .modal-content{
+  height:100vh;
+  max-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+.modal-directorio .modal-body{
+  flex:1 1 auto;
+  display:flex;
+}
+.modal-directorio .modal-iframe-wrapper{
+  flex:1 1 auto;
+  height:100%;
+}
+
+/* Altura adaptable para otros modales principales */
+.modal-pleno .modal-dialog,
+.modal-reglamento .modal-dialog,
+.modal-entity .modal-dialog,
+.modal-commission .modal-dialog{
+  min-height:100vh;
+  display:flex;
+  align-items:stretch;
+}
+@media (max-width: 991.98px){
+  .modal-pleno .modal-dialog,
+  .modal-reglamento .modal-dialog,
+  .modal-entity .modal-dialog,
+  .modal-commission .modal-dialog{
+    min-height:100vh;
+    align-items:stretch;
+  }
+}
+.modal-pleno .modal-content,
+.modal-reglamento .modal-content,
+.modal-entity .modal-content,
+.modal-commission .modal-content{
+  height:100vh;
+  max-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+.modal-pleno .modal-body,
+.modal-reglamento .modal-body,
+.modal-entity .modal-body,
+.modal-commission .modal-body{
+  flex:1 1 auto;
+  display:flex;
 }
 
 /* Página de comisiones */

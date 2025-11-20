@@ -79,38 +79,44 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 document.addEventListener('DOMContentLoaded', function(){
-  const toggle = document.getElementById('inicioMenu');
-  const item = toggle ? toggle.closest('.dropdown-mega') : null;
-  const menu = item ? item.querySelector('.mega-menu') : null;
+  const dropdowns = Array.from(document.querySelectorAll('.dropdown-mega'));
+  if(!dropdowns.length) return;
 
-  if(!(toggle && item && menu)){
-    return;
-  }
+  dropdowns.forEach((item)=>{
+    const toggle = item.querySelector(':scope > .nav-link');
+    const menu = item.querySelector('.mega-menu');
+    if(!(toggle && menu)) return;
 
-  let hideTimeout = null;
+    let hideTimeout = null;
 
-  const clearHideTimeout = ()=>{
-    if(hideTimeout){
-      clearTimeout(hideTimeout);
-      hideTimeout = null;
-    }
-  };
+    const clearHideTimeout = ()=>{
+      if(hideTimeout){
+        clearTimeout(hideTimeout);
+        hideTimeout = null;
+      }
+    };
 
-  const openMenu = ()=>{
-    clearHideTimeout();
-    item.classList.add('is-open');
-  };
+    const openMenu = ()=>{
+      clearHideTimeout();
+      item.classList.add('is-open');
+    };
 
-  const scheduleHide = ()=>{
-    clearHideTimeout();
-    hideTimeout = setTimeout(()=>{
-      item.classList.remove('is-open');
-    }, 500);
-  };
+    const scheduleHide = ()=>{
+      clearHideTimeout();
+      hideTimeout = setTimeout(()=>{
+        item.classList.remove('is-open');
+      }, 700); // mismo comportamiento suave en todos
+    };
 
-  [toggle, menu].forEach((el)=>{
-    el.addEventListener('mouseenter', openMenu);
-    el.addEventListener('mouseleave', scheduleHide);
+    [toggle, menu].forEach((el)=>{
+      el.addEventListener('mouseenter', openMenu);
+      el.addEventListener('mouseleave', scheduleHide);
+      el.addEventListener('focusin', openMenu);
+      el.addEventListener('focusout', (event)=>{
+        if(item.contains(event.relatedTarget)) return;
+        scheduleHide();
+      });
+    });
   });
 });
 

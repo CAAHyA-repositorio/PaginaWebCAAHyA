@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Legislaci&oacute;n | CAAHyA</title>
+    <meta name="description" content="Consulta la legislaci&oacute;n universitaria esencial y los reglamentos vigentes relacionados con el CAAHyA.">
+
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+  </head>
+  <body>
+    <!--Overlay-->
+    <div id="pageTransition" class="page-transition active" aria-hidden="false">
+      <img src="assets/img/LogoAzulOscuro_Completo.png" alt="CAAHYA">
+    </div>
+    <a class="skip-link" href="#contenidoPrincipal">Saltar al contenido</a>
+
+     <!-- Barra de navegacion-->
+  <nav class="navbar navbar-expand-xl navbar-ca fixed-top" aria-label="Navegacion principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Inicio CAAHYA">
+        <img src="assets/img/LogoAzulOscuro.png" alt="CAAHYA" onerror="this.style.display='none'">
+        <span class="brand-text">CAAHyA</span>
+      </a>
+      <div class="d-flex d-xl-none align-items-center ms-auto gap-2">
+        <div class="social d-flex align-items-center" aria-label="Redes sociales">
+          <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <button type="button" class="social-email" data-email-popover="true" data-email="humanidadesyartes@unam.mx"
+            data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
+            data-bs-custom-class="email-popover" data-bs-html="true" aria-label="Correo electronico">
+            <i class="bi bi-envelope-fill"></i>
+          </button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+          aria-controls="navMain" aria-expanded="false" aria-label="Mostrar menu">
+          <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <!-- MEN&Uacute; CENTRAL -->
+        <ul class="navbar-nav nav-pills-ca mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="procesoConsejo.html">Proceso del consejo</a></li>
+          <li class="nav-item"><a class="nav-link" href="comisiones.html">Comisiones</a></li>
+          <li class="nav-item"><a class="nav-link" href="comitesAcademicos.html">Comites
+              academicos</a></li>
+        </ul>
+
+        <!-- ACCIONES DERECHA: BUSCADOR + REDES -->
+        <div class="navbar-actions d-none d-xl-flex">
+          <!-- <form id="navbarSearchForm" class="d-flex navbar-search me-2" role="search" aria-label="Buscar en el sitio"
+            action="search.html" method="get">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="q">
+            <button class="btn btn-secondary-ca" type="submit"><i class="bi bi-search"></i></button>
+          </form> -->
+
+          <div class="social d-flex align-items-center" aria-label="Redes sociales">
+            <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <button type="button" class="social-email" data-email-popover="true" data-email="humanidadesyartes@unam.mx"
+              data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
+              data-bs-custom-class="email-popover" data-bs-html="true" aria-label="Correo electronico">
+              <i class="bi bi-envelope-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </nav>
+    <main id="contenidoPrincipal">
+      <!-- Hero -->
+      <section class="commissions-hero text-center text-lg-start">
+        <div class="container py-5 py-lg-6 position-relative">
+          <div class="hero-bubble hero-bubble-1"></div>
+          <div class="hero-bubble hero-bubble-2"></div>
+          <div class="hero-bubble hero-bubble-3"></div>
+          <div class="row align-items-center g-4 position-relative">
+            <div class="col-lg-7">
+              <span class="badge hero-pill text-uppercase fw-semibold px-3 py-2 mb-3">Legislaci&oacute;n</span>
+              <h1 class="display-5 fw-bold text-primary mb-3">Legislaci&oacute;n universitaria del CAAHyA</h1>
+              <p class="lead text-muted mb-4">Consulta los fundamentos normativos que gu&iacute;an la organizaci&oacute;n, la gesti&oacute;n acad&eacute;mica y el trabajo colegiado del Consejo.</p>
+              <div class="d-flex flex-column flex-sm-row gap-3">
+                <a class="btn btn-secondary-ca btn-lg px-4" href="#legislacion">Normativa esencial</a>
+                <a class="btn btn-outline-primary btn-lg px-4" href="#reglamentos">Reglamentos vigentes</a>
+              </div>
+            </div>
+            <div class="col-lg-5 text-lg-end">
+              <div class="hero-illustration ratio ratio-4x3 rounded overflow-hidden shadow-lg mx-auto mx-lg-0">
+                <img src="assets/img/procesos/proceso-comisiones-evaluadoras-pride.svg" alt="Legislaci&oacute;n del Consejo" class="w-100 h-100 object-fit-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Legislaci&oacute;n esencial -->
+      <section id="legislacion" class="commission-section py-5 section-formal">
+        <div class="container">
+          <div class="row align-items-start justify-content-between g-3 mb-4">
+            <div class="col-lg-8">
+              <h2 class="h2 fw-bold text-primary mb-2">Legislaci&oacute;n</h2>
+              <p class="mb-2 text-muted">La Legislaci&oacute;n Universitaria se integra por las normas y disposiciones generales que garantizan la mejor organizaci&oacute;n y funcionamiento t&eacute;cnico, docente y administrativo de la UNAM.</p>
+              <p class="mb-0 text-muted">En esta secci&oacute;n encontrar&aacute; los reglamentos, normas y lineamientos fundamentales en los que se apoya la realizaci&oacute;n de las funciones del Consejo de &Aacute;rea de las Humanidades y de las Artes.</p>
+            </div>
+          </div>
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="https://www.abogadogeneral.unam.mx/" target="_blank" rel="noopener noreferrer">
+                <div class="commission-card-media d-flex align-items-center justify-content-center text-white fs-2" style="background:linear-gradient(135deg, rgba(238,130,25,.25), rgba(38,34,97,.4));">
+                  <i class="bi bi-building"></i>
+                </div>
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title">P&aacute;gina de la Abogac&iacute;a General</h3>
+                  <p class="commission-card-text">Portal oficial para consultar la legislaci&oacute;n universitaria, acuerdos y disposiciones.</p>
+                  <span class="commission-card-action">Visitar sitio <i class="bi bi-arrow-up-right ms-1"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="https://www.abogadogeneral.unam.mx:8443/legislacion/view/15" target="_blank" rel="noopener noreferrer">
+                <div class="commission-card-media d-flex align-items-center justify-content-center text-white fs-2" style="background:linear-gradient(135deg, rgba(38,34,97,.25), rgba(255,202,0,.32));">
+                  <i class="bi bi-bank2"></i>
+                </div>
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title">Ley Org&aacute;nica de la UNAM</h3>
+                  <p class="commission-card-text">Marco legal fundamental que define la estructura y autonom&iacute;a de la Universidad.</p>
+                  <span class="commission-card-action">Consultar <i class="bi bi-arrow-up-right ms-1"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="https://www.abogadogeneral.unam.mx:8443/legislacion/view/1" target="_blank" rel="noopener noreferrer">
+                <div class="commission-card-media d-flex align-items-center justify-content-center text-white fs-2" style="background:linear-gradient(135deg, rgba(38,34,97,.28), rgba(38,34,97,.55));">
+                  <i class="bi bi-mortarboard"></i>
+                </div>
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title">Estatuto General de la UNAM</h3>
+                  <p class="commission-card-text">Organiza la vida acad&eacute;mica y administrativa de la Universidad Nacional.</p>
+                  <span class="commission-card-action">Consultar <i class="bi bi-arrow-up-right ms-1"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="https://www.abogadogeneral.unam.mx:8443/legislacion/view/5" target="_blank" rel="noopener noreferrer">
+                <div class="commission-card-media d-flex align-items-center justify-content-center text-white fs-2" style="background:linear-gradient(135deg, rgba(238,130,25,.3), rgba(38,34,97,.45));">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title">Reglamento del H. Consejo Universitario</h3>
+                  <p class="commission-card-text">Norma el funcionamiento del m&aacute;ximo &oacute;rgano colegiado de la UNAM.</p>
+                  <span class="commission-card-action">Consultar <i class="bi bi-arrow-up-right ms-1"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="https://www.abogadogeneral.unam.mx:8443/legislacion/view/84" target="_blank" rel="noopener noreferrer">
+                <div class="commission-card-media d-flex align-items-center justify-content-center text-white fs-2" style="background:linear-gradient(135deg, rgba(38,34,97,.3), rgba(255,202,0,.35));">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title">C&oacute;digo de &Eacute;tica de la UNAM</h3>
+                  <p class="commission-card-text">Principios y valores que orientan la conducta universitaria.</p>
+                  <span class="commission-card-action">Consultar <i class="bi bi-arrow-up-right ms-1"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="https://www.abogadogeneral.unam.mx:8443/legislacion/view/97" target="_blank" rel="noopener noreferrer">
+                <div class="commission-card-media d-flex align-items-center justify-content-center text-white fs-2" style="background:linear-gradient(135deg, rgba(38,34,97,.25), rgba(238,130,25,.32));">
+                  <i class="bi bi-badge-ad"></i>
+                </div>
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title">Reglamento de Responsabilidades Administrativas</h3>
+                  <p class="commission-card-text">Disposiciones sobre responsabilidades de funcionarias y funcionarios universitarios.</p>
+                  <span class="commission-card-action">Consultar <i class="bi bi-arrow-up-right ms-1"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="https://www.abogadogeneral.unam.mx:8443/legislacion/view/68" target="_blank" rel="noopener noreferrer">
+                <div class="commission-card-media d-flex align-items-center justify-content-center text-white fs-2" style="background:linear-gradient(135deg, rgba(38,34,97,.45), rgba(238,130,25,.35));">
+                  <i class="bi bi-journal-text"></i>
+                </div>
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title">Reglamento General de Estudios Universitarios</h3>
+                  <p class="commission-card-text">Lineamientos acad&eacute;micos para los planes y programas de estudio.</p>
+                  <span class="commission-card-action">Consultar <i class="bi bi-arrow-up-right ms-1"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="https://www.abogadogeneral.unam.mx:8443/legislacion/view/72" target="_blank" rel="noopener noreferrer">
+                <div class="commission-card-media d-flex align-items-center justify-content-center text-white fs-2" style="background:linear-gradient(135deg, rgba(38,34,97,.32), rgba(255,202,0,.32));">
+                  <i class="bi bi-person-badge"></i>
+                </div>
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title">Reglamento para Elecci&oacute;n de Consejeros Universitarios y T&eacute;cnicos</h3>
+                  <p class="commission-card-text">Procedimientos para elegir representantes universitarios.</p>
+                  <span class="commission-card-action">Consultar <i class="bi bi-arrow-up-right ms-1"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="https://www.abogadogeneral.unam.mx:8443/legislacion/view/87" target="_blank" rel="noopener noreferrer">
+                <div class="commission-card-media d-flex align-items-center justify-content-center text-white fs-2" style="background:linear-gradient(135deg, rgba(238,130,25,.25), rgba(38,34,97,.5));">
+                  <i class="bi bi-book"></i>
+                </div>
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title">Reglamento General de Educaci&oacute;n Continua</h3>
+                  <p class="commission-card-text">Norma la oferta y operaci&oacute;n de programas de educaci&oacute;n continua.</p>
+                  <span class="commission-card-action">Consultar <i class="bi bi-arrow-up-right ms-1"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="https://www.abogadogeneral.unam.mx:8443/legislacion/view/91/" target="_blank" rel="noopener noreferrer">
+                <div class="commission-card-media d-flex align-items-center justify-content-center text-white fs-2" style="background:linear-gradient(135deg, rgba(38,34,97,.4), rgba(255,202,0,.3));">
+                  <i class="bi bi-lock"></i>
+                </div>
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title">Reglamento de Transparencia y Acceso a la Informaci&oacute;n</h3>
+                  <p class="commission-card-text">Derechos de acceso a la informaci&oacute;n y obligaciones de transparencia.</p>
+                  <span class="commission-card-action">Consultar <i class="bi bi-arrow-up-right ms-1"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="https://www.abogadogeneral.unam.mx:8443/legislacion/view/116" target="_blank" rel="noopener noreferrer">
+                <div class="commission-card-media d-flex align-items-center justify-content-center text-white fs-2" style="background:linear-gradient(135deg, rgba(38,34,97,.25), rgba(38,34,97,.6));">
+                  <i class="bi bi-diagram-3"></i>
+                </div>
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title">Reglamento General de Planes y Programas de Estudio</h3>
+                  <p class="commission-card-text">Criterios para presentar y aprobar planes y programas acad&eacute;micos.</p>
+                  <span class="commission-card-action">Consultar <i class="bi bi-arrow-up-right ms-1"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="https://www.abogadogeneral.unam.mx:8443/legislacion/view/24" target="_blank" rel="noopener noreferrer">
+                <div class="commission-card-media d-flex align-items-center justify-content-center text-white fs-2" style="background:linear-gradient(135deg, rgba(238,130,25,.32), rgba(38,34,97,.45));">
+                  <i class="bi bi-graph-up"></i>
+                </div>
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title">Reglamento de Planeaci&oacute;n de la UNAM</h3>
+                  <p class="commission-card-text">Ejes y procesos para la planeaci&oacute;n universitaria.</p>
+                  <span class="commission-card-action">Consultar <i class="bi bi-arrow-up-right ms-1"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <a class="commission-card" href="https://www.abogadogeneral.unam.mx:8443/legislacion/view/133" target="_blank" rel="noopener noreferrer">
+                <div class="commission-card-media d-flex align-items-center justify-content-center text-white fs-2" style="background:linear-gradient(135deg, rgba(38,34,97,.35), rgba(238,130,25,.35));">
+                  <i class="bi bi-gavel"></i>
+                </div>
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title">Estatuto del Tribunal Universitario</h3>
+                  <p class="commission-card-text">Atribuciones y funcionamiento del Tribunal Universitario.</p>
+                  <span class="commission-card-action">Consultar <i class="bi bi-arrow-up-right ms-1"></i></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reglamentos vigentes -->
+      <section id="reglamentos" class="py-5 section-formal-light">
+        <div class="container">
+          <div class="row align-items-center justify-content-between g-3 mb-4">
+            <div class="col-lg-8">
+              <h2 class="h2 fw-bold text-primary mb-2">Reglamentos vigentes</h2>
+              <p class="mb-0 text-muted">Materiales compartidos en el modal de reglamentos, ahora disponibles directamente en esta p&aacute;gina.</p>
+            </div>
+          </div>
+
+          <div class="row g-3 reglamento-downloads">
+            <div class="col-12 col-md-6">
+              <a class="reglamento-card" href="https://www.abogadogeneral.unam.mx/sites/default/files/archivos/LegUniv/3-EstatutoGeneral_rem38_021220.pdf" target="_blank" rel="noopener noreferrer">
+                <div class="reglamento-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
+                <div>
+                  <h6 class="mb-1">Estatuto General de la UNAM</h6>
+                  <small>Consultar</small>
+                </div>
+                <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+              </a>
+            </div>
+            <div class="col-12 col-md-6">
+              <a class="reglamento-card" href="https://www.abogadogeneral.unam.mx/sites/default/files/archivos/LegUniv/ReglamentoInternoConsejosAcademicosArea_090424.pdf" target="_blank" rel="noopener noreferrer">
+                <div class="reglamento-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
+                <div>
+                  <h6 class="mb-1">Reglamento Interno de los Consejos Acad&eacute;micos de &Aacute;rea</h6>
+                  <small>Consultar</small>
+                </div>
+                <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+              </a>
+            </div>
+            <div class="col-12 col-md-6">
+              <a class="reglamento-card" href="https://www.caahya.unam.mx/wp-content/uploads/2023/09/RGPAPPE.pdf" target="_blank" rel="noopener noreferrer">
+                <div class="reglamento-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
+                <div>
+                  <h6 class="mb-1">Reglamento General para la Presentaci&oacute;n y Aprobaci&oacute;n de Planes y Programas de Estudio</h6>
+                  <small>Consultar</small>
+                </div>
+                <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+              </a>
+            </div>
+            <div class="col-12 col-md-6">
+              <a class="reglamento-card" href="https://www.caahya.unam.mx/wp-content/uploads/2025/05/Requisitos-generales.pdf" target="_blank" rel="noopener noreferrer">
+                <div class="reglamento-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
+                <div>
+                  <h6 class="mb-1">Requisitos Generales para Fungir como Miembro de las Comisiones Dictaminadoras del &Aacute;rea de las Humanidades y de las Artes</h6>
+                  <small>Consultar</small>
+                </div>
+                <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+              </a>
+            </div>
+            <div class="col-12 col-md-6">
+              <a class="reglamento-card" href="https://www.abogadogeneral.unam.mx/sites/default/files/archivos/LegUniv/18-ReglamentoEleccionConsejerosAcademicosBachilleratoRepresentantesProfesoresInvestigadoresTecnicosAcademicosAlumnos_rem38_021220.pdf" target="_blank" rel="noopener noreferrer">
+                <div class="reglamento-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
+                <div>
+                  <h6 class="mb-1">Reglamento para la Elecci&oacute;n de Consejeros Acad&eacute;micos de &Aacute;rea y del Bachillerato</h6>
+                  <small>Consultar</small>
+                </div>
+                <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+              </a>
+            </div>
+            <div class="col-12 col-md-6">
+              <a class="reglamento-card" href="https://www.abogadogeneral.unam.mx/sites/default/files/archivos/LegUniv/6-NormasAplicacionProcedimientoReglamentosEleccionConsejerosUniversitariosTecnicosEleccionConsejerosAcademicosBachilleratoRepresentantesProfesoresInvestigadoresAlumnos_rem38_021220.pdf" target="_blank" rel="noopener noreferrer">
+                <div class="reglamento-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
+                <div>
+                  <h6 class="mb-1">Normas de Aplicaci&oacute;n y Procedimiento de los Reglamentos para la Elecci&oacute;n de Consejeros Universitarios y T&eacute;cnicos</h6>
+                  <small>Consultar</small>
+                </div>
+                <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+              </a>
+            </div>
+            <div class="col-12 col-md-6">
+              <a class="reglamento-card" href="https://www.caahya.unam.mx/wp-content/uploads/2025/04/LINEAMIENTOS-Y-CRITERIOS-GENERALES-CAAHyA-PEDPACMET.pdf" target="_blank" rel="noopener noreferrer">
+                <div class="reglamento-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
+                <div>
+                  <h6 class="mb-1">Lineamientos y Criterios Generales de Evaluaci&oacute;n del PEDPACMET</h6>
+                  <small>Consultar</small>
+                </div>
+                <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <h3 class="h6 text-primary fw-bold">Recursos complementarios</h3>
+            <p class="text-muted mb-3">Materiales adicionales relacionados con la documentaci&oacute;n del Consejo.</p>
+            <div class="row g-3 reglamento-downloads">
+              <div class="col-12 col-md-6">
+                <a class="reglamento-card" href="directorio.html">
+                  <div class="reglamento-icon"><i class="bi bi-people-fill"></i></div>
+                  <div>
+                    <h6 class="mb-1">Directorio del Consejo</h6>
+                    <small>Consulta la integraci&oacute;n y datos de contacto actualizados.</small>
+                  </div>
+                  <span class="reglamento-arrow"><i class="bi bi-arrow-up-right-circle-fill"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+
+
+
+    </main>
+
+    <footer class="py-5 text-on-dark">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <img src="assets/img/LogoCA.png" alt="CAAHyA" width="120" class="mb-3">
+            <p class="mb-0">Consejo Acad&eacute;mico de Humanidades y Artes * Universidad Nacional Aut&oacute;noma de M&eacute;xico.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <div class="social">
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+            <small class="d-block mt-3">&copy; <span data-year>2024</span> CAAHyA. Todos los derechos reservados.</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/animejs/anime.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

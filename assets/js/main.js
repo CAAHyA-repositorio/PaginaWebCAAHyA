@@ -78,6 +78,42 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 });
 
+document.addEventListener('DOMContentLoaded', function(){
+  const toggle = document.getElementById('inicioMenu');
+  const item = toggle ? toggle.closest('.dropdown-mega') : null;
+  const menu = item ? item.querySelector('.mega-menu') : null;
+
+  if(!(toggle && item && menu)){
+    return;
+  }
+
+  let hideTimeout = null;
+
+  const clearHideTimeout = ()=>{
+    if(hideTimeout){
+      clearTimeout(hideTimeout);
+      hideTimeout = null;
+    }
+  };
+
+  const openMenu = ()=>{
+    clearHideTimeout();
+    item.classList.add('is-open');
+  };
+
+  const scheduleHide = ()=>{
+    clearHideTimeout();
+    hideTimeout = setTimeout(()=>{
+      item.classList.remove('is-open');
+    }, 500);
+  };
+
+  [toggle, menu].forEach((el)=>{
+    el.addEventListener('mouseenter', openMenu);
+    el.addEventListener('mouseleave', scheduleHide);
+  });
+});
+
 // Overlay de transición: animación de entrada y al cambiar de página
 window.addEventListener('load', function(){ const pageTransition = document.getElementById('pageTransition');
   if(!pageTransition) return;
@@ -232,26 +268,29 @@ document.addEventListener('DOMContentLoaded', function(){
       body.prepend(title);
     }
 
-    const updateHeight = ()=>{
-      const frontHeight = header.offsetHeight;
-      const backHeight = body.scrollHeight;
-      flip.style.minHeight = `${Math.max(frontHeight, backHeight)}px`;
-    };
-
     const setOpen = (open)=>{
       card.dataset.open = open ? 'true' : 'false';
       header.setAttribute('aria-expanded', open ? 'true' : 'false');
       card.classList.toggle('is-open', open);
       body.setAttribute('aria-hidden', open ? 'false' : 'true');
 
-      if(!open){
+      if(open){
+        const backHeight = body.scrollHeight;
+        body.style.maxHeight = `${backHeight}px`;
+      }else{
+        body.style.maxHeight = '0px';
         body.blur();
       }
-      updateHeight();
     };
 
     setOpen(false);
-    updateHeight();
+
+    const updateHeight = ()=>{
+      if(card.dataset.open === 'true'){
+        const backHeight = body.scrollHeight;
+        body.style.maxHeight = `${backHeight}px`;
+      }
+    };
 
     const onResize = ()=> updateHeight();
     window.addEventListener('resize', onResize);

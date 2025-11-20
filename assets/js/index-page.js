@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startAuto = () => {
       clearInterval(autoTimer);
-      autoTimer = window.setInterval(nextSlide, 3000);
+      autoTimer = window.setInterval(nextSlide, 5000);
     };
 
     const pauseAuto = () => {

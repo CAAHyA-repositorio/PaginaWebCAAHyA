@@ -1,0 +1,599 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Consejeros | CAAHyA</title>
+    <meta name="description" content="Requisitos normativos y listado de consejeros del Consejo Académico de Humanidades y Artes.">
+
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+      .counselor-card{background:#fff;border:1px solid rgba(38,34,97,.12);border-radius:1rem;box-shadow:0 16px 34px rgba(12,11,28,.14);padding:1.25rem 1.35rem;display:flex;flex-direction:column;gap:.75rem;height:100%;}
+      .counselor-card h3{margin:0;font-size:1.05rem;font-weight:700;color:#262261;}
+      .counselor-card table{margin:0;font-size:.95rem;}
+      .counselor-card th{background:#f7f7fb;color:#262261;font-weight:700;font-size:.9rem;}
+      .counselor-card td{background:#ffffff;color:#1f1b4a;}
+      .counselor-card .empty{color:#9aa0b5;font-style:italic;}
+      .normativa-card{background:#fff;border:1px solid rgba(38,34,97,.12);border-radius:1rem;box-shadow:0 16px 34px rgba(12,11,28,.12);padding:1.35rem 1.5rem;height:100%;}
+      .normativa-card h3{margin-bottom:.5rem;color:#262261;font-weight:700;font-size:1.1rem;}
+      .normativa-card ul{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.4rem;}
+      .normativa-card li{line-height:1.5;color:#1f1b4a;}
+    </style>
+  </head>
+  <body>
+    <!--Overlay-->
+    <div id="pageTransition" class="page-transition active" aria-hidden="false">
+      <img src="assets/img/LogoAzulOscuro_Completo.png" alt="CAAHYA">
+    </div>
+    <a class="skip-link" href="#contenidoPrincipal">Saltar al contenido</a>
+
+    <!-- Barra de navegacion-->
+    <nav class="navbar navbar-expand-xl navbar-ca fixed-top" aria-label="Navegacion principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Inicio CAAHYA">
+          <img src="assets/img/LogoAzulOscuro.png" alt="CAAHYA" onerror="this.style.display='none'">
+          <span class="brand-text">CAAHyA</span>
+        </a>
+        <div class="d-flex d-xl-none align-items-center ms-auto gap-2">
+          <div class="social d-flex align-items-center" aria-label="Redes sociales">
+            <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <button type="button" class="social-email" data-email-popover="true" data-email="humanidadesyartes@unam.mx"
+              data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
+              data-bs-custom-class="email-popover" data-bs-html="true" aria-label="Correo electronico">
+              <i class="bi bi-envelope-fill"></i>
+            </button>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+            aria-controls="navMain" aria-expanded="false" aria-label="Mostrar menu">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav nav-pills-ca mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="procesoConsejo.html">Proceso del consejo</a></li>
+            <li class="nav-item"><a class="nav-link" href="comisiones.html">Comisiones</a></li>
+            <li class="nav-item"><a class="nav-link" href="comitesAcademicos.html">Comites academicos</a></li>
+          </ul>
+
+          <div class="navbar-actions d-none d-xl-flex">
+            <div class="social d-flex align-items-center" aria-label="Redes sociales">
+              <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <button type="button" class="social-email" data-email-popover="true" data-email="humanidadesyartes@unam.mx"
+                data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
+                data-bs-custom-class="email-popover" data-bs-html="true" aria-label="Correo electronico">
+                <i class="bi bi-envelope-fill"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="contenidoPrincipal">
+      <section class="commissions-hero text-center text-lg-start">
+        <div class="container py-5 py-lg-6 position-relative">
+          <div class="hero-bubble hero-bubble-1"></div>
+          <div class="hero-bubble hero-bubble-2"></div>
+          <div class="hero-bubble hero-bubble-3"></div>
+          <div class="row align-items-center g-4 position-relative">
+            <div class="col-lg-7">
+              <span class="badge hero-pill text-uppercase fw-semibold px-3 py-2 mb-3">Consejeros</span>
+              <h1 class="display-5 fw-bold text-primary mb-3">Integración de consejeros</h1>
+              <p class="lead text-muted mb-4">Consulta los requisitos normativos y la composición de consejeros por entidad.</p>
+              <div class="d-flex flex-column flex-sm-row gap-3">
+                <a class="btn btn-secondary-ca btn-lg px-4" href="#normativa">Ver normativa</a>
+                <a class="btn btn-outline-primary btn-lg px-4" href="#consejeros">Listado de consejeros</a>
+              </div>
+            </div>
+            <div class="col-lg-5 text-lg-end">
+              <div class="hero-illustration ratio ratio-4x3 rounded overflow-hidden shadow-lg mx-auto mx-lg-0">
+                <img src="assets/img/procesos/proceso-comision-pride.svg" alt="Consejeros del Consejo" class="w-100 h-100 object-fit-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="normativa" class="py-5 section-formal">
+        <div class="container">
+          <div class="row align-items-start justify-content-between g-3 mb-4">
+            <div class="col-lg-8">
+              <h2 class="h2 fw-bold text-primary mb-2">Normativa</h2>
+              <p class="mb-0 text-muted">Requisitos del Artículo 114 del Estatuto General de la UNAM para cada perfil de consejero.</p>
+            </div>
+          </div>
+          <div class="row g-4">
+            <div class="col-12 col-lg-4">
+              <div class="normativa-card h-100">
+                <h3>Consejeros académicos</h3>
+                <ul>
+                  <li>Ser reconocido en su especialidad y haberse distinguido en labores docentes, técnicas, de investigación o difusión en el área correspondiente.</li>
+                  <li>Poseer un grado superior al de bachiller en el área correspondiente.</li>
+                  <li>Profesores: ser profesor de carrera o investigador titular definitivo con más de seis años de servicios docentes en la escuela o facultad del área; o profesor de asignatura B definitivo, de amplio reconocimiento, con más de seis años de servicios docentes.</li>
+                  <li>Investigadores: ser investigador titular definitivo, con un mínimo de tres años de antigüedad en el instituto o centro y más de seis años en la Universidad, en el área correspondiente.</li>
+                  <li>Técnicos académicos: titular definitivo, con un mínimo de tres años de antigüedad en su entidad de adscripción y más de seis años en la Universidad, en el área correspondiente.</li>
+                  <li>No ocupar en la Universidad ningún puesto administrativo o académico-administrativo al momento de la elección ni durante el cargo, y no haber sido sancionado por faltas graves.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="normativa-card h-100">
+                <h3>Consejeros alumnos</h3>
+                <ul>
+                  <li>Haber cubierto al menos el 50% de los créditos del plan de estudios correspondiente.</li>
+                  <li>Estar inscrito en el momento de la elección en el plan de estudios correspondiente y haberlo estado los dos semestres inmediatos anteriores.</li>
+                  <li>Tener un promedio mínimo de 8.5.</li>
+                  <li>Ser alumno de la Universidad en el ciclo escolar respectivo, durante un tiempo no mayor al establecido para cubrir el plan de estudios.</li>
+                  <li>No ocupar en la Universidad ningún puesto administrativo o académico-administrativo al momento de la elección ni durante el cargo.</li>
+                  <li>No haber sido sancionado por cometer faltas graves contra la disciplina universitaria.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="normativa-card h-100">
+                <h3>Consejeros alumnos de posgrado</h3>
+                <ul>
+                  <li>Estar inscrito en algún programa de posgrado de la Universidad dentro del área correspondiente al momento de la elección.</li>
+                  <li>Especialidad y maestría: promedio mínimo de 8.5.</li>
+                  <li>No tener evaluaciones desfavorables.</li>
+                  <li>Doctorado: evaluaciones favorables en las actividades académicas asignadas en los plazos establecidos.</li>
+                  <li>No ocupar en la Universidad ningún puesto administrativo o académico-administrativo al momento de la elección ni durante el cargo.</li>
+                  <li>No haber sido sancionado por faltas graves contra la disciplina universitaria.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="consejeros" class="py-5 section-formal-light">
+        <div class="container">
+          <div class="row align-items-start justify-content-between g-3 mb-4">
+            <div class="col-lg-8">
+              <h2 class="h2 fw-bold text-primary mb-2">Consejeros</h2>
+              <p class="mb-0 text-muted">Tablas compactas por entidad académica con los cargos titular y suplente.</p>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>Facultad de Arquitectura</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dra. Mónica Cejudo Collera</td>
+                    <td>Dr. José Gerardo Guízar Bermúdez, profesor</td>
+                    <td>Arq. Elodia Gómez Maqueo Rojas, profesora</td>
+                    <td>Joel Iván Moreno Estévez, alumno</td>
+                    <td>Rebeca Paola Cardoso Rodríguez, alumna</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>Facultad de Artes y Diseño</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dr. Mauricio de Jesús Juárez Servín</td>
+                    <td>Lic. Manuel Gerardo Alonso Ulloa, profesor</td>
+                    <td>Mtra. María del Carmen Mendoza Chávez, profesora</td>
+                    <td>Ximena Alejandra Meléndez Rebollo, alumna</td>
+                    <td>Jazmín Alejandra Sánchez García, alumna</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>Facultad de Filosofía y Letras</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dra. María Antonia González Valerio</td>
+                    <td>Mtra. Julia Edith Constantino Reyes, profesora</td>
+                    <td class="empty">Pendiente</td>
+                    <td>José Luis Segura Morales, alumno</td>
+                    <td>Elsa María Dueñas Tapia, alumna</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>Facultad de Música</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td class="empty">Pendiente</td>
+                    <td class="empty">Pendiente</td>
+                    <td class="empty">Pendiente</td>
+                    <td class="empty">Pendiente</td>
+                    <td class="empty">Pendiente</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>FES Acatlán</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dra. Nora del Consuelo Goris Mayans</td>
+                    <td>Dr. David Fragoso Franco, profesor</td>
+                    <td>Dr. José Luis Caballero Facio</td>
+                    <td>Erin Fernanda Páez Vázquez, alumna</td>
+                    <td>Karla Camila Mendoza Cuéllar, alumna</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>FES Aragón</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dra. Araceli Romo Cabrera</td>
+                    <td>Dra. Mónica Morales Barrera, profesora</td>
+                    <td class="empty">Pendiente</td>
+                    <td>Rut Rodríguez Pérez, alumna</td>
+                    <td>Diego Sánchez Rojas Sollano, alumno</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>FES Cuautitlán</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dr. David Quintanar Guerrero</td>
+                    <td>Mtra. Huberta Márquez Villeda, profesora</td>
+                    <td>Dr. Sergio Omar Terán, profesor</td>
+                    <td>Ernesto Albarrán Pulido, alumno</td>
+                    <td class="empty">Pendiente</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>ENES León</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Mtro. Salvador Andrade Ortiz</td>
+                    <td>Mtro. Leonardo Rivas Rivas, profesor</td>
+                    <td>Dra. Arlene Iskra García Vázquez, profesora</td>
+                    <td>Diana Montserrat Lugo Pérez, alumna</td>
+                    <td>Renata López Banda, alumna</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>ENES Morelia</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dra. Yunuen Tapia Torres</td>
+                    <td>Dra. Berenice Araceli Granados Vázquez, profesora</td>
+                    <td>Dra. Cecilia López Ridaura, profesora</td>
+                    <td>Alexia Harley Ortiz Herrera, alumna</td>
+                    <td>Natalia Ciriaco Ramírez, alumna</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>ENES Mérida</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dr. Rubén Torres Martínez</td>
+                    <td>Dr. Martin Francisco Fricke, profesor</td>
+                    <td>Mtra. Daniela Huda Tarhuni Navarro, profesora</td>
+                    <td class="empty">Pendiente</td>
+                    <td>María Ronces Mercado; Daniela Trujillo Suárez, alumnas</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>ENES Oaxaca</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Mtro. Carlos Andrés Sánchez Soto</td>
+                    <td class="empty">Pendiente</td>
+                    <td class="empty">Pendiente</td>
+                    <td class="empty">Pendiente</td>
+                    <td class="empty">Pendiente</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>ENES Juriquilla</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dr. Raúl Gerardo Paredes Guerrero</td>
+                    <td class="empty">Pendiente</td>
+                    <td class="empty">Pendiente</td>
+                    <td class="empty">Pendiente</td>
+                    <td class="empty">Pendiente</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>ENALLT</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dr. Arturo Mendoza Ramos</td>
+                    <td>Dra. Eréndira Dolores Camarena Ortiz, profesora</td>
+                    <td>Dr. José Martín Gasca García, profesor</td>
+                    <td>Natalia Alonso Madrigal, alumna</td>
+                    <td>Tábatha Berlanga Sandoval, alumna</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>ENAC</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Lic. María de los Ángeles Guadalupe Castro Gurría</td>
+                    <td>Mtra. Aurora Lourdes Ojeda Coronado, profesora</td>
+                    <td>Mtro. Jorge Arturo García González, profesor</td>
+                    <td>Frida Paola González Martínez, alumna</td>
+                    <td class="empty">Pendiente</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>Consejeros Técnico Académicos (Escuelas y Facultades)</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Técnico Académico Propietario</th><th>Técnico Académico Suplente</th></tr></thead>
+                  <tbody>
+                    <tr><td>Mtra. Eva Leticia Ortiz Ávalos</td><td>Dra. María Antonieta Rodríguez Rivera</td></tr>
+                    <tr><td>Mtra. Oralia García Cárdenas</td><td>Lic. Martha Caritina Díaz Alaniz</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>Instituto de Investigaciones Bibliográficas</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dra. María Guadalupe Sánchez Mendoza, en representación de la directora</td>
+                    <td class="empty">Pendiente</td>
+                    <td class="empty">Pendiente</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>IIBI</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dra. Perla Olivia Rodríguez Reséndiz</td>
+                    <td>Dr. Ariel Alejandro Rodríguez García, investigador</td>
+                    <td>Dra. Adriana Suárez Sánchez</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>Instituto de Investigaciones Estéticas</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dra. Angélica Velázquez Guadarrama</td>
+                    <td>Dr. Jaime Genaro Cuadriello Aguilar, investigador</td>
+                    <td>Dra. Verónica Hernández Díaz, investigadora</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>Instituto de Investigaciones Filológicas</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dra. Lilián Álvarez Arellano</td>
+                    <td>Dr. José Rafael Mondragón Velázquez, investigador</td>
+                    <td class="empty">Pendiente</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>Instituto de Investigaciones Filosóficas</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dr. Luis Estrada González</td>
+                    <td>Dra. María Teresa Rodríguez González, investigadora</td>
+                    <td>Dr. Juan Espíndola Mata, investigador</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>Instituto de Investigaciones Históricas</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dra. Elisa Speckman Guerra</td>
+                    <td>Dra. María Dolores Lorenzo Río, investigadora</td>
+                    <td>Dra. Estela Roselló Soberón, investigadora</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>IISUE</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dra. Gabriela de la Cruz Flores</td>
+                    <td>Dr. Jesús García Reyes, investigador</td>
+                    <td class="empty">Pendiente</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>CIALC</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dr. Jesús Gerardo Torres Salcido</td>
+                    <td>Dra. Gaja Joanna Makaran Kubis, investigadora</td>
+                    <td>Dr. Fernando Neira Orjuela, investigador</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>CIEG</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dra. Amneris Chaparro Martínez</td>
+                    <td>Dra. Lucía Gabriela Ciccia, investigadora</td>
+                    <td class="empty">Pendiente</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>CEPHCIS</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Director</th><th>Académico Propietario</th><th>Académico Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dra. María Carolina Depetris</td>
+                    <td>Dra. Sandra Lucía Sánchez Ramírez, investigadora</td>
+                    <td>Dr. Jorge Arturo Taracena Arriola, investigador</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>Representación del Consejo Académico del Bachillerato</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Representante Propietario</th><th>Representante Suplente</th></tr></thead>
+                  <tbody><tr>
+                    <td>Dra. María de Lourdes Solís Plancarte</td>
+                    <td>Mtra. Edith Padilla Zimbrón</td>
+                  </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="counselor-card">
+                <h3>Consejeros de Bachillerato</h3>
+                <table class="table table-bordered align-middle table-sm">
+                  <thead><tr><th>Alumno Propietario</th><th>Alumno Suplente</th></tr></thead>
+                  <tbody><tr><td class="empty">Pendiente</td><td class="empty">Pendiente</td></tr></tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-5 text-on-dark">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <img src="assets/img/LogoCA.png" alt="CAAHyA" width="120" class="mb-3">
+            <p class="mb-0">Consejo Académico de Humanidades y Artes * Universidad Nacional Autónoma de México.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <div class="social">
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+            <small class="d-block mt-3">&copy; <span data-year>2024</span> CAAHyA. Todos los derechos reservados.</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/animejs/anime.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

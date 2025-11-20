@@ -629,6 +629,37 @@
   transform:translateY(-4px);
   box-shadow:0 24px 48px rgba(12,11,28,.18);
 }
+.page-comisiones .commission-section .col-12,
+.page-comisiones .commission-section .col-md-6,
+.page-comisiones .commission-section .col-xl-3,
+.page-comisiones .commission-section .col-xl-4{
+  display:flex;
+}
+.page-comisiones .commission-card{
+  height:100%;
+}
+.page-comisiones .commission-card-media{
+  display:none;
+}
+.page-comisiones .commission-card-body{
+  padding:1.35rem 1.35rem 1.55rem;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+.legislation-listing .commission-card{
+  height:100%;
+  min-height:260px;
+}
+.legislation-listing .commission-card-media{
+  display:none;
+}
+.legislation-listing .commission-card-body{
+  padding:1.4rem 1.35rem 1.6rem;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
 .commission-card-media{
   position:relative;
   padding-top:60%;
@@ -1239,6 +1270,20 @@ footer .social a:hover{ color:#d7d7ff; }
   }
 }
 
+.modal-entity .row.g-4 > [class*="col-"]{
+  display:flex;
+}
+.modal-entity .process-card{
+  height:100%;
+}
+.modal-entity .process-card-media{
+  display:none;
+}
+.modal-entity .process-card-body{
+  padding:1.4rem 1.35rem 1.6rem;
+  height:100%;
+}
+
 /* Backdrop con tinte institucional */
 .modal-backdrop.show{
   background:
@@ -1306,6 +1351,11 @@ footer .social a:hover{ color:#d7d7ff; }
 
 /* Reglamentos */
 .reglamento-downloads{ position: relative; z-index:1; }
+.reglamento-downloads.row{ align-items: stretch; }
+.reglamento-downloads .col-12,
+.reglamento-downloads .col-md-6{
+  display:flex;
+}
 .reglamento-card{
   display:flex;
   align-items:center;
@@ -1320,6 +1370,9 @@ footer .social a:hover{ color:#d7d7ff; }
   position:relative;
   overflow:hidden;
   transition: transform .2s ease, box-shadow .2s ease;
+  height:100%;
+  min-height:130px;
+  width:100%;
 }
 .reglamento-card:hover{
   transform: translateY(-4px);

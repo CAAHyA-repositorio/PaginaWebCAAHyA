@@ -33,17 +33,6 @@
   color: #5b6474;
 }
 
-.modal-committee .modal-dialog {
-  max-width: 1140px;
-  margin: 1.5rem auto;
-}
-
-@media (max-width: 991.98px) {
-  .modal-committee .modal-dialog {
-    margin: 0.5rem;
-  }
-}
-
 .modal-committee .modal-content {
   border: none;
   border-radius: 1.5rem;
@@ -55,12 +44,34 @@
 
 .modal-committee .modal-body {
   padding: 0;
+  flex: 1 1 auto;
+  display: flex;
 }
 
 .modal-iframe-wrapper {
-  height: min(80vh, 720px);
+  flex: 1 1 auto;
+  height: 100%;
   border-radius: 0 0 1.5rem 1.5rem;
   overflow: hidden;
+}
+
+/* Altura adaptable para modales de comités académicos */
+.modal-committee .modal-dialog{
+  max-width:1140px;
+  min-height:100vh;
+  margin:0 auto;
+  display:flex;
+  align-items:stretch;
+}
+@media (max-width: 991.98px){
+  .modal-committee .modal-dialog{
+    min-height:100vh;
+    margin:0 .75rem;
+  }
+}
+.modal-committee .modal-content{
+  height:100vh;
+  max-height:100vh;
 }
 
 .modal-iframe-wrapper iframe {

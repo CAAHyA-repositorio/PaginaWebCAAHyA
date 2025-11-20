@@ -487,6 +487,13 @@
   flex:1 1 auto;
   display:flex;
 }
+.modal-pleno .modal-iframe-wrapper,
+.modal-reglamento .modal-iframe-wrapper,
+.modal-entity .modal-iframe-wrapper,
+.modal-commission .modal-iframe-wrapper{
+  flex:1 1 auto;
+  height:100%;
+}
 
 /* Página de comisiones */
 .commissions-hero{

@@ -1,11 +1,11 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Proceso del Consejo — CAAHYA</title>
-  <meta name="description" content="Diagrama oficial del proceso del Consejo Académico de Humanidades y Artes.">
+  <title>Proceso del Consejo â€” CAAHYA</title>
+  <meta name="description" content="Diagrama oficial del proceso del Consejo AcadÃ©mico de Humanidades y Artes.">
 
   <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
@@ -23,18 +23,18 @@
     contenido</a>
 
 
-  <!-- Barra de navegacion-->
+    <!-- Barra de navegacion-->
   <nav class="navbar navbar-expand-xl navbar-ca fixed-top" aria-label="Navegacion principal">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Inicio CAAHYA">
-        <img src="assets/img/LogoAzulOscuro.png" alt="CAAHYA" onerror="this.style.display='none'">
+        <img src="assets/img/LogoAzulOscuro.png" alt="CAAHYA" onerror="this.style.display=''none''">
         <span class="brand-text">CAAHyA</span>
       </a>
       <div class="d-flex d-xl-none align-items-center ms-auto gap-2">
         <div class="social d-flex align-items-center" aria-label="Redes sociales">
-          <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-          <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/p/Consejo-Academico-del-Area-de-las-Humanidades-y-las-Artes-Caahya-61573733710648/" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.youtube.com/@CAAHYA_UNAM" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.instagram.com/caahya_unam/" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
           <button type="button" class="social-email" data-email-popover="true" data-email="humanidadesyartes@unam.mx"
             data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
             data-bs-custom-class="email-popover" data-bs-html="true" aria-label="Correo electronico">
@@ -48,23 +48,66 @@
       </div>
 
       <div class="collapse navbar-collapse" id="navMain">
-        <!-- MENÚ CENTRAL -->
-        <ul class="navbar-nav nav-pills-ca mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="procesoConsejo.html">Proceso del consejo</a></li>
-          <li class="nav-item"><a class="nav-link" href="comisiones.html">Comisiones</a></li>
-          <li class="nav-item"><a class="nav-link" href="comitesAcademicos.html">Comites
-              academicos</a></li>
+        <!-- MENU CENTRAL -->
+        <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="index.html" id="inicioMenu">CAAHyA</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Inicio CAAHyA</p>
+                <a href="#modalDirectorio" class="mega-menu__item" data-bs-toggle="modal" data-bs-target="#modalDirectorio">
+                  <span class="mega-menu__item-title">Directorio del Consejo</span>
+                  <span class="mega-menu__item-desc">Consulta la integracion y los datos de contacto oficiales.</span>
+                </a>
+                <a href="#modalSobreConsejo" class="mega-menu__item" data-bs-toggle="modal" data-bs-target="#modalSobreConsejo">
+                  <span class="mega-menu__item-title">Acerca del Consejo</span>
+                  <span class="mega-menu__item-desc">Conoce el origen, funciones e integracion del CAAHyA.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega"><a class="nav-link" href="procesoConsejo.html">Procesos</a></li>
+          <li class="nav-item dropdown-mega"><a class="nav-link" href="comisiones.html">Comisiones</a></li>
+          <li class="nav-item"><a class="nav-link" href="comitesAcademicos.html">Comites</a></li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="legislacion.html">Legislacion</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Legislacion universitaria</p>
+                <a href="legislacion.html#legislacion" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Normativa esencial</span>
+                  <span class="mega-menu__item-desc">Leyes, estatutos y reglamentos base del CAAHyA.</span>
+                </a>
+                <a href="legislacion.html#reglamentos" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Reglamentos vigentes</span>
+                  <span class="mega-menu__item-desc">Descarga directa de reglamentos y lineamientos activos.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="consejeros.html">Consejeros</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Integracion y requisitos</p>
+                <a href="consejeros.html#normativa" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Normativa</span>
+                  <span class="mega-menu__item-desc">Requisitos para consejeros academicos, alumnos y posgrados.</span>
+                </a>
+                <a href="consejeros.html#consejeros" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Listado de consejeros</span>
+                  <span class="mega-menu__item-desc">Consulta titulares y suplentes por entidad academica.</span>
+                </a>
+              </div>
+            </div>
+          </li>
         </ul>
 
-        <!-- ACCIONES DERECHA: BUSCADOR + REDES -->
         <div class="navbar-actions d-none d-xl-flex">
-          <!-- <form id="navbarSearchForm" class="d-flex navbar-search me-2" role="search" aria-label="Buscar en el sitio"
-            action="search.html" method="get">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="q">
-            <button class="btn btn-secondary-ca" type="submit"><i class="bi bi-search"></i></button>
-          </form> -->
-
           <div class="social d-flex align-items-center" aria-label="Redes sociales">
             <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
@@ -77,9 +120,6 @@
           </div>
         </div>
       </div>
-
-
-
     </div>
   </nav>
 
@@ -93,11 +133,11 @@
               class="badge rounded-pill text-bg-light text-secondary-ca mb-3 px-3 py-2 fw-semibold text-uppercase">Proceso</span>
             <h1 class="display-5 fw-bold text-primary mb-3">Proceso del Consejo</h1>
             <p class="lead text-muted">Consulta y descarga los diagramas que describen el procedimiento oficial del
-              Consejo Académico de Humanidades y Artes.</p>
+              Consejo AcadÃ©mico de Humanidades y Artes.</p>
           </div>
           <div class="col-lg-6 order-lg-2">
             <div class="ratio ratio-16x9 rounded overflow-hidden shadow-lg">
-              <img src="assets/img/CAConFondo.png" alt="Proceso del Consejo Académico"
+              <img src="assets/img/CAConFondo.png" alt="Proceso del Consejo AcadÃ©mico"
                 class="w-100 h-100 object-fit-cover">
             </div>
           </div>
@@ -109,7 +149,7 @@
       <div class="container">
         <div class="row align-items-center g-3 mb-4">
           <div class="col-lg-8">
-            <h2 class="h3 text-primary fw-bold mb-0">Comisión Permanente de Personal Académico</h2>
+            <h2 class="h3 text-primary fw-bold mb-0">ComisiÃ³n Permanente de Personal AcadÃ©mico</h2>
             <p class="text-muted mb-0">Flujos de trabajo de las comisiones especiales, dictaminadoras y evaluadoras del
               PRIDE.</p>
           </div>
@@ -120,11 +160,11 @@
               target="_blank" rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2023/03/Flujo_1.jpg"
-                  alt="Diagrama Comité Especial de Lenguas" loading="lazy">
+                  alt="Diagrama ComitÃ© Especial de Lenguas" loading="lazy">
               </div>
               <div class="process-card-body">
-                <h6 class="process-card-title">Comisión Especial de Lenguas</h6>
-                <p class="mb-1 small text-muted">Flujo CPPA — Comisión Especial de Lenguas.</p>
+                <h6 class="process-card-title">ComisiÃ³n Especial de Lenguas</h6>
+                <p class="mb-1 small text-muted">Flujo CPPA â€” ComisiÃ³n Especial de Lenguas.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -134,11 +174,11 @@
               target="_blank" rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2023/03/Flujo_2.jpg"
-                  alt="Diagrama Comisión Especial del PRIDE" loading="lazy">
+                  alt="Diagrama ComisiÃ³n Especial del PRIDE" loading="lazy">
               </div>
               <div class="process-card-body">
-                <h6 class="process-card-title">Comisión Especial del PRIDE</h6>
-                <p class="mb-1 small text-muted">Flujo CPPA — Comisión Especial del PRIDE.</p>
+                <h6 class="process-card-title">ComisiÃ³n Especial del PRIDE</h6>
+                <p class="mb-1 small text-muted">Flujo CPPA â€” ComisiÃ³n Especial del PRIDE.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -148,11 +188,11 @@
               target="_blank" rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2023/03/Flujo_3.jpg"
-                  alt="Diagrama Comisión Revisora del PRIDE" loading="lazy">
+                  alt="Diagrama ComisiÃ³n Revisora del PRIDE" loading="lazy">
               </div>
               <div class="process-card-body">
-                <h6 class="process-card-title">Comisión Revisora del PRIDE</h6>
-                <p class="mb-1 small text-muted">Flujo CPPA — Comisión Revisora del PRIDE.</p>
+                <h6 class="process-card-title">ComisiÃ³n Revisora del PRIDE</h6>
+                <p class="mb-1 small text-muted">Flujo CPPA â€” ComisiÃ³n Revisora del PRIDE.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -166,7 +206,7 @@
               </div>
               <div class="process-card-body">
                 <h6 class="process-card-title">Comisiones Dictaminadoras</h6>
-                <p class="mb-1 small text-muted">Flujo CPPA — Comisiones dictaminadoras del área</p>
+                <p class="mb-1 small text-muted">Flujo CPPA â€” Comisiones dictaminadoras del Ã¡rea</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -180,7 +220,7 @@
               </div>
               <div class="process-card-body">
                 <h6 class="process-card-title">Comisiones Evaluadoras del PRIDE</h6>
-                <p class="mb-1 small text-muted">Flujo CPPA — Evaluaciones PRIDE.</p>
+                <p class="mb-1 small text-muted">Flujo CPPA â€” Evaluaciones PRIDE.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -190,11 +230,11 @@
               target="_blank" rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2023/03/Flujo_6.jpg"
-                  alt="Diagrama Eximir del grado académico PRIDE" loading="lazy">
+                  alt="Diagrama Eximir del grado acadÃ©mico PRIDE" loading="lazy">
               </div>
               <div class="process-card-body">
-                <h6 class="process-card-title">Eximir del grado académico PRIDE</h6>
-                <p class="mb-1 small text-muted">Flujo CPPA — Solicitud para eximir grado académico.</p>
+                <h6 class="process-card-title">Eximir del grado acadÃ©mico PRIDE</h6>
+                <p class="mb-1 small text-muted">Flujo CPPA â€” Solicitud para eximir grado acadÃ©mico.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -208,8 +248,8 @@
         <div class="row align-items-center g-3 mb-4">
           <div class="col-lg-8">
             <h2 class="h3 text-primary fw-bold mb-0">Planes y Programas de Estudio</h2>
-            <p class="text-muted mb-0">Diagramas que resumen los procesos de creación, modificación, implantación,
-              evaluación y titulación.</p>
+            <p class="text-muted mb-0">Diagramas que resumen los procesos de creaciÃ³n, modificaciÃ³n, implantaciÃ³n,
+              evaluaciÃ³n y titulaciÃ³n.</p>
           </div>
           <div class="col-lg-4 text-lg-end">
             <a class="btn btn-secondary-ca" href="https://www.caahya.unam.mx/wp-content/uploads/2023/09/RGPAPPE.pdf"
@@ -219,7 +259,7 @@
           </div>
         </div>
 
-        <h3 class="h5 text-uppercase text-secondary-ca fw-bold mt-4 mb-3">Proyecto de creación</h3>
+        <h3 class="h5 text-uppercase text-secondary-ca fw-bold mt-4 mb-3">Proyecto de creaciÃ³n</h3>
         <div class="row g-4 mb-4">
           <div class="col-12 col-md-6 col-xl-3">
             <a class="process-card"
@@ -227,11 +267,11 @@
               target="_blank" rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2023/11/Creacion-Licenciatura-Presencial.png"
-                  alt="Creación de licenciatura presencial" loading="lazy">
+                  alt="CreaciÃ³n de licenciatura presencial" loading="lazy">
               </div>
               <div class="process-card-body">
                 <h6 class="process-card-title">Licenciatura presencial</h6>
-                <p class="mb-1 small text-muted">Proyecto de creación de planes y programas.</p>
+                <p class="mb-1 small text-muted">Proyecto de creaciÃ³n de planes y programas.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -242,11 +282,11 @@
               target="_blank" rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2023/11/Creacion-Licenciatura-SUAyED.png"
-                  alt="Creación de licenciatura SUAyED" loading="lazy">
+                  alt="CreaciÃ³n de licenciatura SUAyED" loading="lazy">
               </div>
               <div class="process-card-body">
                 <h6 class="process-card-title">Licenciatura SUAyED</h6>
-                <p class="mb-1 small text-muted">Proyecto de creación modalidad abierta o a distancia.</p>
+                <p class="mb-1 small text-muted">Proyecto de creaciÃ³n modalidad abierta o a distancia.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -257,11 +297,11 @@
               target="_blank" rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2023/11/Creacion-Posgrado-Presencial.png"
-                  alt="Creación de posgrado presencial" loading="lazy">
+                  alt="CreaciÃ³n de posgrado presencial" loading="lazy">
               </div>
               <div class="process-card-body">
                 <h6 class="process-card-title">Posgrado presencial</h6>
-                <p class="mb-1 small text-muted">Proyecto de creación de posgrados.</p>
+                <p class="mb-1 small text-muted">Proyecto de creaciÃ³n de posgrados.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -272,29 +312,29 @@
               target="_blank" rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2023/11/Creacion-Posgrado-SUAyED.png"
-                  alt="Creación de posgrado SUAyED" loading="lazy">
+                  alt="CreaciÃ³n de posgrado SUAyED" loading="lazy">
               </div>
               <div class="process-card-body">
                 <h6 class="process-card-title">Posgrado SUAyED</h6>
-                <p class="mb-1 small text-muted">Proyecto de creación modalidad abierta o a distancia.</p>
+                <p class="mb-1 small text-muted">Proyecto de creaciÃ³n modalidad abierta o a distancia.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
           </div>
         </div>
 
-        <h3 class="h5 text-uppercase text-secondary-ca fw-bold mt-5 mb-3">Modificación</h3>
+        <h3 class="h5 text-uppercase text-secondary-ca fw-bold mt-5 mb-3">ModificaciÃ³n</h3>
         <div class="row g-4 mb-4">
           <div class="col-12 col-md-6 col-xl-3">
             <a class="process-card" href="https://www.caahya.unam.mx/wp-content/uploads/2024/05/5.pdf" target="_blank"
               rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2024/05/5.jpg"
-                  alt="Modificación licenciatura presencial" loading="lazy">
+                  alt="ModificaciÃ³n licenciatura presencial" loading="lazy">
               </div>
               <div class="process-card-body">
                 <h6 class="process-card-title">Licenciatura presencial</h6>
-                <p class="mb-1 small text-muted">Proceso de modificación de planes y programas.</p>
+                <p class="mb-1 small text-muted">Proceso de modificaciÃ³n de planes y programas.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -304,11 +344,11 @@
               rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2024/05/6.jpg"
-                  alt="Modificación licenciatura SUAyED" loading="lazy">
+                  alt="ModificaciÃ³n licenciatura SUAyED" loading="lazy">
               </div>
               <div class="process-card-body">
                 <h6 class="process-card-title">Licenciatura SUAyED</h6>
-                <p class="mb-1 small text-muted">Proceso de modificación modalidad abierta o a distancia.</p>
+                <p class="mb-1 small text-muted">Proceso de modificaciÃ³n modalidad abierta o a distancia.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -318,11 +358,11 @@
               rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2024/05/7.jpg"
-                  alt="Modificación posgrado presencial" loading="lazy">
+                  alt="ModificaciÃ³n posgrado presencial" loading="lazy">
               </div>
               <div class="process-card-body">
                 <h6 class="process-card-title">Posgrado presencial</h6>
-                <p class="mb-1 small text-muted">Proceso de modificación de posgrados.</p>
+                <p class="mb-1 small text-muted">Proceso de modificaciÃ³n de posgrados.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -332,29 +372,29 @@
               rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2024/05/8.jpg"
-                  alt="Modificación posgrado SUAyED" loading="lazy">
+                  alt="ModificaciÃ³n posgrado SUAyED" loading="lazy">
               </div>
               <div class="process-card-body">
                 <h6 class="process-card-title">Posgrado SUAyED</h6>
-                <p class="mb-1 small text-muted">Proceso de modificación modalidad abierta o a distancia.</p>
+                <p class="mb-1 small text-muted">Proceso de modificaciÃ³n modalidad abierta o a distancia.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
           </div>
         </div>
 
-        <h3 class="h5 text-uppercase text-secondary-ca fw-bold mt-5 mb-3">Implantación</h3>
+        <h3 class="h5 text-uppercase text-secondary-ca fw-bold mt-5 mb-3">ImplantaciÃ³n</h3>
         <div class="row g-4 mb-4">
           <div class="col-12 col-md-6 col-xl-3">
             <a class="process-card" href="https://www.caahya.unam.mx/wp-content/uploads/2024/05/9.pdf" target="_blank"
               rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2024/05/9.jpg"
-                  alt="Implantación licenciatura presencial" loading="lazy">
+                  alt="ImplantaciÃ³n licenciatura presencial" loading="lazy">
               </div>
               <div class="process-card-body">
                 <h6 class="process-card-title">Licenciatura presencial</h6>
-                <p class="mb-1 small text-muted">Implantación de planes y programas de estudio.</p>
+                <p class="mb-1 small text-muted">ImplantaciÃ³n de planes y programas de estudio.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -364,18 +404,18 @@
               rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2024/05/10.jpg"
-                  alt="Implantación licenciatura SUAyED" loading="lazy">
+                  alt="ImplantaciÃ³n licenciatura SUAyED" loading="lazy">
               </div>
               <div class="process-card-body">
                 <h6 class="process-card-title">Licenciatura SUAyED</h6>
-                <p class="mb-1 small text-muted">Implantación modalidad abierta o a distancia.</p>
+                <p class="mb-1 small text-muted">ImplantaciÃ³n modalidad abierta o a distancia.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
           </div>
         </div>
 
-        <h3 class="h5 text-uppercase text-secondary-ca fw-bold mt-5 mb-3">Evaluación</h3>
+        <h3 class="h5 text-uppercase text-secondary-ca fw-bold mt-5 mb-3">EvaluaciÃ³n</h3>
         <div class="row g-4 mb-4">
           <div class="col-12 col-md-6 col-xl-3">
             <a class="process-card"
@@ -383,11 +423,11 @@
               target="_blank" rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2023/11/11.png"
-                  alt="Evaluación licenciatura presencial" loading="lazy">
+                  alt="EvaluaciÃ³n licenciatura presencial" loading="lazy">
               </div>
               <div class="process-card-body">
                 <h6 class="process-card-title">Licenciatura presencial</h6>
-                <p class="mb-1 small text-muted">Evaluación de planes y programas.</p>
+                <p class="mb-1 small text-muted">EvaluaciÃ³n de planes y programas.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -398,30 +438,30 @@
               target="_blank" rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2023/11/12.png"
-                  alt="Evaluación licenciatura SUAyED" loading="lazy">
+                  alt="EvaluaciÃ³n licenciatura SUAyED" loading="lazy">
               </div>
               <div class="process-card-body">
                 <h6 class="process-card-title">Licenciatura SUAyED</h6>
-                <p class="mb-1 small text-muted">Evaluación en modalidad abierta o a distancia.</p>
+                <p class="mb-1 small text-muted">EvaluaciÃ³n en modalidad abierta o a distancia.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
           </div>
         </div>
 
-        <h3 class="h5 text-uppercase text-secondary-ca fw-bold mt-5 mb-3">Titulación</h3>
+        <h3 class="h5 text-uppercase text-secondary-ca fw-bold mt-5 mb-3">TitulaciÃ³n</h3>
         <div class="row g-4">
           <div class="col-12 col-md-6 col-xl-3">
             <a class="process-card" href="https://www.caahya.unam.mx/wp-content/uploads/2024/05/13.pdf" target="_blank"
               rel="noopener">
               <div class="process-card-media">
                 <img src="https://www.caahya.unam.mx/wp-content/uploads/2024/05/13.jpg"
-                  alt="Reglamentos de titulación y opciones" loading="lazy">
+                  alt="Reglamentos de titulaciÃ³n y opciones" loading="lazy">
               </div>
               <div class="process-card-body">
-                <h6 class="process-card-title">Reglamentos de titulación</h6>
-                <p class="mb-1 small text-muted">Opciones no contempladas en el artículo 20 del Reglamento General de
-                  Exámenes.</p>
+                <h6 class="process-card-title">Reglamentos de titulaciÃ³n</h6>
+                <p class="mb-1 small text-muted">Opciones no contempladas en el artÃ­culo 20 del Reglamento General de
+                  ExÃ¡menes.</p>
                 <span class="process-card-link">Abrir PDF <i class="bi bi-arrow-up-right"></i></span>
               </div>
             </a>
@@ -438,10 +478,10 @@
           <div class="d-flex align-items-center gap-2 mb-3">
             <img src="assets/img/logo-caahya-white.png" alt="CAAHYA" style="height:36px"
               onerror="this.style.display='none'">
-            <strong>Consejo Académico de Humanidades y Artes</strong>
+            <strong>Consejo AcadÃ©mico de Humanidades y Artes</strong>
           </div>
           <p class="mb-3 text-light opacity-75">Instancia colegiada dedicada a coordinar y fortalecer los procesos
-            académicos en el Área de Humanidades y Artes de la UNAM.</p>
+            acadÃ©micos en el Ãrea de Humanidades y Artes de la UNAM.</p>
           <div class="social" aria-label="Redes sociales">
             <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
@@ -449,7 +489,7 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
-          <h5 class="mb-3">Navegación</h5>
+          <h5 class="mb-3">NavegaciÃ³n</h5>
           <ul class="list-unstyled">
             <li class="mb-1"><a class="footer-link" href="index.html#inicio">Inicio</a></li>
             <li class="mb-1"><a class="footer-link" href="index.html#documentos">Documentos</a></li>
@@ -461,15 +501,15 @@
         </div>
         <div class="col-md-6 col-lg-4">
           <h5 class="mb-3">Contacto</h5>
-          <p class="mb-2"><i class="bi bi-geo-alt text-secondary-ca"></i> Ciudad Universitaria, Coyoacán, CDMX.</p>
+          <p class="mb-2"><i class="bi bi-geo-alt text-secondary-ca"></i> Ciudad Universitaria, CoyoacÃ¡n, CDMX.</p>
           <p class="mb-2"><i class="bi bi-envelope text-secondary-ca"></i> humanidadesyartes@unam.mx</p>
           <p class="mb-0"><i class="bi bi-telephone text-secondary-ca"></i> (55) 5622 1600 ext. 0000</p>
         </div>
       </div>
       <div
         class="border-top border-light-subtle mt-4 pt-3 d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
-        <small class="text-light opacity-75">© <span data-year></span> Consejo Académico de Humanidades y Artes.</small>
-        <small class="text-light opacity-75">Información sujeta a actualización oficial.</small>
+        <small class="text-light opacity-75">Â© <span data-year></span> Consejo AcadÃ©mico de Humanidades y Artes.</small>
+        <small class="text-light opacity-75">InformaciÃ³n sujeta a actualizaciÃ³n oficial.</small>
       </div>
     </div>
   </footer>
@@ -480,3 +520,4 @@
 </body>
 
 </html>
+

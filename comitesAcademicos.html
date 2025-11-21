@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
@@ -21,18 +21,18 @@
     </div>
     <a class="skip-link" href="#contenidoPrincipal">Saltar al contenido</a>
 
-  <!-- Barra de navegacion-->
+    <!-- Barra de navegacion-->
   <nav class="navbar navbar-expand-xl navbar-ca fixed-top" aria-label="Navegacion principal">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Inicio CAAHYA">
-        <img src="assets/img/LogoCA.png" alt="CAAHYA" onerror="this.style.display='none'">
+        <img src="assets/img/LogoAzulOscuro.png" alt="CAAHYA" onerror="this.style.display=''none''">
         <span class="brand-text">CAAHyA</span>
       </a>
       <div class="d-flex d-xl-none align-items-center ms-auto gap-2">
         <div class="social d-flex align-items-center" aria-label="Redes sociales">
-          <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-          <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/p/Consejo-Academico-del-Area-de-las-Humanidades-y-las-Artes-Caahya-61573733710648/" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.youtube.com/@CAAHYA_UNAM" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.instagram.com/caahya_unam/" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
           <button type="button" class="social-email" data-email-popover="true" data-email="humanidadesyartes@unam.mx"
             data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
             data-bs-custom-class="email-popover" data-bs-html="true" aria-label="Correo electronico">
@@ -46,23 +46,66 @@
       </div>
 
       <div class="collapse navbar-collapse" id="navMain">
-        <!-- MENÚ CENTRAL -->
-        <ul class="navbar-nav nav-pills-ca mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="procesoConsejo.html">Proceso del consejo</a></li>
-          <li class="nav-item"><a class="nav-link" href="comisiones.html">Comisiones</a></li>
-          <li class="nav-item"><a class="nav-link" href="comitesAcademicos.html">Comites
-              academicos</a></li>
+        <!-- MENU CENTRAL -->
+        <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="index.html" id="inicioMenu">CAAHyA</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Inicio CAAHyA</p>
+                <a href="#modalDirectorio" class="mega-menu__item" data-bs-toggle="modal" data-bs-target="#modalDirectorio">
+                  <span class="mega-menu__item-title">Directorio del Consejo</span>
+                  <span class="mega-menu__item-desc">Consulta la integracion y los datos de contacto oficiales.</span>
+                </a>
+                <a href="#modalSobreConsejo" class="mega-menu__item" data-bs-toggle="modal" data-bs-target="#modalSobreConsejo">
+                  <span class="mega-menu__item-title">Acerca del Consejo</span>
+                  <span class="mega-menu__item-desc">Conoce el origen, funciones e integracion del CAAHyA.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega"><a class="nav-link" href="procesoConsejo.html">Procesos</a></li>
+          <li class="nav-item dropdown-mega"><a class="nav-link" href="comisiones.html">Comisiones</a></li>
+          <li class="nav-item"><a class="nav-link" href="comitesAcademicos.html">Comites</a></li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="legislacion.html">Legislacion</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Legislacion universitaria</p>
+                <a href="legislacion.html#legislacion" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Normativa esencial</span>
+                  <span class="mega-menu__item-desc">Leyes, estatutos y reglamentos base del CAAHyA.</span>
+                </a>
+                <a href="legislacion.html#reglamentos" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Reglamentos vigentes</span>
+                  <span class="mega-menu__item-desc">Descarga directa de reglamentos y lineamientos activos.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="consejeros.html">Consejeros</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Integracion y requisitos</p>
+                <a href="consejeros.html#normativa" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Normativa</span>
+                  <span class="mega-menu__item-desc">Requisitos para consejeros academicos, alumnos y posgrados.</span>
+                </a>
+                <a href="consejeros.html#consejeros" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Listado de consejeros</span>
+                  <span class="mega-menu__item-desc">Consulta titulares y suplentes por entidad academica.</span>
+                </a>
+              </div>
+            </div>
+          </li>
         </ul>
 
-        <!-- ACCIONES DERECHA: BUSCADOR + REDES -->
         <div class="navbar-actions d-none d-xl-flex">
-          <!-- <form id="navbarSearchForm" class="d-flex navbar-search me-2" role="search" aria-label="Buscar en el sitio"
-            action="search.html" method="get">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="q">
-            <button class="btn btn-secondary-ca" type="submit"><i class="bi bi-search"></i></button>
-          </form> -->
-
           <div class="social d-flex align-items-center" aria-label="Redes sociales">
             <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
@@ -75,9 +118,6 @@
           </div>
         </div>
       </div>
-
-
-
     </div>
   </nav>
 
@@ -100,6 +140,180 @@
               <div class="ratio ratio-4x3 rounded-4 overflow-hidden shadow-lg">
                 <img src="assets/img/LogoCA.png" class="w-100 h-100 object-fit-cover" alt="Integrantes de comites academicos">
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 section-formal" id="funcionesComites">
+        <div class="container">
+          <div class="row align-items-start g-3 mb-4">
+            <div class="col-lg-8">
+              <h2 class="h3 fw-bold text-primary mb-2">Funciones de los Comités Académicos de Carrera</h2>
+              <p class="text-muted mb-0">Responsabilidades y alcances de los comités del Consejo Académico del Área de Humanidades y Artes.</p>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-6">
+              <div class="commission-card h-100">
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title h5 mb-2">A) Vinculación académica</h3>
+                  <p class="commission-card-text">Promover mecanismos de vinculación entre entidades que imparten la misma carrera o afines para compartir experiencias sobre la formación del alumnado.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="commission-card h-100">
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title h5 mb-2">B) Autoevaluación de planes de estudio</h3>
+                  <p class="commission-card-text">Proponer procedimientos de autoevaluación para decisiones de los consejos técnicos sobre:</p>
+                  <ol class="text-muted mb-0 ps-3">
+                    <li>Actualización de objetivos, estructura curricular y perfiles.</li>
+                    <li>Mejoras a la trayectoria escolar.</li>
+                    <li>Reducción del abandono escolar.</li>
+                    <li>Atención a asignaturas con alta reprobación.</li>
+                    <li>Aumento de egreso y titulación.</li>
+                    <li>Actividades propedéuticas para rezago escolar.</li>
+                    <li>Actividades extracurriculares que eleven la calidad.</li>
+                    <li>Seguimiento de egresados y estructura ocupacional.</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="commission-card h-100">
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title h5 mb-2">C) Lineamientos académicos</h3>
+                  <p class="commission-card-text">Hacer propuestas a los consejos técnicos sobre:</p>
+                  <ol class="text-muted mb-0 ps-3">
+                    <li>Evaluación de la docencia.</li>
+                    <li>Cursos de superación académica.</li>
+                    <li>Programas de formación del personal académico.</li>
+                    <li>Programas de actualización docente.</li>
+                    <li>Impulso a la investigación y su vínculo con la docencia.</li>
+                    <li>Ponderación de actividades académicas y estímulos.</li>
+                    <li>Necesidades académicas para apoyos en docencia, investigación e innovación.</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="commission-card h-100">
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title h5 mb-2">D) Cooperación entre entidades</h3>
+                  <p class="commission-card-text">Plantear acciones de cooperación para planes de una misma carrera:</p>
+                  <ol class="text-muted mb-0 ps-3">
+                    <li>Valoración de contenidos que dan identidad a los planes.</li>
+                    <li>Revisión de tablas de convalidación para movilidad.</li>
+                    <li>Intercambio de docentes y convenios de colaboración.</li>
+                    <li>Acciones para compartir infraestructura, equipos y archivos bibliohemerográficos.</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="commission-card h-100">
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title h5 mb-2">E) Opciones de titulación</h3>
+                  <p class="commission-card-text mb-0">Proponer modificaciones para fomentar la formación continua del alumnado de licenciatura a doctorado.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="commission-card h-100">
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title h5 mb-2">F) Flexibilidad curricular</h3>
+                  <p class="commission-card-text">Diseñar mecanismos para mayor flexibilidad en planes de estudio:</p>
+                  <ol class="text-muted mb-0 ps-3">
+                    <li>Asignaturas optativas comunes.</li>
+                    <li>Movilidad estudiantil y docente.</li>
+                    <li>Proyectos compartidos de investigación y difusión.</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="commission-card h-100">
+                <div class="commission-card-body">
+                  <h3 class="commission-card-title h5 mb-2">G) Estudios prospectivos</h3>
+                  <p class="commission-card-text mb-0">Impulsar estudios sobre tendencias de la disciplina y estructuras ocupacionales para actualizar contenidos, metodologías y proyectos de investigación, así como modernizar la infraestructura requerida.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 section-formal-light" id="reglamentoComites">
+        <div class="container">
+          <div class="row align-items-start g-3 mb-4">
+            <div class="col-lg-8">
+              <h2 class="h3 fw-bold text-primary mb-2">Reglamento interno de los Comités Académicos de Carrera</h2>
+              <p class="text-muted mb-0">Síntesis de capítulos, integración y funciones de los Comités Académicos de Carrera del CAAHyA.</p>
+            </div>
+          </div>
+          <div class="commission-card">
+            <div class="commission-card-body">
+              <h3 class="commission-card-title h5 mb-2">Capítulo I · Naturaleza y objetivo</h3>
+              <ol class="text-muted ps-3 mb-3">
+                <li>Los comités son cuerpos colegiados de planeación, evaluación y vinculación que articulan licenciaturas impartidas en dos o más entidades, optimizando recursos.</li>
+                <li>Comités del área: Arquitectura; Filosofía; Historia; Pedagogía; Diseño; Desarrollo y Gestión Interculturales.</li>
+              </ol>
+
+              <h3 class="commission-card-title h5 mb-2">Capítulo II · Integración</h3>
+              <ol class="text-muted ps-3 mb-3">
+                <li>Titular de la Coordinación del CAAHyA.</li>
+                <li>Direcciones de las entidades participantes.</li>
+                <li>Coordinaciones o jefaturas de carrera de las entidades.</li>
+                <li>Representantes del profesorado.</li>
+                <li>Representantes del alumnado.</li>
+              </ol>
+              <p class="text-muted mb-1">Representación y periodos:</p>
+              <ul class="text-muted ps-3 mb-3">
+                <li>I y II pueden nombrar representante con voz y voto en ausencia.</li>
+                <li>Profesorado y alumnado designados por la dirección de cada entidad.</li>
+                <li>Dirección y coordinación/jefatura permanecen durante su gestión.</li>
+                <li>Profesorado: 2 años, con opción a un periodo más. Alumnado: 2 años.</li>
+                <li>Secretaría: rotativa entre jefaturas/coordinaciones por 1 año, opción a 1 más.</li>
+              </ul>
+
+              <h3 class="commission-card-title h5 mb-2">Capítulo III · Funciones</h3>
+              <ul class="text-muted ps-3 mb-3">
+                <li>Vinculación académica entre entidades de una misma carrera.</li>
+                <li>Autoevaluación de planes de estudio para decisiones de consejos técnicos (objetivos, trayectoria, abandono, reprobación, egreso/titulación, propedéuticos, extracurriculares, seguimiento de egresados).</li>
+                <li>Lineamientos sobre docencia, formación y actualización del personal académico.</li>
+                <li>Cooperación interentidades: intercambio docente, movilidad, convalidaciones, infraestructura compartida.</li>
+                <li>Opciones de titulación: ajustes para fomentar formación continua.</li>
+                <li>Flexibilidad curricular: optativas comunes, movilidad, proyectos de investigación y difusión.</li>
+                <li>Estudios prospectivos: tendencias disciplinares y estructura ocupacional.</li>
+              </ul>
+
+              <h3 class="commission-card-title h5 mb-2">Capítulo IV · Secretaría del comité</h3>
+              <ul class="text-muted ps-3 mb-3">
+                <li>Convocar y presidir reuniones; coordinar actividades; agenda y minutas.</li>
+                <li>Coadyuvar a disposiciones del CAAHyA; informar acuerdos y nombramientos.</li>
+                <li>Fijar plazos e informar cambios por inasistencia.</li>
+              </ul>
+
+              <h3 class="commission-card-title h5 mb-2">Capítulo V · Miembros</h3>
+              <ul class="text-muted ps-3 mb-3">
+                <li>Asistir a reuniones y designar secretaría.</li>
+                <li>Participar con voz y voto; cumplir acuerdos y tiempos.</li>
+                <li>Proponer actividades académicas conforme a las funciones anteriores.</li>
+              </ul>
+
+              <h3 class="commission-card-title h5 mb-2">Capítulo VI · Funcionamiento y responsabilidades</h3>
+              <ul class="text-muted ps-3 mb-3">
+                <li>Quórum, orden del día e intervenciones (máx. 5 min); reuniones máx. 2 horas, presenciales/virtuales/mixtas; al menos 6 reuniones al año.</li>
+                <li>Avisar ausencias; informar cambio de funciones; revocación tras tres faltas consecutivas sin aviso.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -382,3 +596,4 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+

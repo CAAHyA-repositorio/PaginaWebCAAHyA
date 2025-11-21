@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Comisiones del CAAHyA</title>
-    <meta name="description" content="Catálogo de las comisiones permanentes y especiales del Consejo Académico de Humanidades y Artes.">
+    <meta name="description" content="CatÃ¡logo de las comisiones permanentes y especiales del Consejo AcadÃ©mico de Humanidades y Artes.">
 
     <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
@@ -21,7 +21,7 @@
     </div>
     <a class="skip-link" href="#contenidoPrincipal">Saltar al contenido</a>
 
-     <!-- Barra de navegacion-->
+       <!-- Barra de navegacion-->
   <nav class="navbar navbar-expand-xl navbar-ca fixed-top" aria-label="Navegacion principal">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Inicio CAAHYA">
@@ -30,9 +30,9 @@
       </a>
       <div class="d-flex d-xl-none align-items-center ms-auto gap-2">
         <div class="social d-flex align-items-center" aria-label="Redes sociales">
-          <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-          <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/p/Consejo-Academico-del-Area-de-las-Humanidades-y-las-Artes-Caahya-61573733710648/" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.youtube.com/@CAAHYA_UNAM" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.instagram.com/caahya_unam/" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
           <button type="button" class="social-email" data-email-popover="true" data-email="humanidadesyartes@unam.mx"
             data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
             data-bs-custom-class="email-popover" data-bs-html="true" aria-label="Correo electronico">
@@ -46,17 +46,66 @@
       </div>
 
       <div class="collapse navbar-collapse" id="navMain">
-        <!-- MENÚ CENTRAL -->
-        <ul class="navbar-nav nav-pills-ca mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="procesoConsejo.html">Proceso del consejo</a></li>
-          <li class="nav-item"><a class="nav-link" href="comisiones.html">Comisiones</a></li>
-          <li class="nav-item"><a class="nav-link" href="comitesAcademicos.html">Comites
-              academicos</a></li>
+        <!-- MENU CENTRAL -->
+        <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="index.html" id="inicioMenu">CAAHyA</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Inicio CAAHyA</p>
+                <a href="#modalDirectorio" class="mega-menu__item" data-bs-toggle="modal" data-bs-target="#modalDirectorio">
+                  <span class="mega-menu__item-title">Directorio del Consejo</span>
+                  <span class="mega-menu__item-desc">Consulta la integracion y los datos de contacto oficiales.</span>
+                </a>
+                <a href="#modalSobreConsejo" class="mega-menu__item" data-bs-toggle="modal" data-bs-target="#modalSobreConsejo">
+                  <span class="mega-menu__item-title">Acerca del Consejo</span>
+                  <span class="mega-menu__item-desc">Conoce el origen, funciones e integracion del CAAHyA.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega"><a class="nav-link" href="procesoConsejo.html">Procesos</a></li>
+          <li class="nav-item dropdown-mega"><a class="nav-link" href="comisiones.html">Comisiones</a></li>
+          <li class="nav-item"><a class="nav-link" href="comitesAcademicos.html">Comites</a></li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="legislacion.html">Legislacion</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Legislacion universitaria</p>
+                <a href="legislacion.html#legislacion" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Normativa esencial</span>
+                  <span class="mega-menu__item-desc">Leyes, estatutos y reglamentos base del CAAHyA.</span>
+                </a>
+                <a href="legislacion.html#reglamentos" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Reglamentos vigentes</span>
+                  <span class="mega-menu__item-desc">Descarga directa de reglamentos y lineamientos activos.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="consejeros.html">Consejeros</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Integracion y requisitos</p>
+                <a href="consejeros.html#normativa" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Normativa</span>
+                  <span class="mega-menu__item-desc">Requisitos para consejeros academicos, alumnos y posgrados.</span>
+                </a>
+                <a href="consejeros.html#consejeros" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Listado de consejeros</span>
+                  <span class="mega-menu__item-desc">Consulta titulares y suplentes por entidad academica.</span>
+                </a>
+              </div>
+            </div>
+          </li>
         </ul>
 
         <div class="navbar-actions d-none d-xl-flex">
-
           <div class="social d-flex align-items-center" aria-label="Redes sociales">
             <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
@@ -69,12 +118,9 @@
           </div>
         </div>
       </div>
-
-
-
     </div>
   </nav>
-    <main id="contenidoPrincipal">
+        <main id="contenidoPrincipal">
       <!-- Hero -->
       <section class="commissions-hero text-center text-lg-start">
         <div class="container py-5 py-lg-6 position-relative">
@@ -543,3 +589,4 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+

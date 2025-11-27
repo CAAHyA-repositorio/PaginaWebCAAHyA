@@ -95,8 +95,19 @@
   padding: 1.75rem;
 }
 
+.modal-hero-photo {
+  flex: 0 0 auto;
+}
+
 .modal-hero-photo img {
-  border: 6px solid #ffffff;
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 1.5rem !important;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px -5px rgba(16, 57, 150, 0.15) !important;
 }
 
 .entity-card {

@@ -74,9 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Footer Year
-  const yearSpan = document.getElementById('yearSpan');
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
+  const yearSpans = document.querySelectorAll('[data-year]');
+  yearSpans.forEach(span => {
+    span.textContent = new Date().getFullYear();
+  });
 
 });

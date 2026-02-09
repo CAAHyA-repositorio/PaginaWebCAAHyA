@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cartelera Digital — CAAHyA</title>
+    <meta name="description"
+        content="Cartelera Digital de las Humanidades y de las Artes. Eventos, exposiciones y actividades académicas.">
+
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Custom CSS for Cartelera -->
+    <link rel="stylesheet" href="assets/css/cartelera.css">
+
+</head>
+
+<body class="cartelera-page">
+
+    <!-- Barra de navegacion (Copied from index.html) -->
+    <nav class="navbar navbar-expand-xl navbar-ca fixed-top" aria-label="Navegacion principal">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Inicio CAAHYA">
+                <img src="assets/img/LogoAzulOscuro.png" alt="CAAHYA" onerror="this.style.display='none'">
+                <span class="brand-text">CAAHyA</span>
+            </a>
+            <div class="d-flex d-xl-none align-items-center ms-auto gap-2">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+                    aria-controls="navMain" aria-expanded="false" aria-label="Mostrar menu">
+                    <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown-mega">
+                        <a class="nav-link" href="procesoConsejo.html">Procesos</a>
+                    </li>
+                    <li class="nav-item dropdown-mega">
+                        <a class="nav-link" href="comisiones.html">Comisiones</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="comitesAcademicos.html">Comites</a></li>
+                    <li class="nav-item dropdown-mega">
+                        <a class="nav-link" href="legislacion.html">Legislación</a>
+                    </li>
+                    <li class="nav-item dropdown-mega">
+                        <a class="nav-link" href="consejeros.html">Consejeros</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px; min-height: 80vh;">
+
+        <!-- Ticket Header -->
+        <div class="cartelera-header-container">
+            <div class="ticket-visual">
+                CARDELERA DIGITAL DE LAS HUMANIDADES <br> Y DE LAS ARTES
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="cartelera-filters">
+            <div class="filter-group">
+                <span class="filter-label text-white">MES</span>
+                <select id="filter-month" class="custom-select form-select-sm">
+                    <option value="all">TODOS</option>
+                    <option value="ENE">ENERO</option>
+                    <option value="FEB">FEBRERO</option>
+                    <option value="MAR">MARZO</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <span class="filter-label text-white">ENTIDAD ACADÉMICA</span>
+                <select id="filter-entity" class="custom-select form-select-sm">
+                    <option value="all">TODAS</option>
+                    <option value="F_FILOSOFIA">F. FILOSOFÍA</option>
+                    <option value="F_ARTES">F. ARTES</option>
+                </select>
+            </div>
+            <!-- Search placeholder -->
+            <div class="filter-group">
+                <span class="filter-label text-white">BUSCAR EVENTO</span>
+                <select id="filter-search" class="custom-select form-select-sm">
+                    <option value="" disabled selected>Escribe...</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Carrusel 1: ARTES (Arriba) -->
+        <div class="carousel-section">
+            <div class="carousel-label-container">
+                <span class="carousel-label-text">ARTES</span>
+            </div>
+
+            <div class="carousel-viewport" id="carousel-artes">
+                <!-- Cards -->
+                <!-- Generating 8 cards with different months -->
+                <div class="event-card" data-month="FEB">
+                    <div class="event-image-container">
+                        <img src="assets/img/ET.png" alt="Evento" class="event-image">
+                        <div class="event-date-tag">10 FEB</div>
+                    </div>
+                    <p class="event-title">Lorem Ipsum</p>
+                </div>
+                <div class="event-card" data-month="MAR">
+                    <div class="event-image-container">
+                        <img src="assets/img/ET.png" alt="Evento" class="event-image">
+                        <div class="event-date-tag">15 MAR</div>
+                    </div>
+                    <p class="event-title">Lorem Ipsum</p>
+                </div>
+                <div class="event-card" data-month="FEB">
+                    <div class="event-image-container">
+                        <img src="assets/img/ET.png" alt="Evento" class="event-image">
+                        <div class="event-date-tag">20 FEB</div>
+                    </div>
+                    <p class="event-title">Lorem Ipsum</p>
+                </div>
+                <div class="event-card" data-month="ENE">
+                    <div class="event-image-container">
+                        <img src="assets/img/ET.png" alt="Evento" class="event-image">
+                        <div class="event-date-tag">05 ENE</div>
+                    </div>
+                    <p class="event-title">Lorem Ipsum</p>
+                </div>
+                <div class="event-card" data-month="FEB">
+                    <div class="event-image-container">
+                        <img src="assets/img/ET.png" alt="Evento" class="event-image">
+                        <div class="event-date-tag">22 FEB</div>
+                    </div>
+                    <p class="event-title">Lorem Ipsum</p>
+                </div>
+                <div class="event-card" data-month="MAR">
+                    <div class="event-image-container">
+                        <img src="assets/img/ET.png" alt="Evento" class="event-image">
+                        <div class="event-date-tag">01 MAR</div>
+                    </div>
+                    <p class="event-title">Lorem Ipsum</p>
+                </div>
+                <div class="event-card" data-month="FEB">
+                    <div class="event-image-container">
+                        <img src="assets/img/ET.png" alt="Evento" class="event-image">
+                        <div class="event-date-tag">28 FEB</div>
+                    </div>
+                    <p class="event-title">Lorem Ipsum</p>
+                </div>
+                <div class="event-card" data-month="ENE">
+                    <div class="event-image-container">
+                        <img src="assets/img/ET.png" alt="Evento" class="event-image">
+                        <div class="event-date-tag">12 ENE</div>
+                    </div>
+                    <p class="event-title">Lorem Ipsum</p>
+                </div>
+            </div>
+
+            <button class="carousel-arrow control-next" data-target="carousel-artes"><i
+                    class="bi bi-chevron-right"></i></button>
+        </div>
+
+        <!-- Carrusel 2: HUMANIDADES (Abajo) -->
+        <div class="carousel-section">
+            <div class="carousel-label-container">
+                <span class="carousel-label-text">HUMANIDADES</span>
+            </div>
+
+            <div class="carousel-viewport" id="carousel-humanidades">
+                <!-- Cards duplicate for demo -->
+                <div class="event-card" data-month="FEB">
+                    <div class="event-image-container">
+                        <img src="assets/img/ET.png" alt="Evento" class="event-image">
+                        <div class="event-date-tag">10 FEB</div>
+                    </div>
+                    <p class="event-title">Lorem Ipsum</p>
+                </div>
+                <div class="event-card" data-month="MAR">
+                    <div class="event-image-container">
+                        <img src="assets/img/ET.png" alt="Evento" class="event-image">
+                        <div class="event-date-tag">15 MAR</div>
+                    </div>
+                    <p class="event-title">Lorem Ipsum</p>
+                </div>
+                <div class="event-card" data-month="FEB">
+                    <div class="event-image-container">
+                        <img src="assets/img/ET.png" alt="Evento" class="event-image">
+                        <div class="event-date-tag">20 FEB</div>
+                    </div>
+                    <p class="event-title">Lorem Ipsum</p>
+                </div>
+                <div class="event-card" data-month="ENE">
+                    <div class="event-image-container">
+                        <img src="assets/img/ET.png" alt="Evento" class="event-image">
+                        <div class="event-date-tag">05 ENE</div>
+                    </div>
+                    <p class="event-title">Lorem Ipsum</p>
+                </div>
+                <div class="event-card" data-month="FEB">
+                    <div class="event-image-container">
+                        <img src="assets/img/ET.png" alt="Evento" class="event-image">
+                        <div class="event-date-tag">22 FEB</div>
+                    </div>
+                    <p class="event-title">Lorem Ipsum</p>
+                </div>
+            </div>
+            <button class="carousel-arrow control-next" data-target="carousel-humanidades"><i
+                    class="bi bi-chevron-right"></i></button>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto" class="pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="assets/img/LogoCA.png" alt="CAAHYA" style="height:36px"
+                            onerror="this.style.display='none'">
+                        <strong>CAAHYA</strong>
+                    </div>
+                    <p class="mb-2">Consejo Académico de Humanidades y Artes</p>
+                    <small class="opacity-75">&copy; <span id="yearSpan">2026</span> &bull; Todos los derechos
+                        reservados.</small>
+                </div>
+                <!-- Simplified footer content for cartelera page or keep full? Keeping simplified to save space/time, sticking to main functionality -->
+            </div>
+            <div class="bg-secondary-ca text-white py-4 mt-5 small">
+                <div class="container text-center">
+                    <p class="text-white opacity-75-hover">
+                        Hecho en México, Universidad Nacional Autónoma de México (UNAM).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- AnimeJS if needed, otherwise skip -->
+    <script src="assets/js/cartelera.js"></script>
+</body>
+
+</html>

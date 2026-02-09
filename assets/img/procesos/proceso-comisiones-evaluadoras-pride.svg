@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
-  <rect width="800" height="500" fill="#262261"/>
-  <rect x="90" y="90" width="620" height="320" rx="28" fill="#1f1b4a" opacity="0.85"/>
-  <g fill="none" stroke="#ffca00" stroke-width="12">
-    <polyline points="180,330 260,220 330,300 410,210 510,340 600,190"/>
-  </g>
-  <text x="50%" y="46%" font-family="Verdana, Geneva, sans-serif" font-size="36" fill="#ffffff" text-anchor="middle">Comisiones Evaluadoras</text>
-  <text x="50%" y="62%" font-family="Verdana, Geneva, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">PRIDE</text>
-</svg>

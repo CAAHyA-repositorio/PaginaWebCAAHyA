@@ -75,13 +75,12 @@
                   <span class="mega-menu__item-title">Acerca de nosotros</span>
                   <span class="mega-menu__item-desc">Conoce el origen, funciones e integración del CAAHyA.</span>
                 </a>
-                <a href="#modalPleno" class="mega-menu__item" data-bs-toggle="modal"
-                  data-bs-target="#modalPleno">
+                <a href="#modalPleno" class="mega-menu__item" data-bs-toggle="modal" data-bs-target="#modalPleno">
                   <span class="mega-menu__item-title">El Pleno</span>
-                  <span class="mega-menu__item-desc">Consulta la integración oficial y representantes del Pleno del CAAHYA.</span>
+                  <span class="mega-menu__item-desc">Consulta la integración oficial y representantes del Pleno del
+                    CAAHYA.</span>
                 </a>
-                <a href="#modalContacto" class="mega-menu__item" data-bs-toggle="modal"
-                  data-bs-target="#modalContacto">
+                <a href="#modalContacto" class="mega-menu__item" data-bs-toggle="modal" data-bs-target="#modalContacto">
                   <span class="mega-menu__item-title">Contacto</span>
                   <span class="mega-menu__item-desc">Información de contacto y ubicación del CAAHyA.</span>
                 </a>
@@ -152,7 +151,7 @@
           </div>
         </div>
       </div>
-      
+
     </div>
   </nav>
 
@@ -180,46 +179,41 @@
 
               <!-- Primer comunicado -->
               <div class="comunicado-slide active">
-                <!-- Aqui para poner el link a donde quieres que se dirijan -->
-                <a href="https://www.youtube.com/@CAAHYA_UNAM" class="comunicado-card d-block text-decoration-none"
-                  target="_blank" rel="noopener noreferrer">
+                <a href="assets/pdf/CONVOCATORIA_vacanteJuntaDeGobierno.pdf"
+                  class="comunicado-card d-block text-decoration-none" target="_blank" rel="noopener noreferrer">
                   <div class="comunicado-media">
-                    <img src="assets/img/carrusel/GeopoliticaCrisis.jpeg" alt="Geopolítica y Crisis Civilizatoria"
-                      loading="lazy">
+                    <img src="assets\img\carrusel\CONVOCATORIA_vacanteJuntaDeGobiernoCarrusel.jpg"
+                      alt="Convocatoria vacante Junta de Gobierno" loading="lazy">
                   </div>
-                  <span class="comunicado-meta">Publicado recientemente</span>
-                  <h3 class="h5 mb-2">Geopolítica y Crisis Civilizatoria</h3>
-                  <p class="mb-3">Sigue la transmisión y consulta los detalles del evento en nuestro canal de YouTube.
+                  <span class="comunicado-meta">Convocatoria oficial</span>
+                  <h3 class="h5 mb-2">Convocatoria: Vacante en la Junta de Gobierno</h3>
+                  <p class="mb-3">Consulta el documento oficial para conocer las bases y los detalles de participación.
                   </p>
-                  <span class="comunicado-link">Ir al canal de YouTube del CAAHyA. <i
-                      class="bi bi-arrow-up-right"></i></span>
+                  <span class="comunicado-link">Abrir documento PDF <i class="bi bi-file-earmark-pdf-fill"></i></span>
                 </a>
               </div>
 
-
-
-              <!-- Plantilla comunicado con boton de registrarse -->
-
-              <!-- <div class="comunicado-slide">
-                <div class="comunicado-card h-100 d-flex flex-column">
-                  <a href="https://www.caahya.unam.mx" class="comunicado-media comunicado-media-link d-block"
-                    target="_blank" rel="noopener noreferrer">
-                    <img src="https://www.caahya.unam.mx/wp-content/uploads/2025/11/03-dic_V2.jpg"
-                      alt="Registro al encuentro anual" loading="lazy">
-                  </a>
-                  <span class="comunicado-meta">Publicado el 10 de junio de 2024</span>
-                  <h3 class="h5 mb-2">Registro al encuentro anual de consejos academicos</h3>
-                  <p class="mb-3 flex-grow-1">Aparta tu lugar en el encuentro 2024 y comparte propuestas con otras
-                    entidades academicas.</p>
-                  <div class="d-flex flex-wrap gap-3 align-items-center">
-                    <a href="https://www.caahya.unam.mx" class="comunicado-link text-decoration-none" target="_blank"
-                      rel="noopener noreferrer">Ir al comunicado <i class="bi bi-arrow-up-right"></i></a>
-                    <a href="#contacto" class="btn btn-accent btn-sm ms-auto">Registrarse</a>
+              <!-- Segundo comunicado -->
+              <div class="comunicado-slide">
+                <div class="comunicado-card h-100 d-flex flex-column text-decoration-none position-relative">
+                  <div class="comunicado-media d-block position-relative">
+                    <img src="assets/img/carrusel/DesarrolloSostenible_Podcast.jpg" alt="Podcast Desarrollo Sostenible"
+                      loading="lazy">
+                    <button
+                      class="btn btn-accent btn-play-audio position-absolute top-50 start-50 translate-middle rounded-circle shadow"
+                      style="width: 55px; height: 55px; font-size: 1.8rem; display: flex; align-items: center; justify-content: center; z-index: 10;"
+                      onclick="toggleAudio(this)" aria-label="Reproducir podcast">
+                      <i class="bi bi-play-fill" style="margin-left: 4px;"></i>
+                    </button>
                   </div>
+                  <audio id="podcastAudio" src="assets/audio/DesarrolloSostenible_Podcast.mp4"
+                    onended="audioEnded()"></audio>
+                  <span class="comunicado-meta">Podcast del CAAHyA</span>
+                  <h3 class="h5 mb-2">Desarrollo Sostenible</h3>
+                  <p class="mb-3 flex-grow-1">Escucha nuestro más reciente episodio con invitados especiales
+                    directamente desde aquí.</p>
                 </div>
-              </div> -->
-
-              <!-- Hasta aqui Plantilla comunicado con boton de registrarse -->
+              </div>
 
             </div>
           </div>
@@ -485,7 +479,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Modal Contacto -->
   <div class="modal fade modal-directorio" id="modalContacto" tabindex="-1" aria-labelledby="modalContactoLabel"
     aria-hidden="true">
@@ -503,12 +497,13 @@
         </div>
         <div class="modal-body">
           <div class="modal-iframe-wrapper border rounded-min shadow-soft overflow-hidden">
-            <iframe src="modals/modalContacto.html" title="Contacto CAAHyA"
-              class="w-100 h-100 border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="modals/modalContacto.html" title="Contacto CAAHyA" class="w-100 h-100 border-0" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
         <div class="modal-footer border-0 justify-content-end">
-          <a class="btn btn-outline-secondary" href="modals/modalContacto.html" target="_blank" rel="noopener">Abrir en nueva pestaña</a>
+          <a class="btn btn-outline-secondary" href="modals/modalContacto.html" target="_blank" rel="noopener">Abrir en
+            nueva pestaña</a>
         </div>
       </div>
     </div>
@@ -688,6 +683,33 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/index-page.js"></script>
   <script src="assets/js/marquee-fallback.js"></script>
+
+  <!-- Lógica para el reproductor de audio del carrusel -->
+  <script>
+    function toggleAudio(btn) {
+      var audio = document.getElementById('podcastAudio');
+      var icon = btn.querySelector('i');
+      if (audio.paused) {
+        audio.play();
+        icon.classList.remove('bi-play-fill');
+        icon.classList.add('bi-pause-fill');
+        icon.style.marginLeft = "0px"; // Ajustar centrado al cambiar de icono
+      } else {
+        audio.pause();
+        icon.classList.remove('bi-pause-fill');
+        icon.classList.add('bi-play-fill');
+        icon.style.marginLeft = "4px"; // Ajustar centrado óptico del botón play
+      }
+    }
+    function audioEnded() {
+      var icon = document.querySelector('.btn-play-audio i');
+      if (icon) {
+        icon.classList.remove('bi-pause-fill');
+        icon.classList.add('bi-play-fill');
+        icon.style.marginLeft = "4px";
+      }
+    }
+  </script>
 </body>
 
 </html>

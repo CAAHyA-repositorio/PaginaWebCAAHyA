@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
 
 <head>
@@ -72,8 +72,18 @@
                 </a>
                 <a href="#modalSobreConsejo" class="mega-menu__item" data-bs-toggle="modal"
                   data-bs-target="#modalSobreConsejo">
-                  <span class="mega-menu__item-title">Acerca del Consejo</span>
+                  <span class="mega-menu__item-title">Acerca de nosotros</span>
                   <span class="mega-menu__item-desc">Conoce el origen, funciones e integración del CAAHyA.</span>
+                </a>
+                <a href="#modalPleno" class="mega-menu__item" data-bs-toggle="modal"
+                  data-bs-target="#modalPleno">
+                  <span class="mega-menu__item-title">El Pleno</span>
+                  <span class="mega-menu__item-desc">Consulta la integración oficial y representantes del Pleno del CAAHYA.</span>
+                </a>
+                <a href="#modalContacto" class="mega-menu__item" data-bs-toggle="modal"
+                  data-bs-target="#modalContacto">
+                  <span class="mega-menu__item-title">Contacto</span>
+                  <span class="mega-menu__item-desc">Información de contacto y ubicación del CAAHyA.</span>
                 </a>
               </div>
             </div>
@@ -475,6 +485,33 @@
       </div>
     </div>
   </div>
+  
+  <!-- Modal Contacto -->
+  <div class="modal fade modal-directorio" id="modalContacto" tabindex="-1" aria-labelledby="modalContactoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <div>
+            <h5 class="modal-title mb-1 d-flex align-items-center gap-2" id="modalContactoLabel">
+              <i class="bi bi-envelope"></i>
+              Contacto
+            </h5>
+            <p class="mb-0 text-muted">Información de contacto del CAAHyA.</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-iframe-wrapper border rounded-min shadow-soft overflow-hidden">
+            <iframe src="modals/modalContacto.html" title="Contacto CAAHyA"
+              class="w-100 h-100 border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="modal-footer border-0 justify-content-end">
+          <a class="btn btn-outline-secondary" href="modals/modalContacto.html" target="_blank" rel="noopener">Abrir en nueva pestaña</a>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- Modales de entidades -->
 

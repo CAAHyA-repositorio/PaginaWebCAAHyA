@@ -175,6 +175,9 @@
 
                 <button type="button" class="comunicado-dot" aria-label="Mostrar comunicado 3" data-index="2"
                   aria-pressed="false"></button>
+
+                <button type="button" class="comunicado-dot" aria-label="Mostrar comunicado 4" data-index="3"
+                  aria-pressed="false"></button>
               </div>
             </div>
             <div class="hero-comunicados-carousel" role="region" aria-live="polite">
@@ -208,8 +211,8 @@
                       <i class="bi bi-play-fill" style="margin-left: 4px;"></i>
                     </button>
                   </div>
-                  <audio id="podcastAudio" src="assets/audio/DesarrolloSostenible_Podcast.mp4"
-                    onended="audioEnded()"></audio>
+                  <audio id="podcastAudio1" src="assets/audio/DesarrolloSostenible_Podcast.mp4"
+                    onended="audioEnded(this)"></audio>
                   <span class="comunicado-meta">Podcast del CAAHyA</span>
                   <h3 class="h5 mb-2">Desarrollo Sostenible</h3>
                   <p class="mb-3 flex-grow-1">Escucha nuestro más reciente episodio con invitados especiales
@@ -219,15 +222,39 @@
 
               <!-- Tercer comunicado -->
               <div class="comunicado-slide">
-                <a href="https://youtu.be/ZPBCfK6c_j0?si=gZuPV0RQ8dXLzpyP" class="comunicado-card d-block text-decoration-none" target="_blank" rel="noopener noreferrer">
+                <a href="https://youtu.be/ZPBCfK6c_j0?si=gZuPV0RQ8dXLzpyP"
+                  class="comunicado-card d-block text-decoration-none" target="_blank" rel="noopener noreferrer">
                   <div class="comunicado-media position-relative">
                     <img src="assets/img/carrusel/8MVideo_Carrusel.jpg" alt="Conmemoración 8M" loading="lazy">
                   </div>
                   <span class="comunicado-meta">Video Especial</span>
                   <h3 class="h5 mb-2">Conmemoración del 8M</h3>
                   <p class="mb-3">Ver el video conmemorativo completo en nuestro canal oficial de YouTube.</p>
-                  <span class="comunicado-link" style="color: #ff0000;">Ver en YouTube <i class="bi bi-youtube"></i></span>
+                  <span class="comunicado-link" style="color: #ff0000;">Ver en YouTube <i
+                      class="bi bi-youtube"></i></span>
                 </a>
+              </div>
+
+              <!-- Cuarto comunicado -->
+              <div class="comunicado-slide">
+                <div class="comunicado-card h-100 d-flex flex-column text-decoration-none position-relative">
+                  <div class="comunicado-media d-block position-relative">
+                    <img src="assets/img/carrusel/podcast interculturalidad .jpg"
+                      alt="Podcast Interculturalidad en el siglo XXI" loading="lazy">
+                    <button
+                      class="btn btn-accent btn-play-audio position-absolute top-50 start-50 translate-middle rounded-circle shadow"
+                      style="width: 55px; height: 55px; font-size: 1.8rem; display: flex; align-items: center; justify-content: center; z-index: 10;"
+                      onclick="toggleAudio(this)" aria-label="Reproducir podcast">
+                      <i class="bi bi-play-fill" style="margin-left: 4px;"></i>
+                    </button>
+                  </div>
+                  <audio id="podcastAudio2" src="assets/audio/Interculturalidad_Podcast.mp4"
+                    onended="audioEnded(this)"></audio>
+                  <span class="comunicado-meta">Podcast del CAAHyA</span>
+                  <h3 class="h5 mb-2">Interculturalidad en el siglo XXI</h3>
+                  <p class="mb-3 flex-grow-1">Escucha nuestro más reciente episodio de Podcast directamente desde aqui.
+                  </p>
+                </div>
               </div>
 
             </div>
@@ -702,8 +729,24 @@
   <!-- Lógica para el reproductor de audio del carrusel -->
   <script>
     function toggleAudio(btn) {
-      var audio = document.getElementById('podcastAudio');
+      // Find the audio element within the same card
+      var card = btn.closest('.comunicado-card');
+      var audio = card.querySelector('audio');
       var icon = btn.querySelector('i');
+
+      // Pause any other playing audios
+      document.querySelectorAll('audio').forEach(function (otherAudio) {
+        if (otherAudio !== audio && !otherAudio.paused) {
+          otherAudio.pause();
+          var otherIcon = otherAudio.closest('.comunicado-card').querySelector('.btn-play-audio i');
+          if (otherIcon) {
+            otherIcon.classList.remove('bi-pause-fill');
+            otherIcon.classList.add('bi-play-fill');
+            otherIcon.style.marginLeft = "4px";
+          }
+        }
+      });
+
       if (audio.paused) {
         audio.play();
         icon.classList.remove('bi-play-fill');
@@ -716,12 +759,15 @@
         icon.style.marginLeft = "4px"; // Ajustar centrado óptico del botón play
       }
     }
-    function audioEnded() {
-      var icon = document.querySelector('.btn-play-audio i');
-      if (icon) {
-        icon.classList.remove('bi-pause-fill');
-        icon.classList.add('bi-play-fill');
-        icon.style.marginLeft = "4px";
+    function audioEnded(audioElem) {
+      var card = audioElem.closest('.comunicado-card');
+      if (card) {
+        var icon = card.querySelector('.btn-play-audio i');
+        if (icon) {
+          icon.classList.remove('bi-pause-fill');
+          icon.classList.add('bi-play-fill');
+          icon.style.marginLeft = "4px";
+        }
       }
     }
   </script>

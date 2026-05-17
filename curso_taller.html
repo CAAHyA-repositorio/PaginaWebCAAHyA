@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curso-Taller | CAAHyA</title>
+  <meta name="description"
+    content="Orientaciones para la elaboración y/o evaluación de proyectos de adecuación de planes y programas de estudio.">
+
+  <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+  <!--Overlay-->
+  <div id="pageTransition" class="page-transition active" aria-hidden="false">
+    <img src="assets/img/LogoAzulOscuro_Completo.png" alt="CAAHYA">
+  </div>
+  <a class="skip-link" href="#contenidoPrincipal">Saltar al contenido</a>
+
+  <!-- Barra de navegacion-->
+  <nav class="navbar navbar-expand-xl navbar-ca fixed-top" aria-label="Navegacion principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Inicio CAAHYA">
+        <img src="assets/img/LogoAzulOscuro.png" alt="CAAHYA" onerror="this.style.display='none'">
+        <span class="brand-text">CAAHyA</span>
+      </a>
+      <div class="d-flex d-xl-none align-items-center ms-auto gap-2">
+        <div class="social d-flex align-items-center" aria-label="Redes sociales">
+          <a href="https://www.facebook.com/p/Consejo-Acad%C3%A9mico-del-%C3%81rea-de-las-Humanidades-y-las-Artes-Caahya-61573733710648/"
+            class="social-pill" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
+              class="bi bi-facebook"></i></a>
+          <a href="https://www.youtube.com/@CAAHYA_UNAM" class="social-pill" aria-label="YouTube" target="_blank"
+            rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.instagram.com/caahya_unam/" class="social-pill" aria-label="Instagram" target="_blank"
+            rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+          <button type="button" class="social-email" data-email-popover="true" data-email="humanidadesyartes@unam.mx"
+            data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
+            data-bs-custom-class="email-popover" data-bs-html="true" aria-label="Correo electronico">
+            <i class="bi bi-envelope-fill"></i>
+          </button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+          aria-controls="navMain" aria-expanded="false" aria-label="Mostrar menu">
+          <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <!-- MENÚ CENTRAL -->
+        <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" id="inicioMenu">
+              CAAHyA
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="procesoConsejo.html">Procesos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comisiones.html">Comisiones</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="comitesAcademicos.html">Comites</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="legislacion.html">Legislación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="consejeros.html">Consejeros</a>
+          </li>
+        </ul>
+
+
+        <div class="navbar-actions d-none d-xl-flex">
+          <div class="social d-flex align-items-center" aria-label="Redes sociales">
+            <a href="https://www.facebook.com/p/Consejo-Acad%C3%A9mico-del-%C3%81rea-de-las-Humanidades-y-las-Artes-Caahya-61573733710648/"
+              class="social-pill" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://www.youtube.com/@CAAHYA_UNAM" class="social-pill" aria-label="YouTube" target="_blank"
+              rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.instagram.com/caahya_unam/" class="social-pill" aria-label="Instagram" target="_blank"
+              rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+            <button type="button" class="social-email" data-email-popover="true" data-email="humanidadesyartes@unam.mx"
+              data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
+              data-bs-custom-class="email-popover" data-bs-html="true" aria-label="Correo electronico">
+              <i class="bi bi-envelope-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <main id="contenidoPrincipal">
+    <!-- Hero -->
+    <section class="commissions-hero text-center text-lg-start">
+      <div class="container py-5 py-lg-6 position-relative">
+        <div class="hero-bubble hero-bubble-1"></div>
+        <div class="hero-bubble hero-bubble-2"></div>
+        <div class="hero-bubble hero-bubble-3"></div>
+        <div class="row align-items-center g-4 position-relative">
+          <div class="col-lg-7">
+            <span class="badge hero-pill text-uppercase fw-semibold px-3 py-2 mb-3">Comisiones</span>
+            <h1 class="display-5 fw-bold text-primary mb-3">Curso Taller</h1>
+            <p class="lead text-muted mb-4">Orientaciones para la elaboración y/o evaluación de proyectos de adecuación de planes y programas de estudio.</p>
+            <div class="d-flex flex-column flex-sm-row gap-3">
+              <a class="btn btn-secondary-ca btn-lg px-4" href="#presentaciones">Ver presentaciones</a>
+              <a class="btn btn-outline-primary btn-lg px-4" href="#productos">Ver productos y propuestas</a>
+            </div>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <!-- Espacio para ilustración si se desea -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Presentaciones de los Conferencistas -->
+    <section id="presentaciones" class="py-5 section-formal">
+      <div class="container">
+        <div class="row align-items-center justify-content-between g-3 mb-4">
+          <div class="col-lg-8">
+            <h2 class="h2 fw-bold text-primary mb-2">Presentaciones de los Conferencistas</h2>
+            <p class="mb-0 text-muted">Descarga el material presentado por los expertos durante el taller.</p>
+          </div>
+        </div>
+
+        <div class="row g-3 reglamento-downloads">
+          <!-- Item 1 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <a class="reglamento-card h-100" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="reglamento-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <div>
+                <h6 class="mb-1">Lineamientos académico-administrativos Planes de estudio. DGAE. Mtra. Elia Márquez</h6>
+                <small>Descargar</small>
+              </div>
+              <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+            </a>
+          </div>
+          <!-- Item 2 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <a class="reglamento-card h-100" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="reglamento-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <div>
+                <h6 class="mb-1">Lineamientos generales del posgrado a considerar en los planes y programas de estudio. Coordinación Estudios de Posgrado</h6>
+                <small>Descargar</small>
+              </div>
+              <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+            </a>
+          </div>
+          <!-- Item 3 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <a class="reglamento-card h-100" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="reglamento-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <div>
+                <h6 class="mb-1">Requisitos estructurales de un plan de estudios. Lic. Karin Wried</h6>
+                <small>Descargar</small>
+              </div>
+              <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+            </a>
+          </div>
+          <!-- Item 4 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <a class="reglamento-card h-100" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="reglamento-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <div>
+                <h6 class="mb-1">Requisitos metodológicos a considerar en la redacción de un plan de estudios. Mtra. Bataller</h6>
+                <small>Descargar</small>
+              </div>
+              <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+            </a>
+          </div>
+          <!-- Item 5 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <a class="reglamento-card h-100" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="reglamento-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <div>
+                <h6 class="mb-1">Competencias y Flexibilidad curricular. Mtra. Padilla</h6>
+                <small>Descargar</small>
+              </div>
+              <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+            </a>
+          </div>
+          <!-- Item 6 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <a class="reglamento-card h-100" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="reglamento-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <div>
+                <h6 class="mb-1">En tensión y en diálogo con las competencias. Dra. Orozco</h6>
+                <small>Descargar</small>
+              </div>
+              <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+            </a>
+          </div>
+          <!-- Item 7 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <a class="reglamento-card h-100" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="reglamento-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <div>
+                <h6 class="mb-1">TIC herramientas para pensar. Dr. Gerardo Hernández Rojas</h6>
+                <small>Descargar</small>
+              </div>
+              <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+            </a>
+          </div>
+          <!-- Item 8 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <a class="reglamento-card h-100" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="reglamento-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <div>
+                <h6 class="mb-1">Plataformas para el aprendizaje. Dr. Rigo Lemini</h6>
+                <small>Descargar</small>
+              </div>
+              <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+            </a>
+          </div>
+          <!-- Item 9 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <a class="reglamento-card h-100" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="reglamento-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <div>
+                <h6 class="mb-1">Innovaciones en el diseño de entornos virtuales. Dr. Ruiz Velasco</h6>
+                <small>Descargar</small>
+              </div>
+              <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+            </a>
+          </div>
+          <!-- Item 10 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <a class="reglamento-card h-100" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="reglamento-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <div>
+                <h6 class="mb-1">Productos interactivos para la docencia. Sistemas Web y móviles en la Educación. Ing. Rebeca Valenzuela. DGSCA</h6>
+                <small>Descargar</small>
+              </div>
+              <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+            </a>
+          </div>
+          <!-- Item 11 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <a class="reglamento-card h-100" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="reglamento-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <div>
+                <h6 class="mb-1">Incorporación docentes procesos de transformación curricular Dra. Valenzuela</h6>
+                <small>Descargar</small>
+              </div>
+              <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+            </a>
+          </div>
+          <!-- Item 12 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <a class="reglamento-card h-100" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="reglamento-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <div>
+                <h6 class="mb-1">Conferencia Mtra. Lourdes Chehaibar</h6>
+                <small>Descargar</small>
+              </div>
+              <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+            </a>
+          </div>
+          <!-- Item 13 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <a class="reglamento-card h-100" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="reglamento-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <div>
+                <h6 class="mb-1">Informe del curso</h6>
+                <small>Descargar</small>
+              </div>
+              <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Productos y propuestas -->
+    <section id="productos" class="py-5 section-formal-light">
+      <div class="container">
+        <div class="row align-items-center justify-content-between g-3 mb-4">
+          <div class="col-lg-8">
+            <h2 class="h2 fw-bold text-primary mb-2">Productos y propuestas</h2>
+            <p class="mb-0 text-muted">Documentos generados en el curso Taller Orientaciones para la elaboración de Planes y Programas de estudio.</p>
+          </div>
+        </div>
+
+        <div class="row g-3 reglamento-downloads">
+          <!-- Item 1 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <a class="reglamento-card h-100" href="#" target="_blank" rel="noopener noreferrer">
+              <div class="reglamento-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+              <div>
+                <h6 class="mb-1">Hacia la construcción de un proyecto de evaluación curricular_Pedagogia Aragón</h6>
+                <small>Descargar</small>
+              </div>
+              <span class="reglamento-arrow"><i class="bi bi-arrow-down-circle-fill"></i></span>
+            </a>
+          </div>
+          <!-- Agrega más elementos aquí según sea necesario -->
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-5 text-on-dark">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <img src="assets/img/LogoCA.png" alt="CAAHyA" width="120" class="mb-3">
+          <p class="mb-0">Consejo Académico de Humanidades y Artes * Universidad Nacional Autónoma de México.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+          <small class="d-block mt-3">&copy; <span data-year>2024</span> CAAHyA. Todos los derechos reservados.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/animejs/anime.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

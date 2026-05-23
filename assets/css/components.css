@@ -760,6 +760,7 @@
   color:#262261;
   text-transform:uppercase;
   letter-spacing:.06em;
+  text-align:left;
 }
 .commission-toggle i{
   transition:transform .2s ease;

@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.live-server",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    "ecmel.vscode-html-css",
+    "pranaygp.vscode-css-peek",
+    "christian-kohler.path-intellisense",
+    "eamodio.gitlens",
+    "kamikillerto.vscode-colorize"
+  ]
+}

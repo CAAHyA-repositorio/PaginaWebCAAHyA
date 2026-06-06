@@ -54,6 +54,37 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    const prevBtn = document.querySelector('.hero-comunicados .comunicado-prev');
+    const nextBtn = document.querySelector('.hero-comunicados .comunicado-next');
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        goTo(activeIndex - 1);
+        startAuto();
+      });
+      prevBtn.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          goTo(activeIndex - 1);
+          startAuto();
+        }
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        goTo(activeIndex + 1);
+        startAuto();
+      });
+      nextBtn.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          goTo(activeIndex + 1);
+          startAuto();
+        }
+      });
+    }
+
     if (comunicadoCarousel) {
       ['mouseenter', 'focusin'].forEach((type) => {
         comunicadoCarousel.addEventListener(type, pauseAuto);

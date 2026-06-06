@@ -1499,3 +1499,77 @@ footer .social a:hover{ color:#d7d7ff; }
     margin-top:1rem;
   }
 }
+
+/* Estilos para las flechas de navegación del carrusel */
+.comunicado-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 15;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.comunicado-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.comunicado-nav-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.comunicado-prev {
+  left: -64px;
+}
+
+.comunicado-next {
+  right: -64px;
+}
+
+/* Adaptación responsive para pantallas más pequeñas */
+@media (max-width: 1200px) {
+  .comunicado-prev {
+    left: -24px;
+  }
+  .comunicado-next {
+    right: -24px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .comunicado-prev {
+    left: 8px;
+  }
+  .comunicado-next {
+    right: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .comunicado-nav-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+  .comunicado-prev {
+    left: 4px;
+  }
+  .comunicado-next {
+    right: 4px;
+  }
+}

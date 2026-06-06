@@ -179,9 +179,19 @@
 
                 <button type="button" class="comunicado-dot" aria-label="Mostrar comunicado 4" data-index="3"
                   aria-pressed="false"></button>
+
+                <button type="button" class="comunicado-dot" aria-label="Mostrar comunicado 5" data-index="4"
+                  aria-pressed="false"></button>
               </div>
             </div>
             <div class="hero-comunicados-carousel" role="region" aria-live="polite">
+              <!-- Botones de navegación (Flechas) -->
+              <button type="button" class="comunicado-nav-btn comunicado-prev" aria-label="Comunicado anterior">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <button type="button" class="comunicado-nav-btn comunicado-next" aria-label="Siguiente comunicado">
+                <i class="bi bi-chevron-right"></i>
+              </button>
 
               <!-- Primer comunicado -->
               <div class="comunicado-slide active">
@@ -257,6 +267,27 @@
                   <h3 class="h5 mb-2">Interculturalidad en el siglo XXI</h3>
                   <p class="mb-3 flex-grow-1">Escucha nuestro más reciente episodio de Podcast directamente desde aqui.
                   </p>
+                  <span class="comunicado-link" style="color: #33ff00;">Da click para escucharlo<i
+                      class="bi bi-play-circle-fill"></i></span>
+                </div>
+              </div>
+
+              <!-- Quinto comunicado -->
+              <div class="comunicado-slide">
+                <div class="comunicado-card h-100 d-flex flex-column text-decoration-none position-relative">
+                  <div class="comunicado-media d-block position-relative">
+                    <img src="assets/img/carrusel/CARRUSEL LGTBQ+.jpg" alt="Mes del Orgullo LGTBQ+" loading="lazy">
+                    <button
+                      class="btn btn-accent btn-play-audio position-absolute top-50 start-50 translate-middle rounded-circle shadow"
+                      style="width: 55px; height: 55px; font-size: 1.8rem; display: flex; align-items: center; justify-content: center; z-index: 10;"
+                      onclick="toggleAudio(this)" aria-label="Reproducir podcast">
+                      <i class="bi bi-play-fill" style="margin-left: 4px;"></i>
+                    </button>
+                  </div>
+                  <audio id="podcastAudio3" src="assets/audio/MES DEL ORGULLO.mp4" onended="audioEnded(this)"></audio>
+                  <span class="comunicado-meta">Podcast del CAAHyA</span>
+                  <h3 class="h5 mb-2">Mes del Orgullo</h3>
+                  <p class="mb-3 flex-grow-1">Escucha nuestro mensaje especial en conmemoración del Mes del Orgullo LGTBQ+.</p>
                   <span class="comunicado-link" style="color: #33ff00;">Da click para escucharlo<i
                       class="bi bi-play-circle-fill"></i></span>
                 </div>

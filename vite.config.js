@@ -1,4 +1,4 @@
-﻿import { defineConfig } from 'vite'
+import { defineConfig } from 'vite'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
@@ -7,7 +7,8 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         { src: 'assets/search-*.json', dest: 'assets' },
-        { src: 'assets/vendor/**', dest: 'assets/vendor' }
+        { src: 'assets/vendor/**', dest: 'assets/vendor' },
+        { src: 'modals/**', dest: 'modals' }
       ]
     })
   ],
@@ -17,7 +18,13 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        directorio: 'directorio.html',
+        cartelera: 'cartelera.html',
+        comisiones: 'comisiones.html',
+        comitesAcademicos: 'comitesAcademicos.html',
+        consejeros: 'consejeros.html',
+        curso_taller: 'curso_taller.html',
+        legislacion: 'legislacion.html',
+        procesoConsejo: 'procesoConsejo.html',
         search: 'search.html'
       }
     }

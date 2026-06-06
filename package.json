@@ -6,7 +6,7 @@
   "scripts": {
     "build:index": "node scripts/build-search-index.mjs",
     "dev": "vite",
-    "build": "npm run build:index && vite build",
+    "build": "vite build",
     "preview": "vite preview --open"
   },
   "devDependencies": {

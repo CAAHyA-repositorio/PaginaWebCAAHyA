@@ -18,6 +18,26 @@
     <link rel="stylesheet" href="../../assets/css/components.css" />
     <link rel="stylesheet" href="../../assets/css/theme.css" />
     <link rel="stylesheet" href="../../assets/css/responsive.css" />
+    <style>
+      .flag-icon {
+        width: 26px;
+        height: 18px;
+        object-fit: cover;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        vertical-align: middle;
+      }
+      .lang-emblem {
+        font-size: 1.15rem;
+        vertical-align: middle;
+      }
+      .commission-toggle span {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    </style>
   </head>
 
   <body class="bg-light">
@@ -415,7 +435,7 @@
                       aria-expanded="false"
                       aria-controls="ciIngles"
                     >
-                      <span>INGLÉS</span>
+                      <span>INGLÉS <img src="https://flagcdn.com/w40/gb.png" alt="Reino Unido" class="flag-icon"></span>
                       <i class="bi bi-chevron-down"></i>
                     </button>
                     <div
@@ -453,11 +473,18 @@
                             >Facultad de Estudios Superiores Arag&oacute;n</span
                           >
                         </li>
-                        <li>
+                        <li class="mb-3">
                           <span class="d-block fw-bold"
                             >Lic. Erika Carmina Reyes Rojas</span
                           ><span class="d-block text-muted"
                             >Facultad de Estudios Superiores Arag&oacute;n</span
+                          >
+                        </li>
+                        <li>
+                          <span class="d-block fw-bold"
+                            >Prof. Oscar Garc&iacute;a Benavides</span
+                          ><span class="d-block text-muted"
+                            >Escuela Nacional de Lenguas, Ling&uuml;&iacute;stica y Traducci&oacute;n</span
                           >
                         </li>
                       </ul>
@@ -473,7 +500,7 @@
                       aria-expanded="false"
                       aria-controls="ciFrances"
                     >
-                      <span>FRANCÉS</span>
+                      <span>FRANCÉS <img src="https://flagcdn.com/w40/fr.png" alt="Francia" class="flag-icon"></span>
                       <i class="bi bi-chevron-down"></i>
                     </button>
                     <div
@@ -527,7 +554,7 @@
                       aria-expanded="false"
                       aria-controls="ciAleman"
                     >
-                      <span>ALEMÁN</span>
+                      <span>ALEMÁN <img src="https://flagcdn.com/w40/de.png" alt="Alemania" class="flag-icon"></span>
                       <i class="bi bi-chevron-down"></i>
                     </button>
                     <div
@@ -565,7 +592,7 @@
                       aria-expanded="false"
                       aria-controls="ciItaliano"
                     >
-                      <span>ITALIANO</span>
+                      <span>ITALIANO <img src="https://flagcdn.com/w40/it.png" alt="Italia" class="flag-icon"></span>
                       <i class="bi bi-chevron-down"></i>
                     </button>
                     <div
@@ -595,7 +622,275 @@
                           <span class="d-block fw-bold"
                             >Mtro. Andrea Al&iacute;</span
                           ><span class="d-block text-muted"
-                            >Pendiente de entidad</span
+                            >CCH Sur</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- PORTUGUÉS -->
+                  <div class="commission-toggle-card">
+                    <button
+                      class="commission-toggle"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#ciPortugues"
+                      aria-expanded="false"
+                      aria-controls="ciPortugues"
+                    >
+                      <span>PORTUGUÉS <img src="https://flagcdn.com/w40/pt.png" alt="Portugal" class="flag-icon"></span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div
+                      id="ciPortugues"
+                      class="collapse commission-toggle-panel"
+                      data-bs-parent="#accordionComisionIdiomas"
+                    >
+                      <ul class="commission-modal-list list-unstyled mb-0">
+                        <li class="mb-3">
+                          <span class="d-block fw-bold"
+                            >DG Mercedes Trujillo Molina</span
+                          ><span class="d-block text-muted"
+                            >Facultad de Estudios Superiores Acatl&aacute;n</span
+                          >
+                        </li>
+                        <li>
+                          <span class="d-block fw-bold"
+                            >Lic. Berenice Jim&eacute;nez Hidalgo</span
+                          ><span class="d-block text-muted"
+                            >Escuela Nacional de Lenguas, Ling&uuml;&iacute;stica y Traducci&oacute;n</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- RUSO -->
+                  <div class="commission-toggle-card">
+                    <button
+                      class="commission-toggle"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#ciRuso"
+                      aria-expanded="false"
+                      aria-controls="ciRuso"
+                    >
+                      <span>RUSO <img src="https://flagcdn.com/w40/ru.png" alt="Rusia" class="flag-icon"></span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div
+                      id="ciRuso"
+                      class="collapse commission-toggle-panel"
+                      data-bs-parent="#accordionComisionIdiomas"
+                    >
+                      <ul class="commission-modal-list list-unstyled mb-0">
+                        <li>
+                          <span class="d-block fw-bold"
+                            >Dra. Svetlana Iakovleva</span
+                          ><span class="d-block text-muted"
+                            >Facultad de Estudios Superiores Arag&oacute;n</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- JAPONÉS -->
+                  <div class="commission-toggle-card">
+                    <button
+                      class="commission-toggle"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#ciJapones"
+                      aria-expanded="false"
+                      aria-controls="ciJapones"
+                    >
+                      <span>JAPONÉS <img src="https://flagcdn.com/w40/jp.png" alt="Japón" class="flag-icon"></span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div
+                      id="ciJapones"
+                      class="collapse commission-toggle-panel"
+                      data-bs-parent="#accordionComisionIdiomas"
+                    >
+                      <ul class="commission-modal-list list-unstyled mb-0">
+                        <li class="mb-3">
+                          <span class="d-block fw-bold"
+                            >Lic. Elisa Akemi Shimazaki Miho</span
+                          ><span class="d-block text-muted"
+                            >Escuela Nacional de Lenguas, Ling&uuml;&iacute;stica y Traducci&oacute;n</span
+                          >
+                        </li>
+                        <li>
+                          <span class="d-block fw-bold"
+                            >Prof. Yuji Takata</span
+                          ><span class="d-block text-muted"
+                            >Facultad de Estudios Superiores Acatl&aacute;n</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- CHINO -->
+                  <div class="commission-toggle-card">
+                    <button
+                      class="commission-toggle"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#ciChino"
+                      aria-expanded="false"
+                      aria-controls="ciChino"
+                    >
+                      <span>CHINO <img src="https://flagcdn.com/w40/cn.png" alt="China" class="flag-icon"></span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div
+                      id="ciChino"
+                      class="collapse commission-toggle-panel"
+                      data-bs-parent="#accordionComisionIdiomas"
+                    >
+                      <ul class="commission-modal-list list-unstyled mb-0">
+                        <li>
+                          <span class="d-block fw-bold"
+                            >Prof. Ricardo Cornejo &Aacute;vila</span
+                          ><span class="d-block text-muted"
+                            >Escuela Nacional de Lenguas, Ling&uuml;&iacute;stica y Traducci&oacute;n</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- MAYA -->
+                  <div class="commission-toggle-card">
+                    <button
+                      class="commission-toggle"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#ciMaya"
+                      aria-expanded="false"
+                      aria-controls="ciMaya"
+                    >
+                      <span>MAYA <span class="lang-emblem">🏛️</span></span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div
+                      id="ciMaya"
+                      class="collapse commission-toggle-panel"
+                      data-bs-parent="#accordionComisionIdiomas"
+                    >
+                      <ul class="commission-modal-list list-unstyled mb-0">
+                        <li>
+                          <span class="d-block fw-bold"
+                            >Mtro. Ismael May May</span
+                          ><span class="d-block text-muted"
+                            >Escuela Nacional de Estudios Superiores Unidad M&eacute;rida</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- NÁHUATL -->
+                  <div class="commission-toggle-card">
+                    <button
+                      class="commission-toggle"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#ciNahuatl"
+                      aria-expanded="false"
+                      aria-controls="ciNahuatl"
+                    >
+                      <span>NÁHUATL <span class="lang-emblem">🦅</span></span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div
+                      id="ciNahuatl"
+                      class="collapse commission-toggle-panel"
+                      data-bs-parent="#accordionComisionIdiomas"
+                    >
+                      <ul class="commission-modal-list list-unstyled mb-0">
+                        <li class="mb-3">
+                          <span class="d-block fw-bold"
+                            >Prof. Jos&eacute; Leonardo Bonilla S&aacute;nchez</span
+                          ><span class="d-block text-muted"
+                            >Facultad de Estudios Superiores Arag&oacute;n</span
+                          >
+                        </li>
+                        <li>
+                          <span class="d-block fw-bold"
+                            >Dra. Elsa del Valle N&uacute;&ntilde;ez</span
+                          ><span class="d-block text-muted"
+                            >Escuela Nacional de Lenguas, Ling&uuml;&iacute;stica y Traducci&oacute;n</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- OTOMÍ -->
+                  <div class="commission-toggle-card">
+                    <button
+                      class="commission-toggle"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#ciOtomi"
+                      aria-expanded="false"
+                      aria-controls="ciOtomi"
+                    >
+                      <span>OTOMÍ <span class="lang-emblem">🌵</span></span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div
+                      id="ciOtomi"
+                      class="collapse commission-toggle-panel"
+                      data-bs-parent="#accordionComisionIdiomas"
+                    >
+                      <ul class="commission-modal-list list-unstyled mb-0">
+                        <li>
+                          <span class="d-block fw-bold"
+                            >Lic. Isidro Alavez Raymundo</span
+                          ><span class="d-block text-muted"
+                            >Facultad de Estudios Superiores Acatl&aacute;n</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- PURÉPECHA -->
+                  <div class="commission-toggle-card">
+                    <button
+                      class="commission-toggle"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#ciPurepecha"
+                      aria-expanded="false"
+                      aria-controls="ciPurepecha"
+                    >
+                      <span>PURÉPECHA <span class="lang-emblem">🦋</span></span>
+                      <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div
+                      id="ciPurepecha"
+                      class="collapse commission-toggle-panel"
+                      data-bs-parent="#accordionComisionIdiomas"
+                    >
+                      <ul class="commission-modal-list list-unstyled mb-0">
+                        <li class="mb-3">
+                          <span class="d-block fw-bold"
+                            >Mtra. Alicia Mateo Manzo</span
+                          ><span class="d-block text-muted"
+                            >Escuela Nacional de Estudios Superiores Unidad Morelia</span
+                          >
+                        </li>
+                        <li>
+                          <span class="d-block fw-bold"
+                            >Mtro. Benjam&iacute;n Lucas Ju&aacute;rez</span
+                          ><span class="d-block text-muted"
+                            >Escuela Nacional de Estudios Superiores Unidad Morelia</span
                           >
                         </li>
                       </ul>

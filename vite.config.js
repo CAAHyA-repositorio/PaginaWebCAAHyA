@@ -8,6 +8,11 @@ export default defineConfig({
       targets: [
         { src: 'assets/search-*.json', dest: 'assets' },
         { src: 'assets/vendor/**', dest: 'assets/vendor' },
+        { src: 'assets/js/**', dest: 'assets/js' },
+        { src: 'assets/css/**', dest: 'assets/css' },
+        { src: 'assets/img/**', dest: 'assets/img' },
+        { src: 'assets/audio/**', dest: 'assets/audio' },
+        { src: 'assets/pdf/**', dest: 'assets/pdf' },
         { src: 'modals/**', dest: 'modals' }
       ]
     })

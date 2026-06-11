@@ -30,7 +30,8 @@ export default defineConfig({
         curso_taller: 'curso_taller.html',
         legislacion: 'legislacion.html',
         procesoConsejo: 'procesoConsejo.html',
-        search: 'search.html'
+        search: 'search.html',
+        privacidadSimplificado: 'privacidadSimplificado.html'
       }
     }
   },

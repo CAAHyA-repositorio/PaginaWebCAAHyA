@@ -965,7 +965,39 @@
   }
 }
 
-/* Footer */
+/* Footer Modernizado */
+.footer-dark {
+  background-color: #0c0a1f !important; /* Azul muy oscuro premium */
+  color: #ffffff;
+  font-family: Verdana, Geneva, sans-serif;
+}
+.footer-dark .footer-title {
+  color: var(--secondary);
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: none;
+  margin-top: 0;
+}
+.footer-dark .footer-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.footer-dark .footer-link-item {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+.footer-dark .footer-link-item:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+/* Footer general fallback y redes */
 footer{
   background: #1f1b4a;
   color: var(--text-on-dark);

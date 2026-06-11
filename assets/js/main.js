@@ -1,4 +1,4 @@
-﻿// CAAHYA — Main JS
+// CAAHYA — Main JS
 document.addEventListener('DOMContentLoaded', function () {
   // Navbar: solo efecto en scroll (sin animar toda la barra)
   const navbar = document.querySelector('.navbar-ca');
@@ -349,3 +349,18 @@ if (sideNav) {
     a.addEventListener('click', () => { links.forEach(l => l.classList.remove('active')); a.classList.add('active'); const dot = a.querySelector('.dot'); if (dot) { dot.classList.remove('pulse'); void dot.offsetWidth; dot.classList.add('pulse'); } });
   });
 }
+
+// Abrir modal automáticamente desde el hash de la URL (para navegación entre páginas)
+window.addEventListener('load', function () {
+  const hash = window.location.hash;
+  if (hash && hash.startsWith('#modal')) {
+    const modalEl = document.querySelector(hash);
+    if (modalEl && window.bootstrap && window.bootstrap.Modal) {
+      setTimeout(() => {
+        const modal = window.bootstrap.Modal.getOrCreateInstance(modalEl);
+        if (modal) modal.show();
+      }, 600);
+    }
+  }
+});
+

@@ -90,29 +90,6 @@ const newMegaMenu = `        <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-
                 </a>
               </div>
             </div>
-          </li>
-
-          <li class="nav-item dropdown-mega">
-            <a class="nav-link" href="#">Elección para junta de gobierno</a>
-            <div class="mega-menu">
-              <div class="mega-menu__col">
-                <p class="mega-menu__title">Elección para Junta de Gobierno</p>
-                <a href="https://www.caahya.unam.mx/wp-content/uploads/2026/04/CONVOCATORIA.pdf" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
-                  <span class="mega-menu__item-title">Convocatoria</span>
-                  <span class="mega-menu__item-desc">Consulta las bases y requisitos oficiales de la convocatoria.</span>
-                </a>
-                <a href="https://www.caahya.unam.mx/wp-content/uploads/2026/06/Listado_inicial_de_personas_candidatas.pdf" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
-                  <span class="mega-menu__item-title">Listado de personas candidatas</span>
-                  <span class="mega-menu__item-desc">Listado oficial de aspirantes registrados para la elección.</span>
-                </a>
-                <a href="modals/comparecencias.html" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
-                  <span class="mega-menu__item-title">Comparecencias</span>
-                  <span class="mega-menu__item-desc">Videos y transmisiones de las sesiones de comparecencias.</span>
-                </a>
-              </div>
-            </div>
-          </li>
-
           <li class="nav-item dropdown-mega">
             <a class="nav-link" href="comitesAcademicos.html">Comités</a>
             <div class="mega-menu">
@@ -163,6 +140,27 @@ const newMegaMenu = `        <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-
                 <a href="consejeros.html#consejeros" class="mega-menu__item">
                   <span class="mega-menu__item-title">Listado de consejeros</span>
                   <span class="mega-menu__item-desc">Consulta titulares y suplentes por entidad académica.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="#">Elección para junta de gobierno</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Elección para Junta de Gobierno</p>
+                <a href="https://www.caahya.unam.mx/wp-content/uploads/2026/04/CONVOCATORIA.pdf" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
+                  <span class="mega-menu__item-title">Convocatoria</span>
+                  <span class="mega-menu__item-desc">Consulta las bases y requisitos oficiales de la convocatoria.</span>
+                </a>
+                <a href="https://www.caahya.unam.mx/wp-content/uploads/2026/06/Listado_inicial_de_personas_candidatas.pdf" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
+                  <span class="mega-menu__item-title">Listado de personas candidatas</span>
+                  <span class="mega-menu__item-desc">Listado oficial de aspirantes registrados para la elección.</span>
+                </a>
+                <a href="modals/comparecencias.html" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
+                  <span class="mega-menu__item-title">Comparecencias</span>
+                  <span class="mega-menu__item-desc">Videos y transmisiones de las sesiones de comparecencias.</span>
                 </a>
               </div>
             </div>

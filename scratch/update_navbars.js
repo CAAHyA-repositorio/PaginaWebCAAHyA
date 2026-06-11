@@ -33,6 +33,10 @@ const newMegaMenu = `        <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-
                   <span class="mega-menu__item-title">Acerca de nosotros</span>
                   <span class="mega-menu__item-desc">Conoce el origen, funciones e integración del CAAHyA.</span>
                 </a>
+                <a href="https://www.youtube.com/shorts/k3SCDilEsck" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
+                  <span class="mega-menu__item-title">¿Quiénes somos?</span>
+                  <span class="mega-menu__item-desc">Ver video institucional de presentación del CAAHyA.</span>
+                </a>
                 <a href="index.html#modalPleno" class="mega-menu__item">
                   <span class="mega-menu__item-title">El Pleno</span>
                   <span class="mega-menu__item-desc">Consulta la integración oficial y representantes del Pleno del

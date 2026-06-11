@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calendario de actividades</title>
+    <link rel="icon" type="image/png" href="../assets/img/LogoCA.png">
+    <meta name="description" content="Calendarios de actividades y sesiones ordinarias del CAAHyA.">
+    <link href="../assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        .calendar-container {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .calendar-card {
+            max-width: 700px;
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid rgba(38, 34, 97, 0.08);
+            box-shadow: 0 16px 36px rgba(12, 11, 28, 0.08);
+            border-radius: 1.25rem;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .calendar-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(38, 34, 97, 0.05);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            font-size: 2.25rem;
+        }
+        .btn-calendar {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            font-weight: 600;
+        }
+        .btn-calendar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        .btn-calendar:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <main>
+        <div class="container calendar-container">
+            <div class="calendar-card">
+                <div class="calendar-icon-wrapper">
+                    <i class="bi bi-calendar3"></i>
+                </div>
+                <h1 class="h3 fw-bold text-primary mb-3">Calendario de actividades</h1>
+                <p class="text-muted mb-5">
+                    Selecciona una de las siguientes opciones para consultar el calendario oficial de actividades del Consejo Académico de Humanidades y Artes:
+                </p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a href="https://www.caahya.unam.mx/wp-content/uploads/2024/11/Calendario-2025.pdf" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn-primary btn-lg px-4 py-3 btn-calendar d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-file-earmark-pdf-fill"></i>
+                        <span>Calendario de Sesiones 2025 (PDF)</span>
+                    </a>
+                    <a href="https://www.caahya.unam.mx/?page_id=7908" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn-secondary-ca btn-lg px-4 py-3 btn-calendar d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-calendar-event-fill"></i>
+                        <span>Portal del Calendario de Actividades</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/animejs/anime.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

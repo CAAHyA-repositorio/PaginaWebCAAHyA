@@ -86,6 +86,11 @@
                   <span class="mega-menu__item-title">Publicaciones</span>
                   <span class="mega-menu__item-desc">Consulta los libros, revistas y obras académicas del CAAHyA.</span>
                 </a>
+                <a href="#modalCalendario" class="mega-menu__item" data-bs-toggle="modal"
+                  data-bs-target="#modalCalendario">
+                  <span class="mega-menu__item-title">Calendario de actividades</span>
+                  <span class="mega-menu__item-desc">Consulta las fechas oficiales de sesiones, convocatorias y eventos.</span>
+                </a>
                 <a href="#modalContacto" class="mega-menu__item" data-bs-toggle="modal" data-bs-target="#modalContacto">
                   <span class="mega-menu__item-title">Contacto</span>
                   <span class="mega-menu__item-desc">Información de contacto y ubicación del CAAHyA.</span>
@@ -627,6 +632,35 @@
         </div>
         <div class="modal-footer border-0 justify-content-end">
           <a class="btn btn-outline-secondary" href="modals/modalPublicaciones.html" target="_blank"
+            rel="noopener">Abrir en nueva pestaña</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Calendario de Actividades -->
+  <div class="modal fade modal-pleno" id="modalCalendario" tabindex="-1" aria-labelledby="modalCalendarioLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <div>
+            <h5 class="modal-title d-flex align-items-center gap-2" id="modalCalendarioLabel">
+              <i class="bi bi-calendar3 text-secondary-ca"></i>
+              Calendario de actividades
+            </h5>
+            <p class="mb-0 text-muted">Consulta las fechas oficiales de sesiones, convocatorias y eventos.</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 border rounded-min shadow-soft overflow-hidden">
+            <iframe src="modals/modalCalendario.html" title="Calendario de Actividades CAAHyA" class="w-100 h-100" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="modal-footer border-0 justify-content-end">
+          <a class="btn btn-outline-secondary" href="modals/modalCalendario.html" target="_blank"
             rel="noopener">Abrir en nueva pestaña</a>
         </div>
       </div>

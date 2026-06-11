@@ -50,6 +50,7 @@
   border:1px solid rgba(0, 225, 255, 0.318);
   transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
   backdrop-filter: blur(6px);
+  white-space: nowrap;
 }
 .nav-pills-ca .nav-link:hover{
   background: rgba(255,255,255,.18);

@@ -14,6 +14,42 @@
     <link rel="stylesheet" href="../assets/css/components.css">
     <link rel="stylesheet" href="../assets/css/theme.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+      .profile-img-wrapper {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid rgba(38, 34, 97, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f5;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+      .profile-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .profile-img-placeholder {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #e6e6fa;
+        border: 3px solid rgba(38, 34, 97, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+      .transition-icon {
+        transition: transform 0.3s ease;
+      }
+      [aria-expanded="true"] .transition-icon {
+        transform: rotate(180deg);
+      }
+    </style>
   </head>
   <body>
     <main id="contenidoPrincipal" class="py-4 py-lg-5 section-formal-light">
@@ -98,6 +134,127 @@
             <li>Centro de Investigaciones y Estudios de Género.</li>
             <li>Centro Peninsular en Humanidades y Ciencias Sociales.</li>
           </ul>
+        </section>
+
+        <!-- Nueva sección: Otros coordinadores -->
+        <section class="section-formal bg-white rounded-4 shadow-soft p-4 p-lg-5 mt-4">
+          <div class="d-flex align-items-center justify-content-between" role="button" data-bs-toggle="collapse" data-bs-target="#collapseCoordinadores" aria-expanded="false" aria-controls="collapseCoordinadores" style="cursor: pointer;">
+            <h2 class="h4 fw-bold text-primary mb-0">Otros coordinadores</h2>
+            <i class="bi bi-chevron-down fs-4 transition-icon"></i>
+          </div>
+          
+          <div class="collapse" id="collapseCoordinadores">
+            <p class="text-muted mt-3 mb-4">Han sido coordinadores de este Consejo Académico:</p>
+            <div class="row g-4">
+              <!-- Dr. Gerardo García Luna Martínez -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-wrapper mb-3 mx-auto">
+                    <img src="../assets/img/coordinadores/1111-scaled-e1725412348578-1159x1536.jpg" alt="Dr. Gerardo García Luna Martínez" class="profile-img">
+                  </div>
+                  <h3 class="h6 mb-1">Dr. Gerardo García Luna Martínez</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinador</div>
+                  <div class="text-muted small mt-1">2023 - 2024</div>
+                </div>
+              </div>
+              
+              <!-- Dr. Adalberto Enrique Santana Hernández -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-wrapper mb-3 mx-auto">
+                    <img src="../assets/img/coordinadores/Dr.-Adalberto-Enrique-Santana-Hernandez.jpg" alt="Dr. Adalberto Enrique Santana Hernández" class="profile-img">
+                  </div>
+                  <h3 class="h6 mb-1">Dr. Adalberto Enrique Santana Hernández</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinador</div>
+                  <div class="text-muted small mt-1">2016 - 2023</div>
+                </div>
+              </div>
+              
+              <!-- Dra. Guadalupe Curiel Defossé -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-wrapper mb-3 mx-auto">
+                    <img src="../assets/img/coordinadores/Dra.-Guadalupe-Curiel-1.jpg" alt="Dra. Guadalupe Curiel Defossé" class="profile-img">
+                  </div>
+                  <h3 class="h6 mb-1">Dra. Guadalupe Curiel Defossé †</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinadora</div>
+                  <div class="text-muted small mt-1">2016</div>
+                </div>
+              </div>
+              
+              <!-- Dr. Luis Arnal Simón -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-wrapper mb-3 mx-auto">
+                    <img src="../assets/img/coordinadores/Dr.-Luis-Arnal.jpg" alt="Dr. Luis Arnal Simón" class="profile-img">
+                  </div>
+                  <h3 class="h6 mb-1">Dr. Luis Arnal Simón †</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinador</div>
+                  <div class="text-muted small mt-1">2008 - 2016</div>
+                </div>
+              </div>
+              
+              <!-- Dra. María Teresa Uriarte Castañeda -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-wrapper mb-3 mx-auto">
+                    <img src="../assets/img/coordinadores/Maria-Teresa-Uriarte-1.jpg" alt="Dra. María Teresa Uriarte Castañeda" class="profile-img">
+                  </div>
+                  <h3 class="h6 mb-1">Dra. María Teresa Uriarte Castañeda</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinadora</div>
+                  <div class="text-muted small mt-1">2006 - 2008</div>
+                </div>
+              </div>
+              
+              <!-- Dra. Elizabeth Luna Traill -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-wrapper mb-3 mx-auto">
+                    <img src="../assets/img/coordinadores/Dra.-Elizabeeth-Luna-Traill.jpg" alt="Dra. Elizabeth Luna Traill" class="profile-img">
+                  </div>
+                  <h3 class="h6 mb-1">Dra. Elizabeth Luna Traill †</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinadora</div>
+                  <div class="text-muted small mt-1">2001 - 2006</div>
+                </div>
+              </div>
+              
+              <!-- Lic. Gonzalo Celorio Blasco -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-placeholder mb-3 mx-auto">
+                    <i class="bi bi-person-fill text-muted" style="font-size: 2.5rem;"></i>
+                  </div>
+                  <h3 class="h6 mb-1">Lic. Gonzalo Celorio Blasco</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinador</div>
+                  <div class="text-muted small mt-1">1998 - 2000</div>
+                </div>
+              </div>
+              
+              <!-- Dra. Juliana González Valenzuela -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-placeholder mb-3 mx-auto">
+                    <i class="bi bi-person-fill text-muted" style="font-size: 2.5rem;"></i>
+                  </div>
+                  <h3 class="h6 mb-1">Dra. Juliana González Valenzuela</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinadora</div>
+                  <div class="text-muted small mt-1">1997 - 1998</div>
+                </div>
+              </div>
+              
+              <!-- Dr. León Olivé Morett -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-placeholder mb-3 mx-auto">
+                    <i class="bi bi-person-fill text-muted" style="font-size: 2.5rem;"></i>
+                  </div>
+                  <h3 class="h6 mb-1">Dr. León Olivé Morett †</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinador</div>
+                  <div class="text-muted small mt-1">1994 - 1997</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </main>

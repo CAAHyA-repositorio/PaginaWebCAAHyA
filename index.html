@@ -81,6 +81,11 @@
                   <span class="mega-menu__item-desc">Consulta la integración oficial y representantes del Pleno del
                     CAAHYA.</span>
                 </a>
+                <a href="#modalPublicaciones" class="mega-menu__item" data-bs-toggle="modal"
+                  data-bs-target="#modalPublicaciones">
+                  <span class="mega-menu__item-title">Publicaciones</span>
+                  <span class="mega-menu__item-desc">Consulta los libros, revistas y obras académicas del CAAHyA.</span>
+                </a>
                 <a href="#modalContacto" class="mega-menu__item" data-bs-toggle="modal" data-bs-target="#modalContacto">
                   <span class="mega-menu__item-title">Contacto</span>
                   <span class="mega-menu__item-desc">Información de contacto y ubicación del CAAHyA.</span>
@@ -598,6 +603,36 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal Publicaciones -->
+  <div class="modal fade modal-pleno" id="modalPublicaciones" tabindex="-1" aria-labelledby="modalPublicacionesLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <div>
+            <h5 class="modal-title d-flex align-items-center gap-2" id="modalPublicacionesLabel">
+              <i class="bi bi-book text-secondary-ca"></i>
+              Publicaciones
+            </h5>
+            <p class="mb-0 text-muted">Consulta las obras, libros y ediciones editoriales del CAAHyA.</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 border rounded-min shadow-soft overflow-hidden">
+            <iframe src="modals/modalPublicaciones.html" title="Publicaciones CAAHyA" class="w-100 h-100" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="modal-footer border-0 justify-content-end">
+          <a class="btn btn-outline-secondary" href="modals/modalPublicaciones.html" target="_blank"
+            rel="noopener">Abrir en nueva pestaña</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Modales de entidades -->
 
   <div class="modal fade modal-entity" id="modalFacultades" tabindex="-1" aria-labelledby="modalFacultadesLabel"

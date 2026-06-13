@@ -1605,3 +1605,13 @@ footer .social a:hover{ color:#d7d7ff; }
     right: 4px;
   }
 }
+
+/* Tarjetas Gaceta y Actualidad - Efecto Hover Premium */
+.gaceta-card {
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.gaceta-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(38, 34, 97, 0.18) !important;
+}

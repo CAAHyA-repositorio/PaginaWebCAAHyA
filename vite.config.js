@@ -31,7 +31,9 @@ export default defineConfig({
         legislacion: 'legislacion.html',
         procesoConsejo: 'procesoConsejo.html',
         search: 'search.html',
-        privacidadSimplificado: 'privacidadSimplificado.html'
+        privacidadSimplificado: 'privacidadSimplificado.html',
+        privacidadIntegral: 'privacidadIntegral.html',
+        creditos: 'creditos.html'
       }
     }
   },

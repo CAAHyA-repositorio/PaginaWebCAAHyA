@@ -46,6 +46,14 @@ const newMegaMenu = `        <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-
                   <span class="mega-menu__item-title">Publicaciones</span>
                   <span class="mega-menu__item-desc">Consulta los libros, revistas y obras académicas del CAAHyA.</span>
                 </a>
+                <a href="index.html#modalInformes" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Informes académicos</span>
+                  <span class="mega-menu__item-desc">Consulta los informes, novedades y proyectos del CAAHyA.</span>
+                </a>
+                <a href="index.html#modalEntidades" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Entidades</span>
+                  <span class="mega-menu__item-desc">Consulta las facultades, escuelas, institutos y centros del CAAHyA.</span>
+                </a>
                 <a href="index.html#modalCalendario" class="mega-menu__item">
                   <span class="mega-menu__item-title">Calendario de actividades</span>
                   <span class="mega-menu__item-desc">Consulta las fechas oficiales de sesiones, convocatorias y eventos.</span>

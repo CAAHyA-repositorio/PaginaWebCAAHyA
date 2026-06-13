@@ -15,7 +15,9 @@ const filesToUpdate = [
   'index.html',
   'legislacion.html',
   'procesoConsejo.html',
-  'search.html'
+  'search.html',
+  'privacidadSimplificado.html',
+  'privacidadIntegral.html'
 ];
 
 const newFooter = `  <footer id="contacto" class="pt-5 pb-0 footer-dark">
@@ -61,9 +63,9 @@ const newFooter = `  <footer id="contacto" class="pt-5 pb-0 footer-dark">
           </h5>
           <ul class="list-unstyled mb-0">
             <li class="mb-2"><a class="footer-link-item" href="privacidadSimplificado.html">Aviso de privacidad simplificada</a></li>
-            <li class="mb-2"><a class="footer-link-item" href="#">Aviso de privacidad integral</a></li>
-            <li class="mb-2"><a class="footer-link-item" href="#">Documento de seguridad</a></li>
-            <li class="mb-2"><a class="footer-link-item" href="#">Resolución del Comité de Transparencia</a></li>
+            <li class="mb-2"><a class="footer-link-item" href="privacidadIntegral.html">Aviso de privacidad integral</a></li>
+            <li class="mb-2"><a class="footer-link-item" href="https://www.caahya.unam.mx/wp-content/uploads/2022/08/Documento-de-Seguridad_CAAHyA.pdf" target="_blank" rel="noopener noreferrer">Documento de seguridad</a></li>
+            <li class="mb-2"><a class="footer-link-item" href="https://www.caahya.unam.mx/wp-content/uploads/2024/01/FEU_02-ctunam-528-2022-docto-seg-3.pdf" target="_blank" rel="noopener noreferrer">Resolución del Comité de Transparencia</a></li>
           </ul>
         </div>
       </div>

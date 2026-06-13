@@ -90,6 +90,16 @@
                   <span class="mega-menu__item-title">Publicaciones</span>
                   <span class="mega-menu__item-desc">Consulta los libros, revistas y obras académicas del CAAHyA.</span>
                 </a>
+                <a href="#modalInformes" class="mega-menu__item" data-bs-toggle="modal"
+                  data-bs-target="#modalInformes">
+                  <span class="mega-menu__item-title">Informes academicos</span>
+                  <span class="mega-menu__item-desc">Consulta los informes, novedades y proyectos del CAAHyA</span>
+                </a>
+                <a href="#modalEntidades" class="mega-menu__item" data-bs-toggle="modal"
+                  data-bs-target="#modalEntidades" data-entity-tab="facultades">
+                  <span class="mega-menu__item-title">Entidades</span>
+                  <span class="mega-menu__item-desc">Consulta las facultades, escuelas, institutos y centros del CAAHyA.</span>
+                </a>
                 <a href="#modalCalendario" class="mega-menu__item" data-bs-toggle="modal"
                   data-bs-target="#modalCalendario">
                   <span class="mega-menu__item-title">Calendario de actividades</span>
@@ -539,7 +549,7 @@
           <div class="entity-slide">
             <a href="#"
               class="entity-card entity-facultades d-block rounded-min text-decoration-none p-4 h-100 shadow-soft"
-              data-bs-toggle="modal" data-bs-target="#modalFacultades">
+              data-bs-toggle="modal" data-bs-target="#modalEntidades" data-entity-tab="facultades">
               <div class="icon-badge"><i class="bi bi-mortarboard-fill"></i></div>
               <h3 class="h5 mt-3 mb-2">Facultades</h3>
               <p class="mb-0">Programas y escuelas de nivel superior.</p>
@@ -548,7 +558,7 @@
           <div class="entity-slide">
             <a href="#"
               class="entity-card entity-escuelas d-block rounded-min text-decoration-none p-4 h-100 shadow-soft"
-              data-bs-toggle="modal" data-bs-target="#modalEscuelas">
+              data-bs-toggle="modal" data-bs-target="#modalEntidades" data-entity-tab="escuelas">
               <div class="icon-badge"><i class="bi bi-journal-bookmark-fill"></i></div>
               <h3 class="h5 mt-3 mb-2">Escuelas</h3>
               <p class="mb-0">Formacion especializada y profesionalizante.</p>
@@ -557,7 +567,7 @@
           <div class="entity-slide">
             <a href="#"
               class="entity-card entity-institutos d-block rounded-min text-decoration-none p-4 h-100 shadow-soft"
-              data-bs-toggle="modal" data-bs-target="#modalInstitutos">
+              data-bs-toggle="modal" data-bs-target="#modalEntidades" data-entity-tab="institutos">
               <div class="icon-badge"><i class="bi bi-bank"></i></div>
               <h3 class="h5 mt-3 mb-2">Institutos</h3>
               <p class="mb-0">Investigacion y produccion de conocimiento.</p>
@@ -566,7 +576,7 @@
           <div class="entity-slide">
             <a href="#"
               class="entity-card entity-centros d-block rounded-min text-decoration-none p-4 h-100 shadow-soft"
-              data-bs-toggle="modal" data-bs-target="#modalCentros">
+              data-bs-toggle="modal" data-bs-target="#modalEntidades" data-entity-tab="centros">
               <div class="icon-badge"><i class="bi bi-collection-fill"></i></div>
               <h3 class="h5 mt-3 mb-2">Centros</h3>
               <p class="mb-0">Vinculacion y desarrollo academico-cultural.</p>
@@ -726,6 +736,35 @@
     </div>
   </div>
 
+  <!-- Modal Informes Académicos -->
+  <div class="modal fade modal-pleno" id="modalInformes" tabindex="-1" aria-labelledby="modalInformesLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <div>
+            <h5 class="modal-title d-flex align-items-center gap-2" id="modalInformesLabel">
+              <i class="bi bi-file-earmark-pdf text-secondary-ca"></i>
+              Informes académicos
+            </h5>
+            <p class="mb-0 text-muted">Consulta los informes, novedades y proyectos del CAAHyA.</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 border rounded-min shadow-soft overflow-hidden">
+            <iframe src="modals/modalInformes.html" title="Informes académicos CAAHyA" class="w-100 h-100" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="modal-footer border-0 justify-content-end">
+          <a class="btn btn-outline-secondary" href="modals/modalInformes.html" target="_blank"
+            rel="noopener">Abrir en nueva pestaña</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Modal Calendario de Actividades -->
   <div class="modal fade modal-pleno" id="modalCalendario" tabindex="-1" aria-labelledby="modalCalendarioLabel"
     aria-hidden="true">
@@ -755,123 +794,37 @@
     </div>
   </div>
 
-  <!-- Modales de entidades -->
-
-  <div class="modal fade modal-entity" id="modalFacultades" tabindex="-1" aria-labelledby="modalFacultadesLabel"
+  <!-- Modal Entidades Académicas -->
+  <div class="modal fade modal-pleno" id="modalEntidades" tabindex="-1" aria-labelledby="modalEntidadesLabel"
     aria-hidden="true">
-
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-
+    <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
-
         <div class="modal-header border-0">
-
-          <h5 class="modal-title d-flex align-items-center gap-2" id="modalFacultadesLabel"><i
-              class="bi bi-mortarboard-fill"></i> Facultades</h5>
-
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-
-        </div>
-
-        <div class="modal-body pt-0">
-
-          <div class="ratio ratio-4x3 border rounded-min shadow-soft overflow-hidden">
-
-            <iframe src="modals/entidades/modalFacultades.html" title="Facultades" class="w-100 h-100 border-0"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+          <div>
+            <h5 class="modal-title d-flex align-items-center gap-2" id="modalEntidadesLabel">
+              <i class="bi bi-mortarboard text-secondary-ca"></i>
+              Entidades Académicas
+            </h5>
+            <p class="mb-0 text-muted">Consulta las facultades, escuelas, institutos y centros del CAAHyA.</p>
           </div>
-
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="modal fade modal-entity" id="modalEscuelas" tabindex="-1" aria-labelledby="modalEscuelasLabel"
-    aria-hidden="true">
-
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-
-      <div class="modal-content">
-
-        <div class="modal-header border-0">
-
-          <h5 class="modal-title d-flex align-items-center gap-2" id="modalEscuelasLabel"><i
-              class="bi bi-journal-bookmark-fill"></i> Escuelas</h5>
-
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-
-        </div>
-
-        <div class="modal-body pt-0">
-
+        <div class="modal-body">
           <div class="ratio ratio-4x3 border rounded-min shadow-soft overflow-hidden">
-
-            <iframe src="modals/entidades/modalEscuelas.html" title="Escuelas" class="w-100 h-100 border-0"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="modal fade modal-entity" id="modalInstitutos" tabindex="-1" aria-labelledby="modalInstitutosLabel"
-    aria-hidden="true">
-
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-
-      <div class="modal-content">
-
-        <div class="modal-header border-0">
-
-          <h5 class="modal-title d-flex align-items-center gap-2" id="modalInstitutosLabel"><i class="bi bi-bank"></i>
-            Institutos</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body pt-0">
-          <div class="ratio ratio-4x3 border rounded-min shadow-soft overflow-hidden">
-            <iframe src="modals/entidades/modalInstitutos.html" title="Institutos" class="w-100 h-100 border-0"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="modal fade modal-entity" id="modalCentros" tabindex="-1" aria-labelledby="modalCentrosLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header border-0">
-          <h5 class="modal-title d-flex align-items-center gap-2" id="modalCentrosLabel"><i
-              class="bi bi-collection-fill"></i> Centros</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body pt-0">
-          <div class="ratio ratio-4x3 border rounded-min shadow-soft overflow-hidden">
-            <iframe src="modals/entidades/ModalCentros.html" title="Centros" class="w-100 h-100 border-0" loading="lazy"
+            <iframe src="modals/modalEntidades.html" title="Entidades CAAHyA" class="w-100 h-100" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
+        </div>
+        <div class="modal-footer border-0 justify-content-end">
+          <a class="btn btn-outline-secondary" href="modals/modalEntidades.html" target="_blank"
+            rel="noopener">Abrir en nueva pestaña</a>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Footer -->
-        <footer id="contacto" class="pt-5 pb-0 footer-dark">
+              <footer id="contacto" class="pt-5 pb-0 footer-dark">
     <div class="container pb-4">
       <div class="row g-4">
         <!-- Columna 1: CAAHyA -->
@@ -914,9 +867,9 @@
           </h5>
           <ul class="list-unstyled mb-0">
             <li class="mb-2"><a class="footer-link-item" href="privacidadSimplificado.html">Aviso de privacidad simplificada</a></li>
-            <li class="mb-2"><a class="footer-link-item" href="#">Aviso de privacidad integral</a></li>
-            <li class="mb-2"><a class="footer-link-item" href="#">Documento de seguridad</a></li>
-            <li class="mb-2"><a class="footer-link-item" href="#">Resolución del Comité de Transparencia</a></li>
+            <li class="mb-2"><a class="footer-link-item" href="privacidadIntegral.html">Aviso de privacidad integral</a></li>
+            <li class="mb-2"><a class="footer-link-item" href="https://www.caahya.unam.mx/wp-content/uploads/2022/08/Documento-de-Seguridad_CAAHyA.pdf" target="_blank" rel="noopener noreferrer">Documento de seguridad</a></li>
+            <li class="mb-2"><a class="footer-link-item" href="https://www.caahya.unam.mx/wp-content/uploads/2024/01/FEU_02-ctunam-528-2022-docto-seg-3.pdf" target="_blank" rel="noopener noreferrer">Resolución del Comité de Transparencia</a></li>
           </ul>
         </div>
       </div>
@@ -933,7 +886,7 @@
           Consejos Académicos de Área.
         </p>
         <p class="mb-0 fw-bold">
-          <a href="#" class="text-white text-decoration-underline opacity-75-hover">Créditos</a>
+          <a href="creditos.html" class="text-white text-decoration-underline opacity-75-hover">Créditos</a>
         </p>
       </div>
     </div>
@@ -989,6 +942,20 @@
         }
       }
     }
+    // Lógica para sincronizar la pestaña seleccionada del modal Entidades con el iframe
+    document.addEventListener('DOMContentLoaded', function () {
+      var modalEntidades = document.getElementById('modalEntidades');
+      if (modalEntidades) {
+        modalEntidades.addEventListener('show.bs.modal', function (event) {
+          var button = event.relatedTarget;
+          var tab = button ? button.getAttribute('data-entity-tab') : 'facultades';
+          var iframe = modalEntidades.querySelector('iframe');
+          if (iframe) {
+            iframe.src = 'modals/modalEntidades.html?tab=' + (tab || 'facultades');
+          }
+        });
+      }
+    });
   </script>
 </body>
 

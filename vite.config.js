@@ -33,7 +33,8 @@ export default defineConfig({
         search: 'search.html',
         privacidadSimplificado: 'privacidadSimplificado.html',
         privacidadIntegral: 'privacidadIntegral.html',
-        creditos: 'creditos.html'
+        creditos: 'creditos.html',
+        juntaGobierno: 'juntaGobierno.html'
       }
     }
   },

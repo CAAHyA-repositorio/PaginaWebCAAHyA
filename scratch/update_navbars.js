@@ -14,7 +14,9 @@ const filesToUpdate = [
   'curso_taller.html',
   'legislacion.html',
   'procesoConsejo.html',
-  'search.html'
+  'search.html',
+  'index.html',
+  'juntaGobierno.html'
 ];
 
 const newMegaMenu = `        <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-lg-0">
@@ -154,7 +156,7 @@ const newMegaMenu = `        <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-
           </li>
 
           <li class="nav-item dropdown-mega">
-            <a class="nav-link" href="#">Elección para junta de gobierno</a>
+            <a class="nav-link" href="juntaGobierno.html">Elección para junta de gobierno</a>
             <div class="mega-menu">
               <div class="mega-menu__col">
                 <p class="mega-menu__title">Elección para Junta de Gobierno</p>

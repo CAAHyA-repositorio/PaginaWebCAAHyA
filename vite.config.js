@@ -34,7 +34,35 @@ export default defineConfig({
         privacidadSimplificado: 'privacidadSimplificado.html',
         privacidadIntegral: 'privacidadIntegral.html',
         creditos: 'creditos.html',
-        juntaGobierno: 'juntaGobierno.html'
+        juntaGobierno: 'juntaGobierno.html',
+        
+        // Nuevas páginas (antiguos modales)
+        directorio: 'pages/directorio.html',
+        pleno: 'pages/pleno.html',
+        sobreElConsejo: 'pages/sobreElConsejo.html',
+        contacto: 'pages/contacto.html',
+        publicaciones: 'pages/publicaciones.html',
+        informes: 'pages/informes.html',
+        calendario: 'pages/calendario.html',
+        entidades: 'pages/entidades.html',
+        comparecencias: 'pages/comparecencias.html',
+        
+        // Comités
+        comiteArquitectura: 'pages/comites/comiteArquitectura.html',
+        comiteDiseno: 'pages/comites/comiteDiseno.html',
+        comiteFilosofia: 'pages/comites/comiteFilosofia.html',
+        comiteHistoria: 'pages/comites/comiteHistoria.html',
+        comiteIntercultural: 'pages/comites/comiteIntercultural.html',
+        comitePedagogia: 'pages/comites/comitePedagogia.html',
+        
+        // Comisiones
+        personalAcademico: 'pages/comisiones/personalAcademico.html',
+        planesYProgramas: 'pages/comisiones/planesYProgramas.html',
+        planeacionYEvaluacion: 'pages/comisiones/planeacionYEvaluacion.html',
+        difusionYExtension: 'pages/comisiones/difusionYExtension.html',
+        comisionVigilancia: 'pages/comisiones/comisionVigilancia.html',
+        comisionLenguas: 'pages/comisiones/comisionLenguas.html',
+        comisionPRIDE: 'pages/comisiones/comisionPRIDE.html'
       }
     }
   },

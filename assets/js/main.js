@@ -350,17 +350,5 @@ if (sideNav) {
   });
 }
 
-// Abrir modal automáticamente desde el hash de la URL (para navegación entre páginas)
-window.addEventListener('load', function () {
-  const hash = window.location.hash;
-  if (hash && hash.startsWith('#modal')) {
-    const modalEl = document.querySelector(hash);
-    if (modalEl && window.bootstrap && window.bootstrap.Modal) {
-      setTimeout(() => {
-        const modal = window.bootstrap.Modal.getOrCreateInstance(modalEl);
-        if (modal) modal.show();
-      }, 600);
-    }
-  }
-});
+// Modales deshabilitados. Navegación directa configurada por página.
 

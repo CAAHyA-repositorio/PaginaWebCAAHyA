@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acerca del Consejo</title>
+    <link rel="icon" type="image/png" href="../assets/img/LogoCA.png">
+    <meta name="description" content="Información general sobre el Consejo Académico de Humanidades y Artes (CAAHyA), su origen, funciones e integración.">
+
+    <link href="../assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+      .profile-img-wrapper {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid rgba(38, 34, 97, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f5;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+      .profile-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .profile-img-placeholder {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #e6e6fa;
+        border: 3px solid rgba(38, 34, 97, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+      .transition-icon {
+        transition: transform 0.3s ease;
+      }
+      [aria-expanded="true"] .transition-icon {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+<!-- Barra de navegacion-->
+  <nav class="navbar navbar-expand-xl navbar-ca fixed-top" aria-label="Navegacion principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" aria-label="Inicio CAAHYA">
+        <img src="../assets/img/LogoAzulOscuro.png" alt="CAAHYA" onerror="this.style.display='none'">
+        <span class="brand-text">CAAHyA</span>
+      </a>
+      <div class="d-flex d-xl-none align-items-center ms-auto gap-2">
+        <div class="social d-flex align-items-center" aria-label="Redes sociales">
+          <a href="https://www.facebook.com/p/Consejo-Acad%C3%A9mico-del-%C3%81rea-de-las-Humanidades-y-las-Artes-Caahya-61573733710648/"
+            class="social-pill" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
+              class="bi bi-facebook"></i></a>
+          <a href="https://www.youtube.com/@CAAHYA_UNAM" class="social-pill" aria-label="YouTube" target="_blank"
+            rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.instagram.com/caahya_unam/" class="social-pill" aria-label="Instagram" target="_blank"
+            rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+          <button type="button" class="social-email" data-email-popover="true" data-email="humanidadesyartes@unam.mx"
+            data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
+            data-bs-custom-class="email-popover" data-bs-html="true" aria-label="Correo electronico">
+            <i class="bi bi-envelope-fill"></i>
+          </button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+          aria-controls="navMain" aria-expanded="false" aria-label="Mostrar menu">
+          <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <!-- MENÚ CENTRAL -->
+                                                                                                <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="../index.html" id="inicioMenu">
+              CAAHyA
+            </a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Inicio CAAHyA</p>
+                <a href="../pages/directorio.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Directorio del Consejo</span>
+                  <span class="mega-menu__item-desc">Consulta la integración y los datos de contacto oficiales.</span>
+                </a>
+                <a href="../pages/sobreElConsejo.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Acerca de nosotros</span>
+                  <span class="mega-menu__item-desc">Conoce el origen, funciones e integración del CAAHyA.</span>
+                </a>
+                <a href="https://www.youtube.com/shorts/k3SCDilEsck" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
+                  <span class="mega-menu__item-title">¿Quiénes somos?</span>
+                  <span class="mega-menu__item-desc">Ver video institucional de presentación del CAAHyA.</span>
+                </a>
+                <a href="../pages/pleno.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">El Pleno</span>
+                  <span class="mega-menu__item-desc">Consulta la integración oficial y representantes del Pleno del
+                    CAAHYA.</span>
+                </a>
+                <a href="../pages/publicaciones.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Publicaciones</span>
+                  <span class="mega-menu__item-desc">Consulta los libros, revistas y obras académicas del CAAHyA.</span>
+                </a>
+                <a href="../pages/informes.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Informes académicos</span>
+                  <span class="mega-menu__item-desc">Consulta los informes, novedades y proyectos del CAAHyA.</span>
+                </a>
+                <a href="../pages/entidades.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Entidades</span>
+                  <span class="mega-menu__item-desc">Consulta las facultades, escuelas, institutos y centros del CAAHyA.</span>
+                </a>
+                <a href="../pages/calendario.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Calendario de actividades</span>
+                  <span class="mega-menu__item-desc">Consulta las fechas oficiales de sesiones, convocatorias y eventos.</span>
+                </a>
+                <a href="../pages/contacto.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Contacto</span>
+                  <span class="mega-menu__item-desc">Información de contacto y ubicación del CAAHyA.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="../procesoConsejo.html">Procesos</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Procesos del Consejo</p>
+                <a href="procesoConsejo.html#personalAcademico" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Personal Académico</span>
+                  <span class="mega-menu__item-desc">Procesos de la Comisión Permanente de Personal Académico.</span>
+                </a>
+                <a href="procesoConsejo.html#planesEstudio" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Planes y Programas de Estudio</span>
+                  <span class="mega-menu__item-desc">Creación, modificación e implantación de planes de estudio.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="../comisiones.html">Comisiones</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Comisiones del Consejo</p>
+                <a href="comisiones.html#permanentes" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Comisiones Permanentes</span>
+                  <span class="mega-menu__item-desc">Estudian y dictaminan asuntos de las labores sustantivas del Consejo.</span>
+                </a>
+                <a href="comisiones.html#especiales" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Comisiones Especiales</span>
+                  <span class="mega-menu__item-desc">Comisiones especiales y grupos de trabajo designados por el Pleno.</span>
+                </a>
+              </div>
+            </div>
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="../comitesAcademicos.html">Comités</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Comités de Carrera</p>
+                <a href="comitesAcademicos.html#funcionesComites" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Funciones de los comités</span>
+                  <span class="mega-menu__item-desc">Responsabilidades, vinculación y autoevaluación curricular.</span>
+                </a>
+                <a href="comitesAcademicos.html#reglamentoComites" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Reglamento interno</span>
+                  <span class="mega-menu__item-desc">Naturaleza, integración, funcionamiento y responsabilidades.</span>
+                </a>
+                <a href="comitesAcademicos.html#gridComites" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Catálogo de comités activos</span>
+                  <span class="mega-menu__item-desc">Consulta los comités de carrera por disciplina académica.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="../legislacion.html">Legislación</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Legislación universitaria</p>
+                <a href="legislacion.html#legislacion" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Normativa esencial</span>
+                  <span class="mega-menu__item-desc">Leyes, estatutos y reglamentos base del CAAHyA.</span>
+                </a>
+                <a href="legislacion.html#reglamentos" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Reglamentos vigentes</span>
+                  <span class="mega-menu__item-desc">Descarga directa de reglamentos y lineamientos activos.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="../consejeros.html">Consejeros</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Consejeros del área</p>
+                <a href="consejeros.html#normativa" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Normativa</span>
+                  <span class="mega-menu__item-desc">Requisitos para consejeros académicos, alumnos y posgrados.</span>
+                </a>
+                <a href="consejeros.html#consejeros" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Listado de consejeros</span>
+                  <span class="mega-menu__item-desc">Consulta titulares y suplentes por entidad académica.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="../juntaGobierno.html">Elección para junta de gobierno</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Elección para Junta de Gobierno</p>
+                <a href="https://www.caahya.unam.mx/wp-content/uploads/2026/04/CONVOCATORIA.pdf" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
+                  <span class="mega-menu__item-title">Convocatoria</span>
+                  <span class="mega-menu__item-desc">Consulta las bases y requisitos oficiales de la convocatoria.</span>
+                </a>
+                <a href="https://www.caahya.unam.mx/wp-content/uploads/2026/06/Listado_inicial_de_personas_candidatas.pdf" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
+                  <span class="mega-menu__item-title">Listado de personas candidatas</span>
+                  <span class="mega-menu__item-desc">Listado oficial de aspirantes registrados para la elección.</span>
+                </a>
+                <a href="../pages/comparecencias.html" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
+                  <span class="mega-menu__item-title">Comparecencias</span>
+                  <span class="mega-menu__item-desc">Videos y transmisiones de las sesiones de comparecencias.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+
+        <div class="navbar-actions d-none d-xl-flex">
+          <div class="social d-flex align-items-center" aria-label="Redes sociales">
+            <a href="https://www.facebook.com/p/Consejo-Acad%C3%A9mico-del-%C3%81rea-de-las-Humanidades-y-las-Artes-Caahya-61573733710648/"
+              class="social-pill" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://www.youtube.com/@CAAHYA_UNAM" class="social-pill" aria-label="YouTube" target="_blank"
+              rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.instagram.com/caahya_unam/" class="social-pill" aria-label="Instagram" target="_blank"
+              rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+            <button type="button" class="social-email" data-email-popover="true" data-email="humanidadesyartes@unam.mx"
+              data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
+              data-bs-custom-class="email-popover" data-bs-html="true" aria-label="Correo electronico">
+              <i class="bi bi-envelope-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+<main style="padding-top: 100px; min-height: 80vh;" id="contenidoPrincipal" class="py-4 py-lg-5 section-formal-light">
+      <div class="container">
+        <section class="commissions-hero text-center text-lg-start mb-4">
+          <div class="container py-4 py-lg-5 position-relative">
+            <div class="hero-bubble hero-bubble-1"></div>
+            <div class="hero-bubble hero-bubble-2"></div>
+            <div class="hero-bubble hero-bubble-3"></div>
+            <div class="row align-items-center g-4 position-relative">
+              <div class="col-lg-7">
+                <span class="badge hero-pill text-uppercase fw-semibold mb-3">Sobre el CAAHyA</span>
+                <h1 class="h3 h2-lg fw-bold text-primary mb-3">Acerca del Consejo Académico de Humanidades y Artes</h1>
+                <p class="mb-0 text-muted">
+                  El CAAHyA es un órgano colegiado que articula la planeación, evaluación y coordinación académica del área de las humanidades y las artes, en diálogo permanente con las entidades que lo integran.
+                </p>
+              </div>
+              <div class="col-lg-5">
+                <div class="hero-illustration text-center">
+                  <img src="../assets/img/LogoAzulOscuro_Completo.png" alt="Logotipo del CAAHyA" class="img-fluid" onerror="this.style.display='none'">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-formal bg-white rounded-4 shadow-soft p-4 p-lg-5 mb-4">
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <h2 class="h4 fw-bold text-primary mb-3">Origen y propósito</h2>
+              <p class="text-muted mb-3">
+                Como resultado de un acuerdo del Congreso Universitario en 1990, el Consejo Universitario aprobó en 1992 la creación de los Consejos Académicos de Área y del Consejo Académico del Bachillerato, con el propósito de que estos órganos colegiados funcionen como intermediarios entre los Consejos Técnicos y el Consejo Universitario. Sus funciones ordinarias iniciaron en 1994.
+              </p>
+              <h3 class="h5 fw-semibold text-primary mb-3">Funciones principales</h3>
+              <ul class="text-muted mb-0">
+                <li>Planeación y evaluación académicas en programas como PAPIIT y PASPA.</li>
+                <li>Revisión y aprobación de los proyectos de creación, adecuación y modificación de planes de estudio.</li>
+                <li>Evaluación de profesores e investigadores en programas como PRIDE.</li>
+                <li>Ratificación de las comisiones dictaminadoras y evaluadoras.</li>
+                <li>
+                  Diseño de políticas académicas que contribuyan al mejoramiento de la enseñanza, a una mayor vinculación entre la investigación y la docencia, así como al mejor aprovechamiento de los recursos humanos y materiales con que cuenta la Universidad.
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="h-100 d-flex flex-column justify-content-between">
+                <p class="text-muted mb-3">
+                  Los Consejos Académicos, por su composición y por sus funciones, son instancias de coordinación y articulación de los distintos subsistemas universitarios y de diversas entidades académicas. Por ello, pueden fungir como plataforma para realizar y promover proyectos multi e interdisciplinarios y consolidar políticas académicas que redunden en una mejor integración de los distintos sectores que conforman la comunidad universitaria.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-formal-light rounded-4 shadow-soft p-4 p-lg-5">
+          <h2 class="h4 fw-bold text-primary mb-3">¿Quiénes integran el CAAHyA?</h2>
+          <p class="text-muted">
+            El Consejo Académico del Área de las Humanidades y de las Artes está integrado por las siguientes entidades académicas:
+          </p>
+          <ul class="text-muted mb-0">
+            <li>Facultad de Arquitectura.</li>
+            <li>Facultad de Artes y Diseño.</li>
+            <li>Facultad de Filosofía y Letras.</li>
+            <li>Facultad de Música.</li>
+            <li>Facultad de Estudios Superiores Acatlán.</li>
+            <li>Facultad de Estudios Superiores Aragón.</li>
+            <li>Facultad de Estudios Superiores Cuautitlán.</li>
+            <li>Escuela Nacional de Estudios Superiores, Unidad León.</li>
+            <li>Escuela Nacional de Estudios Superiores, Unidad Morelia.</li>
+            <li>Escuela Nacional de Estudios Superiores, Unidad Mérida.</li>
+            <li>Escuela Nacional de Estudios Superiores, Unidad Juriquilla.</li>
+            <li>Escuela Nacional de Lenguas, Lingüística y Traducción.</li>
+            <li>Escuela Nacional de Artes Cinematográficas.</li>
+            <li>Instituto de Investigaciones Bibliográficas.</li>
+            <li>Instituto de Investigaciones Bibliotecológicas y de la Información.</li>
+            <li>Instituto de Investigaciones Estéticas.</li>
+            <li>Instituto de Investigaciones Filológicas.</li>
+            <li>Instituto de Investigaciones Filosóficas.</li>
+            <li>Instituto de Investigaciones Históricas.</li>
+            <li>Instituto de Investigaciones sobre la Universidad y la Educación.</li>
+            <li>Centro de Investigaciones sobre América Latina y el Caribe.</li>
+            <li>Centro de Investigaciones y Estudios de Género.</li>
+            <li>Centro Peninsular en Humanidades y Ciencias Sociales.</li>
+          </ul>
+        </section>
+
+        <!-- Nueva sección: Otros coordinadores -->
+        <section class="section-formal bg-white rounded-4 shadow-soft p-4 p-lg-5 mt-4">
+          <div class="d-flex align-items-center justify-content-between" role="button" data-bs-toggle="collapse" data-bs-target="#collapseCoordinadores" aria-expanded="false" aria-controls="collapseCoordinadores" style="cursor: pointer;">
+            <h2 class="h4 fw-bold text-primary mb-0">Otros coordinadores</h2>
+            <i class="bi bi-chevron-down fs-4 transition-icon"></i>
+          </div>
+          
+          <div class="collapse" id="collapseCoordinadores">
+            <p class="text-muted mt-3 mb-4">Han sido coordinadores de este Consejo Académico:</p>
+            <div class="row g-4">
+              <!-- Dr. Gerardo García Luna Martínez -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-wrapper mb-3 mx-auto">
+                    <img src="../assets/img/coordinadores/1111-scaled-e1725412348578-1159x1536.jpg" alt="Dr. Gerardo García Luna Martínez" class="profile-img">
+                  </div>
+                  <h3 class="h6 mb-1">Dr. Gerardo García Luna Martínez</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinador</div>
+                  <div class="text-muted small mt-1">2023 - 2024</div>
+                </div>
+              </div>
+              
+              <!-- Dr. Adalberto Enrique Santana Hernández -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-wrapper mb-3 mx-auto">
+                    <img src="../assets/img/coordinadores/Dr.-Adalberto-Enrique-Santana-Hernandez.jpg" alt="Dr. Adalberto Enrique Santana Hernández" class="profile-img">
+                  </div>
+                  <h3 class="h6 mb-1">Dr. Adalberto Enrique Santana Hernández</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinador</div>
+                  <div class="text-muted small mt-1">2016 - 2023</div>
+                </div>
+              </div>
+              
+              <!-- Dra. Guadalupe Curiel Defossé -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-wrapper mb-3 mx-auto">
+                    <img src="../assets/img/coordinadores/Dra.-Guadalupe-Curiel-1.jpg" alt="Dra. Guadalupe Curiel Defossé" class="profile-img">
+                  </div>
+                  <h3 class="h6 mb-1">Dra. Guadalupe Curiel Defossé †</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinadora</div>
+                  <div class="text-muted small mt-1">2016</div>
+                </div>
+              </div>
+              
+              <!-- Dr. Luis Arnal Simón -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-wrapper mb-3 mx-auto">
+                    <img src="../assets/img/coordinadores/Dr.-Luis-Arnal.jpg" alt="Dr. Luis Arnal Simón" class="profile-img">
+                  </div>
+                  <h3 class="h6 mb-1">Dr. Luis Arnal Simón †</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinador</div>
+                  <div class="text-muted small mt-1">2008 - 2016</div>
+                </div>
+              </div>
+              
+              <!-- Dra. María Teresa Uriarte Castañeda -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-wrapper mb-3 mx-auto">
+                    <img src="../assets/img/coordinadores/Maria-Teresa-Uriarte-1.jpg" alt="Dra. María Teresa Uriarte Castañeda" class="profile-img">
+                  </div>
+                  <h3 class="h6 mb-1">Dra. María Teresa Uriarte Castañeda</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinadora</div>
+                  <div class="text-muted small mt-1">2006 - 2008</div>
+                </div>
+              </div>
+              
+              <!-- Dra. Elizabeth Luna Traill -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-wrapper mb-3 mx-auto">
+                    <img src="../assets/img/coordinadores/Dra.-Elizabeeth-Luna-Traill.jpg" alt="Dra. Elizabeth Luna Traill" class="profile-img">
+                  </div>
+                  <h3 class="h6 mb-1">Dra. Elizabeth Luna Traill †</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinadora</div>
+                  <div class="text-muted small mt-1">2001 - 2006</div>
+                </div>
+              </div>
+              
+              <!-- Lic. Gonzalo Celorio Blasco -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-placeholder mb-3 mx-auto">
+                    <i class="bi bi-person-fill text-muted" style="font-size: 2.5rem;"></i>
+                  </div>
+                  <h3 class="h6 mb-1">Lic. Gonzalo Celorio Blasco</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinador</div>
+                  <div class="text-muted small mt-1">1998 - 2000</div>
+                </div>
+              </div>
+              
+              <!-- Dra. Juliana González Valenzuela -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-placeholder mb-3 mx-auto">
+                    <i class="bi bi-person-fill text-muted" style="font-size: 2.5rem;"></i>
+                  </div>
+                  <h3 class="h6 mb-1">Dra. Juliana González Valenzuela</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinadora</div>
+                  <div class="text-muted small mt-1">1997 - 1998</div>
+                </div>
+              </div>
+              
+              <!-- Dr. León Olivé Morett -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-soft rounded-min card-profile text-center p-3">
+                  <div class="profile-img-placeholder mb-3 mx-auto">
+                    <i class="bi bi-person-fill text-muted" style="font-size: 2.5rem;"></i>
+                  </div>
+                  <h3 class="h6 mb-1">Dr. León Olivé Morett †</h3>
+                  <div class="text-secondary-ca small fw-semibold">Excoordinador</div>
+                  <div class="text-muted small mt-1">1994 - 1997</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+     
+    <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+<footer id="contacto" class="pt-5 pb-0 footer-dark">
+    <div class="container pb-4">
+      <div class="row g-4">
+        <!-- Columna 1: CAAHyA -->
+        <div class="col-md-6 col-lg-3">
+          <h5 class="footer-title mb-3">
+            <span class="text-secondary-ca">|</span> CAAHYA
+          </h5>
+          <p class="footer-text mb-0">
+            Consejo Académico del Área de las Humanidades y de las Artes
+          </p>
+        </div>
+
+        <!-- Columna 2: Ubicación -->
+        <div class="col-md-6 col-lg-3">
+          <h5 class="footer-title mb-3">
+            <span class="text-secondary-ca">|</span> Ubicación
+          </h5>
+          <p class="footer-text mb-0">
+            Edificio de los Consejos Académicos<br>
+            Circuito Exterior s/n. Ciudad<br>
+            Universitaria. C.P. 04510. Ciudad de<br>
+            México
+          </p>
+        </div>
+
+        <!-- Columna 3: Contacto -->
+        <div class="col-md-6 col-lg-3">
+          <h5 class="footer-title mb-3">
+            <span class="text-secondary-ca">|</span> Contacto
+          </h5>
+          <p class="footer-text mb-0">
+            Tel: 555622-1173 y 555622-1411
+          </p>
+        </div>
+
+        <!-- Columna 4: Privacidad -->
+        <div class="col-md-6 col-lg-3">
+          <h5 class="footer-title mb-3">
+            <span class="text-secondary-ca">|</span> Privacidad
+          </h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a class="footer-link-item" href="../privacidadSimplificado.html">Aviso de privacidad simplificada</a></li>
+            <li class="mb-2"><a class="footer-link-item" href="../privacidadIntegral.html">Aviso de privacidad integral</a></li>
+            <li class="mb-2"><a class="footer-link-item" href="https://www.caahya.unam.mx/wp-content/uploads/2022/08/Documento-de-Seguridad_CAAHyA.pdf" target="_blank" rel="noopener noreferrer">Documento de seguridad</a></li>
+            <li class="mb-2"><a class="footer-link-item" href="https://www.caahya.unam.mx/wp-content/uploads/2024/01/FEU_02-ctunam-528-2022-docto-seg-3.pdf" target="_blank" rel="noopener noreferrer">Resolución del Comité de Transparencia</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección Amarilla de Derechos Reservados -->
+    <div class="bg-secondary-ca text-white py-4 mt-4 small">
+      <div class="container text-center">
+        <p class="text-white mb-2">
+          © Hecho en México, Universidad Nacional Autónoma de México (UNAM), todos los derechos reservados 2023.
+          Esta página y sus contenidos pueden ser reproducidos con fines no lucrativos, siempre y cuando no se mutile,
+          se cite la fuente completa y su dirección electrónica. De otra forma, requiere permiso previo por escrito de
+          la institución. Sitio web administrado por la Unidad Coordinadora de Servicios de Apoyo Administrativo a los
+          Consejos Académicos de Área.
+        </p>
+        <p class="mb-0 fw-bold">
+          <a href="../creditos.html" class="text-white text-decoration-underline opacity-75-hover">Créditos</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+

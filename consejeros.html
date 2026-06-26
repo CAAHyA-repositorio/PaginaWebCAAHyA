@@ -15,16 +15,75 @@
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
-      .counselor-card{background:#fff;border:1px solid rgba(38,34,97,.12);border-radius:1rem;box-shadow:0 16px 34px rgba(12,11,28,.14);padding:1.25rem 1.35rem;display:flex;flex-direction:column;gap:.75rem;height:100%;}
+      .counselor-card{
+        background:#fff;
+        border:1px solid rgba(38,34,97,.12);
+        border-top: 4px solid #262261;
+        border-radius:1rem;
+        box-shadow:0 10px 30px rgba(38,34,97,.08);
+        padding:1.25rem 1.35rem;
+        display:flex;
+        flex-direction:column;
+        gap:.75rem;
+        height:100%;
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+      }
+      .counselor-card:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(38,34,97,.16);
+        border-color: rgba(38,34,97,.3);
+      }
       .counselor-card h3{margin:0;font-size:1.05rem;font-weight:700;color:#262261;}
       .counselor-card table{margin:0;font-size:.95rem;}
       .counselor-card th{background:#f7f7fb;color:#262261;font-weight:700;font-size:.9rem;}
       .counselor-card td{background:#ffffff;color:#1f1b4a;}
       .counselor-card .empty{color:#9aa0b5;font-style:italic;}
-      .normativa-card{background:#fff;border:1px solid rgba(38,34,97,.12);border-radius:1rem;box-shadow:0 16px 34px rgba(12,11,28,.12);padding:1.35rem 1.5rem;height:100%;}
+
+      .normativa-card{
+        background:#fff;
+        border:1px solid rgba(38,34,97,.12);
+        border-left: 4px solid #ee8219;
+        border-radius:1rem;
+        box-shadow:0 10px 30px rgba(38,34,97,.08);
+        padding:1.35rem 1.5rem;
+        height:100%;
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+      }
+      .normativa-card:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(38,34,97,.16);
+        border-color: rgba(38,34,97,.3);
+      }
       .normativa-card h3{margin-bottom:.5rem;color:#262261;font-weight:700;font-size:1.1rem;}
-      .normativa-card ul{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.4rem;}
-      .normativa-card li{line-height:1.5;color:#1f1b4a;}
+      .normativa-card ul{
+        margin:0;
+        padding-left:0;
+        list-style:none;
+        display:flex;
+        flex-direction:column;
+        gap:.6rem;
+      }
+      .normativa-card li{
+        position:relative;
+        padding-left:1.5rem;
+        padding-bottom:.4rem;
+        border-bottom:1px solid rgba(38,34,97,.08);
+        line-height:1.5;
+        color:#1f1b4a;
+      }
+      .normativa-card li:last-child{
+        border-bottom:none;
+        padding-bottom:0;
+      }
+      .normativa-card li::before{
+        font-family: "bootstrap-icons" !important;
+        content: "\f285";
+        position: absolute;
+        left: 0;
+        color: #ee8219;
+        font-size: 0.8rem;
+        top: 0.25rem;
+      }
     </style>
   </head>
   <body>

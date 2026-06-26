@@ -52,7 +52,7 @@ const newFooter = `  <footer id="contacto" class="pt-5 pb-0 footer-dark">
             <span class="text-secondary-ca">|</span> Contacto
           </h5>
           <p class="footer-text mb-0">
-            Tel: 555622-1173 y 555622-1411
+            Tel: 555622-1411
           </p>
         </div>
 

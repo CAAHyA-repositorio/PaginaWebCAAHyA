@@ -259,8 +259,18 @@
 }
 .pleno-entity-grid{
   display:grid;
-  gap:1rem;
-  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:1.25rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 576px) {
+  .pleno-entity-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .pleno-entity-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .pleno-entity{
   background:#ffffff;

@@ -275,13 +275,42 @@
 .pleno-entity{
   background:#ffffff;
   border:1px solid rgba(38,34,97,.12);
-  border-radius:.85rem;
+  border-radius:.9rem;
   padding:1rem 1.1rem 1.2rem;
   display:flex;
   flex-direction:column;
   gap:.75rem;
-  box-shadow:0 18px 40px rgba(38,34,97,.12);
+  box-shadow:0 10px 30px rgba(38,34,97,.08);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease;
 }
+.pleno-entity:hover{
+  transform: translateY(-5px);
+  box-shadow:0 20px 40px rgba(38,34,97,.16);
+  border-color: rgba(38,34,97,.3);
+}
+/* Color coding for categories */
+.pleno-section:nth-of-type(2) .pleno-entity {
+  border-top: 4px solid #ee8219 !important;
+}
+.pleno-section:nth-of-type(3) .pleno-entity {
+  border-top: 4px solid #262261 !important;
+}
+.pleno-section:nth-of-type(4) .pleno-entity {
+  border-top: 4px solid #00b4d8 !important;
+}
+.pleno-section:nth-of-type(5) .pleno-entity {
+  border-top: 4px solid #48cae4 !important;
+}
+.pleno-section:nth-of-type(6) .pleno-entity {
+  border-top: 4px solid #9b5de5 !important;
+}
+.pleno-section:nth-of-type(7) .pleno-entity {
+  border-top: 4px solid #f15bb5 !important;
+}
+.pleno-section:nth-of-type(8) .pleno-entity {
+  border-top: 4px solid #fd7e14 !important;
+}
+
 .pleno-entity-title{
   margin:0;
   font-size:1rem;
@@ -295,14 +324,31 @@
 }
 .pleno-entity-members{
   margin:0;
-  padding-left:1.15rem;
+  padding-left:0;
+  list-style:none;
   display:flex;
   flex-direction:column;
-  gap:.35rem;
-  color:#1f1b4a;
+  gap:.5rem;
 }
 .pleno-entity-members li{
-  line-height:1.4;
+  position:relative;
+  padding-left:1.5rem;
+  padding-bottom:.5rem;
+  border-bottom:1px solid rgba(255,255,255,0.12);
+  line-height:1.45;
+}
+.pleno-entity-members li:last-child{
+  border-bottom:none;
+  padding-bottom:0;
+}
+.pleno-entity-members li::before{
+  font-family: "bootstrap-icons" !important;
+  content: "\f4e1";
+  position: absolute;
+  left: 0;
+  color: #ee8219;
+  font-size: 0.9rem;
+  top: 0.2rem;
 }
 [data-pleno-card]{
   position:relative;
@@ -359,7 +405,8 @@
   padding:1.25rem 1.5rem;
   margin:0;
   border-radius:.9rem;
-  background:#9892ed;
+  background: linear-gradient(135deg, #262261 0%, #3d359c 100%);
+  border-left: 4px solid #ee8219;
   color:#fff;
   box-shadow:0 16px 30px rgba(31,27,74,.18);
   max-height:0;

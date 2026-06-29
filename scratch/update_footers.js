@@ -26,7 +26,7 @@ const newFooter = `  <footer id="contacto" class="pt-5 pb-0 footer-dark">
         <!-- Columna 1: CAAHyA -->
         <div class="col-md-6 col-lg-3">
           <h5 class="footer-title mb-3">
-            <span class="text-secondary-ca">|</span> CAAHYA
+            <span class="text-secondary-ca">|</span> CAAHyA
           </h5>
           <p class="footer-text mb-0">
             Consejo Académico del Área de las Humanidades y de las Artes

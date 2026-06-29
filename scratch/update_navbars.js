@@ -42,7 +42,7 @@ const newMegaMenu = `        <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-
                 <a href="index.html#modalPleno" class="mega-menu__item">
                   <span class="mega-menu__item-title">El Pleno</span>
                   <span class="mega-menu__item-desc">Consulta la integración oficial y representantes del Pleno del
-                    CAAHYA.</span>
+                    CAAHyA.</span>
                 </a>
                 <a href="index.html#modalPublicaciones" class="mega-menu__item">
                   <span class="mega-menu__item-title">Publicaciones</span>
@@ -156,7 +156,7 @@ const newMegaMenu = `        <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-
           </li>
 
           <li class="nav-item dropdown-mega">
-            <a class="nav-link" href="juntaGobierno.html">Elección para junta de gobierno</a>
+            <a class="nav-link" href="juntaGobierno.html">Elección para Junta de Gobierno</a>
             <div class="mega-menu">
               <div class="mega-menu__col">
                 <p class="mega-menu__title">Elección para Junta de Gobierno</p>

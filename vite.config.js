@@ -13,8 +13,7 @@ export default defineConfig({
         { src: 'assets/css/**', dest: 'assets/css' },
         { src: 'assets/img/**', dest: 'assets/img' },
         { src: 'assets/audio/**', dest: 'assets/audio' },
-        { src: 'assets/pdf/**', dest: 'assets/pdf' },
-        { src: 'modals/**', dest: 'modals' }
+        { src: 'assets/pdf/**', dest: 'assets/pdf' }
       ]
     })
   ],
@@ -47,6 +46,7 @@ export default defineConfig({
         calendario: 'pages/calendario.html',
         entidades: 'pages/entidades.html',
         comparecencias: 'pages/comparecencias.html',
+        orgullo: 'pages/orgullo.html',
         
         // Comités
         comiteArquitectura: 'pages/comites/comiteArquitectura.html',

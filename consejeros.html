@@ -46,19 +46,38 @@
 
     .counselor-card table {
       margin: 0;
-      font-size: .95rem;
+      font-size: .88rem;
+      border-collapse: collapse !important;
     }
 
     .counselor-card th {
-      background: #f7f7fb;
-      color: #262261;
-      font-weight: 700;
-      font-size: .9rem;
+      background: rgba(38, 34, 97, 0.05) !important;
+      color: #262261 !important;
+      font-weight: 700 !important;
+      font-size: .75rem !important;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.55rem 0.6rem !important;
+      border: none !important;
+      border-bottom: 2px solid rgba(38, 34, 97, 0.15) !important;
     }
 
     .counselor-card td {
-      background: #ffffff;
-      color: #1f1b4a;
+      background: #ffffff !important;
+      color: #1f1b4a !important;
+      padding: 0.55rem 0.6rem !important;
+      border: none !important;
+      border-bottom: 1px solid rgba(38, 34, 97, 0.08) !important;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .counselor-card tr:last-child td {
+      border-bottom: none !important;
+    }
+
+    .counselor-card tr:hover td {
+      background-color: rgba(238, 130, 25, 0.04) !important;
+      color: #262261 !important;
     }
 
     .counselor-card .empty {

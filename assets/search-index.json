@@ -103,11 +103,11 @@
     },
     {
       "url": "procesoConsejo.html",
-      "title": "Proceso del Consejo — CAAHYA",
+      "title": "Revisión de proyectos, designaciones y exenciones — CAAHYA",
       "sections": [
         {
           "id": "hero",
-          "title": "Proceso del Consejo",
+          "title": "Revisión de proyectos, designaciones y exenciones",
           "content": "Diagramas y procedimientos oficiales del Consejo Académico del Área de las Humanidades y de las Artes."
         },
         {
@@ -124,11 +124,11 @@
     },
     {
       "url": "dist/procesoConsejo.html",
-      "title": "Proceso del Consejo — CAAHYA",
+      "title": "Revisión de proyectos, designaciones y exenciones — CAAHYA",
       "sections": [
         {
           "id": "hero",
-          "title": "Proceso del Consejo",
+          "title": "Revisión de proyectos, designaciones y exenciones",
           "content": "Diagramas y procedimientos oficiales del Consejo Académico del Área de las Humanidades y de las Artes."
         },
         {

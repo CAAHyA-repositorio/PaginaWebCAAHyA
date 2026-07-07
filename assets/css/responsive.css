@@ -110,3 +110,19 @@ main#contenidoPrincipal {
     font-size: 0.65rem !important;
   }
 }
+
+/* Corrección de contraste para enlaces activos/enfocados en el menú pills */
+.nav-pills-ca .nav-link.active,
+.nav-pills-ca .nav-link:focus,
+.nav-pills-ca .show > .nav-link {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #1a1740 !important; /* Azul oscuro de la marca para contraste legible */
+  border-color: #ffffff !important;
+}
+
+/* Ajuste dinámico de margen de scroll para anclas en escritorio */
+@media (min-width: 1200px) {
+  section {
+    scroll-margin-top: 155px !important; /* Ajustado para que el título de la sección no quede oculto bajo la navbar expandida */
+  }
+}

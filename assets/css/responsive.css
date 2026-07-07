@@ -88,3 +88,25 @@
     padding:1.5rem;
   }
 }
+
+/* Fix overlap of fixed navbar on content pages */
+main#contenidoPrincipal {
+  padding-top: 100px !important;
+}
+
+@media (min-width: 1200px) {
+  main#contenidoPrincipal {
+    padding-top: 145px !important; /* Evita que la navbar expandida tape el título de la página */
+  }
+}
+
+/* Optimización para evitar que el menú se rompa en dos líneas en pantallas medianas */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .nav-pills-ca .nav-link {
+    padding: 0.3rem 0.8rem !important;
+    font-size: 0.85rem !important;
+  }
+  .navbar-brand .brand-text {
+    font-size: 0.65rem !important;
+  }
+}

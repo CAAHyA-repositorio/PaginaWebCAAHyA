@@ -126,3 +126,35 @@ main#contenidoPrincipal {
     scroll-margin-top: 155px !important; /* Ajustado para que el título de la sección no quede oculto bajo la navbar expandida */
   }
 }
+
+/* RECOMENDACIÓN A: Micro-interacciones de Glassmorphism en Tarjetas */
+.process-card, .entity-card {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease !important;
+}
+
+.process-card:hover, .entity-card:hover {
+  transform: translateY(-6px) scale(1.01) !important;
+  border-color: rgba(238, 130, 25, 0.45) !important; /* Brillo con el naranja de la marca */
+  box-shadow: 0 22px 40px rgba(38, 34, 97, 0.12) !important;
+}
+
+/* RECOMENDACIÓN B: Fondos Degradados Suaves en Secciones Grandes y Main */
+.section-formal, main#contenidoPrincipal {
+  background: radial-gradient(circle at top left, rgba(238, 130, 25, 0.02), transparent 45%),
+              radial-gradient(circle at bottom right, rgba(38, 34, 97, 0.015), transparent 50%),
+              #ffffff !important;
+}
+
+/* RECOMENDACIÓN C: Botones Primarios con Efecto de Resplandor y Suavizado */
+.btn-download-pdf {
+  transition: background-color 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
+}
+.btn-download-pdf:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(100, 194, 166, 0.45) !important;
+}

@@ -275,7 +275,22 @@
                 <i class="bi bi-chevron-right"></i>
               </button>
 
+              <!-- Primer comunicado (Nombramiento Dra. Beatriz Arias Ávila) -->
               <div class="comunicado-slide active">
+                <a href="juntaGobierno.html" class="comunicado-card d-block text-decoration-none">
+                  <div class="comunicado-media">
+                    <img src="assets/img/carrusel/Dra. Beatriz Arias Ávila.png" alt="Nombramiento de la Dra. Beatriz Arias Ávila" loading="lazy">
+                  </div>
+                  <span class="comunicado-meta">Nombramiento</span>
+                  <h3 class="h5 mb-2">Felicitamos a la Dra. Beatriz Arias Ávila por su recién nombramiento</h3>
+                  <p class="mb-3">Nueva integrante de la II. Junta de Gobierno.</p>
+                  <span class="comunicado-link" style="color: #33ff00;">Ver detalles <i
+                      class="bi bi-arrow-right-circle-fill"></i></span>
+                </a>
+              </div>
+
+              <!-- Segundo comunicado (Mes del Orgullo) -->
+              <div class="comunicado-slide">
                 <a href="pages/orgullo.html" class="comunicado-card d-block text-decoration-none">
                   <div class="comunicado-media">
                     <img src="assets/img/carrusel/CARRUSEL LGTBQ+.jpg" alt="Mes del Orgullo LGTBQ+" loading="lazy">
@@ -289,22 +304,49 @@
                 </a>
               </div>
 
-              <!-- Segundo comunicado (Galardones) -->
+              <!-- Tercer comunicado (Tendencias emergentes en comunicación de género) -->
               <div class="comunicado-slide">
-                <div class="comunicado-card h-100 d-flex flex-column text-decoration-none position-relative">
-                  <div class="comunicado-media">
-                    <img src="assets/img/carrusel/galardones.png" alt="Galardones" loading="lazy">
+                <a href="https://youtu.be/ZPBCfK6c_j0?si=gZuPV0RQ8dXLzpyP"
+                  class="comunicado-card d-block text-decoration-none" target="_blank" rel="noopener noreferrer">
+                  <div class="comunicado-media position-relative">
+                    <img src="assets/img/carrusel/8MVideo_Carrusel.jpg" alt="Tendencias emergentes en comunicación de género" loading="lazy">
                   </div>
-                  <span class="comunicado-meta">Reconocimientos</span>
-                  <h3 class="h5 mb-2">Galardones</h3>
-                </div>
+                  <span class="comunicado-meta">Video Especial</span>
+                  <h3 class="h5 mb-2">Tendencias emergentes en comunicación de género</h3>
+                  <p class="mb-3">Ver el video especial en nuestro canal oficial de YouTube.</p>
+                  <span class="comunicado-link" style="color: #ff0000;">Ver en YouTube <i
+                      class="bi bi-youtube"></i></span>
+                </a>
               </div>
 
-              <!-- Tercer comunicado (Desarrollo Sostenible) -->
+              <!-- Cuarto comunicado (Interculturalidad y la cultura de la paz) -->
               <div class="comunicado-slide">
                 <div class="comunicado-card h-100 d-flex flex-column text-decoration-none position-relative">
                   <div class="comunicado-media d-block position-relative">
-                    <img src="assets/img/carrusel/DesarrolloSostenible_Podcast.jpg" alt="Podcast Desarrollo Sostenible"
+                    <img src="assets/img/carrusel/podcast interculturalidad .jpg"
+                      alt="Podcast Interculturalidad y la cultura de la paz" loading="lazy">
+                    <button
+                      class="btn btn-accent btn-play-audio position-absolute top-50 start-50 translate-middle rounded-circle shadow"
+                      style="width: 55px; height: 55px; font-size: 1.8rem; display: flex; align-items: center; justify-content: center; z-index: 10;"
+                      onclick="toggleAudio(this)" aria-label="Reproducir podcast">
+                      <i class="bi bi-play-fill" style="margin-left: 4px;"></i>
+                    </button>
+                  </div>
+                  <audio id="podcastAudio1" src="assets/audio/Interculturalidad_Podcast.mp4"
+                    onended="audioEnded(this)"></audio>
+                  <span class="comunicado-meta">Podcast del CAAHyA</span>
+                  <h3 class="h5 mb-2">Interculturalidad y la cultura de la paz</h3>
+                  <p class="mb-3 flex-grow-1">Escucha nuestro más reciente episodio de Podcast directamente desde aquí.</p>
+                  <span class="comunicado-link" style="color: #33ff00;">Da click para escucharlo<i
+                      class="bi bi-play-circle-fill"></i></span>
+                </div>
+              </div>
+
+              <!-- Quinto comunicado (Desarrollo basado en sostenibilidad) -->
+              <div class="comunicado-slide">
+                <div class="comunicado-card h-100 d-flex flex-column text-decoration-none position-relative">
+                  <div class="comunicado-media d-block position-relative">
+                    <img src="assets/img/carrusel/DesarrolloSostenible_Podcast.jpg" alt="Podcast Desarrollo basado en sostenibilidad"
                       loading="lazy">
                     <button
                       class="btn btn-accent btn-play-audio position-absolute top-50 start-50 translate-middle rounded-circle shadow"
@@ -313,51 +355,12 @@
                       <i class="bi bi-play-fill" style="margin-left: 4px;"></i>
                     </button>
                   </div>
-                  <audio id="podcastAudio1" src="assets/audio/DesarrolloSostenible_Podcast.mp4"
+                  <audio id="podcastAudio2" src="assets/audio/DesarrolloSostenible_Podcast.mp4"
                     onended="audioEnded(this)"></audio>
                   <span class="comunicado-meta">Podcast del CAAHyA</span>
-                  <h3 class="h5 mb-2">Desarrollo Sostenible</h3>
+                  <h3 class="h5 mb-2">Desarrollo basado en sostenibilidad</h3>
                   <p class="mb-3 flex-grow-1">Escucha nuestro más reciente episodio con invitados especiales
                     directamente desde aquí.</p>
-                  <span class="comunicado-link" style="color: #33ff00;">Da click para escucharlo<i
-                      class="bi bi-play-circle-fill"></i></span>
-                </div>
-              </div>
-
-              <!-- Cuarto comunicado (Conmemoración 8M) -->
-              <div class="comunicado-slide">
-                <a href="https://youtu.be/ZPBCfK6c_j0?si=gZuPV0RQ8dXLzpyP"
-                  class="comunicado-card d-block text-decoration-none" target="_blank" rel="noopener noreferrer">
-                  <div class="comunicado-media position-relative">
-                    <img src="assets/img/carrusel/8MVideo_Carrusel.jpg" alt="Conmemoración 8M" loading="lazy">
-                  </div>
-                  <span class="comunicado-meta">Video Especial</span>
-                  <h3 class="h5 mb-2">Conmemoración del 8M</h3>
-                  <p class="mb-3">Ver el video conmemorativo completo en nuestro canal oficial de YouTube.</p>
-                  <span class="comunicado-link" style="color: #ff0000;">Ver en YouTube <i
-                      class="bi bi-youtube"></i></span>
-                </a>
-              </div>
-
-              <!-- Quinto comunicado (Podcast Interculturalidad) -->
-              <div class="comunicado-slide">
-                <div class="comunicado-card h-100 d-flex flex-column text-decoration-none position-relative">
-                  <div class="comunicado-media d-block position-relative">
-                    <img src="assets/img/carrusel/podcast interculturalidad .jpg"
-                      alt="Podcast Interculturalidad en el siglo XXI" loading="lazy">
-                    <button
-                      class="btn btn-accent btn-play-audio position-absolute top-50 start-50 translate-middle rounded-circle shadow"
-                      style="width: 55px; height: 55px; font-size: 1.8rem; display: flex; align-items: center; justify-content: center; z-index: 10;"
-                      onclick="toggleAudio(this)" aria-label="Reproducir podcast">
-                      <i class="bi bi-play-fill" style="margin-left: 4px;"></i>
-                    </button>
-                  </div>
-                  <audio id="podcastAudio2" src="assets/audio/Interculturalidad_Podcast.mp4"
-                    onended="audioEnded(this)"></audio>
-                  <span class="comunicado-meta">Podcast del CAAHyA</span>
-                  <h3 class="h5 mb-2">Interculturalidad en el siglo XXI</h3>
-                  <p class="mb-3 flex-grow-1">Escucha nuestro más reciente episodio de Podcast directamente desde aqui.
-                  </p>
                   <span class="comunicado-link" style="color: #33ff00;">Da click para escucharlo<i
                       class="bi bi-play-circle-fill"></i></span>
                 </div>

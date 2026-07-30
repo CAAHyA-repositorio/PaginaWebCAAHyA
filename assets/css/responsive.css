@@ -128,7 +128,8 @@ main#contenidoPrincipal {
 }
 
 /* RECOMENDACIÓN A: Micro-interacciones de Glassmorphism en Tarjetas */
-.process-card, .entity-card {
+.process-card, 
+.entity-card:not(.entity-facultades):not(.entity-escuelas):not(.entity-institutos):not(.entity-centros) {
   background: rgba(255, 255, 255, 0.75) !important;
   backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(255, 255, 255, 0.4) !important;
@@ -137,7 +138,8 @@ main#contenidoPrincipal {
               border-color 0.4s ease !important;
 }
 
-.process-card:hover, .entity-card:hover {
+.process-card:hover, 
+.entity-card:not(.entity-facultades):not(.entity-escuelas):not(.entity-institutos):not(.entity-centros):hover {
   transform: translateY(-6px) scale(1.01) !important;
   border-color: rgba(238, 130, 25, 0.45) !important; /* Brillo con el naranja de la marca */
   box-shadow: 0 22px 40px rgba(38, 34, 97, 0.12) !important;

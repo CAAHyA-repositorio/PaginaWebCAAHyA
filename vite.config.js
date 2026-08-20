@@ -63,7 +63,9 @@ export default defineConfig({
         difusionYExtension: 'pages/comisiones/difusionYExtension.html',
         comisionVigilancia: 'pages/comisiones/comisionVigilancia.html',
         comisionLenguas: 'pages/comisiones/comisionLenguas.html',
-        comisionPRIDE: 'pages/comisiones/comisionPRIDE.html'
+        comisionPRIDE: 'pages/comisiones/comisionPRIDE.html',
+        loginDrive: 'pages/comisiones/loginDrive.html',
+        driveLenguas: 'pages/comisiones/driveLenguas.html'
       }
     }
   },

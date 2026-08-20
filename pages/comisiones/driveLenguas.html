@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Drive Privado — Comisión Especial de Lenguas</title>
+    <link rel="icon" type="image/png" href="../../assets/img/LogoCA.png" />
+    <!-- Validación de sesión inmediata antes de renderizar la página -->
+    <script>
+      if (sessionStorage.getItem('drive_auth_token') !== 'authorized_session_lenguas_2026') {
+        window.location.replace('loginDrive.html');
+      }
+    </script>
+    <link
+      href="../../assets/vendor/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/components.css" />
+    <link rel="stylesheet" href="../../assets/css/theme.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive.css" />
+    <style>
+      .dropzone {
+        border: 2px dashed rgba(38, 34, 97, 0.2);
+        background-color: #f8f9fa;
+        border-radius: 1rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      .dropzone:hover, .dropzone.dragover {
+        border-color: #00d2ff;
+        background-color: rgba(0, 210, 255, 0.05);
+      }
+      .file-item {
+        transition: all 0.2s ease;
+        border-left: 4px solid transparent;
+      }
+      .file-item:hover {
+        background-color: #f8f9fa;
+        border-left-color: #00d2ff;
+        transform: translateX(4px);
+      }
+      .shadow-soft-card {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <!-- Barra de navegacion-->
+    <nav class="navbar navbar-expand-xl navbar-ca fixed-top" aria-label="Navegacion principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../../index.html" aria-label="Inicio CAAHyA">
+          <img src="../../assets/img/LogoAzulOscuro.png" alt="CAAHyA" onerror="this.style.display='none'">
+          <span class="brand-text">CAAHyA</span>
+        </a>
+        <div class="d-flex d-xl-none align-items-center ms-auto gap-2">
+          <button class="btn btn-outline-danger btn-sm" onclick="logout()">Cerrar Sesión</button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="comisionLenguas.html">Volver a la Comisión</a>
+            </li>
+          </ul>
+          <div class="d-none d-xl-flex">
+            <button class="btn btn-danger px-4" style="border-radius: 0.5rem;" onclick="logout()">Cerrar Sesión</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Panel del Drive -->
+    <main style="padding-top: 130px; min-height: 80vh;" class="py-4 py-lg-5">
+      <div class="container">
+        <!-- Encabezado del Panel -->
+        <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-3 pb-3 border-bottom">
+          <div>
+            <h1 class="h3 fw-bold text-primary mb-1">
+              <i class="bi bi-cloud-check-fill me-2 text-info"></i>Drive de la Comisión Especial de Lenguas
+            </h1>
+            <p class="text-muted mb-0">Repositorio privado y seguro para la carga de documentos de trabajo.</p>
+          </div>
+          <div class="bg-success bg-opacity-10 text-success px-3 py-2 rounded-3 d-flex align-items-center gap-2 small">
+            <span class="position-relative d-inline-flex" style="width: 8px; height: 8px;">
+              <span class="animate-ping position-absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-success"></span>
+            </span>
+            Sesión Autorizada
+          </div>
+        </div>
+
+        <!-- Alerta de integración pendiente -->
+        <div class="alert alert-warning border-0 shadow-sm mb-4" role="alert" style="border-radius: 0.75rem;">
+          <div class="d-flex gap-3">
+            <div class="fs-4 text-warning">
+              <i class="bi bi-exclamation-triangle-fill"></i>
+            </div>
+            <div>
+              <h5 class="alert-heading fw-bold mb-1" style="font-size: 1rem;">Estructura Operativa en Modo de Pruebas</h5>
+              <p class="mb-0 small opacity-90">
+                Esta interfaz muestra el funcionamiento completo del Drive. Los archivos cargados se almacenan temporalmente en su navegador. Para producción, el sistema se conectará directamente a la carpeta institucional definitiva (Google Drive / OneDrive) una vez proporcionados los enlaces correspondientes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Columna Izquierda: Cargar Archivos -->
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-soft-card p-4 h-100" style="border-radius: 1rem;">
+              <h3 class="h5 fw-bold text-dark mb-3">Subir Nuevos Archivos</h3>
+              
+              <!-- Zona de Dropzone -->
+              <div 
+                id="dropzone" 
+                class="dropzone p-5 text-center mb-4 d-flex flex-column align-items-center justify-content-center"
+                onclick="document.getElementById('fileInput').click()"
+              >
+                <i class="bi bi-cloud-arrow-up text-primary mb-3" style="font-size: 3.5rem;"></i>
+                <h4 class="h6 fw-semibold text-dark mb-1">Arrastre archivos aquí</h4>
+                <p class="text-muted small mb-0">o haga clic para seleccionar</p>
+                <input 
+                  type="file" 
+                  id="fileInput" 
+                  class="d-none" 
+                  multiple 
+                  onchange="handleFiles(this.files)" 
+                />
+              </div>
+
+              <!-- Indicador de Carga Simulada -->
+              <div id="uploadProgress" class="d-none mb-3">
+                <div class="d-flex justify-content-between mb-1 small text-muted">
+                  <span id="uploadFilename">Cargando archivo...</span>
+                  <span id="uploadPercent">0%</span>
+                </div>
+                <div class="progress" style="height: 6px;">
+                  <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 0%"></div>
+                </div>
+              </div>
+
+              <!-- Reglas del repositorio -->
+              <div class="bg-light p-3 rounded-3 small">
+                <h5 class="fw-bold mb-2 text-dark" style="font-size: 0.85rem;">Instrucciones de uso:</h5>
+                <ul class="list-unstyled mb-0 text-muted d-flex flex-column gap-2" style="font-size: 0.8rem;">
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i>Formatos permitidos: PDF, Word, Excel, PowerPoint e Imágenes.</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i>Evite subir archivos de tamaño superior a 25MB.</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i>Nombrar los archivos de forma clara (Ej. Minuta_Ordinaria_Agosto_2026.pdf).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Listado de Archivos -->
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-soft-card p-4 h-100" style="border-radius: 1rem;">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="h5 fw-bold text-dark mb-0">Documentos de la Comisión</h3>
+                <span id="fileCount" class="badge bg-secondary-ca-subtle text-secondary-ca px-2 py-1 rounded-pill">0 archivos</span>
+              </div>
+
+              <!-- Listado de Archivos -->
+              <div id="fileListContainer" class="d-flex flex-column gap-3 overflow-auto" style="max-height: 500px;">
+                <!-- Cargado dinámicamente por JS -->
+              </div>
+
+              <!-- Estado Vacío -->
+              <div id="emptyState" class="text-center py-5 d-none">
+                <i class="bi bi-folder-x text-muted" style="font-size: 4rem;"></i>
+                <h4 class="h6 fw-semibold text-muted mt-3">No hay archivos en la comisión</h4>
+                <p class="text-muted small mb-0">Arrastre nuevos archivos para iniciar la carga.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto" class="pt-5 pb-0 footer-dark">
+      <div class="container pb-4">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <h5 class="footer-title mb-3">
+              <span class="text-secondary-ca">|</span> CAAHyA
+            </h5>
+            <p class="footer-text mb-0">
+              Consejo Académico del Área de las Humanidades y de las Artes
+            </p>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h5 class="footer-title mb-3">
+              <span class="text-secondary-ca">|</span> Ubicación
+            </h5>
+            <p class="footer-text mb-0">
+              Edificio de los Consejos Académicos<br>
+              Circuito Exterior s/n. Ciudad<br>
+              Universitaria. C.P. 04510. Ciudad de<br>
+              México
+            </p>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h5 class="footer-title mb-3">
+              <span class="text-secondary-ca">|</span> Contacto
+            </h5>
+            <p class="footer-text mb-0">
+              Tel: 555622-1411
+            </p>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h5 class="footer-title mb-3">
+              <span class="text-secondary-ca">|</span> Privacidad
+            </h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a class="footer-link-item" href="../../privacidadSimplificado.html">Aviso de privacidad simplificada</a></li>
+              <li class="mb-2"><a class="footer-link-item" href="../../privacidadIntegral.html">Aviso de privacidad integral</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bg-secondary-ca text-white py-4 mt-4 small">
+        <div class="container text-center">
+          <p class="text-white mb-0">
+            © Hecho en México, Universidad Nacional Autónoma de México (UNAM), todos los derechos reservados 2023.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Lógica de Funcionamiento del Drive -->
+    <script>
+      // Archivos por defecto precargados
+      const defaultFiles = [
+        {
+          id: '1',
+          name: 'Lineamientos_Internos_COEL_2026.pdf',
+          size: '1.2 MB',
+          date: '2026-08-15',
+          icon: 'bi-file-earmark-pdf-fill',
+          iconColor: 'text-danger'
+        },
+        {
+          id: '2',
+          name: 'Minuta_Segunda_Sesion_Ordinaria.docx',
+          size: '485 KB',
+          date: '2026-08-10',
+          icon: 'bi-file-earmark-word-fill',
+          iconColor: 'text-primary'
+        },
+        {
+          id: '3',
+          name: 'Programa_de_Trabajo_Anual_2026.xlsx',
+          size: '2.4 MB',
+          date: '2026-07-28',
+          icon: 'bi-file-earmark-excel-fill',
+          iconColor: 'text-success'
+        }
+      ];
+
+      // Inicialización en LocalStorage
+      if (!localStorage.getItem('coel_drive_files')) {
+        localStorage.setItem('coel_drive_files', JSON.stringify(defaultFiles));
+      }
+
+      // Renderizar listado de archivos
+      function renderFileList() {
+        const files = JSON.parse(localStorage.getItem('coel_drive_files')) || [];
+        const container = document.getElementById('fileListContainer');
+        const emptyState = document.getElementById('emptyState');
+        const fileCount = document.getElementById('fileCount');
+
+        container.innerHTML = '';
+        fileCount.textContent = `${files.length} archivo${files.length !== 1 ? 's' : ''}`;
+
+        if (files.length === 0) {
+          emptyState.classList.remove('d-none');
+          return;
+        }
+
+        emptyState.classList.add('d-none');
+
+        files.forEach(file => {
+          const item = document.createElement('div');
+          item.className = 'card border-0 p-3 file-item shadow-sm rounded-3';
+          item.innerHTML = `
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-3">
+                <div class="fs-2 ${file.iconColor || 'text-muted'}">
+                  <i class="bi ${file.icon}"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold text-dark mb-1 text-break">${file.name}</h6>
+                  <small class="text-muted d-flex gap-2">
+                    <span>Tamaño: ${file.size}</span>
+                    <span>•</span>
+                    <span>Modificado: ${file.date}</span>
+                  </small>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-light btn-sm text-dark px-3" onclick="downloadFile('${file.name}')" title="Descargar">
+                  <i class="bi bi-download"></i> <span class="d-none d-sm-inline ms-1">Descargar</span>
+                </button>
+                <button class="btn btn-outline-danger btn-sm" onclick="deleteFile('${file.id}')" title="Eliminar">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </div>
+            </div>
+          `;
+          container.appendChild(item);
+        });
+      }
+
+      // Cerrar sesión
+      function logout() {
+        sessionStorage.removeItem('drive_auth_token');
+        window.location.replace('loginDrive.html');
+      }
+
+      // Simular descarga de archivos
+      function downloadFile(name) {
+        alert(`Iniciando descarga simulada del archivo: ${name}\n\nEn la versión definitiva, este botón iniciará la descarga directa desde el repositorio remoto de Google Drive o el servidor institucional.`);
+      }
+
+      // Eliminar archivo
+      function deleteFile(id) {
+        if (confirm('¿Está seguro de que desea eliminar este archivo?')) {
+          let files = JSON.parse(localStorage.getItem('coel_drive_files')) || [];
+          files = files.filter(f => f.id !== id);
+          localStorage.setItem('coel_drive_files', JSON.stringify(files));
+          renderFileList();
+        }
+      }
+
+      // Configuración de Drag and Drop
+      const dropzone = document.getElementById('dropzone');
+      
+      ['dragenter', 'dragover'].forEach(eventName => {
+        dropzone.addEventListener(eventName, e => {
+          e.preventDefault();
+          dropzone.classList.add('dragover');
+        }, false);
+      });
+
+      ['dragleave', 'drop'].forEach(eventName => {
+        dropzone.addEventListener(eventName, e => {
+          e.preventDefault();
+          dropzone.classList.remove('dragover');
+        }, false);
+      });
+
+      dropzone.addEventListener('drop', e => {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        handleFiles(files);
+      });
+
+      // Manejar la carga de archivos
+      function handleFiles(files) {
+        if (files.length === 0) return;
+        
+        const file = files[0];
+        const progressBox = document.getElementById('uploadProgress');
+        const filenameLabel = document.getElementById('uploadFilename');
+        const percentLabel = document.getElementById('uploadPercent');
+        const progressBar = document.getElementById('progressBar');
+
+        // Mostrar barra de progreso simulada
+        progressBox.classList.remove('d-none');
+        filenameLabel.textContent = file.name;
+        
+        let percent = 0;
+        const interval = setInterval(() => {
+          percent += 10;
+          percentLabel.textContent = `${percent}%`;
+          progressBar.style.width = `${percent}%`;
+
+          if (percent >= 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+              // Ocultar barra de progreso
+              progressBox.classList.add('d-none');
+              progressBar.style.width = '0%';
+
+              // Guardar el nuevo archivo cargado en LocalStorage
+              const currentFiles = JSON.parse(localStorage.getItem('coel_drive_files')) || [];
+              const date = new Date().toISOString().slice(0, 10);
+              
+              // Determinar el icono según extensión
+              const ext = file.name.split('.').pop().toLowerCase();
+              let icon = 'bi-file-earmark-fill';
+              let color = 'text-muted';
+              
+              if (['pdf'].includes(ext)) { icon = 'bi-file-earmark-pdf-fill'; color = 'text-danger'; }
+              else if (['doc', 'docx'].includes(ext)) { icon = 'bi-file-earmark-word-fill'; color = 'text-primary'; }
+              else if (['xls', 'xlsx'].includes(ext)) { icon = 'bi-file-earmark-excel-fill'; color = 'text-success'; }
+              else if (['ppt', 'pptx'].includes(ext)) { icon = 'bi-file-earmark-ppt-fill'; color = 'text-warning'; }
+              else if (['jpg', 'jpeg', 'png', 'gif', 'svg'].includes(ext)) { icon = 'bi-file-earmark-image-fill'; color = 'text-info'; }
+
+              // Formatear tamaño legible
+              const sizeInKb = file.size / 1024;
+              const sizeStr = sizeInKb > 1024 
+                ? `${(sizeInKb / 1024).toFixed(1)} MB` 
+                : `${sizeInKb.toFixed(0)} KB`;
+
+              currentFiles.unshift({
+                id: Date.now().toString(),
+                name: file.name,
+                size: sizeStr,
+                date: date,
+                icon: icon,
+                iconColor: color
+              });
+
+              localStorage.setItem('coel_drive_files', JSON.stringify(currentFiles));
+              renderFileList();
+            }, 500);
+          }
+        }, 100);
+      }
+
+      // Renderizar al cargar la página
+      document.addEventListener('DOMContentLoaded', () => {
+        renderFileList();
+      });
+    </script>
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

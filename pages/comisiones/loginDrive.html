@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Acceso al Drive — Comisión Especial de Lenguas</title>
+    <link rel="icon" type="image/png" href="../../assets/img/LogoCA.png" />
+    <link
+      href="../../assets/vendor/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/components.css" />
+    <link rel="stylesheet" href="../../assets/css/theme.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  </head>
+
+  <body class="bg-light">
+    <!-- Barra de navegacion-->
+    <nav class="navbar navbar-expand-xl navbar-ca fixed-top" aria-label="Navegacion principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../../index.html" aria-label="Inicio CAAHyA">
+          <img src="../../assets/img/LogoAzulOscuro.png" alt="CAAHyA" onerror="this.style.display='none'">
+          <span class="brand-text">CAAHyA</span>
+        </a>
+        <div class="d-flex d-xl-none align-items-center ms-auto gap-2">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+            aria-controls="navMain" aria-expanded="false" aria-label="Mostrar menu">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="comisionLenguas.html">Volver a la Comisión</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenido de Login -->
+    <main style="padding-top: 140px; min-height: 80vh;" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-5">
+            <div class="card border-0 shadow-lg" style="border-radius: 1.25rem; overflow: hidden;">
+              <!-- Encabezado de la Tarjeta -->
+              <div class="p-4 text-center text-white" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                <div class="d-inline-flex align-items-center justify-content-center bg-white bg-opacity-20 rounded-circle mb-3" style="width: 70px; height: 70px;">
+                  <i class="bi bi-shield-lock-fill text-white" style="font-size: 2.2rem;"></i>
+                </div>
+                <h2 class="h5 fw-bold mb-1">Acceso Privado</h2>
+                <p class="small text-white-50 mb-0">Comisión Especial de Lenguas</p>
+              </div>
+
+              <!-- Cuerpo del Formulario -->
+              <div class="card-body p-4 p-lg-5 bg-white">
+                <div id="loginAlert" class="alert alert-danger d-none" role="alert">
+                  Credenciales incorrectas. Verifique e intente de nuevo.
+                </div>
+
+                <form id="loginDriveForm" onsubmit="handleLogin(event)">
+                  <!-- Campo: Número de Credencial UNAM -->
+                  <div class="mb-4">
+                    <label for="unamUser" class="form-label fw-semibold text-dark">Número de Credencial UNAM</label>
+                    <div class="input-group">
+                      <span class="input-group-text bg-light border-end-0 text-muted">
+                        <i class="bi bi-card-text"></i>
+                      </span>
+                      <input 
+                        type="text" 
+                        class="form-control bg-light border-start-0 ps-0" 
+                        id="unamUser" 
+                        placeholder="Ej. 123456789" 
+                        required 
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Campo: RFC -->
+                  <div class="mb-4">
+                    <label for="userRfc" class="form-label fw-semibold text-dark">RFC (Contraseña)</label>
+                    <div class="input-group">
+                      <span class="input-group-text bg-light border-end-0 text-muted">
+                        <i class="bi bi-key-fill"></i>
+                      </span>
+                      <input 
+                        type="password" 
+                        class="form-control bg-light border-start-0 ps-0" 
+                        id="userRfc" 
+                        placeholder="Introduce tu RFC" 
+                        required 
+                      />
+                    </div>
+                    <div class="form-text text-muted mt-2" style="font-size: 0.8rem;">
+                      La contraseña corresponde a su homoclave RFC completa en mayúsculas.
+                    </div>
+                  </div>
+
+                  <!-- Botón de Envío -->
+                  <button 
+                    type="submit" 
+                    class="btn btn-primary btn-lg w-100 mb-3 shadow" 
+                    style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); border: none; border-radius: 0.75rem; font-size: 1rem; font-weight: 600;"
+                  >
+                    Ingresar al Drive
+                  </button>
+
+                  <!-- Enlace de regreso -->
+                  <a href="comisionLenguas.html" class="btn btn-outline-secondary w-100" style="border-radius: 0.75rem;">
+                    Cancelar y Volver
+                  </a>
+                </form>
+              </div>
+            </div>
+            
+            <!-- Nota informativa -->
+            <div class="text-center mt-4">
+              <p class="text-muted small">
+                <i class="bi bi-info-circle-fill me-1"></i> Este es un portal de acceso seguro. Si no cuenta con sus datos de ingreso, favor de solicitarlos a la coordinación de la Comisión.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto" class="pt-5 pb-0 footer-dark">
+      <div class="container pb-4">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <h5 class="footer-title mb-3">
+              <span class="text-secondary-ca">|</span> CAAHyA
+            </h5>
+            <p class="footer-text mb-0">
+              Consejo Académico del Área de las Humanidades y de las Artes
+            </p>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h5 class="footer-title mb-3">
+              <span class="text-secondary-ca">|</span> Ubicación
+            </h5>
+            <p class="footer-text mb-0">
+              Edificio de los Consejos Académicos<br>
+              Circuito Exterior s/n. Ciudad<br>
+              Universitaria. C.P. 04510. Ciudad de<br>
+              México
+            </p>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h5 class="footer-title mb-3">
+              <span class="text-secondary-ca">|</span> Contacto
+            </h5>
+            <p class="footer-text mb-0">
+              Tel: 555622-1411
+            </p>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h5 class="footer-title mb-3">
+              <span class="text-secondary-ca">|</span> Privacidad
+            </h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a class="footer-link-item" href="../../privacidadSimplificado.html">Aviso de privacidad simplificada</a></li>
+              <li class="mb-2"><a class="footer-link-item" href="../../privacidadIntegral.html">Aviso de privacidad integral</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bg-secondary-ca text-white py-4 mt-4 small">
+        <div class="container text-center">
+          <p class="text-white mb-0">
+            © Hecho en México, Universidad Nacional Autónoma de México (UNAM), todos los derechos reservados 2023.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS de Validación -->
+    <script>
+      function handleLogin(event) {
+        event.preventDefault();
+        const user = document.getElementById('unamUser').value.trim();
+        const rfc = document.getElementById('userRfc').value.trim().toUpperCase();
+        const alertBox = document.getElementById('loginAlert');
+
+        // Valores de prueba pendientes de configuración definitiva
+        // Usuario: unam2026, Contraseña/RFC: LENGUAS2026
+        if (user === 'unam2026' && rfc === 'LENGUAS2026') {
+          alertBox.classList.add('d-none');
+          // Guardamos token temporal en sesión para validar acceso en la página del drive
+          sessionStorage.setItem('drive_auth_token', 'authorized_session_lenguas_2026');
+          window.location.href = 'driveLenguas.html';
+        } else {
+          alertBox.classList.remove('d-none');
+        }
+      }
+    </script>
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

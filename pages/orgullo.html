@@ -22,13 +22,195 @@
 
   <body class="bg-light">
     <!-- Barra de navegacion-->
-    <nav class="navbar navbar-expand-xl navbar-ca fixed-top" aria-label="Navegacion principal">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" aria-label="Inicio CAAHyA">
-          <img src="../assets/img/LogoAzulOscuro.png" alt="CAAHyA" onerror="this.style.display='none'">
-          <span class="brand-text">CAAHyA</span>
-        </a>
-        <div class="d-flex d-xl-none align-items-center ms-auto gap-2">
+      <nav class="navbar navbar-expand-xl navbar-ca fixed-top" aria-label="Navegacion principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" aria-label="Inicio CAAHyA">
+        <img src="../assets/img/LogoAzulOscuro.png" alt="CAAHyA" onerror="this.style.display='none'">
+        <span class="brand-text">CAAHyA</span>
+      </a>
+      <div class="d-flex d-xl-none align-items-center ms-auto gap-2">
+        <div class="social d-flex align-items-center" aria-label="Redes sociales">
+          <a href="https://www.facebook.com/p/Consejo-Acad%C3%A9mico-del-%C3%81rea-de-las-Humanidades-y-las-Artes-Caahya-61573733710648/"
+            class="social-pill" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
+              class="bi bi-facebook"></i></a>
+          <a href="https://www.youtube.com/@CAAHYA_UNAM" class="social-pill" aria-label="YouTube" target="_blank"
+            rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.instagram.com/caahya_unam/" class="social-pill" aria-label="Instagram" target="_blank"
+            rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+          <button type="button" class="social-email" data-email-popover="true" data-email="humanidadesyartes@unam.mx"
+            data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
+            data-bs-custom-class="email-popover" data-bs-html="true" aria-label="Correo electronico">
+            <i class="bi bi-envelope-fill"></i>
+          </button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+          aria-controls="navMain" aria-expanded="false" aria-label="Mostrar menu">
+          <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <!-- MENÚ CENTRAL -->
+        <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="../index.html" id="inicioMenu">
+              CAAHyA
+            </a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Inicio CAAHyA</p>
+                <a href="../pages/directorio.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Directorio del Consejo</span>
+                  <span class="mega-menu__item-desc">Consulta la integración y los datos de contacto oficiales.</span>
+                </a>
+                <a href="../pages/sobreElConsejo.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Acerca de nosotros</span>
+                  <span class="mega-menu__item-desc">Conoce el origen, funciones e integración del CAAHyA.</span>
+                </a>
+                <a href="https://coordinaciongenero.unam.mx/" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
+                  <span class="mega-menu__item-title">Coordinación para la Igualdad de Género en la UNAM</span>
+                  <span class="mega-menu__item-desc">Portal oficial de la Coordinación para la Igualdad de Género de la UNAM.</span>
+                </a>
+                <a href="../pages/pleno.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">El Pleno</span>
+                  <span class="mega-menu__item-desc">Consulta la integración oficial y representantes del Pleno del
+                    CAAHyA.</span>
+                </a>
+                <a href="../pages/publicaciones.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Publicaciones</span>
+                  <span class="mega-menu__item-desc">Consulta los libros, revistas y obras académicas del CAAHyA.</span>
+                </a>
+                <a href="../pages/informes.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Informes académicos</span>
+                  <span class="mega-menu__item-desc">Consulta los informes, novedades y proyectos del CAAHyA.</span>
+                </a>
+                <a href="../pages/entidades.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Entidades</span>
+                  <span class="mega-menu__item-desc">Consulta las facultades, escuelas, institutos y centros del CAAHyA.</span>
+                </a>
+                <a href="../pages/calendario.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Calendario de actividades</span>
+                  <span class="mega-menu__item-desc">Consulta las fechas oficiales de sesiones, convocatorias y eventos.</span>
+                </a>
+                <a href="../pages/contacto.html" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Contacto</span>
+                  <span class="mega-menu__item-desc">Información de contacto y ubicación del CAAHyA.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="../procesoConsejo.html">Procesos</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Revisión de proyectos, designaciones y exenciones</p>
+                <a href="../procesoConsejo.html#personalAcademico" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Personal Académico</span>
+                  <span class="mega-menu__item-desc">Procesos de la Comisión Permanente de Personal Académico.</span>
+                </a>
+                <a href="../procesoConsejo.html#planesEstudio" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Planes y Programas de Estudio</span>
+                  <span class="mega-menu__item-desc">Creación, modificación e implantación de planes de estudio.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="../comisiones.html">Comisiones</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Comisiones del Consejo</p>
+                <a href="../comisiones.html#permanentes" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Comisiones Permanentes</span>
+                  <span class="mega-menu__item-desc">Estudian y dictaminan asuntos de las labores sustantivas del Consejo.</span>
+                </a>
+                <a href="../comisiones.html#especiales" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Comisiones Especiales</span>
+                  <span class="mega-menu__item-desc">Comisiones especiales y grupos de trabajo designados por el Pleno.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="../comitesAcademicos.html">Comités</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Comités de Carrera</p>
+                <a href="../comitesAcademicos.html#funcionesComites" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Funciones de los comités</span>
+                  <span class="mega-menu__item-desc">Responsabilidades, vinculación y autoevaluación curricular.</span>
+                </a>
+                <a href="../comitesAcademicos.html#reglamentoComites" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Reglamento interno</span>
+                  <span class="mega-menu__item-desc">Naturaleza, integración, funcionamiento y responsabilidades.</span>
+                </a>
+                <a href="../comitesAcademicos.html#gridComites" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Catálogo de comités activos</span>
+                  <span class="mega-menu__item-desc">Consulta los comités de carrera por disciplina académica.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="../legislacion.html">Legislación</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Legislación universitaria</p>
+                <a href="../legislacion.html#legislacion" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Normativa esencial</span>
+                  <span class="mega-menu__item-desc">Leyes, estatutos y reglamentos base del CAAHyA.</span>
+                </a>
+                <a href="../legislacion.html#reglamentos" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Reglamentos vigentes</span>
+                  <span class="mega-menu__item-desc">Descarga directa de reglamentos y lineamientos activos.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="../consejeros.html">Consejeros</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Consejeros del área</p>
+                <a href="../consejeros.html#normativa" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Normativa</span>
+                  <span class="mega-menu__item-desc">Requisitos para consejeros académicos, alumnos y posgrados.</span>
+                </a>
+                <a href="../consejeros.html#consejeros" class="mega-menu__item">
+                  <span class="mega-menu__item-title">Listado de consejeros</span>
+                  <span class="mega-menu__item-desc">Consulta titulares y suplentes por entidad académica.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown-mega">
+            <a class="nav-link" href="../juntaGobierno.html">Elección para Junta de Gobierno</a>
+            <div class="mega-menu">
+              <div class="mega-menu__col">
+                <p class="mega-menu__title">Elección para Junta de Gobierno</p>
+                <a href="https://www.caahya.unam.mx/wp-content/uploads/2026/04/CONVOCATORIA.pdf" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
+                  <span class="mega-menu__item-title">Convocatoria</span>
+                  <span class="mega-menu__item-desc">Consulta las bases y requisitos oficiales de la convocatoria.</span>
+                </a>
+                <a href="https://www.caahya.unam.mx/wp-content/uploads/2026/06/Listado_inicial_de_personas_candidatas.pdf" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
+                  <span class="mega-menu__item-title">Listado de personas candidatas</span>
+                  <span class="mega-menu__item-desc">Listado oficial de aspirantes registrados para la elección.</span>
+                </a>
+                <a href="../pages/comparecencias.html" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
+                  <span class="mega-menu__item-title">Comparecencias</span>
+                  <span class="mega-menu__item-desc">Videos y transmisiones de las sesiones de comparecencias.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="navbar-actions d-none d-xl-flex">
           <div class="social d-flex align-items-center" aria-label="Redes sociales">
             <a href="https://www.facebook.com/p/Consejo-Acad%C3%A9mico-del-%C3%81rea-de-las-Humanidades-y-las-Artes-Caahya-61573733710648/"
               class="social-pill" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
@@ -43,193 +225,10 @@
               <i class="bi bi-envelope-fill"></i>
             </button>
           </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
-            aria-controls="navMain" aria-expanded="false" aria-label="Mostrar menu">
-            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-          </button>
-        </div>
-
-        <div class="collapse navbar-collapse" id="navMain">
-          <!-- MENÚ CENTRAL -->
-          <ul class="navbar-nav nav-pills-ca me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown-mega">
-              <a class="nav-link" href="../index.html" id="inicioMenu">
-                CAAHyA
-              </a>
-              <div class="mega-menu">
-                <div class="mega-menu__col">
-                  <p class="mega-menu__title">Inicio CAAHyA</p>
-                  <a href="../pages/directorio.html" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Directorio del Consejo</span>
-                    <span class="mega-menu__item-desc">Consulta la integración y los datos de contacto oficiales.</span>
-                  </a>
-                  <a href="../pages/sobreElConsejo.html" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Acerca de nosotros</span>
-                    <span class="mega-menu__item-desc">Conoce el origen, funciones e integración del CAAHyA.</span>
-                  </a>
-                  <a href="https://coordinaciongenero.unam.mx/" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
-                  <span class="mega-menu__item-title">Coordinación para la Igualdad de Género en la UNAM</span>
-                  <span class="mega-menu__item-desc">Portal oficial de la Coordinación para la Igualdad de Género de la UNAM.</span>
-                </a>
-                  <a href="../pages/pleno.html" class="mega-menu__item">
-                    <span class="mega-menu__item-title">El Pleno</span>
-                    <span class="mega-menu__item-desc">Consulta la integración oficial y representantes del Pleno del
-                      CAAHyA.</span>
-                  </a>
-                  <a href="../pages/publicaciones.html" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Publicaciones</span>
-                    <span class="mega-menu__item-desc">Consulta los libros, revistas y obras académicas del CAAHyA.</span>
-                  </a>
-                  <a href="../pages/informes.html" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Informes académicos</span>
-                    <span class="mega-menu__item-desc">Consulta los informes, novedades y proyectos del CAAHyA.</span>
-                  </a>
-                  <a href="../pages/entidades.html" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Entidades</span>
-                    <span class="mega-menu__item-desc">Consulta las facultades, escuelas, institutos y centros del CAAHyA.</span>
-                  </a>
-                  <a href="../pages/calendario.html" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Calendario de actividades</span>
-                    <span class="mega-menu__item-desc">Consulta las fechas oficiales de sesiones, convocatorias y eventos.</span>
-                  </a>
-                  <a href="../pages/contacto.html" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Contacto</span>
-                    <span class="mega-menu__item-desc">Información de contacto y ubicación del CAAHyA.</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown-mega">
-              <a class="nav-link" href="../procesoConsejo.html">Procesos</a>
-              <div class="mega-menu">
-                <div class="mega-menu__col">
-                  <p class="mega-menu__title">Revisión de proyectos, designaciones y exenciones</p>
-                  <a href="../procesoConsejo.html#personalAcademico" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Personal Académico</span>
-                    <span class="mega-menu__item-desc">Procesos de la Comisión Permanente de Personal Académico.</span>
-                  </a>
-                  <a href="../procesoConsejo.html#planesEstudio" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Planes y Programas de Estudio</span>
-                    <span class="mega-menu__item-desc">Creación, modificación e implantación de planes de estudio.</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown-mega">
-              <a class="nav-link" href="../comisiones.html">Comisiones</a>
-              <div class="mega-menu">
-                <div class="mega-menu__col">
-                  <p class="mega-menu__title">Comisiones del Consejo</p>
-                  <a href="../comisiones.html#permanentes" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Comisiones Permanentes</span>
-                    <span class="mega-menu__item-desc">Estudian y dictaminan asuntos de las labores sustantivas del Consejo.</span>
-                  </a>
-                  <a href="../comisiones.html#especiales" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Comisiones Especiales</span>
-                    <span class="mega-menu__item-desc">Comisiones especiales y grupos de trabajo designados por el Pleno.</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown-mega">
-              <a class="nav-link" href="../comitesAcademicos.html">Comités</a>
-              <div class="mega-menu">
-                <div class="mega-menu__col">
-                  <p class="mega-menu__title">Comités de Carrera</p>
-                  <a href="../comitesAcademicos.html#funcionesComites" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Funciones de los comités</span>
-                    <span class="mega-menu__item-desc">Responsabilidades, vinculación y autoevaluación curricular.</span>
-                  </a>
-                  <a href="../comitesAcademicos.html#reglamentoComites" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Reglamento interno</span>
-                    <span class="mega-menu__item-desc">Naturaleza, integración, funcionamiento y responsabilidades.</span>
-                  </a>
-                  <a href="../comitesAcademicos.html#gridComites" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Catálogo de comités activos</span>
-                    <span class="mega-menu__item-desc">Consulta los comités de carrera por disciplina académica.</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown-mega">
-              <a class="nav-link" href="../legislacion.html">Legislación</a>
-              <div class="mega-menu">
-                <div class="mega-menu__col">
-                  <p class="mega-menu__title">Legislación universitaria</p>
-                  <a href="../legislacion.html#legislacion" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Normativa esencial</span>
-                    <span class="mega-menu__item-desc">Leyes, estatutos y reglamentos base del CAAHyA.</span>
-                  </a>
-                  <a href="../legislacion.html#reglamentos" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Reglamentos vigentes</span>
-                    <span class="mega-menu__item-desc">Descarga directa de reglamentos y lineamientos activos.</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown-mega">
-              <a class="nav-link" href="../consejeros.html">Consejeros</a>
-              <div class="mega-menu">
-                <div class="mega-menu__col">
-                  <p class="mega-menu__title">Consejeros del área</p>
-                  <a href="../consejeros.html#normativa" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Normativa</span>
-                    <span class="mega-menu__item-desc">Requisitos para consejeros académicos, alumnos y posgrados.</span>
-                  </a>
-                  <a href="../consejeros.html#consejeros" class="mega-menu__item">
-                    <span class="mega-menu__item-title">Listado de consejeros</span>
-                    <span class="mega-menu__item-desc">Consulta titulares y suplentes por entidad académica.</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown-mega">
-              <a class="nav-link" href="../juntaGobierno.html">Elección para Junta de Gobierno</a>
-              <div class="mega-menu">
-                <div class="mega-menu__col">
-                  <p class="mega-menu__title">Elección para Junta de Gobierno</p>
-                  <a href="https://www.caahya.unam.mx/wp-content/uploads/2026/04/CONVOCATORIA.pdf" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
-                    <span class="mega-menu__item-title">Convocatoria</span>
-                    <span class="mega-menu__item-desc">Consulta las bases y requisitos oficiales de la convocatoria.</span>
-                  </a>
-                  <a href="https://www.caahya.unam.mx/wp-content/uploads/2026/06/Listado_inicial_de_personas_candidatas.pdf" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
-                    <span class="mega-menu__item-title">Listado de personas candidatas</span>
-                    <span class="mega-menu__item-desc">Listado oficial de aspirantes registrados para la elección.</span>
-                  </a>
-                  <a href="../pages/comparecencias.html" class="mega-menu__item" target="_blank" rel="noopener noreferrer">
-                    <span class="mega-menu__item-title">Comparecencias</span>
-                    <span class="mega-menu__item-desc">Videos y transmisiones de las sesiones de comparecencias.</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-          </ul>
-
-          <div class="navbar-actions d-none d-xl-flex">
-            <div class="social d-flex align-items-center" aria-label="Redes sociales">
-              <a href="https://www.facebook.com/p/Consejo-Acad%C3%A9mico-del-%C3%81rea-de-las-Humanidades-y-las-Artes-Caahya-61573733710648/"
-                class="social-pill" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-facebook"></i></a>
-              <a href="https://www.youtube.com/@CAAHYA_UNAM" class="social-pill" aria-label="YouTube" target="_blank"
-                rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
-              <a href="https://www.instagram.com/caahya_unam/" class="social-pill" aria-label="Instagram" target="_blank"
-                rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
-              <button type="button" class="social-email" data-email-popover="true" data-email="humanidadesyartes@unam.mx"
-                data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom"
-                data-bs-custom-class="email-popover" data-bs-html="true" aria-label="Correo electronico">
-                <i class="bi bi-envelope-fill"></i>
-              </button>
-            </div>
-          </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
     <main style="padding-top: 100px; min-height: 80vh;" class="py-4 py-lg-5">
       <div class="container">

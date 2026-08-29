@@ -10,3 +10,6 @@ Thumbs.db
 # Entornos
 .env
 .env.*
+
+# Archivos comprimidos
+*.zip

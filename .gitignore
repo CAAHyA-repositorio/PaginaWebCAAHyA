@@ -13,3 +13,6 @@ Thumbs.db
 
 # Archivos comprimidos
 *.zip
+
+# Scratch
+scratch/

@@ -58,19 +58,29 @@
 
 @media (min-width: 1200px){
   .navbar-ca .container{
-    padding-left:0;
-    padding-right:0;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
   }
   .navbar-ca #navMain{
     flex-grow:1;
     justify-content:flex-end;
   }
   .navbar-ca .navbar-nav.nav-pills-ca{
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    margin:0;
+    position:relative;
+    left:auto;
+    top:auto;
+    transform:none;
+    margin-left:0.75rem;
+    margin-right:auto;
+    gap:0.35rem;
+  }
+  .nav-pills-ca .nav-link{
+    padding: 0.38rem 0.85rem !important;
+    font-size: 0.92rem !important;
+  }
+  .navbar .social .social-email,
+  .navbar .social .social-pill{
+    margin-left:0.4rem;
   }
   .navbar-search{
     width:auto;

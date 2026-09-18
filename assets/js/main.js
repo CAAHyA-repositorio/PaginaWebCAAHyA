@@ -96,8 +96,20 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     };
 
+    const adjustPosition = () => {
+      menu.style.transform = '';
+      const rect = menu.getBoundingClientRect();
+      const padding = 16;
+      if (rect.left < padding) {
+        const shiftRight = padding - rect.left;
+        menu.style.transform = `translateX(calc(-50% + ${shiftRight}px)) translateY(0)`;
+      } else if (rect.right > window.innerWidth - padding) {
+        const shiftLeft = rect.right - (window.innerWidth - padding);
+        menu.style.transform = `translateX(calc(-50% - ${shiftLeft}px)) translateY(0)`;
+      }
+    };
+
     const openMenu = () => {
-      // Cierra otros menús abiertos inmediatamente
       dropdowns.forEach((other) => {
         if (other !== item && other.classList.contains('is-open')) {
           other.classList.remove('is-open');
@@ -105,23 +117,23 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       clearHideTimeout();
       item.classList.add('is-open');
+      adjustPosition();
     };
 
     const scheduleHide = () => {
       clearHideTimeout();
       hideTimeout = setTimeout(() => {
         item.classList.remove('is-open');
-      }, 700); // mismo comportamiento suave en todos
+        menu.style.transform = '';
+      }, 150); // Cierre rápido y fluido en 150ms al retirar el cursor
     };
 
-    [toggle, menu].forEach((el) => {
-      el.addEventListener('mouseenter', openMenu);
-      el.addEventListener('mouseleave', scheduleHide);
-      el.addEventListener('focusin', openMenu);
-      el.addEventListener('focusout', (event) => {
-        if (item.contains(event.relatedTarget)) return;
-        scheduleHide();
-      });
+    item.addEventListener('mouseenter', openMenu);
+    item.addEventListener('mouseleave', scheduleHide);
+    item.addEventListener('focusin', openMenu);
+    item.addEventListener('focusout', (event) => {
+      if (item.contains(event.relatedTarget)) return;
+      scheduleHide();
     });
   });
 });

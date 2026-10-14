@@ -6,7 +6,8 @@ export default defineConfig({
   root: '.',
   server: {
     host: true,
-    port: 5173
+    port: 5173,
+    open: true
   },
   plugins: [
     viteStaticCopy({
@@ -74,9 +75,5 @@ export default defineConfig({
         driveLenguas: 'pages/comisiones/driveLenguas.html'
       }
     }
-  },
-  server: {
-    port: 5173,
-    open: true
   }
 })

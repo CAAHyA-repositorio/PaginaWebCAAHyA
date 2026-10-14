@@ -4,6 +4,10 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 export default defineConfig({
   base: './',
   root: '.',
+  server: {
+    host: true,
+    port: 5173
+  },
   plugins: [
     viteStaticCopy({
       targets: [

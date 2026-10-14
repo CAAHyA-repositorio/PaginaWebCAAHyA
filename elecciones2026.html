@@ -240,20 +240,30 @@
 
     /* Cuenta regresiva en tiempo real (12 de noviembre, 8:00 AM) */
     .elecciones-countdown-wrapper {
-      margin-top: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    @media (min-width: 992px) {
+      .elecciones-countdown-wrapper {
+        align-items: flex-end;
+      }
     }
     .elecciones-countdown-container {
       display: inline-flex;
-      gap: 14px;
-      flex-wrap: wrap;
+      gap: 10px;
+      flex-wrap: nowrap;
       align-items: center;
+      justify-content: center;
     }
     .countdown-card {
       background-color: #2a285e;
       color: #ffffff;
-      border-radius: 18px;
-      width: 108px;
-      height: 118px;
+      border-radius: 16px;
+      width: 86px;
+      height: 96px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -267,7 +277,7 @@
       box-shadow: 0 8px 22px rgba(42, 40, 94, 0.25);
     }
     .countdown-num {
-      font-size: 3.25rem;
+      font-size: 2.5rem;
       font-weight: 700;
       line-height: 1;
       letter-spacing: -1px;
@@ -275,28 +285,65 @@
       color: #ffffff;
     }
     .countdown-label {
-      font-size: 0.95rem;
+      font-size: 0.82rem;
       font-weight: 400;
-      margin-top: 4px;
+      margin-top: 3px;
       color: #ffffff;
       opacity: 0.95;
     }
-    @media (max-width: 576px) {
+    .countdown-footer-label {
+      margin-top: 0.65rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #2a285e;
+      text-align: center;
+    }
+    @media (min-width: 1200px) {
       .elecciones-countdown-container {
-        gap: 8px;
+        gap: 12px;
       }
       .countdown-card {
-        width: 72px;
-        height: 82px;
+        width: 96px;
+        height: 106px;
+      }
+      .countdown-num {
+        font-size: 2.85rem;
+      }
+      .countdown-label {
+        font-size: 0.88rem;
+      }
+      .countdown-footer-label {
+        width: 100%;
+        max-width: 420px;
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      .countdown-footer-label {
+        width: 100%;
+        max-width: 374px;
+      }
+    }
+    @media (max-width: 576px) {
+      .elecciones-countdown-container {
+        gap: 6px;
+      }
+      .countdown-card {
+        width: 68px;
+        height: 78px;
         border-radius: 12px;
       }
       .countdown-num {
-        font-size: 1.95rem;
+        font-size: 1.85rem;
         letter-spacing: -0.5px;
       }
       .countdown-label {
-        font-size: 0.72rem;
+        font-size: 0.7rem;
         margin-top: 2px;
+      }
+      .countdown-footer-label {
+        font-size: 0.8rem;
       }
     }
   </style>
@@ -519,14 +566,16 @@
     <!-- Resumen y accesos directos -->
     <section class="py-4 bg-white border-bottom">
       <div class="container">
-        <div class="row g-3">
-          <div class="col-12 col-xl-10">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-7">
             <span class="badge hero-pill text-uppercase fw-semibold px-3 py-2 mb-2">Procesos Electorales</span>
             <h1 class="h2 fw-bold text-primary mb-2">Elecciones 2026</h1>
-            <p class="text-muted mb-3">
+            <p class="text-muted mb-0">
               Consulta las convocatorias oficiales, listas de personas elegibles, padrones electorales, fórmulas registradas y formatos para la elección de Consejeras y Consejeros Universitarios y del Área de las Humanidades y de las Artes que te representan.
             </p>
+          </div>
 
+          <div class="col-12 col-lg-5">
             <!-- Cuenta Regresiva Elecciones 2026 (12 de noviembre, 9:00 hrs) -->
             <div class="elecciones-countdown-wrapper">
               <div class="elecciones-countdown-container" id="eleccionesCountdown" role="timer" aria-live="polite" aria-label="Cuenta regresiva para la jornada electoral del 12 de noviembre a las 9:00 hrs">
@@ -547,6 +596,7 @@
                   <span class="countdown-label">Segundos</span>
                 </div>
               </div>
+              <div class="countdown-footer-label">Proceso electoral 2026</div>
             </div>
           </div>
         </div>
@@ -567,11 +617,7 @@
               <i class="bi bi-award-fill me-1"></i> Consejeras y Consejeros Académicos del Área
             </button>
           </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="tab-formatos-btn" data-bs-toggle="pill" data-bs-target="#panel-formatos" type="button" role="tab">
-              <i class="bi bi-file-earmark-zip-fill me-1"></i> Formatos y Material de Apoyo
-            </button>
-          </li>
+
         </ul>
       </div>
     </section>
@@ -585,11 +631,6 @@
                1. ELECCIONES CONSEJERAS/OS UNIVERSITARIOS
                ========================================== -->
           <div class="tab-pane fade show active" id="panel-cu" role="tabpanel" tabindex="0">
-            <!-- Banner Sección 1: Consejeras y Consejeros Universitarios -->
-            <div class="rounded-4 overflow-hidden shadow-sm border border-warning border-opacity-25 mb-4">
-              <img src="assets/elecciones2026/BANNER.jpg" alt="Elecciones 2026 - Consejeras y Consejeros Universitarios" class="w-100 h-auto d-block">
-            </div>
-
             <div class="mb-4 text-center text-lg-start">
               <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-2 mb-2">
                 <span class="badge bg-primary-subtle text-primary text-uppercase px-3 py-2 rounded-pill fw-bold">Sección 1</span>
@@ -641,31 +682,31 @@
                   </div>
                   <ul class="elecciones-doc-list">
                     <li>
-                      <a href="assets/elecciones2026/Alumnado%20del%20Conjunto%20de%20las%20FES/ALUMNADO%20CONJUNTO%20DE%20FACTULTADES.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
+                      <a href="assets/elecciones2026/Consejo%20Universitario/i.alumnado%20fes/ALUMNADO%20CONJUNTO%20DE%20FACTULTADES.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                         <span class="doc-title"><i class="bi bi-file-earmark-pdf-fill"></i> Convocatoria</span>
                         <span class="doc-action">Consultar <i class="bi bi-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <a href="assets/elecciones2026/Alumnado%20del%20Conjunto%20de%20las%20FES/Lista%20de%20personas%20elegibles%20Alumnado%20FES.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
+                      <a href="assets/elecciones2026/Consejo%20Universitario/i.alumnado%20fes/Lista%20de%20personas%20elegibles%20Alumnado%20FES.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                         <span class="doc-title"><i class="bi bi-person-check-fill text-success"></i> Lista de personas elegibles</span>
                         <span class="doc-action">Ver lista <i class="bi bi-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <a href="assets/elecciones2026/Alumnado%20del%20Conjunto%20de%20las%20FES/Padr%C3%B3n%20de%20personas%20electoras%20Alumnado%20FES.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
+                      <a href="assets/elecciones2026/Consejo%20Universitario/i.alumnado%20fes/Padr%C3%B3n%20de%20personas%20electoras%20Alumnado%20FES.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                         <span class="doc-title"><i class="bi bi-card-checklist text-info"></i> Padrón de personas electoras</span>
                         <span class="doc-action">Consultar padrón <i class="bi bi-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <a href="#cu-fes-formulas" id="cu-fes-formulas" class="elecciones-doc-item">
+                      <a href="#cu-fes-formulas" id="cu-fes-formulas" class="elecciones-doc-item no-disponible-btn" data-no-disponible="true">
                         <span class="doc-title"><i class="bi bi-people-fill text-warning"></i> Fórmulas registradas</span>
                         <span class="doc-action">Ver fórmulas <i class="bi bi-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <a href="#cu-fes-resultados" id="cu-fes-resultados" class="elecciones-doc-item">
+                      <a href="#cu-fes-resultados" id="cu-fes-resultados" class="elecciones-doc-item no-disponible-btn" data-no-disponible="true">
                         <span class="doc-title"><i class="bi bi-bar-chart-fill text-danger"></i> Resultados preliminares no oficiales</span>
                         <span class="doc-action">Ver resultados <i class="bi bi-chevron-right"></i></span>
                       </a>
@@ -685,15 +726,33 @@
                   </div>
                   <ul class="elecciones-doc-list">
                     <li>
-                      <a href="assets/elecciones2026/Alumnado%20de%20posgrado/ALUMNADO%20POSGRADO.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
+                      <a href="assets/elecciones2026/Consejo%20Universitario/ii.%20alumnado%20posgrado/ALUMNADO%20POSGRADO.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                         <span class="doc-title"><i class="bi bi-file-earmark-pdf-fill"></i> Convocatoria</span>
                         <span class="doc-action">Consultar <i class="bi bi-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <a href="assets/elecciones2026/Alumnado%20de%20posgrado/Padron%20de%20personas%20electoras%20CU%20PosgradoHyA.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
+                      <a href="assets/elecciones2026/Consejo%20Universitario/ii.%20alumnado%20posgrado/Listado%20de%20personas%20elegibles%20CU%20PosgradoHyA.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
+                        <span class="doc-title"><i class="bi bi-person-check-fill text-success"></i> Lista de personas elegibles</span>
+                        <span class="doc-action">Ver lista <i class="bi bi-chevron-right"></i></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="assets/elecciones2026/Consejo%20Universitario/ii.%20alumnado%20posgrado/Padron%20de%20personas%20electoras%20CU%20PosgradoHyA.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                         <span class="doc-title"><i class="bi bi-card-checklist text-info"></i> Padrón de personas electoras</span>
                         <span class="doc-action">Consultar padrón <i class="bi bi-chevron-right"></i></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#cu-posgrado-formulas" id="cu-posgrado-formulas" class="elecciones-doc-item no-disponible-btn" data-no-disponible="true">
+                        <span class="doc-title"><i class="bi bi-people-fill text-warning"></i> Fórmulas registradas</span>
+                        <span class="doc-action">Ver fórmulas <i class="bi bi-chevron-right"></i></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#cu-posgrado-resultados" id="cu-posgrado-resultados" class="elecciones-doc-item no-disponible-btn" data-no-disponible="true">
+                        <span class="doc-title"><i class="bi bi-bar-chart-fill text-danger"></i> Resultados preliminares no oficiales</span>
+                        <span class="doc-action">Ver resultados <i class="bi bi-chevron-right"></i></span>
                       </a>
                     </li>
                   </ul>
@@ -726,19 +785,19 @@
                     <div class="col-md-6 border-end">
                       <ul class="elecciones-doc-list">
                         <li>
-                          <a href="assets/elecciones2026/Personal%20t%C3%A9cnico%20acad%C3%A9mico/PERSONAL_TECNICO_ACADEMICO.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
+                          <a href="assets/elecciones2026/Consejo%20Universitario/iii.%20personal%20tecnico%20academico/PERSONAL_TECNICO_ACADEMICO.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                             <span class="doc-title"><i class="bi bi-file-earmark-pdf-fill"></i> Convocatoria</span>
                             <span class="doc-action">Consultar <i class="bi bi-chevron-right"></i></span>
                           </a>
                         </li>
                         <li>
-                          <a href="#cu-tecnico-elegibles" id="cu-tecnico-elegibles" class="elecciones-doc-item">
+                          <a href="assets/elecciones2026/Consejo%20Universitario/iii.%20personal%20tecnico%20academico/Lista%20de%20personas%20elegibles.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                             <span class="doc-title"><i class="bi bi-person-check-fill text-success"></i> Lista de personas elegibles</span>
                             <span class="doc-action">Ver lista <i class="bi bi-chevron-right"></i></span>
                           </a>
                         </li>
                         <li>
-                          <a href="#cu-tecnico-padron" id="cu-tecnico-padron" class="elecciones-doc-item">
+                          <a href="assets/elecciones2026/Consejo%20Universitario/iii.%20personal%20tecnico%20academico/Padron%20de%20personas%20electoras.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                             <span class="doc-title"><i class="bi bi-card-checklist text-info"></i> Padrón de personas electoras</span>
                             <span class="doc-action">Consultar padrón <i class="bi bi-chevron-right"></i></span>
                           </a>
@@ -748,18 +807,52 @@
                     <div class="col-md-6">
                       <ul class="elecciones-doc-list">
                         <li>
-                          <a href="#cu-tecnico-formulas" id="cu-tecnico-formulas" class="elecciones-doc-item">
+                          <a href="#cu-tecnico-formulas" id="cu-tecnico-formulas" class="elecciones-doc-item no-disponible-btn" data-no-disponible="true">
                             <span class="doc-title"><i class="bi bi-people-fill text-warning"></i> Fórmulas registradas</span>
                             <span class="doc-action">Ver fórmulas <i class="bi bi-chevron-right"></i></span>
                           </a>
                         </li>
                         <li>
-                          <a href="#cu-tecnico-resultados" id="cu-tecnico-resultados" class="elecciones-doc-item">
+                          <a href="#cu-tecnico-resultados" id="cu-tecnico-resultados" class="elecciones-doc-item no-disponible-btn" data-no-disponible="true">
                             <span class="doc-title"><i class="bi bi-bar-chart-fill text-danger"></i> Resultados preliminares no oficiales</span>
                             <span class="doc-action">Ver resultados <i class="bi bi-chevron-right"></i></span>
                           </a>
                         </li>
                       </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Apartado iv: Formatos para las elecciones y material de apoyo -->
+              <div class="col-12" id="cu-formatos">
+                <div class="elecciones-card">
+                  <div class="elecciones-card-header d-flex align-items-center gap-3">
+                    <span class="elecciones-badge">iv</span>
+                    <h3 class="h5 fw-bold text-primary mb-0">
+                      Formatos para las elecciones y material de apoyo
+                    </h3>
+                  </div>
+                  <ul class="elecciones-doc-list">
+                    <li>
+                      <a href="https://elecciones.consejo.unam.mx/material_apoyo.php" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
+                        <span class="doc-title">
+                          <i class="bi bi-folder2-open text-primary"></i> Formatos para las elecciones y material de apoyo
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="p-3">
+                    <div class="posgrado-banner">
+                      <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-info-circle-fill text-primary fs-4"></i>
+                        <span class="small fw-semibold text-dark">
+                          Para consultar y descargar los formatos y material de apoyo oficiales para la elección de personas consejeras universitarias:
+                        </span>
+                      </div>
+                      <a href="https://elecciones.consejo.unam.mx/material_apoyo.php" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill fw-bold text-nowrap">
+                        elecciones.consejo.unam.mx <i class="bi bi-box-arrow-up-right ms-1"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -771,11 +864,6 @@
                2. ELECCIONES CONSEJERAS/OS ACADÉMICAS/OS DE ÁREA
                ================================================== -->
           <div class="tab-pane fade" id="panel-ca" role="tabpanel" tabindex="0">
-            <!-- Banner Sección 2: Consejeras y Consejeros Académicos del Área -->
-            <div class="rounded-4 overflow-hidden shadow-sm border border-warning border-opacity-25 mb-4">
-              <img src="assets/elecciones2026/BANNER2.png" alt="Elecciones 2026 - Consejeras y Consejeros Académicos del Área" class="w-100 h-auto d-block">
-            </div>
-
             <div class="mb-4 text-center text-lg-start">
               <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-2 mb-2">
                 <span class="badge bg-secondary-ca-subtle text-primary text-uppercase px-3 py-2 rounded-pill fw-bold">Sección 2</span>
@@ -819,7 +907,6 @@
                   </div>
                 </div>
               </div>
-            </div>
 
             <div class="row g-4">
               <!-- Apartado i -->
@@ -833,31 +920,31 @@
                   </div>
                   <ul class="elecciones-doc-list">
                     <li>
-                      <a href="#ca-posgrado-convocatoria" id="ca-posgrado-convocatoria" class="elecciones-doc-item">
+                      <a href="assets/elecciones2026/Consejo%20CAAHyA/i.%20Alumnado%20posgrado/Convocatoria%20Alumnado%20Posgrado%20CAAHyA.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                         <span class="doc-title"><i class="bi bi-file-earmark-pdf-fill"></i> Convocatoria</span>
                         <span class="doc-action">Consultar <i class="bi bi-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <a href="#ca-posgrado-elegibles" id="ca-posgrado-elegibles" class="elecciones-doc-item">
+                      <a href="assets/elecciones2026/Consejo%20CAAHyA/i.%20Alumnado%20posgrado/Lista%20de%20personas%20elegibles.%20Posgrado%20CAAHyA.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                         <span class="doc-title"><i class="bi bi-person-check-fill text-success"></i> Lista de personas elegibles</span>
                         <span class="doc-action">Ver lista <i class="bi bi-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <a href="#ca-posgrado-padron" id="ca-posgrado-padron" class="elecciones-doc-item">
+                      <a href="assets/elecciones2026/Consejo%20CAAHyA/i.%20Alumnado%20posgrado/Padron%20de%20personas%20electoras.%20Posgrado%20CAAHyA.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                         <span class="doc-title"><i class="bi bi-card-checklist text-info"></i> Padrón de personas electoras</span>
                         <span class="doc-action">Consultar padrón <i class="bi bi-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <a href="#ca-posgrado-formulas" id="ca-posgrado-formulas" class="elecciones-doc-item">
+                      <a href="#ca-posgrado-formulas" id="ca-posgrado-formulas" class="elecciones-doc-item no-disponible-btn" data-no-disponible="true">
                         <span class="doc-title"><i class="bi bi-people-fill text-warning"></i> Fórmulas registradas</span>
                         <span class="doc-action">Ver fórmulas <i class="bi bi-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <a href="#ca-posgrado-resultados" id="ca-posgrado-resultados" class="elecciones-doc-item">
+                      <a href="#ca-posgrado-resultados" id="ca-posgrado-resultados" class="elecciones-doc-item no-disponible-btn" data-no-disponible="true">
                         <span class="doc-title"><i class="bi bi-bar-chart-fill text-danger"></i> Resultados preliminares no oficiales</span>
                         <span class="doc-action">Ver resultados <i class="bi bi-chevron-right"></i></span>
                       </a>
@@ -890,31 +977,31 @@
                   </div>
                   <ul class="elecciones-doc-list">
                     <li>
-                      <a href="#ca-facultades-convocatoria" id="ca-facultades-convocatoria" class="elecciones-doc-item">
+                      <a href="assets/elecciones2026/Consejo%20CAAHyA/ii.%20Personal%20tecnico%20academico%20facultades%20y%20escuelas/Convocatoria%20TA%20Facultades%20y%20Escuelas.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                         <span class="doc-title"><i class="bi bi-file-earmark-pdf-fill"></i> Convocatoria</span>
                         <span class="doc-action">Consultar <i class="bi bi-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <a href="#ca-facultades-elegibles" id="ca-facultades-elegibles" class="elecciones-doc-item">
+                      <a href="assets/elecciones2026/Consejo%20CAAHyA/ii.%20Personal%20tecnico%20academico%20facultades%20y%20escuelas/Elegibles%20TA%20Facultades%20y%20Escuelas.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                         <span class="doc-title"><i class="bi bi-person-check-fill text-success"></i> Lista de personas elegibles</span>
                         <span class="doc-action">Ver lista <i class="bi bi-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <a href="#ca-facultades-padron" id="ca-facultades-padron" class="elecciones-doc-item">
+                      <a href="assets/elecciones2026/Consejo%20CAAHyA/ii.%20Personal%20tecnico%20academico%20facultades%20y%20escuelas/Electores%20TA%20Facultades%20y%20Escuelas.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                         <span class="doc-title"><i class="bi bi-card-checklist text-info"></i> Padrón de personas electoras</span>
                         <span class="doc-action">Consultar padrón <i class="bi bi-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <a href="#ca-facultades-formulas" id="ca-facultades-formulas" class="elecciones-doc-item">
+                      <a href="#ca-facultades-formulas" id="ca-facultades-formulas" class="elecciones-doc-item no-disponible-btn" data-no-disponible="true">
                         <span class="doc-title"><i class="bi bi-people-fill text-warning"></i> Fórmulas registradas</span>
                         <span class="doc-action">Ver fórmulas <i class="bi bi-chevron-right"></i></span>
                       </a>
                     </li>
                     <li>
-                      <a href="#ca-facultades-resultados" id="ca-facultades-resultados" class="elecciones-doc-item">
+                      <a href="#ca-facultades-resultados" id="ca-facultades-resultados" class="elecciones-doc-item no-disponible-btn" data-no-disponible="true">
                         <span class="doc-title"><i class="bi bi-bar-chart-fill text-danger"></i> Resultados preliminares no oficiales</span>
                         <span class="doc-action">Ver resultados <i class="bi bi-chevron-right"></i></span>
                       </a>
@@ -936,19 +1023,19 @@
                     <div class="col-md-6 border-end">
                       <ul class="elecciones-doc-list">
                         <li>
-                          <a href="#ca-institutos-convocatoria" id="ca-institutos-convocatoria" class="elecciones-doc-item">
+                          <a href="assets/elecciones2026/Consejo%20CAAHyA/iii.%20Personal%20tecnico%20academico%20institutos%20y%20centros/Convocatoria%20TA%20Institutos%20y%20Centros.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                             <span class="doc-title"><i class="bi bi-file-earmark-pdf-fill"></i> Convocatoria</span>
                             <span class="doc-action">Consultar <i class="bi bi-chevron-right"></i></span>
                           </a>
                         </li>
                         <li>
-                          <a href="#ca-institutos-elegibles" id="ca-institutos-elegibles" class="elecciones-doc-item">
+                          <a href="assets/elecciones2026/Consejo%20CAAHyA/iii.%20Personal%20tecnico%20academico%20institutos%20y%20centros/Elegibles%20TA%20Institutos%20y%20Centros.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                             <span class="doc-title"><i class="bi bi-person-check-fill text-success"></i> Lista de personas elegibles</span>
                             <span class="doc-action">Ver lista <i class="bi bi-chevron-right"></i></span>
                           </a>
                         </li>
                         <li>
-                          <a href="#ca-institutos-padron" id="ca-institutos-padron" class="elecciones-doc-item">
+                          <a href="assets/elecciones2026/Consejo%20CAAHyA/iii.%20Personal%20tecnico%20academico%20institutos%20y%20centros/Electores%20TA%20Institutos%20y%20Centros.pdf" target="_blank" rel="noopener noreferrer" class="elecciones-doc-item">
                             <span class="doc-title"><i class="bi bi-card-checklist text-info"></i> Padrón de personas electoras</span>
                             <span class="doc-action">Consultar padrón <i class="bi bi-chevron-right"></i></span>
                           </a>
@@ -958,13 +1045,13 @@
                     <div class="col-md-6">
                       <ul class="elecciones-doc-list">
                         <li>
-                          <a href="#ca-institutos-formulas" id="ca-institutos-formulas" class="elecciones-doc-item">
+                          <a href="#ca-institutos-formulas" id="ca-institutos-formulas" class="elecciones-doc-item no-disponible-btn" data-no-disponible="true">
                             <span class="doc-title"><i class="bi bi-people-fill text-warning"></i> Fórmulas registradas</span>
                             <span class="doc-action">Ver fórmulas <i class="bi bi-chevron-right"></i></span>
                           </a>
                         </li>
                         <li>
-                          <a href="#ca-institutos-resultados" id="ca-institutos-resultados" class="elecciones-doc-item">
+                          <a href="#ca-institutos-resultados" id="ca-institutos-resultados" class="elecciones-doc-item no-disponible-btn" data-no-disponible="true">
                             <span class="doc-title"><i class="bi bi-bar-chart-fill text-danger"></i> Resultados preliminares no oficiales</span>
                             <span class="doc-action">Ver resultados <i class="bi bi-chevron-right"></i></span>
                           </a>
@@ -974,1055 +1061,194 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <!-- ==================================================
-               3. FORMATOS Y MATERIAL DE APOYO
-               ================================================== -->
-                    <!-- ==================================================
-               3. FORMATOS Y MATERIAL DE APOYO
-               ================================================== -->
-          <div class="tab-pane fade" id="panel-formatos" role="tabpanel" tabindex="0">
-            <div class="mb-5 text-center text-lg-start">
-              <span class="badge bg-warning-subtle text-dark text-uppercase px-3 py-2 rounded-pill fw-bold mb-2">Material Descargable</span>
-              <h2 class="h2 fw-bold text-primary mb-2" id="formatos-apoyo">
-                Formatos para las elecciones y material de apoyo
-              </h2>
-              <p class="text-muted lead">Descarga de formatos oficiales de manera individual o por carpeta comprimida (.zip).</p>
-            </div>
+              <!-- Apartado iv: Formatos para las elecciones y material de apoyo -->
+              <div class="col-12 mt-4" id="ca-formatos">
+                <div class="elecciones-card">
+                  <div class="elecciones-card-header d-flex align-items-center gap-3">
+                    <span class="elecciones-badge">iv</span>
+                    <h3 class="h5 fw-bold text-primary mb-0">
+                      Formatos para las elecciones y material de apoyo
+                    </h3>
+                  </div>
+                  <div class="p-3 p-md-4">
+                    <p class="text-muted small mb-4">Descarga los formatos oficiales individuales (.doc) para cada tipo de participante en el proceso electoral.</p>
+                    <div class="formatos-accordion-wrapper">
 
-            <div class="formatos-accordion-wrapper">
-              <!-- ACORDEÓN 0: Material en archivo comprimido .zip -->
-              <div class="formatos-acc-card mb-4" id="formatos-zip-general">
-                <div class="formatos-acc-header" data-bs-toggle="collapse" data-bs-target="#collapse-zip" aria-expanded="true" aria-controls="collapse-zip">
-                  <i class="bi bi-chevron-up acc-icon"></i>
-                  <span>Material en archivo comprimido .zip</span>
-                </div>
-                <div class="formatos-acc-line"></div>
-                <div id="collapse-zip" class="collapse show">
-                  <div class="formatos-acc-body">
-                    <ul class="formatos-doc-list">
-                      <li>
-                        <a href="assets/elecciones2026/Formatos%20elecciones%20de%20alumnado.zip" download="Formatos elecciones de alumnado.zip" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Alumnos
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-file-earmark-zip-fill text-warning"></i> Descargar .zip
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/Formatos%20elecciones%20profesorado.zip" download="Formatos elecciones profesorado.zip" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Profesores
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-file-earmark-zip-fill text-warning"></i> Descargar .zip
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/Formatos%20elecciones%20personal%20de%20investigaci%C3%B3n.zip" download="Formatos elecciones personal de investigación.zip" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Investigadores
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-file-earmark-zip-fill text-warning"></i> Descargar .zip
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/Formatos%20personal%20TA%20de%20Facultades%20y%20Escuelas.zip" download="Formatos personal TA de Facultades y Escuelas.zip" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Técnicos Académicos (Facultades y Escuelas)
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-file-earmark-zip-fill text-warning"></i> Descargar .zip
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/Formatos%20personal%20TA%20de%20Institutos%20y%20Centros.zip" download="Formatos personal TA de Institutos y Centros.zip" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Técnicos Académicos (Institutos y Centros)
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-file-earmark-zip-fill text-warning"></i> Descargar .zip
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/Formatos%20elecciones%20del%20alumnado%20de%20posgrado.zip" download="Formatos elecciones del alumnado de posgrado.zip" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Alumnos de Posgrado
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-file-earmark-zip-fill text-warning"></i> Descargar .zip
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
+                      <!-- i. Formatos para alumnado -->
+                      <div class="formatos-acc-card mb-3" id="ca-formatos-alumnado">
+                        <div class="formatos-acc-header collapsed" data-bs-toggle="collapse" data-bs-target="#ca-collapse-alumnos" aria-expanded="false" aria-controls="ca-collapse-alumnos">
+                          <i class="bi bi-chevron-up acc-icon"></i>
+                          <span>i. Formatos para las elecciones de alumnado</span>
+                        </div>
+                        <div class="formatos-acc-line"></div>
+                        <div id="ca-collapse-alumnos" class="collapse">
+                          <div class="formatos-acc-body">
+                            <ul class="formatos-doc-list">
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/1- CA reg-f_rmula Formatos Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/2- CA rep-f_rmula Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud de Registro Representante de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/3- CA rep-observ-casilla Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Registro Representante u Observador de Casilla</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/4- CA Const- Reg- f_rmula Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/5- CA Const- Neg- Reg -f_rmula Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Negativa Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/6- CA Const- Mod- Neg- Reg- f_rmula Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Modificación Negativa Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/7- CA Const Conf- Neg- Reg-f_rmula Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Confirmación Negativa Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/8- CA Const- Repr-  Formula Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Acreditación Representante de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/9- CA Solic -Ajus- Listado- Eleg Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Ajustes Listado de Elegibles</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/10- CA Aut Ajus listado Eleg Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Autorización Ajustes Listado de Elegibles</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/11- CA Neg Ajus Listado Eleg Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Negativa Ajustes Listado de Elegibles</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/12- CA Solic Ajus Padron Elec Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Ajustes Padrón de Electores</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/13- CA Aut Ajus Padron Elec Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Autorización Ajustes Padrón de Electores</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/14- CA Neg Ajus Padron Elec Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Negativa Ajustes Padrón Electores</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/Acta Cierre Casilla CA Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Acta Cierre Casilla</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/Acta Incidentes CA Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Acta Incidentes</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/Acta Instalacion Casilla CA Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Acta Instalación de Casilla</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/Acta Recuento total CA Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Acta Recuento Total</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/alumnos/Escrito  Inconformidad CA Alum - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Escrito Inconformidad</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- ii. Formatos para profesorado -->
+                      <div class="formatos-acc-card mb-3" id="ca-formatos-profesorado">
+                        <div class="formatos-acc-header collapsed" data-bs-toggle="collapse" data-bs-target="#ca-collapse-profesores" aria-expanded="false" aria-controls="ca-collapse-profesores">
+                          <i class="bi bi-chevron-up acc-icon"></i>
+                          <span>ii. Formatos para las elecciones de profesorado</span>
+                        </div>
+                        <div class="formatos-acc-line"></div>
+                        <div id="ca-collapse-profesores" class="collapse">
+                          <div class="formatos-acc-body">
+                            <ul class="formatos-doc-list">
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/1- CA reg-f_rmula Formatos Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/2- CA rep-f_rmula Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud de Registro Representante de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/3- CA rep-observ-casilla Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Registro Representante u Observador de Casilla</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/4- CA Const- Reg- f_rmula Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/5- CA Const- Neg- Reg -f_rmula Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Negativa Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/6- CA Const- Mod- Neg- Reg- f_rmula Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Modificación Negativa Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/7- CA Const Conf- Neg- Reg-f_rmula Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Confirmación Negativa Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/8- CA Const- Repr-  Formula Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Acreditación Representante de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/9- CA Solic -Ajus- Padron- Eleg Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Ajustes Listado de Elegibles</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/10- CA Aut Ajus listado Eleg Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Autorización Ajustes Listado de Elegibles</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/11- CA Neg Ajus Listado Eleg Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Negativa Ajustes Listado de Elegibles</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/12- CA Solic Ajus Padron Elec Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Ajustes Padrón de Electores</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/13- CA Aut Ajus Padron Elec Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Autorización Ajustes Padrón de Electores</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/14- CA Neg Ajus Padron Elec Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Negativa Ajustes Padrón Electores</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/Acta Cierre Casilla CA Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Acta Cierre Casilla</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/Acta Incidentes CA Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Acta Incidentes</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/Acta Instalacion Casilla CA Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Acta Instalación de Casilla</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/Acta Recuento total CA Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Acta Recuento Total</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/profesores/Escrito  Inconformidad CA Prof - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Escrito Inconformidad</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- iii. Formatos para personal de investigación -->
+                      <div class="formatos-acc-card mb-3" id="ca-formatos-investigadores">
+                        <div class="formatos-acc-header collapsed" data-bs-toggle="collapse" data-bs-target="#ca-collapse-investigadores" aria-expanded="false" aria-controls="ca-collapse-investigadores">
+                          <i class="bi bi-chevron-up acc-icon"></i>
+                          <span>iii. Formatos para las elecciones de personal de investigación</span>
+                        </div>
+                        <div class="formatos-acc-line"></div>
+                        <div id="ca-collapse-investigadores" class="collapse">
+                          <div class="formatos-acc-body">
+                            <ul class="formatos-doc-list">
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/1- CA reg-f_rmula Formatos Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/2- CA rep-f_rmula Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud de Registro Representante de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/3- CA rep-observ-casilla Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Registro Representante u Observador de Casilla</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/4- CA Const- Reg- f_rmula Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/5- CA Const- Neg- Reg -f_rmula Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Negativa Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/6- CA Const- Mod- Neg- Reg- f_rmula Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Modificación Negativa Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/7- CA Const Conf- Neg- Reg-f_rmula Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Confirmación Negativa Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/8 CA Const-acreditacion representante de formula Inv-electr_n.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Constancia Acreditación Representante de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/9- CA Solic -Ajus- Listado- Eleg Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Ajustes Listado de Elegibles</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/10- CA Aut Ajus listado Eleg Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Autorización Ajustes Listado de Elegibles</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/11- CA Neg Ajus Listado Eleg Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Negativa Ajustes Listado de Elegibles</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/12- CA Solic Ajus Padron Elec Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Ajustes Padrón de Electores</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/13- CA Aut Ajus Padron Elec Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Autorización Ajustes Padrón de Electores</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/14- CA Neg Ajus Padron Elec Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Negativa Ajustes Padrón Electores</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/Acta Cierre Casilla CA Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Acta Cierre Casilla</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/Acta Computo total CA-Inv-electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Acta Escrutinio y Cómputo</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/Acta Incidentes CA Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Acta Incidentes</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/Acta Instalacion Casilla CA Inv- electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Acta Instalación de Casilla</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/investigadores/Escrito  Inconformidad CA Inv - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Escrito Inconformidad</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- iv. Formatos TA Facultades y Escuelas -->
+                      <div class="formatos-acc-card mb-3" id="ca-formatos-tecfac">
+                        <div class="formatos-acc-header collapsed" data-bs-toggle="collapse" data-bs-target="#ca-collapse-tecfac" aria-expanded="false" aria-controls="ca-collapse-tecfac">
+                          <i class="bi bi-chevron-up acc-icon"></i>
+                          <span>iv. Formatos para la elección de personal técnico académico de facultades y escuelas</span>
+                        </div>
+                        <div class="formatos-acc-line"></div>
+                        <div id="ca-collapse-tecfac" class="collapse">
+                          <div class="formatos-acc-body">
+                            <ul class="formatos-doc-list">
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/tecnicos_facultades/1- CA reg-f_rmula Formatos TA FyE - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/tecnicos_facultades/2- CA rep-f_rmula TA FyE - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud de Registro Representante de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/tecnicos_facultades/3- CA rep-observ-casilla TA FyE - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Registro Representante u Observador de Casilla</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/tecnicos_facultades/9- CA Solic -Ajus- Padron- Eleg TA FyE- electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Ajustes Listado de Elegibles</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/tecnicos_facultades/12- CA Solic Ajus Padron Elec TA FyE- electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Ajustes Padrón de Electores</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/tecnicos_facultades/Escrito  Inconformidad CA TA FyE- electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Escrito Inconformidad</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- v. Formatos TA Institutos y Centros -->
+                      <div class="formatos-acc-card mb-3" id="ca-formatos-tecinst">
+                        <div class="formatos-acc-header collapsed" data-bs-toggle="collapse" data-bs-target="#ca-collapse-tecinst" aria-expanded="false" aria-controls="ca-collapse-tecinst">
+                          <i class="bi bi-chevron-up acc-icon"></i>
+                          <span>v. Formatos para la elección de personal técnico académico de institutos y centros</span>
+                        </div>
+                        <div class="formatos-acc-line"></div>
+                        <div id="ca-collapse-tecinst" class="collapse">
+                          <div class="formatos-acc-body">
+                            <ul class="formatos-doc-list">
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/tecnicos_institutos/1- CA reg-f_rmula Formatos TA IyC - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/tecnicos_institutos/2- CA rep-f_rmula TA IyC- electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud de Registro Representante de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/tecnicos_institutos/3- CA rep-observ-casilla TA IyC - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Registro Representante u Observador de Casilla</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/tecnicos_institutos/9- CA Solic -Ajus- Padron- Eleg TA IyC- electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Ajustes Listado de Elegibles</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/tecnicos_institutos/12- CA Solic Ajus Padron Elec TA IyC- electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Ajustes Padrón de Electores</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/tecnicos_institutos/Escrito  Inconformidad CA TA IyC electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Escrito Inconformidad</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- vi. Formatos alumnado de posgrado -->
+                      <div class="formatos-acc-card mb-3" id="ca-formatos-posgrado">
+                        <div class="formatos-acc-header collapsed" data-bs-toggle="collapse" data-bs-target="#ca-collapse-posgrado" aria-expanded="false" aria-controls="ca-collapse-posgrado">
+                          <i class="bi bi-chevron-up acc-icon"></i>
+                          <span>vi. Formatos para la elección de alumnado de posgrado</span>
+                        </div>
+                        <div class="formatos-acc-line"></div>
+                        <div id="ca-collapse-posgrado" class="collapse">
+                          <div class="formatos-acc-body">
+                            <ul class="formatos-doc-list">
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/posgrado/1- CA reg-f_rmula Formatos Alum posg- electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Registro de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/posgrado/2- CA rep-f_rmula Alum posg - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud de Registro Representante de Fórmula</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/posgrado/3- CA rep-observ-casilla Alum posg - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Registro Representante u Observador de Casilla</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/posgrado/9- CA Solic -Ajus- Listado- Eleg Alum posg - electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Ajustes Listado de Elegibles</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/posgrado/12- CA Solic Ajus Padron Elec Alum posg- electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Solicitud Ajustes Padrón de Electores</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                              <li><a href="assets/elecciones2026/Consejo%20CAAHyA/iv.%20formatos/posgrado/Escrito  Inconformidad CA Alum posg- electronica.doc" download class="formatos-doc-item"><span class="formatos-doc-title"><span class="formatos-circle-bullet"></span>Escrito Inconformidad</span><span class="formatos-doc-action"><i class="bi bi-download text-primary"></i> Descargar</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div><!-- /formatos-accordion-wrapper -->
                   </div>
                 </div>
               </div>
-              <!-- ACORDEÓN: Alumnos -->
-              <div class="formatos-acc-card mb-4" id="formatos-alumnado">
-                <div class="formatos-acc-header " data-bs-toggle="collapse" data-bs-target="#collapse-alumnos" aria-expanded="true" aria-controls="collapse-alumnos">
-                  <i class="bi bi-chevron-up acc-icon"></i>
-                  <span>Alumnos</span>
-                </div>
-                <div class="formatos-acc-line"></div>
-                <div id="collapse-alumnos" class="collapse show">
-                  <div class="formatos-acc-body">
-                    <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
-                      <span class="small text-muted fw-semibold">Formatos individuales descargables (.doc):</span>
-                      <a href="assets/elecciones2026/Formatos%20elecciones%20de%20alumnado.zip" download="Formatos elecciones de alumnado.zip" class="btn btn-sm btn-outline-primary rounded-pill px-3" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-file-earmark-zip me-1"></i> Descargar paquete completo .zip
-                      </a>
-                    </div>
-                    <ul class="formatos-doc-list">
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/1- CA reg-f_rmula Formatos Alum - electronica.doc" download="1- CA reg-f_rmula Formatos Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/2- CA rep-f_rmula Alum - electronica.doc" download="2- CA rep-f_rmula Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud de Registro Representante de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/3- CA rep-observ-casilla Alum - electronica.doc" download="3- CA rep-observ-casilla Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Registro Representante u Observador de Casilla
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/4- CA Const- Reg- f_rmula Alum - electronica.doc" download="4- CA Const- Reg- f_rmula Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/5- CA Const- Neg- Reg -f_rmula Alum - electronica.doc" download="5- CA Const- Neg- Reg -f_rmula Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Negativa Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/6- CA Const- Mod- Neg- Reg- f_rmula Alum - electronica.doc" download="6- CA Const- Mod- Neg- Reg- f_rmula Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Modificación Negativa Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/7- CA Const Conf- Neg- Reg-f_rmula Alum - electronica.doc" download="7- CA Const Conf- Neg- Reg-f_rmula Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Confirmación Negativa Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/8- CA Const- Repr-  Formula Alum - electronica.doc" download="8- CA Const- Repr-  Formula Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Acreditación Representante de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/9- CA Solic -Ajus- Listado- Eleg Alum - electronica.doc" download="9- CA Solic -Ajus- Listado- Eleg Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Ajustes Listado de Elegibles
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/10- CA Aut Ajus listado Eleg Alum - electronica.doc" download="10- CA Aut Ajus listado Eleg Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Autorización Ajustes Listado de Elegibles
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/11- CA Neg Ajus Listado Eleg Alum - electronica.doc" download="11- CA Neg Ajus Listado Eleg Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Negativa Ajustes Listado de Elegibles
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/12- CA Solic Ajus Padron Elec Alum - electronica.doc" download="12- CA Solic Ajus Padron Elec Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Ajustes Padrón de Electores
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/13- CA Aut Ajus Padron Elec Alum - electronica.doc" download="13- CA Aut Ajus Padron Elec Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Autorización Ajustes Padrón de Electores
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/14- CA Neg Ajus Padron Elec Alum - electronica.doc" download="14- CA Neg Ajus Padron Elec Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Negativa Ajustes Padrón Electores
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/Acta Cierre Casilla CA Alum - electronica.doc" download="Acta Cierre Casilla CA Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Acta Cierre Casilla
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/Acta Recuento total CA Alum - electronica.doc" download="Acta Recuento total CA Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Acta Escrutinio y Cómputo
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/Acta Incidentes CA Alum - electronica.doc" download="Acta Incidentes CA Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Acta Incidentes
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/Acta Instalacion Casilla CA Alum - electronica.doc" download="Acta Instalacion Casilla CA Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Acta Instalación de Casilla
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/alumnos/Escrito  Inconformidad CA Alum - electronica.doc" download="Escrito  Inconformidad CA Alum - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Escrito Inconformidad
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!-- ACORDEÓN: Profesores -->
-              <div class="formatos-acc-card mb-4" id="formatos-profesorado">
-                <div class="formatos-acc-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-profesores" aria-expanded="false" aria-controls="collapse-profesores">
-                  <i class="bi bi-chevron-up acc-icon"></i>
-                  <span>Profesores</span>
-                </div>
-                <div class="formatos-acc-line"></div>
-                <div id="collapse-profesores" class="collapse ">
-                  <div class="formatos-acc-body">
-                    <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
-                      <span class="small text-muted fw-semibold">Formatos individuales descargables (.doc):</span>
-                      <a href="assets/elecciones2026/Formatos%20elecciones%20profesorado.zip" download="Formatos elecciones profesorado.zip" class="btn btn-sm btn-outline-primary rounded-pill px-3" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-file-earmark-zip me-1"></i> Descargar paquete completo .zip
-                      </a>
-                    </div>
-                    <ul class="formatos-doc-list">
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/1- CA reg-f_rmula Formatos Prof - electronica.doc" download="1- CA reg-f_rmula Formatos Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/2- CA rep-f_rmula Prof - electronica.doc" download="2- CA rep-f_rmula Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud de Registro Representante de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/3- CA rep-observ-casilla Prof - electronica.doc" download="3- CA rep-observ-casilla Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Registro Representante u Observador de Casilla
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/4- CA Const- Reg- f_rmula Prof - electronica.doc" download="4- CA Const- Reg- f_rmula Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/5- CA Const- Neg- Reg -f_rmula Prof - electronica.doc" download="5- CA Const- Neg- Reg -f_rmula Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Negativa Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/6- CA Const- Mod- Neg- Reg- f_rmula Prof - electronica.doc" download="6- CA Const- Mod- Neg- Reg- f_rmula Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Modificación Negativa Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/7- CA Const Conf- Neg- Reg-f_rmula Prof - electronica.doc" download="7- CA Const Conf- Neg- Reg-f_rmula Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Confirmación Negativa Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/8- CA Const- Repr-  Formula Prof - electronica.doc" download="8- CA Const- Repr-  Formula Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Acreditación Representante de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/9- CA Solic -Ajus- Padron- Eleg Prof - electronica.doc" download="9- CA Solic -Ajus- Padron- Eleg Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Ajustes Listado de Elegibles
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/10- CA Aut Ajus listado Eleg Prof - electronica.doc" download="10- CA Aut Ajus listado Eleg Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Autorización Ajustes Listado de Elegibles
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/11- CA Neg Ajus Listado Eleg Prof - electronica.doc" download="11- CA Neg Ajus Listado Eleg Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Negativa Ajustes Listado de Elegibles
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/12- CA Solic Ajus Padron Elec Prof - electronica.doc" download="12- CA Solic Ajus Padron Elec Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Ajustes Padrón de Electores
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/13- CA Aut Ajus Padron Elec Prof - electronica.doc" download="13- CA Aut Ajus Padron Elec Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Autorización Ajustes Padrón de Electores
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/14- CA Neg Ajus Padron Elec Prof - electronica.doc" download="14- CA Neg Ajus Padron Elec Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Negativa Ajustes Padrón Electores
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/Acta Cierre Casilla CA Prof - electronica.doc" download="Acta Cierre Casilla CA Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Acta Cierre Casilla
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/Acta Recuento total CA Prof - electronica.doc" download="Acta Recuento total CA Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Acta Escrutinio y Cómputo
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/Acta Incidentes CA Prof - electronica.doc" download="Acta Incidentes CA Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Acta Incidentes
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/Acta Instalacion Casilla CA Prof - electronica.doc" download="Acta Instalacion Casilla CA Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Acta Instalación de Casilla
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/profesores/Escrito  Inconformidad CA Prof - electronica.doc" download="Escrito  Inconformidad CA Prof - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Escrito Inconformidad
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!-- ACORDEÓN: Investigadores -->
-              <div class="formatos-acc-card mb-4" id="formatos-investigacion">
-                <div class="formatos-acc-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-investigadores" aria-expanded="false" aria-controls="collapse-investigadores">
-                  <i class="bi bi-chevron-up acc-icon"></i>
-                  <span>Investigadores</span>
-                </div>
-                <div class="formatos-acc-line"></div>
-                <div id="collapse-investigadores" class="collapse ">
-                  <div class="formatos-acc-body">
-                    <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
-                      <span class="small text-muted fw-semibold">Formatos individuales descargables (.doc):</span>
-                      <a href="assets/elecciones2026/Formatos%20elecciones%20personal%20de%20investigaci%C3%B3n.zip" download="Formatos elecciones personal de investigación.zip" class="btn btn-sm btn-outline-primary rounded-pill px-3" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-file-earmark-zip me-1"></i> Descargar paquete completo .zip
-                      </a>
-                    </div>
-                    <ul class="formatos-doc-list">
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/1- CA reg-f_rmula Formatos Inv - electronica.doc" download="1- CA reg-f_rmula Formatos Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/2- CA rep-f_rmula Inv - electronica.doc" download="2- CA rep-f_rmula Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud de Registro Representante de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/3- CA rep-observ-casilla Inv - electronica.doc" download="3- CA rep-observ-casilla Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Registro Representante u Observador de Casilla
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/4- CA Const- Reg- f_rmula Inv - electronica.doc" download="4- CA Const- Reg- f_rmula Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/5- CA Const- Neg- Reg -f_rmula Inv - electronica.doc" download="5- CA Const- Neg- Reg -f_rmula Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Negativa Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/6- CA Const- Mod- Neg- Reg- f_rmula Inv - electronica.doc" download="6- CA Const- Mod- Neg- Reg- f_rmula Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Modificación Negativa Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/7- CA Const Conf- Neg- Reg-f_rmula Inv - electronica.doc" download="7- CA Const Conf- Neg- Reg-f_rmula Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Confirmación Negativa Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/8 CA Const-acreditacion representante de formula Inv-electr_n.doc" download="8 CA Const-acreditacion representante de formula Inv-electr_n.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Constancia Acreditación Representante de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/9- CA Solic -Ajus- Listado- Eleg Inv - electronica.doc" download="9- CA Solic -Ajus- Listado- Eleg Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Ajustes Listado de Elegibles
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/10- CA Aut Ajus listado Eleg Inv - electronica.doc" download="10- CA Aut Ajus listado Eleg Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Autorización Ajustes Listado de Elegibles
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/11- CA Neg Ajus Listado Eleg Inv - electronica.doc" download="11- CA Neg Ajus Listado Eleg Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Negativa Ajustes Listado de Elegibles
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/12- CA Solic Ajus Padron Elec Inv - electronica.doc" download="12- CA Solic Ajus Padron Elec Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Ajustes Padrón de Electores
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/13- CA Aut Ajus Padron Elec Inv - electronica.doc" download="13- CA Aut Ajus Padron Elec Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Autorización Ajustes Padrón de Electores
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/14- CA Neg Ajus Padron Elec Inv - electronica.doc" download="14- CA Neg Ajus Padron Elec Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Negativa Ajustes Padrón Electores
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/Acta Cierre Casilla CA Inv - electronica.doc" download="Acta Cierre Casilla CA Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Acta Cierre Casilla
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/Acta Computo total CA-Inv-electronica.doc" download="Acta Computo total CA-Inv-electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Acta Escrutinio y Cómputo
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/Acta Incidentes CA Inv - electronica.doc" download="Acta Incidentes CA Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Acta Incidentes
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/Acta Instalacion Casilla CA Inv- electronica.doc" download="Acta Instalacion Casilla CA Inv- electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Acta Instalación de Casilla
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/investigadores/Escrito  Inconformidad CA Inv - electronica.doc" download="Escrito  Inconformidad CA Inv - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Escrito Inconformidad
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!-- ACORDEÓN: Técnicos Académicos (Facultades y Escuelas) -->
-              <div class="formatos-acc-card mb-4" id="formatos-tecnico-facultades">
-                <div class="formatos-acc-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-tecnicos_facultades" aria-expanded="false" aria-controls="collapse-tecnicos_facultades">
-                  <i class="bi bi-chevron-up acc-icon"></i>
-                  <span>Técnicos Académicos (Facultades y Escuelas)</span>
-                </div>
-                <div class="formatos-acc-line"></div>
-                <div id="collapse-tecnicos_facultades" class="collapse ">
-                  <div class="formatos-acc-body">
-                    <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
-                      <span class="small text-muted fw-semibold">Formatos individuales descargables (.doc):</span>
-                      <a href="assets/elecciones2026/Formatos%20personal%20TA%20de%20Facultades%20y%20Escuelas.zip" download="Formatos personal TA de Facultades y Escuelas.zip" class="btn btn-sm btn-outline-primary rounded-pill px-3" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-file-earmark-zip me-1"></i> Descargar paquete completo .zip
-                      </a>
-                    </div>
-                    <ul class="formatos-doc-list">
-                      <li>
-                        <a href="assets/elecciones2026/formatos/tecnicos_facultades/1- CA reg-f_rmula Formatos TA FyE - electronica.doc" download="1- CA reg-f_rmula Formatos TA FyE - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/tecnicos_facultades/2- CA rep-f_rmula TA FyE - electronica.doc" download="2- CA rep-f_rmula TA FyE - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud de Registro Representante de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/tecnicos_facultades/3- CA rep-observ-casilla TA FyE - electronica.doc" download="3- CA rep-observ-casilla TA FyE - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Registro Representante u Observador de Casilla
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/tecnicos_facultades/9- CA Solic -Ajus- Padron- Eleg TA FyE- electronica.doc" download="9- CA Solic -Ajus- Padron- Eleg TA FyE- electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Ajustes Listado de Elegibles
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/tecnicos_facultades/12- CA Solic Ajus Padron Elec TA FyE- electronica.doc" download="12- CA Solic Ajus Padron Elec TA FyE- electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Ajustes Padrón de Electores
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/tecnicos_facultades/Escrito  Inconformidad CA TA FyE- electronica.doc" download="Escrito  Inconformidad CA TA FyE- electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Escrito Inconformidad
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!-- ACORDEÓN: Técnicos Académicos (Institutos y Centros) -->
-              <div class="formatos-acc-card mb-4" id="formatos-tecnico-institutos">
-                <div class="formatos-acc-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-tecnicos_institutos" aria-expanded="false" aria-controls="collapse-tecnicos_institutos">
-                  <i class="bi bi-chevron-up acc-icon"></i>
-                  <span>Técnicos Académicos (Institutos y Centros)</span>
-                </div>
-                <div class="formatos-acc-line"></div>
-                <div id="collapse-tecnicos_institutos" class="collapse ">
-                  <div class="formatos-acc-body">
-                    <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
-                      <span class="small text-muted fw-semibold">Formatos individuales descargables (.doc):</span>
-                      <a href="assets/elecciones2026/Formatos%20personal%20TA%20de%20Institutos%20y%20Centros.zip" download="Formatos personal TA de Institutos y Centros.zip" class="btn btn-sm btn-outline-primary rounded-pill px-3" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-file-earmark-zip me-1"></i> Descargar paquete completo .zip
-                      </a>
-                    </div>
-                    <ul class="formatos-doc-list">
-                      <li>
-                        <a href="assets/elecciones2026/formatos/tecnicos_institutos/1- CA reg-f_rmula Formatos TA IyC - electronica.doc" download="1- CA reg-f_rmula Formatos TA IyC - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/tecnicos_institutos/2- CA rep-f_rmula TA IyC- electronica.doc" download="2- CA rep-f_rmula TA IyC- electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud de Registro Representante de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/tecnicos_institutos/3- CA rep-observ-casilla TA IyC - electronica.doc" download="3- CA rep-observ-casilla TA IyC - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Registro Representante u Observador de Casilla
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/tecnicos_institutos/9- CA Solic -Ajus- Padron- Eleg TA IyC- electronica.doc" download="9- CA Solic -Ajus- Padron- Eleg TA IyC- electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Ajustes Listado de Elegibles
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/tecnicos_institutos/12- CA Solic Ajus Padron Elec TA IyC- electronica.doc" download="12- CA Solic Ajus Padron Elec TA IyC- electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Ajustes Padrón de Electores
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/tecnicos_institutos/Escrito  Inconformidad CA TA IyC electronica.doc" download="Escrito  Inconformidad CA TA IyC electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Escrito Inconformidad
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!-- ACORDEÓN: Alumnos de Posgrado -->
-              <div class="formatos-acc-card mb-4" id="formatos-posgrado">
-                <div class="formatos-acc-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-posgrado" aria-expanded="false" aria-controls="collapse-posgrado">
-                  <i class="bi bi-chevron-up acc-icon"></i>
-                  <span>Alumnos de Posgrado</span>
-                </div>
-                <div class="formatos-acc-line"></div>
-                <div id="collapse-posgrado" class="collapse ">
-                  <div class="formatos-acc-body">
-                    <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
-                      <span class="small text-muted fw-semibold">Formatos individuales descargables (.doc):</span>
-                      <a href="assets/elecciones2026/Formatos%20elecciones%20del%20alumnado%20de%20posgrado.zip" download="Formatos elecciones del alumnado de posgrado.zip" class="btn btn-sm btn-outline-primary rounded-pill px-3" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-file-earmark-zip me-1"></i> Descargar paquete completo .zip
-                      </a>
-                    </div>
-                    <ul class="formatos-doc-list">
-                      <li>
-                        <a href="assets/elecciones2026/formatos/posgrado/1- CA reg-f_rmula Formatos Alum posg- electronica.doc" download="1- CA reg-f_rmula Formatos Alum posg- electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Registro de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/posgrado/2- CA rep-f_rmula Alum posg - electronica.doc" download="2- CA rep-f_rmula Alum posg - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud de Registro Representante de Fórmula
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/posgrado/3- CA rep-observ-casilla Alum posg - electronica.doc" download="3- CA rep-observ-casilla Alum posg - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Registro Representante u Observador de Casilla
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/posgrado/9- CA Solic -Ajus- Listado- Eleg Alum posg - electronica.doc" download="9- CA Solic -Ajus- Listado- Eleg Alum posg - electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Ajustes Listado de Elegibles
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/posgrado/12- CA Solic Ajus Padron Elec Alum posg- electronica.doc" download="12- CA Solic Ajus Padron Elec Alum posg- electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Solicitud Ajustes Padrón de Electores
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="assets/elecciones2026/formatos/posgrado/Escrito  Inconformidad CA Alum posg- electronica.doc" download="Escrito  Inconformidad CA Alum posg- electronica.doc" class="formatos-doc-item" target="_blank" rel="noopener noreferrer">
-                          <span class="formatos-doc-title">
-                            <span class="formatos-circle-bullet"></span>
-                            Escrito Inconformidad
-                          </span>
-                          <span class="formatos-doc-action">
-                            <i class="bi bi-download text-primary"></i> Descargar
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            </div><!-- /row g-4 -->
+          </div><!-- /panel-ca -->
+        </div><!-- /tab-content -->
+      </div><!-- /container -->
+    </section><!-- /section py-5 -->
 
   </main>
 
@@ -2169,8 +1395,54 @@
       };
 
       initCountdown();
+
+      // Notificación y feedback para botones "No disponible aún" (Fórmulas registradas y Resultados preliminares)
+      const toastEl = document.getElementById('toastNoDisponible');
+      let toastInstance = null;
+      if (toastEl && window.bootstrap && window.bootstrap.Toast) {
+        toastInstance = new bootstrap.Toast(toastEl, { delay: 3500 });
+      }
+
+      document.querySelectorAll('.no-disponible-btn, [data-no-disponible="true"]').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          // 1. Mostrar Toast flotante
+          if (toastInstance) {
+            toastInstance.show();
+          }
+
+          // 2. Feedback visual directo en el botón clicado
+          const actionSpan = this.querySelector('.doc-action');
+          if (actionSpan && !this.dataset.isBusy) {
+            this.dataset.isBusy = 'true';
+            const originalHtml = actionSpan.innerHTML;
+            actionSpan.innerHTML = '<span class="badge bg-warning text-dark px-2 py-1 fw-bold shadow-sm"><i class="bi bi-clock me-1"></i> No disponible aún</span>';
+            setTimeout(() => {
+              actionSpan.innerHTML = originalHtml;
+              delete this.dataset.isBusy;
+            }, 3000);
+          }
+        });
+      });
     });
   </script>
+
+  <!-- Toast Notification: No disponible aún -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1090;">
+    <div id="toastNoDisponible" class="toast align-items-center text-bg-dark border-0 shadow-lg" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex align-items-center">
+        <div class="toast-body d-flex align-items-center gap-3 py-3 px-3 fs-6">
+          <i class="bi bi-clock-history text-warning fs-3 flex-shrink-0"></i>
+          <div>
+            <div class="fw-bold text-white mb-1">No disponible aún</div>
+            <div class="text-white-50 small">Esta información se publicará conforme al calendario electoral.</div>
+          </div>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-3 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

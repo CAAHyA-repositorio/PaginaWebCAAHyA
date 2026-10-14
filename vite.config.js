@@ -13,7 +13,8 @@ export default defineConfig({
         { src: 'assets/css/**', dest: 'assets/css' },
         { src: 'assets/img/**', dest: 'assets/img' },
         { src: 'assets/audio/**', dest: 'assets/audio' },
-        { src: 'assets/pdf/**', dest: 'assets/pdf' }
+        { src: 'assets/pdf/**', dest: 'assets/pdf' },
+        { src: 'assets/elecciones2026/**', dest: 'assets/elecciones2026' }
       ]
     })
   ],
@@ -35,6 +36,7 @@ export default defineConfig({
         privacidadIntegral: 'privacidadIntegral.html',
         creditos: 'creditos.html',
         juntaGobierno: 'juntaGobierno.html',
+        elecciones2026: 'elecciones2026.html',
         
         // Nuevas páginas (antiguos modales)
         directorio: 'pages/directorio.html',

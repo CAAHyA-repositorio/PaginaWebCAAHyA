@@ -11,8 +11,9 @@ Thumbs.db
 .env
 .env.*
 
-# Archivos comprimidos
-*.zip
+# Archivos comprimidos de respaldo
+/*.zip
+!assets/elecciones2026/*.zip
 
 # Scratch
 scratch/
